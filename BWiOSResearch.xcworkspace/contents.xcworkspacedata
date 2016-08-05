@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:BWSwiftResearch-MacOS/BWSwiftResearch-MacOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BWSwiftResearch-iOS/BWSwiftResearch-iOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BWObjective-CResearch-iOS/BWObjective-CResearch-iOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BWObjective-CResearch-MacOS/BWObjective-CResearch-MacOS.xcodeproj">
+   </FileRef>
+</Workspace>
