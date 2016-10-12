@@ -35,7 +35,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BWHomeTableViewCell *cell = (BWHomeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BWHomeTableViewCell class])];
+//    BWHomeTableViewCell *cell = (BWHomeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BWHomeTableViewCell class])];
+    BWHomeTableViewCell *cell = (BWHomeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
     if (!cell) {
         cell = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([BWHomeTableViewCell class]) owner:nil options:nil].firstObject;
         NSLog(@"new");

@@ -14,6 +14,6 @@
 
 /*
  熟悉Xib的使用
-    TableViewCell使用Xib，注意重用问题，cell identifier需要和Cell类名一致，不一致会报错，使用自定义基类或者Category的方式进行Cell重用生成方法的统一；
+    TableViewCell使用Xib，注意重用问题，cell identifier需要和Xib所设的identifier名称一致，记得给Xib设置identifier，使用自定义基类或者Category的方式进行Cell重用生成方法的统一；
     使用Xib不用代码重置Cell的Width为屏幕宽度；
 */

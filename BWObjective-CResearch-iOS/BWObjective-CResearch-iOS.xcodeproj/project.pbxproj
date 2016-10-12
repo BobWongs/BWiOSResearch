@@ -17,6 +17,9 @@
 		B4B630DC1DAE1FDB00DF0907 /* BWHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B630D81DAE1FDB00DF0907 /* BWHomeViewController.xib */; };
 		B4B630E71DAE228900DF0907 /* BWHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B630E51DAE228900DF0907 /* BWHomeTableViewCell.m */; };
 		B4B630E81DAE228900DF0907 /* BWHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B630E61DAE228900DF0907 /* BWHomeTableViewCell.xib */; };
+		B4B631311DAE384F00DF0907 /* UITableViewCell+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B6312D1DAE384F00DF0907 /* UITableViewCell+JZExtension.m */; };
+		B4B631321DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B6312F1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m */; };
+		B4B631331DAE384F00DF0907 /* UITableViewRowAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B631301DAE384F00DF0907 /* UITableViewRowAction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,10 @@
 		B4B630E41DAE228900DF0907 /* BWHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWHomeTableViewCell.h; sourceTree = "<group>"; };
 		B4B630E51DAE228900DF0907 /* BWHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWHomeTableViewCell.m; sourceTree = "<group>"; };
 		B4B630E61DAE228900DF0907 /* BWHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWHomeTableViewCell.xib; sourceTree = "<group>"; };
+		B4B6312D1DAE384F00DF0907 /* UITableViewCell+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+JZExtension.m"; sourceTree = "<group>"; };
+		B4B6312E1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewRowAction+JZExtension.h"; sourceTree = "<group>"; };
+		B4B6312F1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewRowAction+JZExtension.m"; sourceTree = "<group>"; };
+		B4B631301DAE384F00DF0907 /* UITableViewRowAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewRowAction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,9 +188,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B4B6312C1DAE384F00DF0907 /* JZTableViewRowAction */ = {
+			isa = PBXGroup;
+			children = (
+				B4B6312D1DAE384F00DF0907 /* UITableViewCell+JZExtension.m */,
+				B4B6312E1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.h */,
+				B4B6312F1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m */,
+				B4B631301DAE384F00DF0907 /* UITableViewRowAction.m */,
+			);
+			path = JZTableViewRowAction;
+			sourceTree = "<group>";
+		};
 		B4FF7E891DACDD220015089F /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				B4B6312C1DAE384F00DF0907 /* JZTableViewRowAction */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -321,8 +340,11 @@
 			files = (
 				B4B630DB1DAE1FDB00DF0907 /* BWHomeViewController.m in Sources */,
 				B4B630E71DAE228900DF0907 /* BWHomeTableViewCell.m in Sources */,
+				B4B631331DAE384F00DF0907 /* UITableViewRowAction.m in Sources */,
 				B443A1DE1D548382003D66C5 /* AppDelegate.m in Sources */,
 				B443A1DB1D548382003D66C5 /* main.m in Sources */,
+				B4B631321DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m in Sources */,
+				B4B631311DAE384F00DF0907 /* UITableViewCell+JZExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
