@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		B443A1DB1D548382003D66C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B443A1DA1D548382003D66C5 /* main.m */; };
 		B443A1DE1D548382003D66C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B443A1DD1D548382003D66C5 /* AppDelegate.m */; };
-		B443A1E11D548382003D66C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B443A1E01D548382003D66C5 /* ViewController.m */; };
-		B443A1E41D548382003D66C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B443A1E21D548382003D66C5 /* Main.storyboard */; };
 		B443A1E61D548382003D66C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B443A1E51D548382003D66C5 /* Assets.xcassets */; };
 		B443A1E91D548382003D66C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B443A1E71D548382003D66C5 /* LaunchScreen.storyboard */; };
 		B443A1F41D548382003D66C5 /* BWObjective_CResearch_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B443A1F31D548382003D66C5 /* BWObjective_CResearch_iOSTests.m */; };
 		B443A1FF1D548382003D66C5 /* BWObjective_CResearch_iOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B443A1FE1D548382003D66C5 /* BWObjective_CResearch_iOSUITests.m */; };
+		B4B630DB1DAE1FDB00DF0907 /* BWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B630D71DAE1FDB00DF0907 /* BWHomeViewController.m */; };
+		B4B630DC1DAE1FDB00DF0907 /* BWHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B630D81DAE1FDB00DF0907 /* BWHomeViewController.xib */; };
+		B4B630E71DAE228900DF0907 /* BWHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B630E51DAE228900DF0907 /* BWHomeTableViewCell.m */; };
+		B4B630E81DAE228900DF0907 /* BWHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B630E61DAE228900DF0907 /* BWHomeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +41,6 @@
 		B443A1DA1D548382003D66C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B443A1DC1D548382003D66C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B443A1DD1D548382003D66C5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B443A1DF1D548382003D66C5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B443A1E01D548382003D66C5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B443A1E31D548382003D66C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B443A1E51D548382003D66C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B443A1E81D548382003D66C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B443A1EA1D548382003D66C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +50,12 @@
 		B443A1FA1D548382003D66C5 /* BWObjective-CResearch-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BWObjective-CResearch-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B443A1FE1D548382003D66C5 /* BWObjective_CResearch_iOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWObjective_CResearch_iOSUITests.m; sourceTree = "<group>"; };
 		B443A2001D548382003D66C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4B630D61DAE1FDB00DF0907 /* BWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWHomeViewController.h; sourceTree = "<group>"; };
+		B4B630D71DAE1FDB00DF0907 /* BWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWHomeViewController.m; sourceTree = "<group>"; };
+		B4B630D81DAE1FDB00DF0907 /* BWHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWHomeViewController.xib; sourceTree = "<group>"; };
+		B4B630E41DAE228900DF0907 /* BWHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWHomeTableViewCell.h; sourceTree = "<group>"; };
+		B4B630E51DAE228900DF0907 /* BWHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWHomeTableViewCell.m; sourceTree = "<group>"; };
+		B4B630E61DAE228900DF0907 /* BWHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWHomeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +108,9 @@
 			children = (
 				B443A1DC1D548382003D66C5 /* AppDelegate.h */,
 				B443A1DD1D548382003D66C5 /* AppDelegate.m */,
-				B443A1DF1D548382003D66C5 /* ViewController.h */,
-				B443A1E01D548382003D66C5 /* ViewController.m */,
-				B443A1E21D548382003D66C5 /* Main.storyboard */,
+				B4B630D41DAE1FDB00DF0907 /* MVC */,
+				B4FF7E891DACDD220015089F /* Library */,
 				B443A1E51D548382003D66C5 /* Assets.xcassets */,
-				B443A1E71D548382003D66C5 /* LaunchScreen.storyboard */,
-				B443A1EA1D548382003D66C5 /* Info.plist */,
 				B443A1D91D548382003D66C5 /* Supporting Files */,
 			);
 			path = "BWObjective-CResearch-iOS";
@@ -118,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				B443A1DA1D548382003D66C5 /* main.m */,
+				B443A1EA1D548382003D66C5 /* Info.plist */,
+				B443A1E71D548382003D66C5 /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +142,50 @@
 				B443A2001D548382003D66C5 /* Info.plist */,
 			);
 			path = "BWObjective-CResearch-iOSUITests";
+			sourceTree = "<group>";
+		};
+		B4B630D41DAE1FDB00DF0907 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				B4B630D51DAE1FDB00DF0907 /* Controller */,
+				B4B630DA1DAE1FDB00DF0907 /* View */,
+				B4B630D91DAE1FDB00DF0907 /* Model */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		B4B630D51DAE1FDB00DF0907 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4B630D61DAE1FDB00DF0907 /* BWHomeViewController.h */,
+				B4B630D71DAE1FDB00DF0907 /* BWHomeViewController.m */,
+				B4B630D81DAE1FDB00DF0907 /* BWHomeViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4B630D91DAE1FDB00DF0907 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4B630DA1DAE1FDB00DF0907 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4B630E41DAE228900DF0907 /* BWHomeTableViewCell.h */,
+				B4B630E51DAE228900DF0907 /* BWHomeTableViewCell.m */,
+				B4B630E61DAE228900DF0907 /* BWHomeTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4FF7E891DACDD220015089F /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +291,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B630DC1DAE1FDB00DF0907 /* BWHomeViewController.xib in Resources */,
+				B4B630E81DAE228900DF0907 /* BWHomeTableViewCell.xib in Resources */,
 				B443A1E91D548382003D66C5 /* LaunchScreen.storyboard in Resources */,
 				B443A1E61D548382003D66C5 /* Assets.xcassets in Resources */,
-				B443A1E41D548382003D66C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +319,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B443A1E11D548382003D66C5 /* ViewController.m in Sources */,
+				B4B630DB1DAE1FDB00DF0907 /* BWHomeViewController.m in Sources */,
+				B4B630E71DAE228900DF0907 /* BWHomeTableViewCell.m in Sources */,
 				B443A1DE1D548382003D66C5 /* AppDelegate.m in Sources */,
 				B443A1DB1D548382003D66C5 /* main.m in Sources */,
 			);
@@ -308,14 +358,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B443A1E21D548382003D66C5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B443A1E31D548382003D66C5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B443A1E71D548382003D66C5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -414,6 +456,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "BWObjective-CResearch-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bws.BWObjective-CResearch-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "BWObjective-CResearch-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bws.BWObjective-CResearch-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,6 +540,7 @@
 				B443A2051D548382003D66C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B443A2061D548382003D66C5 /* Build configuration list for PBXNativeTarget "BWObjective-CResearch-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +549,7 @@
 				B443A2081D548382003D66C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B443A2091D548382003D66C5 /* Build configuration list for PBXNativeTarget "BWObjective-CResearch-iOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +558,7 @@
 				B443A20B1D548382003D66C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
