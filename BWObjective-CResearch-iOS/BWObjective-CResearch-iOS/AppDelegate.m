@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "BWHomeViewController.h"
+#import "BWMeController.h"
+#import "BWBaseNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -15,13 +17,22 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     BWHomeViewController *vcHome = [[BWHomeViewController alloc] init];
     UINavigationController *nvgtVCHome = [[UINavigationController alloc] initWithRootViewController:vcHome];
+    nvgtVCHome.tabBarItem.title = @"HomeTab";
+    
+    BWMeController *vcMe = [BWMeController new];
+    vcMe.title = @"Me";
+    BWBaseNavigationController *nvgtVCMe = [[BWBaseNavigationController alloc] initFullScreenBackWithRootViewController:vcMe];
+    nvgtVCMe.tabBarItem.title = @"MeTab";
+    
+    UITabBarController *tabVC = [UITabBarController new];
+    tabVC.viewControllers = @[nvgtVCHome, nvgtVCMe];
+    tabVC.selectedIndex = 1;
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = nvgtVCHome;
+    self.window.rootViewController = tabVC;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     

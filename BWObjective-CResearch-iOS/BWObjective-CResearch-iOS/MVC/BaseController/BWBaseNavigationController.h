@@ -1,0 +1,15 @@
+//
+//  BWBaseNavigationController.h
+//  BWObjective-CResearch-iOS
+//
+//  Created by BobWong on 16/10/18.
+//  Copyright © 2016年 BobWong. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface BWBaseNavigationController : UINavigationController
+
+- (instancetype)initFullScreenBackWithRootViewController:(UIViewController *)rootViewController;
+
+@end
