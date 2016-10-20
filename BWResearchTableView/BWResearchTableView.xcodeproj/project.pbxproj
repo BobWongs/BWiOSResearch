@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B4F516D81DB8A02500EC5057 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F516D71DB8A02500EC5057 /* main.m */; };
+		B4F516DB1DB8A02500EC5057 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F516DA1DB8A02500EC5057 /* AppDelegate.m */; };
+		B4F516E31DB8A02500EC5057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F516E21DB8A02500EC5057 /* Assets.xcassets */; };
+		B4F516E61DB8A02500EC5057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F516E41DB8A02500EC5057 /* LaunchScreen.storyboard */; };
+		B4F516F11DB8A02500EC5057 /* BWResearchTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F516F01DB8A02500EC5057 /* BWResearchTableViewTests.m */; };
+		B4F516FC1DB8A02500EC5057 /* BWResearchTableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F516FB1DB8A02500EC5057 /* BWResearchTableViewUITests.m */; };
+		B4F517171DB8A41000EC5057 /* BWBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F517161DB8A41000EC5057 /* BWBaseController.m */; };
+		B4F5171A1DB8A42700EC5057 /* BWHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F517191DB8A42700EC5057 /* BWHomeController.m */; };
+		B4F5171D1DB8A43E00EC5057 /* BWDynamicHeightController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F5171C1DB8A43E00EC5057 /* BWDynamicHeightController.m */; };
+		B4F517201DB8A44B00EC5057 /* BWFlexibleController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F5171F1DB8A44B00EC5057 /* BWFlexibleController.m */; };
+		B4F517231DB8A45700EC5057 /* BWHybridController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F517221DB8A45700EC5057 /* BWHybridController.m */; };
+		B4F517261DB8AD7F00EC5057 /* BWDynamicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F517251DB8AD7F00EC5057 /* BWDynamicCell.m */; };
+		FFF842F101D77BDFB4E6E43B /* libPods-BWResearchTableView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EA00E895AECB64532477A3 /* libPods-BWResearchTableView.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B4F516ED1DB8A02500EC5057 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4F516CB1DB8A02400EC5057 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4F516D21DB8A02500EC5057;
+			remoteInfo = BWResearchTableView;
+		};
+		B4F516F81DB8A02500EC5057 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4F516CB1DB8A02400EC5057 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4F516D21DB8A02500EC5057;
+			remoteInfo = BWResearchTableView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19EA00E895AECB64532477A3 /* libPods-BWResearchTableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWResearchTableView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3DB9917A0CA1287E150F10C /* Pods-BWResearchTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWResearchTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWResearchTableView/Pods-BWResearchTableView.release.xcconfig"; sourceTree = "<group>"; };
+		B4F516D31DB8A02500EC5057 /* BWResearchTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWResearchTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4F516D71DB8A02500EC5057 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B4F516D91DB8A02500EC5057 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B4F516DA1DB8A02500EC5057 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B4F516E21DB8A02500EC5057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4F516E51DB8A02500EC5057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B4F516E71DB8A02500EC5057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4F516EC1DB8A02500EC5057 /* BWResearchTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BWResearchTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4F516F01DB8A02500EC5057 /* BWResearchTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWResearchTableViewTests.m; sourceTree = "<group>"; };
+		B4F516F21DB8A02500EC5057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4F516F71DB8A02500EC5057 /* BWResearchTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BWResearchTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4F516FB1DB8A02500EC5057 /* BWResearchTableViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWResearchTableViewUITests.m; sourceTree = "<group>"; };
+		B4F516FD1DB8A02500EC5057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4F517091DB8A12A00EC5057 /* BWResearchTableView.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWResearchTableView.pch; sourceTree = "<group>"; };
+		B4F517151DB8A41000EC5057 /* BWBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWBaseController.h; sourceTree = "<group>"; };
+		B4F517161DB8A41000EC5057 /* BWBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWBaseController.m; sourceTree = "<group>"; };
+		B4F517181DB8A42700EC5057 /* BWHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWHomeController.h; sourceTree = "<group>"; };
+		B4F517191DB8A42700EC5057 /* BWHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWHomeController.m; sourceTree = "<group>"; };
+		B4F5171B1DB8A43E00EC5057 /* BWDynamicHeightController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWDynamicHeightController.h; sourceTree = "<group>"; };
+		B4F5171C1DB8A43E00EC5057 /* BWDynamicHeightController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWDynamicHeightController.m; sourceTree = "<group>"; };
+		B4F5171E1DB8A44B00EC5057 /* BWFlexibleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWFlexibleController.h; sourceTree = "<group>"; };
+		B4F5171F1DB8A44B00EC5057 /* BWFlexibleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWFlexibleController.m; sourceTree = "<group>"; };
+		B4F517211DB8A45700EC5057 /* BWHybridController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWHybridController.h; sourceTree = "<group>"; };
+		B4F517221DB8A45700EC5057 /* BWHybridController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWHybridController.m; sourceTree = "<group>"; };
+		B4F517241DB8AD7F00EC5057 /* BWDynamicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWDynamicCell.h; sourceTree = "<group>"; };
+		B4F517251DB8AD7F00EC5057 /* BWDynamicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWDynamicCell.m; sourceTree = "<group>"; };
+		FA917659E0823FB1DBF44E3F /* Pods-BWResearchTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWResearchTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWResearchTableView/Pods-BWResearchTableView.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B4F516D01DB8A02500EC5057 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFF842F101D77BDFB4E6E43B /* libPods-BWResearchTableView.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4F516E91DB8A02500EC5057 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4F516F41DB8A02500EC5057 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F03F396B53CDDC16F8D5B33 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA917659E0823FB1DBF44E3F /* Pods-BWResearchTableView.debug.xcconfig */,
+				A3DB9917A0CA1287E150F10C /* Pods-BWResearchTableView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B47C4F3C166AAC9D47E0891 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19EA00E895AECB64532477A3 /* libPods-BWResearchTableView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4F516CA1DB8A02400EC5057 = {
+			isa = PBXGroup;
+			children = (
+				B4F516D51DB8A02500EC5057 /* BWResearchTableView */,
+				B4F516EF1DB8A02500EC5057 /* BWResearchTableViewTests */,
+				B4F516FA1DB8A02500EC5057 /* BWResearchTableViewUITests */,
+				B4F516D41DB8A02500EC5057 /* Products */,
+				2F03F396B53CDDC16F8D5B33 /* Pods */,
+				5B47C4F3C166AAC9D47E0891 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B4F516D41DB8A02500EC5057 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4F516D31DB8A02500EC5057 /* BWResearchTableView.app */,
+				B4F516EC1DB8A02500EC5057 /* BWResearchTableViewTests.xctest */,
+				B4F516F71DB8A02500EC5057 /* BWResearchTableViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4F516D51DB8A02500EC5057 /* BWResearchTableView */ = {
+			isa = PBXGroup;
+			children = (
+				B4F516D91DB8A02500EC5057 /* AppDelegate.h */,
+				B4F516DA1DB8A02500EC5057 /* AppDelegate.m */,
+				B4F5170F1DB8A3F500EC5057 /* MVC */,
+				B4F516E21DB8A02500EC5057 /* Assets.xcassets */,
+				B4F516D61DB8A02500EC5057 /* Supporting Files */,
+			);
+			path = BWResearchTableView;
+			sourceTree = "<group>";
+		};
+		B4F516D61DB8A02500EC5057 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4F516D71DB8A02500EC5057 /* main.m */,
+				B4F516E71DB8A02500EC5057 /* Info.plist */,
+				B4F516E41DB8A02500EC5057 /* LaunchScreen.storyboard */,
+				B4F517091DB8A12A00EC5057 /* BWResearchTableView.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4F516EF1DB8A02500EC5057 /* BWResearchTableViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				B4F516F01DB8A02500EC5057 /* BWResearchTableViewTests.m */,
+				B4F516F21DB8A02500EC5057 /* Info.plist */,
+			);
+			path = BWResearchTableViewTests;
+			sourceTree = "<group>";
+		};
+		B4F516FA1DB8A02500EC5057 /* BWResearchTableViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B4F516FB1DB8A02500EC5057 /* BWResearchTableViewUITests.m */,
+				B4F516FD1DB8A02500EC5057 /* Info.plist */,
+			);
+			path = BWResearchTableViewUITests;
+			sourceTree = "<group>";
+		};
+		B4F5170F1DB8A3F500EC5057 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				B4F517101DB8A3F500EC5057 /* BaseController */,
+				B4F517131DB8A3F500EC5057 /* Home */,
+				B4F517111DB8A3F500EC5057 /* Dynamic Height */,
+				B4F517121DB8A3F500EC5057 /* Flexible */,
+				B4F517141DB8A3F500EC5057 /* Hybrid */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		B4F517101DB8A3F500EC5057 /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				B4F517151DB8A41000EC5057 /* BWBaseController.h */,
+				B4F517161DB8A41000EC5057 /* BWBaseController.m */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		B4F517111DB8A3F500EC5057 /* Dynamic Height */ = {
+			isa = PBXGroup;
+			children = (
+				B4F5171B1DB8A43E00EC5057 /* BWDynamicHeightController.h */,
+				B4F5171C1DB8A43E00EC5057 /* BWDynamicHeightController.m */,
+				B4F517241DB8AD7F00EC5057 /* BWDynamicCell.h */,
+				B4F517251DB8AD7F00EC5057 /* BWDynamicCell.m */,
+			);
+			path = "Dynamic Height";
+			sourceTree = "<group>";
+		};
+		B4F517121DB8A3F500EC5057 /* Flexible */ = {
+			isa = PBXGroup;
+			children = (
+				B4F5171E1DB8A44B00EC5057 /* BWFlexibleController.h */,
+				B4F5171F1DB8A44B00EC5057 /* BWFlexibleController.m */,
+			);
+			path = Flexible;
+			sourceTree = "<group>";
+		};
+		B4F517131DB8A3F500EC5057 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B4F517181DB8A42700EC5057 /* BWHomeController.h */,
+				B4F517191DB8A42700EC5057 /* BWHomeController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B4F517141DB8A3F500EC5057 /* Hybrid */ = {
+			isa = PBXGroup;
+			children = (
+				B4F517211DB8A45700EC5057 /* BWHybridController.h */,
+				B4F517221DB8A45700EC5057 /* BWHybridController.m */,
+			);
+			path = Hybrid;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B4F516D21DB8A02500EC5057 /* BWResearchTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4F517001DB8A02500EC5057 /* Build configuration list for PBXNativeTarget "BWResearchTableView" */;
+			buildPhases = (
+				5C00E934424BCA50B7BD1D26 /* [CP] Check Pods Manifest.lock */,
+				B4F516CF1DB8A02500EC5057 /* Sources */,
+				B4F516D01DB8A02500EC5057 /* Frameworks */,
+				B4F516D11DB8A02500EC5057 /* Resources */,
+				44A967C0941B0EC608879683 /* [CP] Embed Pods Frameworks */,
+				7A4ADE17149B7D1DD6D65703 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BWResearchTableView;
+			productName = BWResearchTableView;
+			productReference = B4F516D31DB8A02500EC5057 /* BWResearchTableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B4F516EB1DB8A02500EC5057 /* BWResearchTableViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4F517031DB8A02500EC5057 /* Build configuration list for PBXNativeTarget "BWResearchTableViewTests" */;
+			buildPhases = (
+				B4F516E81DB8A02500EC5057 /* Sources */,
+				B4F516E91DB8A02500EC5057 /* Frameworks */,
+				B4F516EA1DB8A02500EC5057 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4F516EE1DB8A02500EC5057 /* PBXTargetDependency */,
+			);
+			name = BWResearchTableViewTests;
+			productName = BWResearchTableViewTests;
+			productReference = B4F516EC1DB8A02500EC5057 /* BWResearchTableViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B4F516F61DB8A02500EC5057 /* BWResearchTableViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4F517061DB8A02500EC5057 /* Build configuration list for PBXNativeTarget "BWResearchTableViewUITests" */;
+			buildPhases = (
+				B4F516F31DB8A02500EC5057 /* Sources */,
+				B4F516F41DB8A02500EC5057 /* Frameworks */,
+				B4F516F51DB8A02500EC5057 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4F516F91DB8A02500EC5057 /* PBXTargetDependency */,
+			);
+			name = BWResearchTableViewUITests;
+			productName = BWResearchTableViewUITests;
+			productReference = B4F516F71DB8A02500EC5057 /* BWResearchTableViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B4F516CB1DB8A02400EC5057 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = BobWongStudio;
+				TargetAttributes = {
+					B4F516D21DB8A02500EC5057 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					B4F516EB1DB8A02500EC5057 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = B4F516D21DB8A02500EC5057;
+					};
+					B4F516F61DB8A02500EC5057 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = B4F516D21DB8A02500EC5057;
+					};
+				};
+			};
+			buildConfigurationList = B4F516CE1DB8A02400EC5057 /* Build configuration list for PBXProject "BWResearchTableView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B4F516CA1DB8A02400EC5057;
+			productRefGroup = B4F516D41DB8A02500EC5057 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4F516D21DB8A02500EC5057 /* BWResearchTableView */,
+				B4F516EB1DB8A02500EC5057 /* BWResearchTableViewTests */,
+				B4F516F61DB8A02500EC5057 /* BWResearchTableViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B4F516D11DB8A02500EC5057 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F516E61DB8A02500EC5057 /* LaunchScreen.storyboard in Resources */,
+				B4F516E31DB8A02500EC5057 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4F516EA1DB8A02500EC5057 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4F516F51DB8A02500EC5057 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44A967C0941B0EC608879683 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BWResearchTableView/Pods-BWResearchTableView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C00E934424BCA50B7BD1D26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7A4ADE17149B7D1DD6D65703 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BWResearchTableView/Pods-BWResearchTableView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B4F516CF1DB8A02500EC5057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F517261DB8AD7F00EC5057 /* BWDynamicCell.m in Sources */,
+				B4F516DB1DB8A02500EC5057 /* AppDelegate.m in Sources */,
+				B4F517201DB8A44B00EC5057 /* BWFlexibleController.m in Sources */,
+				B4F516D81DB8A02500EC5057 /* main.m in Sources */,
+				B4F5171D1DB8A43E00EC5057 /* BWDynamicHeightController.m in Sources */,
+				B4F517171DB8A41000EC5057 /* BWBaseController.m in Sources */,
+				B4F5171A1DB8A42700EC5057 /* BWHomeController.m in Sources */,
+				B4F517231DB8A45700EC5057 /* BWHybridController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4F516E81DB8A02500EC5057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F516F11DB8A02500EC5057 /* BWResearchTableViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4F516F31DB8A02500EC5057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F516FC1DB8A02500EC5057 /* BWResearchTableViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B4F516EE1DB8A02500EC5057 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4F516D21DB8A02500EC5057 /* BWResearchTableView */;
+			targetProxy = B4F516ED1DB8A02500EC5057 /* PBXContainerItemProxy */;
+		};
+		B4F516F91DB8A02500EC5057 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4F516D21DB8A02500EC5057 /* BWResearchTableView */;
+			targetProxy = B4F516F81DB8A02500EC5057 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B4F516E41DB8A02500EC5057 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4F516E51DB8A02500EC5057 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B4F516FE1DB8A02500EC5057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B4F516FF1DB8A02500EC5057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B4F517011DB8A02500EC5057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA917659E0823FB1DBF44E3F /* Pods-BWResearchTableView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = BWResearchTableView/BWResearchTableView.pch;
+				INFOPLIST_FILE = BWResearchTableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bws.BWResearchTableView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B4F517021DB8A02500EC5057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3DB9917A0CA1287E150F10C /* Pods-BWResearchTableView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = BWResearchTableView/BWResearchTableView.pch;
+				INFOPLIST_FILE = BWResearchTableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bws.BWResearchTableView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B4F517041DB8A02500EC5057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BWResearchTableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bws.BWResearchTableViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BWResearchTableView.app/BWResearchTableView";
+			};
+			name = Debug;
+		};
+		B4F517051DB8A02500EC5057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BWResearchTableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bws.BWResearchTableViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BWResearchTableView.app/BWResearchTableView";
+			};
+			name = Release;
+		};
+		B4F517071DB8A02500EC5057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BWResearchTableViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bws.BWResearchTableViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BWResearchTableView;
+			};
+			name = Debug;
+		};
+		B4F517081DB8A02500EC5057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BWResearchTableViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bws.BWResearchTableViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BWResearchTableView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B4F516CE1DB8A02400EC5057 /* Build configuration list for PBXProject "BWResearchTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4F516FE1DB8A02500EC5057 /* Debug */,
+				B4F516FF1DB8A02500EC5057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4F517001DB8A02500EC5057 /* Build configuration list for PBXNativeTarget "BWResearchTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4F517011DB8A02500EC5057 /* Debug */,
+				B4F517021DB8A02500EC5057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4F517031DB8A02500EC5057 /* Build configuration list for PBXNativeTarget "BWResearchTableViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4F517041DB8A02500EC5057 /* Debug */,
+				B4F517051DB8A02500EC5057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4F517061DB8A02500EC5057 /* Build configuration list for PBXNativeTarget "BWResearchTableViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4F517071DB8A02500EC5057 /* Debug */,
+				B4F517081DB8A02500EC5057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B4F516CB1DB8A02400EC5057 /* Project object */;
+}
