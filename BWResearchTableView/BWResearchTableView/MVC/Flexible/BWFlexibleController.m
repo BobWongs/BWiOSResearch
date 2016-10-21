@@ -7,31 +7,156 @@
 //
 
 #import "BWFlexibleController.h"
+#import "BWFlexibleCell.h"
 
-@interface BWFlexibleController ()
+#define HEIGHT_SHORT 120
+#define HEIGHT_NORMAL 120
+
+#define kHeightShort @"kHeightShort"
+#define kHeightNormal @"kHeightNormal"
+#define kIsUnfold @"kIsUnfold"
+
+@interface BWFlexibleController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) BWFlexibleCell *cellToCalculate;
+
+@property (nonatomic, strong) NSMutableArray *dataSource;
+@property (nonatomic, strong) NSMutableArray *arrayHeight;
 
 @end
 
 @implementation BWFlexibleController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    _dataSource = [NSMutableArray array];
+    NSString *text = @"Textgeiniwan123";
+    NSString *strToAdd = @"";
+    for (NSInteger index = 0; index < 50; index++) {
+        if (index == 0) {
+            strToAdd = text;
+        } else {
+            strToAdd = [NSString stringWithFormat:@"%@\n%@", strToAdd, text];
+        }
+        
+        [_dataSource addObject:strToAdd];
+    }
+    
+    _arrayHeight = [NSMutableArray array];
+//    for (NSInteger index = 0; index < _dataSource.count; index++) {
+//        [_arrayHeight addObject:@(HEIGHT_NORMAL)];
+//    }
+    [self calculateCellHeight];
+    
+    [self setUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setUI
+{
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.tableView = tableView;
+    tableView.dataSource = self;
+    tableView.delegate = self;
+    [self.view addSubview:tableView];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)calculateCellHeight {
+    if (!_cellToCalculate) {
+        _cellToCalculate = [[BWFlexibleCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+        [_cellToCalculate.lbText mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(10);
+            make.right.mas_equalTo(-10);
+            make.top.mas_equalTo(10);
+        }];
+    }
+    
+    for (NSInteger index = 0 ; index < _dataSource.count; index++) {
+        _cellToCalculate.lbText.text = _dataSource[index];
+        
+        CGFloat height = [_cellToCalculate.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+        height += 1.0;  // 加上线条高度
+        
+        CGFloat height_short = height >= HEIGHT_SHORT ? HEIGHT_SHORT : height;
+        
+        NSDictionary *dict = @{
+                               kHeightShort: @(height_short),
+                               kHeightNormal: @(height),
+                               kIsUnfold: @(NO)
+                               };
+        NSMutableDictionary *dictMutable = [NSMutableDictionary dictionaryWithDictionary:dict];
+        [_arrayHeight addObject:dictMutable];
+    }
+    
+    NSLog(@"");
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _dataSource ? _dataSource.count : 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellId = @"Cell";
+    BWFlexibleCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (!cell) {
+        cell = [[BWFlexibleCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        cell.clipsToBounds = YES;
+    }
+    
+    NSInteger row = indexPath.row;
+    cell.lbText.text = _dataSource[row];
+    
+    BW_WEAK_SELF;
+    cell.blockChange = ^{
+        BW_STRONG_SELF;
+        
+        NSMutableDictionary *dictMuta = weakSelf.arrayHeight[row];
+        BOOL isUnfold = ![dictMuta[kIsUnfold] boolValue];
+        dictMuta[kIsUnfold] = @(isUnfold);
+        
+//        [strongSelf.tableView reloadData];
+//        [strongSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+        [strongSelf.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    };
+    
+    NSMutableDictionary *dictMuta = _arrayHeight[row];
+    if ([[self class] isEqualFloatA:[dictMuta[kHeightNormal] floatValue] floatB:[dictMuta[kHeightShort] floatValue]]) {
+        [cell setTextLabelUnfold:YES];
+    } else {
+        [cell setTextLabelUnfold:[dictMuta[kIsUnfold] boolValue]];
+    }
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *dict = _arrayHeight[indexPath.row];
+    CGFloat height = [dict[kIsUnfold] boolValue] ? [dict[kHeightNormal] floatValue] : [dict[kHeightShort] floatValue];
+    
+    return height;
+}
+
+#pragma mark - 比较浮点数的大小
+
+bool float_equals(float a,float b) {
+    if (fabsf(a - b) <= 1e-6) return true;
+    
+    return false;
+}
+
++ (BOOL)isEqualFloatA:(float)a
+               floatB:(float)b {
+    NSNumber *numA = [NSNumber numberWithFloat:a];
+    NSNumber *numB = [NSNumber numberWithFloat:b];
+    
+    if ([numA compare:numB] == NSOrderedSame) {
+        return YES;
+    }
+    return NO;
+}
 
 @end

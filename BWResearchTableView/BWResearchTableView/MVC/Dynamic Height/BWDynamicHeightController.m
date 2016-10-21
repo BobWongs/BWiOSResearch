@@ -27,6 +27,7 @@
     [super viewDidLoad];
     
     _dataSource = [NSMutableArray array];
+    _arrayHeight = [NSMutableArray array];
     NSString *text = @"Textgeiniwan123";
     NSString *strToAdd = @"";
     for (NSInteger index = 0; index < 50; index++) {
@@ -39,29 +40,33 @@
         [_dataSource addObject:strToAdd];
     }
     
-    
-    
-    _cellToCalculate = [[BWDynamicCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-    
-    
-    //    [cell setNeedsUpdateConstraints];
-    //    [cell updateConstraintsIfNeeded];
-    //    [cell setNeedsLayout];
-    //    [cell layoutIfNeeded];
-    //    [cell layoutSubviews];
-    
-    CGFloat height = [_cellToCalculate.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
-    height += 1.0;  // 加上线条高度
-    
+    [self calculateCellHeight];
     [self setUI];
 }
 
 - (void)calculateCellHeight {
+    if (!_cellToCalculate) {
+        _cellToCalculate = [[BWDynamicCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    }
     
+    for (NSInteger index = 0 ; index < _dataSource.count; index++) {
+        [self setCellUI:_cellToCalculate WithModel:_dataSource[index]];
+        
+//        [_cellToCalculate setNeedsUpdateConstraints];
+//        [_cellToCalculate updateConstraintsIfNeeded];
+//        [_cellToCalculate setNeedsLayout];
+//        [_cellToCalculate layoutIfNeeded];
+//        [_cellToCalculate layoutSubviews];
+        
+        CGFloat height = [_cellToCalculate.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+        height += 1.0;  // 加上线条高度
+        [_arrayHeight addObject:@(height)];
+    }
 }
 
-- (void)setCellUIWithModel:(NSString *)string {
-    
+- (void)setCellUI:(BWDynamicCell *)cell
+        WithModel:(NSString *)string {
+    cell.lbText.text = string;
 }
 
 - (void)setUI
@@ -90,9 +95,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
-    return height;
+    return [_arrayHeight[indexPath.row] floatValue];
 }
 
 @end

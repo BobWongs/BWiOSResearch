@@ -25,6 +25,7 @@
 {
     [super viewDidLoad];
     
+    self.title = @"Home";
     _dataSource = @[bw_NSStringFromClass(BWDynamicHeightController), bw_NSStringFromClass(BWFlexibleController), bw_NSStringFromClass(BWHybridController)];
     
     [self setUI];

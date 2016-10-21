@@ -19,6 +19,7 @@
 		B4F517201DB8A44B00EC5057 /* BWFlexibleController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F5171F1DB8A44B00EC5057 /* BWFlexibleController.m */; };
 		B4F517231DB8A45700EC5057 /* BWHybridController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F517221DB8A45700EC5057 /* BWHybridController.m */; };
 		B4F517261DB8AD7F00EC5057 /* BWDynamicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F517251DB8AD7F00EC5057 /* BWDynamicCell.m */; };
+		B4F517291DB9B51D00EC5057 /* BWFlexibleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F517281DB9B51D00EC5057 /* BWFlexibleCell.m */; };
 		FFF842F101D77BDFB4E6E43B /* libPods-BWResearchTableView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EA00E895AECB64532477A3 /* libPods-BWResearchTableView.a */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,8 @@
 		B4F517221DB8A45700EC5057 /* BWHybridController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWHybridController.m; sourceTree = "<group>"; };
 		B4F517241DB8AD7F00EC5057 /* BWDynamicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWDynamicCell.h; sourceTree = "<group>"; };
 		B4F517251DB8AD7F00EC5057 /* BWDynamicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWDynamicCell.m; sourceTree = "<group>"; };
+		B4F517271DB9B51D00EC5057 /* BWFlexibleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWFlexibleCell.h; sourceTree = "<group>"; };
+		B4F517281DB9B51D00EC5057 /* BWFlexibleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWFlexibleCell.m; sourceTree = "<group>"; };
 		FA917659E0823FB1DBF44E3F /* Pods-BWResearchTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWResearchTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWResearchTableView/Pods-BWResearchTableView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -214,6 +217,8 @@
 			children = (
 				B4F5171E1DB8A44B00EC5057 /* BWFlexibleController.h */,
 				B4F5171F1DB8A44B00EC5057 /* BWFlexibleController.m */,
+				B4F517271DB9B51D00EC5057 /* BWFlexibleCell.h */,
+				B4F517281DB9B51D00EC5057 /* BWFlexibleCell.m */,
 			);
 			path = Flexible;
 			sourceTree = "<group>";
@@ -418,6 +423,7 @@
 			files = (
 				B4F517261DB8AD7F00EC5057 /* BWDynamicCell.m in Sources */,
 				B4F516DB1DB8A02500EC5057 /* AppDelegate.m in Sources */,
+				B4F517291DB9B51D00EC5057 /* BWFlexibleCell.m in Sources */,
 				B4F517201DB8A44B00EC5057 /* BWFlexibleController.m in Sources */,
 				B4F516D81DB8A02500EC5057 /* main.m in Sources */,
 				B4F5171D1DB8A43E00EC5057 /* BWDynamicHeightController.m in Sources */,
