@@ -10,7 +10,6 @@
 #import "BWFlexibleCell.h"
 
 #define HEIGHT_SHORT 120
-#define HEIGHT_NORMAL 120
 
 #define kHeightShort @"kHeightShort"
 #define kHeightNormal @"kHeightNormal"
@@ -46,9 +45,6 @@
     }
     
     _arrayHeight = [NSMutableArray array];
-//    for (NSInteger index = 0; index < _dataSource.count; index++) {
-//        [_arrayHeight addObject:@(HEIGHT_NORMAL)];
-//    }
     [self calculateCellHeight];
     
     [self setUI];
@@ -66,11 +62,7 @@
 - (void)calculateCellHeight {
     if (!_cellToCalculate) {
         _cellToCalculate = [[BWFlexibleCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-        [_cellToCalculate.lbText mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(10);
-            make.right.mas_equalTo(-10);
-            make.top.mas_equalTo(10);
-        }];
+        [_cellToCalculate setTextLabelUnfold:YES];
     }
     
     for (NSInteger index = 0 ; index < _dataSource.count; index++) {
@@ -89,8 +81,6 @@
         NSMutableDictionary *dictMutable = [NSMutableDictionary dictionaryWithDictionary:dict];
         [_arrayHeight addObject:dictMutable];
     }
-    
-    NSLog(@"");
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -118,9 +108,7 @@
         BOOL isUnfold = ![dictMuta[kIsUnfold] boolValue];
         dictMuta[kIsUnfold] = @(isUnfold);
         
-//        [strongSelf.tableView reloadData];
-//        [strongSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
-        [strongSelf.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [strongSelf.tableView reloadData];
     };
     
     NSMutableDictionary *dictMuta = _arrayHeight[row];
