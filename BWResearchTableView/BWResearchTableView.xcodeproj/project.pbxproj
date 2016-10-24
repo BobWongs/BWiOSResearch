@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B48102E21DBDF05000BE0E17 /* BWSortByPinyinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B48102E11DBDF04F00BE0E17 /* BWSortByPinyinVC.m */; };
+		B48102E41DBDF0BB00BE0E17 /* pinyin_source.plist in Resources */ = {isa = PBXBuildFile; fileRef = B48102E31DBDF0BB00BE0E17 /* pinyin_source.plist */; };
 		B4F516D81DB8A02500EC5057 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F516D71DB8A02500EC5057 /* main.m */; };
 		B4F516DB1DB8A02500EC5057 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F516DA1DB8A02500EC5057 /* AppDelegate.m */; };
 		B4F516E31DB8A02500EC5057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F516E21DB8A02500EC5057 /* Assets.xcassets */; };
@@ -43,6 +45,9 @@
 /* Begin PBXFileReference section */
 		19EA00E895AECB64532477A3 /* libPods-BWResearchTableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWResearchTableView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DB9917A0CA1287E150F10C /* Pods-BWResearchTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWResearchTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWResearchTableView/Pods-BWResearchTableView.release.xcconfig"; sourceTree = "<group>"; };
+		B48102E01DBDF04F00BE0E17 /* BWSortByPinyinVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSortByPinyinVC.h; sourceTree = "<group>"; };
+		B48102E11DBDF04F00BE0E17 /* BWSortByPinyinVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSortByPinyinVC.m; sourceTree = "<group>"; };
+		B48102E31DBDF0BB00BE0E17 /* pinyin_source.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pinyin_source.plist; sourceTree = "<group>"; };
 		B4F516D31DB8A02500EC5057 /* BWResearchTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWResearchTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F516D71DB8A02500EC5057 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4F516D91DB8A02500EC5057 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +122,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B48102DF1DBDF02600BE0E17 /* SortByPinyin */ = {
+			isa = PBXGroup;
+			children = (
+				B48102E01DBDF04F00BE0E17 /* BWSortByPinyinVC.h */,
+				B48102E11DBDF04F00BE0E17 /* BWSortByPinyinVC.m */,
+				B48102E31DBDF0BB00BE0E17 /* pinyin_source.plist */,
+			);
+			path = SortByPinyin;
+			sourceTree = "<group>";
+		};
 		B4F516CA1DB8A02400EC5057 = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +203,7 @@
 				B4F517111DB8A3F500EC5057 /* Dynamic Height */,
 				B4F517121DB8A3F500EC5057 /* Flexible */,
 				B4F517141DB8A3F500EC5057 /* Hybrid */,
+				B48102DF1DBDF02600BE0E17 /* SortByPinyin */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -349,6 +365,7 @@
 			files = (
 				B4F516E61DB8A02500EC5057 /* LaunchScreen.storyboard in Resources */,
 				B4F516E31DB8A02500EC5057 /* Assets.xcassets in Resources */,
+				B48102E41DBDF0BB00BE0E17 /* pinyin_source.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +441,7 @@
 				B4F517261DB8AD7F00EC5057 /* BWDynamicCell.m in Sources */,
 				B4F516DB1DB8A02500EC5057 /* AppDelegate.m in Sources */,
 				B4F517291DB9B51D00EC5057 /* BWFlexibleCell.m in Sources */,
+				B48102E21DBDF05000BE0E17 /* BWSortByPinyinVC.m in Sources */,
 				B4F517201DB8A44B00EC5057 /* BWFlexibleController.m in Sources */,
 				B4F516D81DB8A02500EC5057 /* main.m in Sources */,
 				B4F5171D1DB8A43E00EC5057 /* BWDynamicHeightController.m in Sources */,

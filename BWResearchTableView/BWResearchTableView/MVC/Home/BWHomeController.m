@@ -10,6 +10,7 @@
 #import "BWDynamicHeightController.h"
 #import "BWFlexibleController.h"
 #import "BWHybridController.h"
+#import "BWSortByPinyinVC.h"
 
 #define bw_NSStringFromClass(Class) NSStringFromClass([Class class])
 
@@ -26,7 +27,11 @@
     [super viewDidLoad];
     
     self.title = @"Home";
-    _dataSource = @[bw_NSStringFromClass(BWDynamicHeightController), bw_NSStringFromClass(BWFlexibleController), bw_NSStringFromClass(BWHybridController)];
+    _dataSource = @[bw_NSStringFromClass(BWDynamicHeightController),
+                    bw_NSStringFromClass(BWFlexibleController),
+                    bw_NSStringFromClass(BWHybridController),
+                    bw_NSStringFromClass(BWSortByPinyinVC)
+                    ];
     
     [self setUI];
 }

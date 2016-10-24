@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>阿白</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>笔笔</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>币</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>暂时</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>哦了</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>家里</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>渴望</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>一直</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>发现</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>头发</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>汉字</string>
+	</dict>
+</array>
+</plist>
