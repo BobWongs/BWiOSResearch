@@ -9,12 +9,18 @@
 #import "BWSortByPinyinVC.h"
 
 #define kName @"name"
+#define kFirstChar @"first_char"
+#define kValue @"value"
+
+#define weakRef(object) __weak typeof(object) weak##object = object
+#define strongRef(object)  __strong typeof(object) strong##object = object
 
 @interface BWSortByPinyinVC () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSArray *dataSource;  ///< 原数据
 @property (nonatomic, strong) NSMutableDictionary *dictSorted;  ///< 排序后的Dictionary数据
 @property (nonatomic, strong) NSMutableArray *arraySorted;  ///< 排序后的Array数据源，TableView的数据源
+@property (nonatomic, strong) NSMutableArray *arrayFirstChar;  ///< 首字母Array
 
 @end
 
@@ -27,8 +33,20 @@
     self.title = @"Home";
     _dataSource = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"pinyin_source" ofType:@"plist"]];
     
+    [self setSortedData];
+    
+//    NSLog(@"sorted array: %@", _arraySorted);
+//    NSLog(@"sorted dict: %@", _dictSorted);
+//    NSLog(@"pinyin: %@, first character: %@", [[self class] bw_pinyinFromString:@"王"], [[self class] bw_firstPinyinUpperCaseCharacterFromString:@"王"]);
+    
+    [self setUI];
+}
+
+// 设置排序数据
+- (void)setSortedData {
     _dictSorted = [NSMutableDictionary dictionary];
     _arraySorted = [NSMutableArray array];
+    _arrayFirstChar = [NSMutableArray array];
     
     for (NSDictionary *dict in _dataSource) {
         NSString *name = dict[kName];
@@ -56,11 +74,50 @@
         }
     }
     
-    NSLog(@"sorted dict: %@", _dictSorted);
+    // 对dictSorted的values进行按顺序添加到arraySorted上
+    for (NSString *key in _dictSorted.allKeys) {
+        NSArray *array = _dictSorted[key];
+        
+        // 没有则直接添加
+        if (_arraySorted.count == 0) {
+            [_arraySorted addObject:[self dictionaryAddToSortedWithFirstChar:key value:array]];
+            continue ;
+        }
+        
+        BOOL isAdded = NO;  // 是否已经添加
+        // 插入排序
+        for (NSInteger index = 0; index < _arraySorted.count; index++) {
+            NSDictionary *dictInIndex = _arraySorted[index];
+            NSString *firstChar = dictInIndex[kFirstChar];
+            
+            if ([key compare:firstChar] == NSOrderedAscending) {
+                [_arraySorted insertObject:[self dictionaryAddToSortedWithFirstChar:key value:array] atIndex:index];
+                isAdded = YES;
+                break;
+            }
+        }
+        
+        if (isAdded) {
+            continue ;
+        }
+        
+        [_arraySorted addObject:[self dictionaryAddToSortedWithFirstChar:key value:array]];  // 添加到最末尾
+    }
     
-    NSLog(@"pinyin: %@, first character: %@", [[self class] bw_pinyinFromString:@"王"], [[self class] bw_firstPinyinUpperCaseCharacterFromString:@"王"]);
     
-    [self setUI];
+    // 首字母数组的生成
+    for (NSInteger index = 0; index < _arraySorted.count; index++) {
+        NSDictionary *dict = _arraySorted[index];
+        [_arrayFirstChar addObject:dict[kFirstChar]];
+    }
+}
+
+- (NSDictionary *)dictionaryAddToSortedWithFirstChar:(id)firstChar value:(id)array {
+    NSDictionary *dictToAdd = @{
+                                kFirstChar: firstChar,
+                                kValue: array
+                                };
+    return dictToAdd;
 }
 
 - (void)setUI
@@ -68,6 +125,9 @@
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     tableView.dataSource = self;
     tableView.delegate = self;
+    tableView.sectionIndexColor = [UIColor orangeColor];  // 索引Title的颜色
+    tableView.sectionIndexBackgroundColor = [UIColor clearColor];  // 索引时候的背景色
+    tableView.sectionIndexTrackingBackgroundColor = [UIColor clearColor];  // 未索引时候的背景色
     [self.view addSubview:tableView];
 }
 
@@ -77,7 +137,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _dataSource ? _dataSource.count : 0;
+    return [_arraySorted[section][kValue] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -87,19 +147,34 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
-    cell.textLabel.text = _dataSource[indexPath.row];
+    NSInteger section = indexPath.section, row = indexPath.row;
+    NSArray *array = _arraySorted[section][kValue];
+    cell.textLabel.text = array[row][kName];
     
     return cell;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return _arraySorted[section][kFirstChar];
+}
+
+- (nullable NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return _arrayFirstChar;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+//    for (NSString *string in _arrayFirstChar) {
+//        if ([string isEqualToString:title]) {
+//            return [_arrayFirstChar indexOfObject:string];
+//        }
+//    }
+//    return 0;
+    
+    return index;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    
-    NSString *strClass = _dataSource[indexPath.row];
-    Class class = NSClassFromString(strClass);
-    UIViewController *vc = [[class alloc] init];
-    vc.title = strClass;
-    [self.navigationController pushViewController:vc animated:YES];
 }
 
 + (NSString *)bw_pinyinFromString:(NSString *)string {
