@@ -11,3 +11,10 @@
 @interface BWHomeController : BWBaseController
 
 @end
+
+
+@interface BWCustomHeaderView : UITableViewHeaderFooterView
+
+@property (nonatomic, strong) UILabel *lbLeft;
+
+@end

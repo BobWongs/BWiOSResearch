@@ -71,4 +71,44 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 50;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    static NSString *headerId = @"Header";
+    BWCustomHeaderView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:headerId];
+    if (!headerView) {
+        headerView = [[BWCustomHeaderView alloc] initWithReuseIdentifier:headerId];
+    }
+    
+    headerView.lbLeft.text = @"日期";
+    
+    return headerView;
+}
+
+@end
+
+
+@implementation BWCustomHeaderView
+
+- (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier {
+    if (self = [super initWithReuseIdentifier:reuseIdentifier]) {
+//        CGRect frame = self.frame;
+//        frame.size.width = [UIScreen mainScreen].bounds.size.width;
+//        self.frame = frame;
+        
+        self.backgroundColor = [UIColor grayColor];
+        
+        _lbLeft = [[UILabel alloc] init];
+        _lbLeft.font = [UIFont systemFontOfSize:12.0];
+        [self.contentView addSubview:_lbLeft];
+        
+        [_lbLeft mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.top.bottom.mas_equalTo(0);
+        }];
+    }
+    return self;
+}
+
 @end
