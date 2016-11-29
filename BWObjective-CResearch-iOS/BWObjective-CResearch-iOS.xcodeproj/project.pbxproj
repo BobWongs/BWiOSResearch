@@ -13,6 +13,7 @@
 		B443A1E91D548382003D66C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B443A1E71D548382003D66C5 /* LaunchScreen.storyboard */; };
 		B443A1F41D548382003D66C5 /* BWObjective_CResearch_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B443A1F31D548382003D66C5 /* BWObjective_CResearch_iOSTests.m */; };
 		B443A1FF1D548382003D66C5 /* BWObjective_CResearch_iOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B443A1FE1D548382003D66C5 /* BWObjective_CResearch_iOSUITests.m */; };
+		B461B6721DDD50FB00FB7BC1 /* BWResearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B461B6711DDD50FB00FB7BC1 /* BWResearchVC.m */; };
 		B46B25521DB5DCD800B9FF54 /* BWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B25511DB5DCD800B9FF54 /* BWBaseViewController.m */; };
 		B46B25551DB5ED6500B9FF54 /* BWBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B25541DB5ED6500B9FF54 /* BWBaseNavigationController.m */; };
 		B46B25601DB5EDDD00B9FF54 /* BWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B25591DB5EDDD00B9FF54 /* BWHomeViewController.m */; };
@@ -66,6 +67,8 @@
 		B443A1FA1D548382003D66C5 /* BWObjective-CResearch-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BWObjective-CResearch-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B443A1FE1D548382003D66C5 /* BWObjective_CResearch_iOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWObjective_CResearch_iOSUITests.m; sourceTree = "<group>"; };
 		B443A2001D548382003D66C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B461B6701DDD50FB00FB7BC1 /* BWResearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearchVC.h; sourceTree = "<group>"; };
+		B461B6711DDD50FB00FB7BC1 /* BWResearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearchVC.m; sourceTree = "<group>"; };
 		B46B25501DB5DCD800B9FF54 /* BWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWBaseViewController.h; sourceTree = "<group>"; };
 		B46B25511DB5DCD800B9FF54 /* BWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWBaseViewController.m; sourceTree = "<group>"; };
 		B46B25531DB5ED6500B9FF54 /* BWBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWBaseNavigationController.h; sourceTree = "<group>"; };
@@ -193,6 +196,15 @@
 			path = "BWObjective-CResearch-iOSUITests";
 			sourceTree = "<group>";
 		};
+		B461B66F1DDD50D300FB7BC1 /* Research */ = {
+			isa = PBXGroup;
+			children = (
+				B461B6701DDD50FB00FB7BC1 /* BWResearchVC.h */,
+				B461B6711DDD50FB00FB7BC1 /* BWResearchVC.m */,
+			);
+			path = Research;
+			sourceTree = "<group>";
+		};
 		B46B254F1DB5DCC500B9FF54 /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +326,7 @@
 				B46B254F1DB5DCC500B9FF54 /* BaseController */,
 				B46B25561DB5EDDD00B9FF54 /* Home */,
 				B46B25641DB5EE0500B9FF54 /* Me */,
+				B461B66F1DDD50D300FB7BC1 /* Research */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -486,6 +499,7 @@
 				B46B25621DB5EDDD00B9FF54 /* BWHomeTableViewCell.m in Sources */,
 				B4B631321DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m in Sources */,
 				B4AC5FC01DB4D01200D880FB /* UIViewController+BWExtension.m in Sources */,
+				B461B6721DDD50FB00FB7BC1 /* BWResearchVC.m in Sources */,
 				B46B25551DB5ED6500B9FF54 /* BWBaseNavigationController.m in Sources */,
 				B4B631311DAE384F00DF0907 /* UITableViewCell+JZExtension.m in Sources */,
 				B4AC5FB71DB4CC5200D880FB /* _JZValue.m in Sources */,

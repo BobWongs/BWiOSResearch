@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '95D2F69AF1AEA1FE479C74518A57B32B'
+               BlueprintIdentifier = 'D18BF1CDD373BAB68A94827AAFFD5966'
                BlueprintName = 'Pods-BWResearchTableView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-BWResearchTableView.a'>

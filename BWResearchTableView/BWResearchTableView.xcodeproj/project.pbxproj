@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B452B7FD1DED77CF00CA97FE /* BWLayoutXibVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B452B7F91DED77CF00CA97FE /* BWLayoutXibVC.m */; };
+		B452B7FE1DED77CF00CA97FE /* BWLayoutXibVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B452B7FA1DED77CF00CA97FE /* BWLayoutXibVC.xib */; };
+		B452B8021DED7C8B00CA97FE /* BWLayoutXibCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B452B8001DED7C8B00CA97FE /* BWLayoutXibCell.m */; };
+		B452B8031DED7C8B00CA97FE /* BWLayoutXibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B452B8011DED7C8B00CA97FE /* BWLayoutXibCell.xib */; };
 		B48102E21DBDF05000BE0E17 /* BWSortByPinyinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B48102E11DBDF04F00BE0E17 /* BWSortByPinyinVC.m */; };
 		B48102E41DBDF0BB00BE0E17 /* pinyin_source.plist in Resources */ = {isa = PBXBuildFile; fileRef = B48102E31DBDF0BB00BE0E17 /* pinyin_source.plist */; };
 		B4F516D81DB8A02500EC5057 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F516D71DB8A02500EC5057 /* main.m */; };
@@ -45,6 +49,12 @@
 /* Begin PBXFileReference section */
 		19EA00E895AECB64532477A3 /* libPods-BWResearchTableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWResearchTableView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DB9917A0CA1287E150F10C /* Pods-BWResearchTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWResearchTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWResearchTableView/Pods-BWResearchTableView.release.xcconfig"; sourceTree = "<group>"; };
+		B452B7F81DED77CF00CA97FE /* BWLayoutXibVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLayoutXibVC.h; sourceTree = "<group>"; };
+		B452B7F91DED77CF00CA97FE /* BWLayoutXibVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLayoutXibVC.m; sourceTree = "<group>"; };
+		B452B7FA1DED77CF00CA97FE /* BWLayoutXibVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWLayoutXibVC.xib; sourceTree = "<group>"; };
+		B452B7FF1DED7C8B00CA97FE /* BWLayoutXibCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLayoutXibCell.h; sourceTree = "<group>"; };
+		B452B8001DED7C8B00CA97FE /* BWLayoutXibCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLayoutXibCell.m; sourceTree = "<group>"; };
+		B452B8011DED7C8B00CA97FE /* BWLayoutXibCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWLayoutXibCell.xib; sourceTree = "<group>"; };
 		B48102E01DBDF04F00BE0E17 /* BWSortByPinyinVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSortByPinyinVC.h; sourceTree = "<group>"; };
 		B48102E11DBDF04F00BE0E17 /* BWSortByPinyinVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSortByPinyinVC.m; sourceTree = "<group>"; };
 		B48102E31DBDF0BB00BE0E17 /* pinyin_source.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pinyin_source.plist; sourceTree = "<group>"; };
@@ -120,6 +130,75 @@
 				19EA00E895AECB64532477A3 /* libPods-BWResearchTableView.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B452B7ED1DED775400CA97FE /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				B452B7F11DED775400CA97FE /* Xib */,
+				B452B7EE1DED775400CA97FE /* iOS */,
+				B452B7EF1DED775400CA97FE /* Masonry */,
+				B452B7F01DED775400CA97FE /* Mine */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		B452B7EE1DED775400CA97FE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		B452B7EF1DED775400CA97FE /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		B452B7F01DED775400CA97FE /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		B452B7F11DED775400CA97FE /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				B452B7F71DED77CF00CA97FE /* Controller */,
+				B452B7FB1DED77CF00CA97FE /* Model */,
+				B452B7FC1DED77CF00CA97FE /* View */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		B452B7F71DED77CF00CA97FE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B452B7F81DED77CF00CA97FE /* BWLayoutXibVC.h */,
+				B452B7F91DED77CF00CA97FE /* BWLayoutXibVC.m */,
+				B452B7FA1DED77CF00CA97FE /* BWLayoutXibVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B452B7FB1DED77CF00CA97FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B452B7FC1DED77CF00CA97FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B452B7FF1DED7C8B00CA97FE /* BWLayoutXibCell.h */,
+				B452B8001DED7C8B00CA97FE /* BWLayoutXibCell.m */,
+				B452B8011DED7C8B00CA97FE /* BWLayoutXibCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B48102DF1DBDF02600BE0E17 /* SortByPinyin */ = {
@@ -204,6 +283,7 @@
 				B4F517121DB8A3F500EC5057 /* Flexible */,
 				B4F517141DB8A3F500EC5057 /* Hybrid */,
 				B48102DF1DBDF02600BE0E17 /* SortByPinyin */,
+				B452B7ED1DED775400CA97FE /* Layout */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -364,6 +444,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4F516E61DB8A02500EC5057 /* LaunchScreen.storyboard in Resources */,
+				B452B7FE1DED77CF00CA97FE /* BWLayoutXibVC.xib in Resources */,
+				B452B8031DED7C8B00CA97FE /* BWLayoutXibCell.xib in Resources */,
 				B4F516E31DB8A02500EC5057 /* Assets.xcassets in Resources */,
 				B48102E41DBDF0BB00BE0E17 /* pinyin_source.plist in Resources */,
 			);
@@ -413,7 +495,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		7A4ADE17149B7D1DD6D65703 /* [CP] Copy Pods Resources */ = {
@@ -440,6 +522,7 @@
 			files = (
 				B4F517261DB8AD7F00EC5057 /* BWDynamicCell.m in Sources */,
 				B4F516DB1DB8A02500EC5057 /* AppDelegate.m in Sources */,
+				B452B7FD1DED77CF00CA97FE /* BWLayoutXibVC.m in Sources */,
 				B4F517291DB9B51D00EC5057 /* BWFlexibleCell.m in Sources */,
 				B48102E21DBDF05000BE0E17 /* BWSortByPinyinVC.m in Sources */,
 				B4F517201DB8A44B00EC5057 /* BWFlexibleController.m in Sources */,
@@ -447,6 +530,7 @@
 				B4F5171D1DB8A43E00EC5057 /* BWDynamicHeightController.m in Sources */,
 				B4F517171DB8A41000EC5057 /* BWBaseController.m in Sources */,
 				B4F5171A1DB8A42700EC5057 /* BWHomeController.m in Sources */,
+				B452B8021DED7C8B00CA97FE /* BWLayoutXibCell.m in Sources */,
 				B4F517231DB8A45700EC5057 /* BWHybridController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

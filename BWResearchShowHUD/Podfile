@@ -1,0 +1,9 @@
+platform :ios, '7.0'
+
+target 'BWResearchShowHUD' do
+
+pod 'Masonry'
+pod 'MBProgressHUD', '~> 1.0.0'
+pod 'SVProgressHUD'
+
+end

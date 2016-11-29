@@ -29,7 +29,7 @@
     
     UITabBarController *tabVC = [UITabBarController new];
     tabVC.viewControllers = @[nvgtVCHome, nvgtVCMe];
-    tabVC.selectedIndex = 1;
+//    tabVC.selectedIndex = 1;
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = tabVC;

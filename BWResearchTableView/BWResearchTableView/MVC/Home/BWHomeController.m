@@ -11,6 +11,7 @@
 #import "BWFlexibleController.h"
 #import "BWHybridController.h"
 #import "BWSortByPinyinVC.h"
+#import "BWLayoutXibVC.h"
 
 #define bw_NSStringFromClass(Class) NSStringFromClass([Class class])
 
@@ -30,7 +31,8 @@
     _dataSource = @[bw_NSStringFromClass(BWDynamicHeightController),
                     bw_NSStringFromClass(BWFlexibleController),
                     bw_NSStringFromClass(BWHybridController),
-                    bw_NSStringFromClass(BWSortByPinyinVC)
+                    bw_NSStringFromClass(BWSortByPinyinVC),
+                    bw_NSStringFromClass(BWLayoutXibVC)
                     ];
     
     [self setUI];
