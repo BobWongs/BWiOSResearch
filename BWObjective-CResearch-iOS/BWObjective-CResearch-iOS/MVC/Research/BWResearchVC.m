@@ -16,27 +16,52 @@
 @property (nonatomic, strong) UITextField *tfFirst;
 @property (nonatomic, strong) UITextField *tfRegEx;
 
+@property (nonatomic, strong) UIImageView *imageView;
+
 @end
 
 @implementation BWResearchVC
 
+- (void)buttonActNew:(UIButton *)sender {
+    _imageView.highlighted = !_imageView.highlighted;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    double numA = 0.01;
+    NSString *strA = [NSString stringWithFormat:@"%.2f", numA];
+    double numB = 0.00;
+    NSString *strB = [NSString stringWithFormat:@"%.2f", numB];
+    NSLog(@"A: %@, B: %@", strA, strB);
     
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(20, 100, 200, 50)];
-    self.tfFirst = textField;
-//    textField.delegate = self;
-    textField.backgroundColor = [UIColor greenColor];
-    [self.view addSubview:textField];
+    return ;
     
-    UITextField *tfRegEx = [[UITextField alloc] initWithFrame:CGRectMake(20, 200, 200, 50)];
-    self.tfRegEx = tfRegEx;
-    tfRegEx.placeholder = @"Regular Expression";
-    tfRegEx.backgroundColor = [UIColor greenColor];
-    [self.view addSubview:tfRegEx];
+    // UIImageView Normal and Hightlighted
+//    UIImageView *iv = [[UIImageView alloc] initWithFrame:CGRectMake(50, 100, 100, 100)];
+//    _imageView = iv;
+//    iv.image = [UIImage imageNamed:@"icon_discovery_selected"];
+//    iv.highlightedImage = [UIImage imageNamed:@"icon_discovery_unselected"];
+//    [self.view addSubview:iv];
+//    
+//    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Right" style:UIBarButtonItemStylePlain target:self action:@selector(buttonActNew:)];
+//    self.navigationItem.rightBarButtonItem = item;
     
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Right" style:UIBarButtonItemStylePlain target:self action:@selector(buttonAct:)];
-    self.navigationItem.rightBarButtonItem = item;
+    
+//    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(20, 100, 200, 50)];
+//    self.tfFirst = textField;
+////    textField.delegate = self;
+//    textField.backgroundColor = [UIColor greenColor];
+//    [self.view addSubview:textField];
+//    
+//    UITextField *tfRegEx = [[UITextField alloc] initWithFrame:CGRectMake(20, 200, 200, 50)];
+//    self.tfRegEx = tfRegEx;
+//    tfRegEx.placeholder = @"Regular Expression";
+//    tfRegEx.backgroundColor = [UIColor greenColor];
+//    [self.view addSubview:tfRegEx];
+//    
+//    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Right" style:UIBarButtonItemStylePlain target:self action:@selector(buttonAct:)];
+//    self.navigationItem.rightBarButtonItem = item;
 }
 
 - (void)buttonAct:(UIButton *)sender

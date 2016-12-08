@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B426B0081DF7ABD400F438F3 /* icon_discovery_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B426B0061DF7ABD400F438F3 /* icon_discovery_selected@2x.png */; };
+		B426B0091DF7ABD400F438F3 /* icon_discovery_unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B426B0071DF7ABD400F438F3 /* icon_discovery_unselected@2x.png */; };
 		B443A1DB1D548382003D66C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B443A1DA1D548382003D66C5 /* main.m */; };
 		B443A1DE1D548382003D66C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B443A1DD1D548382003D66C5 /* AppDelegate.m */; };
 		B443A1E61D548382003D66C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B443A1E51D548382003D66C5 /* Assets.xcassets */; };
@@ -54,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B426B0061DF7ABD400F438F3 /* icon_discovery_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_discovery_selected@2x.png"; sourceTree = "<group>"; };
+		B426B0071DF7ABD400F438F3 /* icon_discovery_unselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_discovery_unselected@2x.png"; sourceTree = "<group>"; };
 		B443A1D61D548382003D66C5 /* BWObjective-CResearch-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BWObjective-CResearch-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B443A1DA1D548382003D66C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B443A1DC1D548382003D66C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -276,6 +280,8 @@
 			isa = PBXGroup;
 			children = (
 				B46B25D01DB72CE800B9FF54 /* bw_icon_back_100@2x.png */,
+				B426B0061DF7ABD400F438F3 /* icon_discovery_selected@2x.png */,
+				B426B0071DF7ABD400F438F3 /* icon_discovery_unselected@2x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -457,6 +463,8 @@
 				B46B25611DB5EDDD00B9FF54 /* BWHomeViewController.xib in Resources */,
 				B46B25D11DB72CE800B9FF54 /* bw_icon_back_100@2x.png in Resources */,
 				B46B25631DB5EDDD00B9FF54 /* BWHomeTableViewCell.xib in Resources */,
+				B426B0091DF7ABD400F438F3 /* icon_discovery_unselected@2x.png in Resources */,
+				B426B0081DF7ABD400F438F3 /* icon_discovery_selected@2x.png in Resources */,
 				B443A1E91D548382003D66C5 /* LaunchScreen.storyboard in Resources */,
 				B443A1E61D548382003D66C5 /* Assets.xcassets in Resources */,
 			);

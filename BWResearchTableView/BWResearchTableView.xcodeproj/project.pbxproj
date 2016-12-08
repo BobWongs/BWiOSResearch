@@ -11,6 +11,9 @@
 		B452B7FE1DED77CF00CA97FE /* BWLayoutXibVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B452B7FA1DED77CF00CA97FE /* BWLayoutXibVC.xib */; };
 		B452B8021DED7C8B00CA97FE /* BWLayoutXibCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B452B8001DED7C8B00CA97FE /* BWLayoutXibCell.m */; };
 		B452B8031DED7C8B00CA97FE /* BWLayoutXibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B452B8011DED7C8B00CA97FE /* BWLayoutXibCell.xib */; };
+		B452B8461DEE6AD000CA97FE /* UITableViewCell+BWExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B452B8451DEE6AD000CA97FE /* UITableViewCell+BWExtension.m */; };
+		B452B8501DEE830200CA97FE /* BWLayoutMasonryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B452B84F1DEE830200CA97FE /* BWLayoutMasonryVC.m */; };
+		B452B8531DEE84B600CA97FE /* BWLayoutMasonryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B452B8521DEE84B600CA97FE /* BWLayoutMasonryCell.m */; };
 		B48102E21DBDF05000BE0E17 /* BWSortByPinyinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B48102E11DBDF04F00BE0E17 /* BWSortByPinyinVC.m */; };
 		B48102E41DBDF0BB00BE0E17 /* pinyin_source.plist in Resources */ = {isa = PBXBuildFile; fileRef = B48102E31DBDF0BB00BE0E17 /* pinyin_source.plist */; };
 		B4F516D81DB8A02500EC5057 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F516D71DB8A02500EC5057 /* main.m */; };
@@ -55,6 +58,12 @@
 		B452B7FF1DED7C8B00CA97FE /* BWLayoutXibCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLayoutXibCell.h; sourceTree = "<group>"; };
 		B452B8001DED7C8B00CA97FE /* BWLayoutXibCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLayoutXibCell.m; sourceTree = "<group>"; };
 		B452B8011DED7C8B00CA97FE /* BWLayoutXibCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWLayoutXibCell.xib; sourceTree = "<group>"; };
+		B452B8441DEE6AD000CA97FE /* UITableViewCell+BWExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+BWExtension.h"; sourceTree = "<group>"; };
+		B452B8451DEE6AD000CA97FE /* UITableViewCell+BWExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+BWExtension.m"; sourceTree = "<group>"; };
+		B452B84E1DEE830200CA97FE /* BWLayoutMasonryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLayoutMasonryVC.h; sourceTree = "<group>"; };
+		B452B84F1DEE830200CA97FE /* BWLayoutMasonryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLayoutMasonryVC.m; sourceTree = "<group>"; };
+		B452B8511DEE84B600CA97FE /* BWLayoutMasonryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLayoutMasonryCell.h; sourceTree = "<group>"; };
+		B452B8521DEE84B600CA97FE /* BWLayoutMasonryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLayoutMasonryCell.m; sourceTree = "<group>"; };
 		B48102E01DBDF04F00BE0E17 /* BWSortByPinyinVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSortByPinyinVC.h; sourceTree = "<group>"; };
 		B48102E11DBDF04F00BE0E17 /* BWSortByPinyinVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSortByPinyinVC.m; sourceTree = "<group>"; };
 		B48102E31DBDF0BB00BE0E17 /* pinyin_source.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pinyin_source.plist; sourceTree = "<group>"; };
@@ -136,8 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				B452B7F11DED775400CA97FE /* Xib */,
-				B452B7EE1DED775400CA97FE /* iOS */,
 				B452B7EF1DED775400CA97FE /* Masonry */,
+				B452B7EE1DED775400CA97FE /* iOS */,
 				B452B7F01DED775400CA97FE /* Mine */,
 			);
 			path = Layout;
@@ -153,6 +162,9 @@
 		B452B7EF1DED775400CA97FE /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
+				B452B84B1DEE82DE00CA97FE /* Controller */,
+				B452B84C1DEE82DE00CA97FE /* Model */,
+				B452B84D1DEE82DE00CA97FE /* View */,
 			);
 			path = Masonry;
 			sourceTree = "<group>";
@@ -201,6 +213,40 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B452B8431DEE6ABB00CA97FE /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				B452B8441DEE6AD000CA97FE /* UITableViewCell+BWExtension.h */,
+				B452B8451DEE6AD000CA97FE /* UITableViewCell+BWExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		B452B84B1DEE82DE00CA97FE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B452B84E1DEE830200CA97FE /* BWLayoutMasonryVC.h */,
+				B452B84F1DEE830200CA97FE /* BWLayoutMasonryVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B452B84C1DEE82DE00CA97FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B452B84D1DEE82DE00CA97FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B452B8511DEE84B600CA97FE /* BWLayoutMasonryCell.h */,
+				B452B8521DEE84B600CA97FE /* BWLayoutMasonryCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B48102DF1DBDF02600BE0E17 /* SortByPinyin */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +285,7 @@
 				B4F516D91DB8A02500EC5057 /* AppDelegate.h */,
 				B4F516DA1DB8A02500EC5057 /* AppDelegate.m */,
 				B4F5170F1DB8A3F500EC5057 /* MVC */,
+				B452B8431DEE6ABB00CA97FE /* Category */,
 				B4F516E21DB8A02500EC5057 /* Assets.xcassets */,
 				B4F516D61DB8A02500EC5057 /* Supporting Files */,
 			);
@@ -520,10 +567,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B452B8461DEE6AD000CA97FE /* UITableViewCell+BWExtension.m in Sources */,
 				B4F517261DB8AD7F00EC5057 /* BWDynamicCell.m in Sources */,
 				B4F516DB1DB8A02500EC5057 /* AppDelegate.m in Sources */,
 				B452B7FD1DED77CF00CA97FE /* BWLayoutXibVC.m in Sources */,
 				B4F517291DB9B51D00EC5057 /* BWFlexibleCell.m in Sources */,
+				B452B8501DEE830200CA97FE /* BWLayoutMasonryVC.m in Sources */,
 				B48102E21DBDF05000BE0E17 /* BWSortByPinyinVC.m in Sources */,
 				B4F517201DB8A44B00EC5057 /* BWFlexibleController.m in Sources */,
 				B4F516D81DB8A02500EC5057 /* main.m in Sources */,
@@ -532,6 +581,7 @@
 				B4F5171A1DB8A42700EC5057 /* BWHomeController.m in Sources */,
 				B452B8021DED7C8B00CA97FE /* BWLayoutXibCell.m in Sources */,
 				B4F517231DB8A45700EC5057 /* BWHybridController.m in Sources */,
+				B452B8531DEE84B600CA97FE /* BWLayoutMasonryCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
