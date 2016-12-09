@@ -1,0 +1,17 @@
+platform :ios, '7.0'
+
+target 'BWObjective-CResearch-iOS' do
+
+  pod 'Masonry'
+
+  target 'BWObjective-CResearch-iOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'BWObjective-CResearch-iOSUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

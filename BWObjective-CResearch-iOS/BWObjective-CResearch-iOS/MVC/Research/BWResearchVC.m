@@ -7,16 +7,20 @@
 //
 
 #import "BWResearchVC.h"
+#import "Masonry.h"
+#import "BWResearchCell.h"
 
 #define NumbersWithDot     @"0123456789.\n"
 #define NumbersWithoutDot  @"0123456789\n"
 
-@interface BWResearchVC () <UITextFieldDelegate>
+@interface BWResearchVC () <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITextField *tfFirst;
 @property (nonatomic, strong) UITextField *tfRegEx;
 
 @property (nonatomic, strong) UIImageView *imageView;
+
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -28,14 +32,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    double numA = 0.01;
-    NSString *strA = [NSString stringWithFormat:@"%.2f", numA];
-    double numB = 0.00;
-    NSString *strB = [NSString stringWithFormat:@"%.2f", numB];
-    NSLog(@"A: %@, B: %@", strA, strB);
+    
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), CGRectGetHeight([UIScreen mainScreen].bounds)) style:UITableViewStylePlain];
+    _tableView.dataSource = self;
+    _tableView.delegate = self;
+    [self.view addSubview:_tableView];
     
     return ;
+    
+//    double numA = 0.01;
+//    NSString *strA = [NSString stringWithFormat:@"%.2f", numA];
+//    double numB = 0.00;
+//    NSString *strB = [NSString stringWithFormat:@"%.2f", numB];
+//    NSLog(@"A: %@, B: %@", strA, strB);
     
     // UIImageView Normal and Hightlighted
 //    UIImageView *iv = [[UIImageView alloc] initWithFrame:CGRectMake(50, 100, 100, 100)];
@@ -62,6 +71,35 @@
 //    
 //    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Right" style:UIBarButtonItemStylePlain target:self action:@selector(buttonAct:)];
 //    self.navigationItem.rightBarButtonItem = item;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellId = @"Cell";
+    BWResearchCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (!cell) {
+        cell = [[BWResearchCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+    }
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return 60.0;
+    
+    BWResearchCell *cell = [[BWResearchCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    
+    return height + 1.0;
 }
 
 - (void)buttonAct:(UIButton *)sender
