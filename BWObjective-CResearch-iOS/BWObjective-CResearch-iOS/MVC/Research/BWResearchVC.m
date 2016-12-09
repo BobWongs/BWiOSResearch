@@ -13,6 +13,8 @@
 #define NumbersWithDot     @"0123456789.\n"
 #define NumbersWithoutDot  @"0123456789\n"
 
+#define SCREEN_WIDTH CGRectGetWidth([UIScreen mainScreen].bounds)
+
 @interface BWResearchVC () <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITextField *tfFirst;
@@ -33,10 +35,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), CGRectGetHeight([UIScreen mainScreen].bounds)) style:UITableViewStylePlain];
     _tableView.dataSource = self;
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
+    
+    UIView *viewFooter = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 45)];
+    viewFooter.backgroundColor = [UIColor grayColor];
+    _tableView.tableFooterView = viewFooter;
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(45, 20, 100, 50);
+    [button setTitle:@"Button" forState:UIControlStateNormal];
+    button.backgroundColor = [UIColor greenColor];
+    [button addTarget:self action:@selector(buttonActNew:) forControlEvents:UIControlEventTouchUpInside];
+    [viewFooter addSubview:button];
+    
+//    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.mas_equalTo(45);
+//        make.right.mas_equalTo(-45);
+//        make.top.mas_equalTo(20);
+//        make.height.mas_equalTo(50);
+//    }];
     
     return ;
     
@@ -75,7 +97,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
