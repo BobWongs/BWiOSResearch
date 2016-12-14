@@ -24,6 +24,8 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 
+@property (nonatomic, strong) NSTimer *timer;
+
 @end
 
 @implementation BWResearchVC
@@ -32,26 +34,96 @@
     _imageView.highlighted = !_imageView.highlighted;
 }
 
+- (void)dealloc {
+    NSLog(@"dealloc BWResearchVC");
+    
+    if ([_timer isValid]) {
+        [_timer invalidate];
+        _timer = nil;
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
+
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(30, 100, 200, 50)];
+    label.text = @"100";
+    label.numberOfLines = 1;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:label];
+
+    __block NSInteger count = 100;
+    __weak UINavigationController *weakNvgtVC = self.navigationController;
+    __weak typeof(self) weakSelf = self;
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//        在这里执行事件
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
+        count -= 1;
+        NSLog(@"vc:%p count is %ld", strongSelf, count);
+        if (count == 95) {
+            [strongSelf.navigationController popViewControllerAnimated:YES];
+        }
+    }];
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), CGRectGetHeight([UIScreen mainScreen].bounds)) style:UITableViewStylePlain];
-    _tableView.dataSource = self;
-    _tableView.delegate = self;
-    [self.view addSubview:_tableView];
+//    NSTimeInterval period = 1.0; //设置时间间隔
+//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+//    dispatch_source_set_timer(_timer, dispatch_walltime(NULL, 0), period * NSEC_PER_SEC, 0); //每秒执行
+//    dispatch_source_set_event_handler(_timer, ^{
+//        //在这里执行事件
+//        count -= 1;
+//        NSLog(@"count is %ld", count);
+//        if (count == 95) {
+//            
+//        }
+//    });
+//    
+//    dispatch_resume(_timer);
     
-    UIView *viewFooter = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 45)];
-    viewFooter.backgroundColor = [UIColor grayColor];
-    _tableView.tableFooterView = viewFooter;
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+////    [button setTitle:@"按钮文本" forState:UIControlStateNormal];
+//    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//    [button setImage:[UIImage imageNamed:@"icon_discovery_selected"] forState:UIControlStateNormal];
+//    button.backgroundColor = [UIColor greenColor];
+//    button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+////    [button addTarget:self action:@selector(nil) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:button];
+//    
+//    CGFloat w_btn = 200;
+//    
+//    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.mas_equalTo(20);
+//        make.width.mas_equalTo(w_btn);
+//        make.top.mas_equalTo(100);
+//        make.height.mas_equalTo(50);
+//    }];
+//    
+//    CGFloat w_image = 30;
+//    CGFloat w_title = 60;
+////    [button setTitleEdgeInsets:UIEdgeInsetsMake(0, -w_image, 0, w_image)];
+////    [button setImageEdgeInsets:UIEdgeInsetsMake(0, w_title, 0, -w_title)];
+//    
+//    return ;
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(45, 20, 100, 50);
-    [button setTitle:@"Button" forState:UIControlStateNormal];
-    button.backgroundColor = [UIColor greenColor];
-    [button addTarget:self action:@selector(buttonActNew:) forControlEvents:UIControlEventTouchUpInside];
-    [viewFooter addSubview:button];
+//    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), CGRectGetHeight([UIScreen mainScreen].bounds)) style:UITableViewStylePlain];
+//    _tableView.dataSource = self;
+//    _tableView.delegate = self;
+//    [self.view addSubview:_tableView];
+//    
+//    UIView *viewFooter = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 45)];
+//    viewFooter.backgroundColor = [UIColor grayColor];
+//    _tableView.tableFooterView = viewFooter;
+//    
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    button.frame = CGRectMake(45, 20, 100, 50);
+//    [button setTitle:@"Button" forState:UIControlStateNormal];
+//    button.backgroundColor = [UIColor greenColor];
+//    [button addTarget:self action:@selector(buttonActNew:) forControlEvents:UIControlEventTouchUpInside];
+//    [viewFooter addSubview:button];
     
 //    [button mas_makeConstraints:^(MASConstraintMaker *make) {
 //        make.left.mas_equalTo(45);

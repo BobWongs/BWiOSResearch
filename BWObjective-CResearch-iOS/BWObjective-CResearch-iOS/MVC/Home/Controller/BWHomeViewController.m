@@ -89,6 +89,9 @@
     
     BWResearchVC *vcResearch = [[BWResearchVC alloc] init];
     [self.navigationController pushViewController:vcResearch animated:YES];
+    
+    BWResearchVC *vcResearch2 = [[BWResearchVC alloc] init];
+    [self.navigationController pushViewController:vcResearch2 animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
