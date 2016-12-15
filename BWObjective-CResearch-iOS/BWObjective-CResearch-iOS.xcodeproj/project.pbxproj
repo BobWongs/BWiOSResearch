@@ -29,6 +29,7 @@
 		B46B25681DB5EE1C00B9FF54 /* BWMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B25671DB5EE1C00B9FF54 /* BWMeController.m */; };
 		B46B25CC1DB620CA00B9FF54 /* BWMeSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B25CB1DB620CA00B9FF54 /* BWMeSecondViewController.m */; };
 		B46B25D11DB72CE800B9FF54 /* bw_icon_back_100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B46B25D01DB72CE800B9FF54 /* bw_icon_back_100@2x.png */; };
+		B47A37BB1E01305900E130AA /* bg_study@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B47A37BA1E01305900E130AA /* bg_study@2x.png */; };
 		B4AC5FB61DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC5FA91DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m */; };
 		B4AC5FB71DB4CC5200D880FB /* _JZValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC5FAB1DB4CC5100D880FB /* _JZValue.m */; };
 		B4AC5FB81DB4CC5200D880FB /* NSNumber+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC5FAD1DB4CC5100D880FB /* NSNumber+JZExtension.m */; };
@@ -100,6 +101,7 @@
 		B46B25CA1DB620CA00B9FF54 /* BWMeSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWMeSecondViewController.h; sourceTree = "<group>"; };
 		B46B25CB1DB620CA00B9FF54 /* BWMeSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWMeSecondViewController.m; sourceTree = "<group>"; };
 		B46B25D01DB72CE800B9FF54 /* bw_icon_back_100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bw_icon_back_100@2x.png"; sourceTree = "<group>"; };
+		B47A37BA1E01305900E130AA /* bg_study@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_study@2x.png"; sourceTree = "<group>"; };
 		B4AC5FA51DB4CC5100D880FB /* JZNavigationExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZNavigationExtension.h; sourceTree = "<group>"; };
 		B4AC5FA71DB4CC5100D880FB /* _JZ-objc-internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "_JZ-objc-internal.h"; sourceTree = "<group>"; };
 		B4AC5FA81DB4CC5100D880FB /* _JZNavigationInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _JZNavigationInteractiveTransition.h; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				B46B25D01DB72CE800B9FF54 /* bw_icon_back_100@2x.png */,
 				B426B0061DF7ABD400F438F3 /* icon_discovery_selected@2x.png */,
 				B426B0071DF7ABD400F438F3 /* icon_discovery_unselected@2x.png */,
+				B47A37BA1E01305900E130AA /* bg_study@2x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				B426B0091DF7ABD400F438F3 /* icon_discovery_unselected@2x.png in Resources */,
 				B426B0081DF7ABD400F438F3 /* icon_discovery_selected@2x.png in Resources */,
 				B443A1E91D548382003D66C5 /* LaunchScreen.storyboard in Resources */,
+				B47A37BB1E01305900E130AA /* bg_study@2x.png in Resources */,
 				B426B1231DFA930500F438F3 /* BWHomeViewController.xib in Resources */,
 				B443A1E61D548382003D66C5 /* Assets.xcassets in Resources */,
 			);

@@ -37,10 +37,10 @@
 - (void)dealloc {
     NSLog(@"dealloc BWResearchVC");
     
-    if ([_timer isValid]) {
-        [_timer invalidate];
-        _timer = nil;
-    }
+//    if ([_timer isValid]) {
+//        [_timer invalidate];
+//        _timer = nil;
+//    }
 }
 
 - (void)viewDidLoad {
@@ -48,26 +48,75 @@
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
 
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(30, 100, 200, 50)];
-    label.text = @"100";
-    label.numberOfLines = 1;
-    label.textAlignment = NSTextAlignmentCenter;
-    label.backgroundColor = [UIColor grayColor];
-    [self.view addSubview:label];
-
-    __block NSInteger count = 100;
-    __weak UINavigationController *weakNvgtVC = self.navigationController;
-    __weak typeof(self) weakSelf = self;
-    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
-//        在这里执行事件
-        __strong typeof(weakSelf) strongSelf = weakSelf;
-        
-        count -= 1;
-        NSLog(@"vc:%p count is %ld", strongSelf, count);
-        if (count == 95) {
-            [strongSelf.navigationController popViewControllerAnimated:YES];
-        }
+    UIView *view = [[UIView alloc] init];
+    view.clipsToBounds = YES;
+    view.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:view];
+    
+    UIImage *image = [UIImage imageNamed:@"bg_study"];
+    
+    UIImageView *imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(20, 64, 200, 50)];
+    imageView2.image = image;
+    [self.view addSubview:imageView2];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    imageView.backgroundColor = [UIColor grayColor];
+    [view addSubview:imageView];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(view);
     }];
+    
+    UIView *view0 = [[UIView alloc] init];
+    view0.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:view0];
+    
+    UIView *view1 = [[UIView alloc] init];
+    view1.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:view1];
+    
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(10);
+        make.right.mas_equalTo(-10);
+        make.top.mas_equalTo(200);
+        make.bottom.mas_equalTo(view1.mas_bottom).offset(50);
+    }];
+    
+    [view0 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(0);
+        make.right.mas_equalTo(0);
+        make.top.mas_equalTo(view.mas_top).offset(30);
+        make.height.mas_equalTo(50);
+    }];
+    
+    [view1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(0);
+        make.right.mas_equalTo(0);
+        make.top.mas_equalTo(view0.mas_bottom).offset(20);
+        make.height.mas_equalTo(50);
+    }];
+    
+//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(30, 100, 200, 50)];
+//    label.text = @"100";
+//    label.numberOfLines = 1;
+//    label.textAlignment = NSTextAlignmentCenter;
+//    label.backgroundColor = [UIColor grayColor];
+//    
+//    label.text = nil;
+//    [self.view addSubview:label];
+//
+//    __block NSInteger count = 100;
+//    __weak UINavigationController *weakNvgtVC = self.navigationController;
+//    __weak typeof(self) weakSelf = self;
+//    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+////        在这里执行事件
+//        __strong typeof(weakSelf) strongSelf = weakSelf;
+//        
+//        count -= 1;
+//        NSLog(@"vc:%p count is %ld", strongSelf, count);
+//        if (count == 95) {
+//            [strongSelf.navigationController popViewControllerAnimated:YES];
+//        }
+//    }];
     
 //    NSTimeInterval period = 1.0; //设置时间间隔
 //    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
