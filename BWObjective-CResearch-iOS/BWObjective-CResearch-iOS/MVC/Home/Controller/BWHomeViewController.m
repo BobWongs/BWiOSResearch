@@ -13,7 +13,13 @@
 #import "UITableViewRowAction+JZExtension.h"
 #import "JZNavigationExtension.h"
 
-@interface BWHomeViewController () <UITableViewDataSource, UITableViewDelegate>
+#import <AddressBookUI/ABPeoplePickerNavigationController.h>
+#import <AddressBook/ABPerson.h>
+#import <AddressBookUI/ABPersonViewController.h>
+
+#import <ContactsUI/ContactsUI.h>
+
+@interface BWHomeViewController () <UITableViewDataSource, UITableViewDelegate, ABPeoplePickerNavigationControllerDelegate, UINavigationControllerDelegate, CNContactPickerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -87,13 +93,121 @@
 //    vc.view.backgroundColor = [UIColor whiteColor];
 //    [self.navigationController pushViewController:vc animated:YES];
     
-    BWResearchVC *vcResearch = [[BWResearchVC alloc] init];
-    [self.navigationController pushViewController:vcResearch animated:YES];
+//    BWResearchVC *vcResearch = [[BWResearchVC alloc] init];
+//    [self.navigationController pushViewController:vcResearch animated:YES];
+    
+    // ---------- 打开通讯录 ----------
+    
+    
+    if (NSClassFromString(@"CNContactPickerViewController")) {
+        // iOS 9, 10, use CNContactPickerViewController
+        CNContactPickerViewController *picker = [[CNContactPickerViewController alloc] init];
+        picker.delegate = self;
+        picker.displayedPropertyKeys = @[CNContactPhoneNumbersKey];
+        picker.predicateForSelectionOfContact = [NSPredicate predicateWithValue:false];
+        [self presentViewController:picker animated:YES completion:nil];
+    }else{
+        // iOS 8 Below, use ABPeoplePickerNavigationController
+        ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
+        picker.peoplePickerDelegate = self;
+        if([UIDevice currentDevice].systemVersion.integerValue >= 8){
+            picker.predicateForSelectionOfPerson = [NSPredicate predicateWithValue:false];  // 在iOS8之后，需要添加nav.predicateForSelectionOfPerson = [NSPredicate predicateWithValue:false];这一段代码，否则选择联系人之后会直接dismiss，不能进入详情选择电话。
+        }
+        [self presentViewController:picker animated:YES completion:nil];
+    }
+    
+    // ---------- 打开通讯录 ----------
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 60;
+#pragma mark - ABPeoplePickerNavigationControllerDelegate
+
+- (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker didSelectPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier {
+    
+    ABMultiValueRef phone = ABRecordCopyValue(person, kABPersonPhoneProperty);
+    
+    long index = ABMultiValueGetIndexForIdentifier(phone,identifier);
+    
+    NSString *phoneNO = (__bridge NSString *)ABMultiValueCopyValueAtIndex(phone, index);
+    phoneNO = [phoneNO stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    NSLog(@"%@", phoneNO);
+    if (phone && phoneNO.length == 11) {
+        
+        [peoplePicker dismissViewControllerAnimated:YES completion:nil];
+        return;
+    }else{
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"错误提示" message:@"请选择正确手机号" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alertView show];
+    }
 }
+
+
+- (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController*)peoplePicker didSelectPerson:(ABRecordRef)person NS_AVAILABLE_IOS(8_0)
+{
+    ABPersonViewController *personViewController = [[ABPersonViewController alloc] init];
+    personViewController.displayedPerson = person;
+    
+    [peoplePicker pushViewController:personViewController animated:YES];
+    
+    
+}
+
+- (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker
+{
+    [peoplePicker dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+
+- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person NS_DEPRECATED_IOS(2_0, 8_0)
+{
+    return YES;
+}
+
+
+
+- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier NS_DEPRECATED_IOS(2_0, 8_0)
+{
+    ABMultiValueRef phone = ABRecordCopyValue(person, kABPersonPhoneProperty);
+    
+    long index = ABMultiValueGetIndexForIdentifier(phone,identifier);
+    
+    NSString *phoneNO = (__bridge NSString *)ABMultiValueCopyValueAtIndex(phone, index);
+    phoneNO = [phoneNO stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    NSLog(@"%@", phoneNO);
+    if (phone && phoneNO.length == 11) {
+        
+        [peoplePicker dismissViewControllerAnimated:YES completion:nil];
+        return NO;
+    }else{
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"错误提示" message:@"请选择正确手机号" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alertView show];
+    }
+    return YES;
+}
+
+#pragma mark - iOS10
+
+- (void)contactPickerDidCancel:(CNContactPickerViewController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)contactPicker:(CNContactPickerViewController *)picker didSelectContact:(CNContact *)contact {
+    NSLog(@"didSelectContact");
+}
+- (void)contactPicker:(CNContactPickerViewController *)picker didSelectContactProperty:(CNContactProperty *)contactProperty {
+    NSLog(@"didSelectContactProperty");
+}
+
+// 选多个
+//- (void)contactPicker:(CNContactPickerViewController *)picker didSelectContacts:(NSArray<CNContact*> *)contacts {
+//    NSLog(@"didSelectContacts");
+//}
+//
+//- (void)contactPicker:(CNContactPickerViewController *)picker didSelectContactProperties:(NSArray<CNContactProperty*> *)contactProperties {
+//    NSLog(@"didSelectContactProperties");
+//}
+
+
 
 // 实现代理
 - (nullable NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0B9AD42279095425F9EC6C3C /* libPods-BWObjective-CResearch-iOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 756DE94FFD3A9E85F2DF7B23 /* libPods-BWObjective-CResearch-iOSTests.a */; };
+		2167F5C81E08390C003427D3 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2167F5C71E08390C003427D3 /* AddressBookUI.framework */; };
+		2167F5CA1E083926003427D3 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2167F5C91E083926003427D3 /* AddressBook.framework */; };
+		2167F5CC1E083C32003427D3 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2167F5CB1E083C32003427D3 /* Contacts.framework */; };
+		2167F5CE1E083C39003427D3 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2167F5CD1E083C39003427D3 /* ContactsUI.framework */; };
 		3B324D32EC3EAEE6B439E99B /* libPods-BWObjective-CResearch-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C8A96D8F4FE77C47230880 /* libPods-BWObjective-CResearch-iOS.a */; };
 		557FF8853EA0C3DDEB77EA8D /* libPods-BWObjective-CResearch-iOSUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7062A3E511621014B08B0E /* libPods-BWObjective-CResearch-iOSUITests.a */; };
 		B426B0081DF7ABD400F438F3 /* icon_discovery_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B426B0061DF7ABD400F438F3 /* icon_discovery_selected@2x.png */; };
@@ -62,6 +66,10 @@
 
 /* Begin PBXFileReference section */
 		1FD232541ED7BCEA92DF3EFA /* Pods-BWObjective-CResearch-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOSUITests/Pods-BWObjective-CResearch-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2167F5C71E08390C003427D3 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		2167F5C91E083926003427D3 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		2167F5CB1E083C32003427D3 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		2167F5CD1E083C39003427D3 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
 		39967450EC1DC8110F985AB7 /* Pods-BWObjective-CResearch-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOSTests/Pods-BWObjective-CResearch-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		756DE94FFD3A9E85F2DF7B23 /* libPods-BWObjective-CResearch-iOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWObjective-CResearch-iOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C8A96D8F4FE77C47230880 /* libPods-BWObjective-CResearch-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWObjective-CResearch-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +142,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2167F5CE1E083C39003427D3 /* ContactsUI.framework in Frameworks */,
+				2167F5CC1E083C32003427D3 /* Contacts.framework in Frameworks */,
+				2167F5CA1E083926003427D3 /* AddressBook.framework in Frameworks */,
+				2167F5C81E08390C003427D3 /* AddressBookUI.framework in Frameworks */,
 				3B324D32EC3EAEE6B439E99B /* libPods-BWObjective-CResearch-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +172,10 @@
 		2D963DA15889F0C9C8A89969 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2167F5CD1E083C39003427D3 /* ContactsUI.framework */,
+				2167F5CB1E083C32003427D3 /* Contacts.framework */,
+				2167F5C91E083926003427D3 /* AddressBook.framework */,
+				2167F5C71E08390C003427D3 /* AddressBookUI.framework */,
 				89C8A96D8F4FE77C47230880 /* libPods-BWObjective-CResearch-iOS.a */,
 				756DE94FFD3A9E85F2DF7B23 /* libPods-BWObjective-CResearch-iOSTests.a */,
 				AC7062A3E511621014B08B0E /* libPods-BWObjective-CResearch-iOSUITests.a */,
@@ -587,7 +603,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		80A7D13EE6B75BD8CA475ECC /* [CP] Embed Pods Frameworks */ = {
@@ -632,7 +648,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C1ADF132BCD855D8A760CB19 /* [CP] Copy Pods Resources */ = {
@@ -677,7 +693,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
