@@ -48,52 +48,83 @@
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
 
-    UIView *view = [[UIView alloc] init];
-    view.clipsToBounds = YES;
-    view.backgroundColor = [UIColor greenColor];
-    [self.view addSubview:view];
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"这是文本";
+    label.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:label];
     
-    UIImage *image = [UIImage imageNamed:@"bg_study"];
+    UITextField *textField = [[UITextField alloc] init];
+    textField.placeholder = @"这是文本";
+    <#textField#>.text = <#NSString#>;
+    <#textField#>.borderStyle = <#UITextBorderStyle#>;
+    <#textField#>.textColor = <#UIColor#>;
+    <#textField#>.font = <#UIFont#>;
+    <#textField#>.background = <#UIImage#>;
+    <#textField#>.backgroundColor = <#UIColor#>;
+    [<#superview#> addSubview:<#textField#>];
     
-    UIImageView *imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(20, 64, 200, 50)];
-    imageView2.image = image;
-    [self.view addSubview:imageView2];
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [button setTitle:@"发现" forState:UIControlStateNormal];
+//    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//    [button setImage:[UIImage imageNamed:@"icon_discovery_selected"] forState:UIControlStateNormal];
+//    button.backgroundColor = [UIColor greenColor];
+//    [self.view addSubview:button];
+//    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.mas_equalTo(10);
+//        make.width.mas_equalTo(24);
+//        make.top.mas_equalTo(100);
+//        make.height.mas_equalTo(44);
+//    }];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-    imageView.backgroundColor = [UIColor grayColor];
-    [view addSubview:imageView];
-    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(view);
-    }];
+//    button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 20);
+//    button.titleEdgeInsets = UIEdgeInsetsMake(30, <#CGFloat left#>, <#CGFloat bottom#>, <#CGFloat right#>)
     
-    UIView *view0 = [[UIView alloc] init];
-    view0.backgroundColor = [UIColor greenColor];
-    [self.view addSubview:view0];
-    
-    UIView *view1 = [[UIView alloc] init];
-    view1.backgroundColor = [UIColor orangeColor];
-    [self.view addSubview:view1];
-    
-    [view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(10);
-        make.right.mas_equalTo(-10);
-        make.top.mas_equalTo(200);
-        make.bottom.mas_equalTo(view1.mas_bottom).offset(50);
-    }];
-    
-    [view0 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(0);
-        make.right.mas_equalTo(0);
-        make.top.mas_equalTo(view.mas_top).offset(30);
-        make.height.mas_equalTo(50);
-    }];
-    
-    [view1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(0);
-        make.right.mas_equalTo(0);
-        make.top.mas_equalTo(view0.mas_bottom).offset(20);
-        make.height.mas_equalTo(50);
-    }];
+//    UIView *view = [[UIView alloc] init];
+//    view.clipsToBounds = YES;
+//    view.backgroundColor = [UIColor greenColor];
+//    [self.view addSubview:view];
+//    
+//    UIImage *image = [UIImage imageNamed:@"bg_study"];
+//    
+//    UIImageView *imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(20, 64, 200, 50)];
+//    imageView2.image = image;
+//    [self.view addSubview:imageView2];
+//    
+//    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+//    imageView.backgroundColor = [UIColor grayColor];
+//    [view addSubview:imageView];
+//    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(view);
+//    }];
+//    
+//    UIView *view0 = [[UIView alloc] init];
+//    view0.backgroundColor = [UIColor greenColor];
+//    [self.view addSubview:view0];
+//    
+//    UIView *view1 = [[UIView alloc] init];
+//    view1.backgroundColor = [UIColor orangeColor];
+//    [self.view addSubview:view1];
+//    
+//    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.mas_equalTo(10);
+//        make.right.mas_equalTo(-10);
+//        make.top.mas_equalTo(200);
+//        make.bottom.mas_equalTo(view1.mas_bottom).offset(50);
+//    }];
+//    
+//    [view0 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.mas_equalTo(0);
+//        make.right.mas_equalTo(0);
+//        make.top.mas_equalTo(view.mas_top).offset(30);
+//        make.height.mas_equalTo(50);
+//    }];
+//    
+//    [view1 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.mas_equalTo(0);
+//        make.right.mas_equalTo(0);
+//        make.top.mas_equalTo(view0.mas_bottom).offset(20);
+//        make.height.mas_equalTo(50);
+//    }];
     
 //    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(30, 100, 200, 50)];
 //    label.text = @"100";
