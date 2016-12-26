@@ -136,4 +136,8 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)contactPicker:(CNContactPickerViewController *)picker didSelectContact:(CNContact *)contact {
+
+}
+
 @end
