@@ -48,20 +48,20 @@
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
 
-    UILabel *label = [[UILabel alloc] init];
-    label.text = @"这是文本";
-    label.backgroundColor = [UIColor greenColor];
-    [self.view addSubview:label];
-    
-    UITextField *textField = [[UITextField alloc] init];
-    textField.placeholder = @"这是文本";
-    <#textField#>.text = <#NSString#>;
-    <#textField#>.borderStyle = <#UITextBorderStyle#>;
-    <#textField#>.textColor = <#UIColor#>;
-    <#textField#>.font = <#UIFont#>;
-    <#textField#>.background = <#UIImage#>;
-    <#textField#>.backgroundColor = <#UIColor#>;
-    [<#superview#> addSubview:<#textField#>];
+//    UILabel *label = [[UILabel alloc] init];
+//    label.text = @"这是文本";
+//    label.backgroundColor = [UIColor greenColor];
+//    [self.view addSubview:label];
+//    
+//    UITextField *textField = [[UITextField alloc] init];
+//    textField.placeholder = @"这是文本";
+//    <#textField#>.text = <#NSString#>;
+//    <#textField#>.borderStyle = <#UITextBorderStyle#>;
+//    <#textField#>.textColor = <#UIColor#>;
+//    <#textField#>.font = <#UIFont#>;
+//    <#textField#>.background = <#UIImage#>;
+//    <#textField#>.backgroundColor = <#UIColor#>;
+//    [<#superview#> addSubview:<#textField#>];
     
 //    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
 //    [button setTitle:@"发现" forState:UIControlStateNormal];

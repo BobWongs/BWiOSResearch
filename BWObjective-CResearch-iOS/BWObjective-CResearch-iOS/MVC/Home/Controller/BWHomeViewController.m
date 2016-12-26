@@ -16,12 +16,14 @@
 #import <AddressBookUI/ABPeoplePickerNavigationController.h>
 #import <AddressBook/ABPerson.h>
 #import <AddressBookUI/ABPersonViewController.h>
-
 #import <ContactsUI/ContactsUI.h>
 
-@interface BWHomeViewController () <UITableViewDataSource, UITableViewDelegate, ABPeoplePickerNavigationControllerDelegate, UINavigationControllerDelegate, CNContactPickerDelegate>
+#import "BWAddressBookManager.h"
+
+@interface BWHomeViewController () <UITableViewDataSource, UITableViewDelegate, ABPeoplePickerNavigationControllerDelegate, CNContactPickerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) BWAddressBookManager *mngAddressBook;
 
 @end
 
@@ -98,6 +100,12 @@
     
     // ---------- 打开通讯录 ----------
     
+    _mngAddressBook = [BWAddressBookManager new];
+    [_mngAddressBook selectContactInViewController:self didSelectPhone:^(NSString *phone, NSString *fullName) {
+        NSLog(@"did select %@, %@", fullName, phone);
+    }];
+    
+    return ;
     
     if (NSClassFromString(@"CNContactPickerViewController")) {
         // iOS 9, 10, use CNContactPickerViewController
@@ -121,82 +129,93 @@
 
 #pragma mark - ABPeoplePickerNavigationControllerDelegate
 
-- (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker didSelectPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier {
-    
-    ABMultiValueRef phone = ABRecordCopyValue(person, kABPersonPhoneProperty);
-    
-    long index = ABMultiValueGetIndexForIdentifier(phone,identifier);
-    
-    NSString *phoneNO = (__bridge NSString *)ABMultiValueCopyValueAtIndex(phone, index);
-    phoneNO = [phoneNO stringByReplacingOccurrencesOfString:@"-" withString:@""];
-    NSLog(@"%@", phoneNO);
-    if (phone && phoneNO.length == 11) {
-        
-        [peoplePicker dismissViewControllerAnimated:YES completion:nil];
-        return;
-    }else{
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"错误提示" message:@"请选择正确手机号" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
-        [alertView show];
-    }
-}
-
-
-- (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController*)peoplePicker didSelectPerson:(ABRecordRef)person NS_AVAILABLE_IOS(8_0)
-{
-    ABPersonViewController *personViewController = [[ABPersonViewController alloc] init];
-    personViewController.displayedPerson = person;
-    
-    [peoplePicker pushViewController:personViewController animated:YES];
-    
-    
-}
-
 - (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker
 {
     [peoplePicker dismissViewControllerAnimated:YES completion:nil];
 }
-
-
 
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person NS_DEPRECATED_IOS(2_0, 8_0)
 {
     return YES;
 }
 
-
-
+// iOS 7
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier NS_DEPRECATED_IOS(2_0, 8_0)
 {
-    ABMultiValueRef phone = ABRecordCopyValue(person, kABPersonPhoneProperty);
+    ABMultiValueRef phoneRef = ABRecordCopyValue(person, kABPersonPhoneProperty);
+    long index = ABMultiValueGetIndexForIdentifier(phoneRef,identifier);
+    NSString *phone = (__bridge NSString *)ABMultiValueCopyValueAtIndex(phoneRef, index);
+    NSRegularExpression *regular = [NSRegularExpression regularExpressionWithPattern:@"[^0-9]" options:0 error:NULL];
+    NSString *result = [regular stringByReplacingMatchesInString:phone options:0 range:NSMakeRange(0, [phone length]) withTemplate:@""];
     
-    long index = ABMultiValueGetIndexForIdentifier(phone,identifier);
+    NSString *firstName = CFBridgingRelease(ABRecordCopyValue(person, kABPersonFirstNameProperty));
+    NSString *lastName = CFBridgingRelease(ABRecordCopyValue(person, kABPersonLastNameProperty));
+    NSString *fullName = [NSString stringWithFormat:@"%@%@", lastName, firstName];
     
-    NSString *phoneNO = (__bridge NSString *)ABMultiValueCopyValueAtIndex(phone, index);
-    phoneNO = [phoneNO stringByReplacingOccurrencesOfString:@"-" withString:@""];
-    NSLog(@"%@", phoneNO);
-    if (phone && phoneNO.length == 11) {
-        
+    NSLog(@"result is %@", result);
+    NSLog(@"fullName %@", fullName);
+    
+    if (phone) {
         [peoplePicker dismissViewControllerAnimated:YES completion:nil];
         return NO;
-    }else{
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"错误提示" message:@"请选择正确手机号" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
-        [alertView show];
     }
+    
     return YES;
 }
 
-#pragma mark - iOS10
+- (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker didSelectPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier
+{
+    ABMultiValueRef phoneRef = ABRecordCopyValue(person, kABPersonPhoneProperty);
+    long index = ABMultiValueGetIndexForIdentifier(phoneRef,identifier);
+    NSString *phone = (__bridge NSString *)ABMultiValueCopyValueAtIndex(phoneRef, index);
+    NSRegularExpression *regular = [NSRegularExpression regularExpressionWithPattern:@"[^0-9]" options:0 error:NULL];
+    NSString *result = [regular stringByReplacingMatchesInString:phone options:0 range:NSMakeRange(0, [phone length]) withTemplate:@""];
+    
+    NSString *firstName = CFBridgingRelease(ABRecordCopyValue(person, kABPersonFirstNameProperty));
+    NSString *lastName = CFBridgingRelease(ABRecordCopyValue(person, kABPersonLastNameProperty));
+    NSString *fullName = [NSString stringWithFormat:@"%@%@", lastName, firstName];
+    
+    NSLog(@"result is %@", result);
+    NSLog(@"fullName %@", fullName);
+    
+    [peoplePicker dismissViewControllerAnimated:YES completion:nil];
+}
+
+// iOS 8
+- (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController*)peoplePicker didSelectPerson:(ABRecordRef)person NS_AVAILABLE_IOS(8_0)
+{
+    ABPersonViewController *personViewController = [[ABPersonViewController alloc] init];
+    personViewController.displayedPerson = person;
+    [peoplePicker pushViewController:personViewController animated:YES];
+}
+
+#pragma mark - iOS 9以后，CNContactPickerDelegate
 
 - (void)contactPickerDidCancel:(CNContactPickerViewController *)picker {
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)contactPicker:(CNContactPickerViewController *)picker didSelectContact:(CNContact *)contact {
-    NSLog(@"didSelectContact");
-}
 - (void)contactPicker:(CNContactPickerViewController *)picker didSelectContactProperty:(CNContactProperty *)contactProperty {
     NSLog(@"didSelectContactProperty");
+    
+    CNContact *contact = contactProperty.contact;
+    NSString *name = [NSString stringWithFormat:@"%@%@", contact.familyName, contact.givenName];
+    
+    CNPhoneNumber *phoneNumber = (CNPhoneNumber *)contactProperty.value;
+    NSString *number = phoneNumber.stringValue;
+    
+    
+    NSRegularExpression *regular = [NSRegularExpression regularExpressionWithPattern:@"[^0-9]" options:0 error:NULL];
+    NSString *result = [regular stringByReplacingMatchesInString:number options:0 range:NSMakeRange(0, [number length]) withTemplate:@""];
+    
+    NSLog(@"name is %@", name);
+    NSLog(@"number is %@", number);
+    NSLog(@"result %@", result);
 }
+
+//- (void)contactPicker:(CNContactPickerViewController *)picker didSelectContact:(CNContact *)contact {
+//    
+//}
 
 // 选多个
 //- (void)contactPicker:(CNContactPickerViewController *)picker didSelectContacts:(NSArray<CNContact*> *)contacts {
