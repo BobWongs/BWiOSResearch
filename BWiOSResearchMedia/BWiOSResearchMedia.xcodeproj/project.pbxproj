@@ -15,6 +15,7 @@
 		B4879A141E49A42B0007D41B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4879A121E49A42B0007D41B /* LaunchScreen.storyboard */; };
 		B4879A1F1E49A42B0007D41B /* BWiOSResearchMediaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4879A1E1E49A42B0007D41B /* BWiOSResearchMediaTests.m */; };
 		B4879A2A1E49A42B0007D41B /* BWiOSResearchMediaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4879A291E49A42B0007D41B /* BWiOSResearchMediaUITests.m */; };
+		B4879A3F1E49B2730007D41B /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B4879A3E1E49B2470007D41B /* test.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		B4879A2B1E49A42B0007D41B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4879A391E49A5250007D41B /* BMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPlayer.h; sourceTree = "<group>"; };
 		B4879A3A1E49A5250007D41B /* BMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPlayer.m; sourceTree = "<group>"; };
+		B4879A3E1E49B2470007D41B /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		B4879A031E49A42B0007D41B /* BWiOSResearchMedia */ = {
 			isa = PBXGroup;
 			children = (
+				B4879A3E1E49B2470007D41B /* test.mp4 */,
 				B4879A071E49A42B0007D41B /* AppDelegate.h */,
 				B4879A081E49A42B0007D41B /* AppDelegate.m */,
 				B4879A0A1E49A42B0007D41B /* ViewController.h */,
@@ -269,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4879A3F1E49B2730007D41B /* test.mp4 in Resources */,
 				B4879A141E49A42B0007D41B /* LaunchScreen.storyboard in Resources */,
 				B4879A111E49A42B0007D41B /* Assets.xcassets in Resources */,
 				B4879A0F1E49A42B0007D41B /* Main.storyboard in Resources */,
@@ -447,6 +451,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V3E8GUFW32;
 				INFOPLIST_FILE = BWiOSResearchMedia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bws.BWiOSResearchMedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -459,6 +464,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V3E8GUFW32;
 				INFOPLIST_FILE = BWiOSResearchMedia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bws.BWiOSResearchMedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
