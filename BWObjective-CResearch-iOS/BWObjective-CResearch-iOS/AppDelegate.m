@@ -18,6 +18,22 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *comps = nil;
+    comps = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[NSDate date]];
+    NSDateComponents *adcomps = [[NSDateComponents alloc] init];
+    [adcomps setYear:0];
+    [adcomps setMonth:0];
+    [adcomps setDay:-1];
+
+    NSDate *dateLast = [calendar dateByAddingComponents:adcomps toDate:[NSDate date] options:0];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyyMMddHHmmss"];
+    NSString *dateStringLast = [formatter stringFromDate:dateLast];
+    NSLog(@"%@", dateStringLast);
+    
+    
     BWHomeViewController *vcHome = [[BWHomeViewController alloc] init];
     UINavigationController *nvgtVCHome = [[UINavigationController alloc] initWithRootViewController:vcHome];
     nvgtVCHome.tabBarItem.title = @"HomeTab";

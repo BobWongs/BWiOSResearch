@@ -24,6 +24,20 @@
 
 @implementation BWHomeViewController
 
+- (void)presentVC {
+    UIViewController *vc = [UIViewController new];
+    vc.title = @"Title";
+    
+    UINavigationController *nvgtVC = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self.navigationController presentViewController:nvgtVC animated:YES completion:nil];
+}
+
+- (void)setNavigationBar
+{
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(presentVC)];
+    self.navigationItem.rightBarButtonItem = item;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -31,6 +45,9 @@
     
     self.title = @"Home";
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self setNavigationBar];
+    
     
     
     /*
