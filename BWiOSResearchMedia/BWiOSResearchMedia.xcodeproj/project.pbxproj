@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B4A5EB5A48EBD0F3C321772 /* libPods-BWiOSResearchMedia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60786C12CFA6375DE183FF94 /* libPods-BWiOSResearchMedia.a */; };
 		B4879A061E49A42B0007D41B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4879A051E49A42B0007D41B /* main.m */; };
 		B4879A091E49A42B0007D41B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4879A081E49A42B0007D41B /* AppDelegate.m */; };
 		B4879A0C1E49A42B0007D41B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4879A0B1E49A42B0007D41B /* ViewController.m */; };
@@ -16,6 +17,9 @@
 		B4879A1F1E49A42B0007D41B /* BWiOSResearchMediaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4879A1E1E49A42B0007D41B /* BWiOSResearchMediaTests.m */; };
 		B4879A2A1E49A42B0007D41B /* BWiOSResearchMediaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4879A291E49A42B0007D41B /* BWiOSResearchMediaUITests.m */; };
 		B4879A3F1E49B2730007D41B /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B4879A3E1E49B2470007D41B /* test.mp4 */; };
+		B49A65341E518DC8002A0E35 /* BWZFPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49A65331E518DC8002A0E35 /* BWZFPlayerViewController.m */; };
+		B49A65391E51A241002A0E35 /* BWVideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B49A65381E51A241002A0E35 /* BWVideoManager.m */; };
+		B4B911261E52FEA2001C6988 /* ZFHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B911251E52FEA2001C6988 /* ZFHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56F143C51E3F780461781FFA /* Pods-BWiOSResearchMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSResearchMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSResearchMedia/Pods-BWiOSResearchMedia.debug.xcconfig"; sourceTree = "<group>"; };
+		60786C12CFA6375DE183FF94 /* libPods-BWiOSResearchMedia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWiOSResearchMedia.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		845EBFBC481F9A67D2B1AEA5 /* Pods-BWiOSResearchMedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSResearchMedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSResearchMedia/Pods-BWiOSResearchMedia.release.xcconfig"; sourceTree = "<group>"; };
 		B4879A011E49A42B0007D41B /* BWiOSResearchMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWiOSResearchMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4879A051E49A42B0007D41B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4879A071E49A42B0007D41B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -55,6 +62,12 @@
 		B4879A391E49A5250007D41B /* BMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPlayer.h; sourceTree = "<group>"; };
 		B4879A3A1E49A5250007D41B /* BMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPlayer.m; sourceTree = "<group>"; };
 		B4879A3E1E49B2470007D41B /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
+		B49A65321E518DC8002A0E35 /* BWZFPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWZFPlayerViewController.h; sourceTree = "<group>"; };
+		B49A65331E518DC8002A0E35 /* BWZFPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWZFPlayerViewController.m; sourceTree = "<group>"; };
+		B49A65371E51A241002A0E35 /* BWVideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWVideoManager.h; sourceTree = "<group>"; };
+		B49A65381E51A241002A0E35 /* BWVideoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWVideoManager.m; sourceTree = "<group>"; };
+		B4B911241E52FEA2001C6988 /* ZFHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFHomeViewController.h; sourceTree = "<group>"; };
+		B4B911251E52FEA2001C6988 /* ZFHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B4A5EB5A48EBD0F3C321772 /* libPods-BWiOSResearchMedia.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +96,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F9B131B3945BBD4F2AC16A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56F143C51E3F780461781FFA /* Pods-BWiOSResearchMedia.debug.xcconfig */,
+				845EBFBC481F9A67D2B1AEA5 /* Pods-BWiOSResearchMedia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		44D19950B2E13A99DC942D4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60786C12CFA6375DE183FF94 /* libPods-BWiOSResearchMedia.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B48799F81E49A42A0007D41B = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +120,8 @@
 				B4879A1D1E49A42B0007D41B /* BWiOSResearchMediaTests */,
 				B4879A281E49A42B0007D41B /* BWiOSResearchMediaUITests */,
 				B4879A021E49A42B0007D41B /* Products */,
+				2F9B131B3945BBD4F2AC16A7 /* Pods */,
+				44D19950B2E13A99DC942D4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +144,8 @@
 				B4879A0A1E49A42B0007D41B /* ViewController.h */,
 				B4879A0B1E49A42B0007D41B /* ViewController.m */,
 				B4879A0D1E49A42B0007D41B /* Main.storyboard */,
+				B49A65351E518E47002A0E35 /* Library */,
+				B49A65301E518DA5002A0E35 /* MVC */,
 				B4879A371E49A5250007D41B /* Common */,
 				B4879A101E49A42B0007D41B /* Assets.xcassets */,
 				B4879A041E49A42B0007D41B /* Supporting Files */,
@@ -150,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				B4879A381E49A5250007D41B /* BMPlayer */,
+				B49A65361E51A22E002A0E35 /* VideoManager */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -163,6 +199,41 @@
 			path = BMPlayer;
 			sourceTree = "<group>";
 		};
+		B49A65301E518DA5002A0E35 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				B49A65311E518DA5002A0E35 /* ZFPlayer */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		B49A65311E518DA5002A0E35 /* ZFPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				B4B911241E52FEA2001C6988 /* ZFHomeViewController.h */,
+				B4B911251E52FEA2001C6988 /* ZFHomeViewController.m */,
+				B49A65321E518DC8002A0E35 /* BWZFPlayerViewController.h */,
+				B49A65331E518DC8002A0E35 /* BWZFPlayerViewController.m */,
+			);
+			path = ZFPlayer;
+			sourceTree = "<group>";
+		};
+		B49A65351E518E47002A0E35 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		B49A65361E51A22E002A0E35 /* VideoManager */ = {
+			isa = PBXGroup;
+			children = (
+				B49A65371E51A241002A0E35 /* BWVideoManager.h */,
+				B49A65381E51A241002A0E35 /* BWVideoManager.m */,
+			);
+			path = VideoManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,9 +241,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4879A2E1E49A42B0007D41B /* Build configuration list for PBXNativeTarget "BWiOSResearchMedia" */;
 			buildPhases = (
+				3D55D8F6CB3023464101C012 /* [CP] Check Pods Manifest.lock */,
 				B48799FD1E49A42B0007D41B /* Sources */,
 				B48799FE1E49A42B0007D41B /* Frameworks */,
 				B48799FF1E49A42B0007D41B /* Resources */,
+				86342D9C6146E1EF488DD052 /* [CP] Embed Pods Frameworks */,
+				E4DEF521CAB95E303D22A9BF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,13 +369,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D55D8F6CB3023464101C012 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		86342D9C6146E1EF488DD052 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BWiOSResearchMedia/Pods-BWiOSResearchMedia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4DEF521CAB95E303D22A9BF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BWiOSResearchMedia/Pods-BWiOSResearchMedia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B48799FD1E49A42B0007D41B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B49A65391E51A241002A0E35 /* BWVideoManager.m in Sources */,
+				B4B911261E52FEA2001C6988 /* ZFHomeViewController.m in Sources */,
 				B4879A0C1E49A42B0007D41B /* ViewController.m in Sources */,
 				B4879A091E49A42B0007D41B /* AppDelegate.m in Sources */,
+				B49A65341E518DC8002A0E35 /* BWZFPlayerViewController.m in Sources */,
 				B4879A061E49A42B0007D41B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,6 +572,7 @@
 		};
 		B4879A2F1E49A42B0007D41B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56F143C51E3F780461781FFA /* Pods-BWiOSResearchMedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V3E8GUFW32;
@@ -460,6 +586,7 @@
 		};
 		B4879A301E49A42B0007D41B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 845EBFBC481F9A67D2B1AEA5 /* Pods-BWiOSResearchMedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V3E8GUFW32;
@@ -540,6 +667,7 @@
 				B4879A301E49A42B0007D41B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4879A311E49A42B0007D41B /* Build configuration list for PBXNativeTarget "BWiOSResearchMediaTests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +676,7 @@
 				B4879A331E49A42B0007D41B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4879A341E49A42B0007D41B /* Build configuration list for PBXNativeTarget "BWiOSResearchMediaUITests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +685,7 @@
 				B4879A361E49A42B0007D41B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

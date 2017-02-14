@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
-#import <>
 
 #define kStatus @"status"
 #define kLoadedTimeRanges @"loadedTimeRanges"
@@ -90,8 +89,8 @@
 
 - (IBAction)buttonActionPlayVideo:(id)sender {
     AVPlayer *player = [AVPlayer playerWithURL:[NSURL URLWithString:@"http://pubfile.bluemoon.com.cn/group1/M00/04/85/wKgwBliX3zqASBQkAG-e7r3kAYw078.mp4"]];
-    AVPlayerViewController *playerVC = [[AVPlayerViewController alloc]init];
-    playerVC.player = player;
+//    AVPlayerViewController *playerVC = [[AVPlayerViewController alloc]init];
+//    playerVC.player = player;
 }
 
 #pragma mark - KVO回调方法
