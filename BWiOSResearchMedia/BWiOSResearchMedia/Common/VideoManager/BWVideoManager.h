@@ -15,7 +15,7 @@
 
 + (instancetype)sharedManager;
 
-- (void)downloadVideoWithURL:(NSString *)URLString;
+- (void)downloadVideoWithURL:(NSString *)URLString progress:(void (^)(NSProgress *))progress completion:(dispatch_block_t)completion;
 
 /**
  *  Get video URL, if has cache, return the cache URL.

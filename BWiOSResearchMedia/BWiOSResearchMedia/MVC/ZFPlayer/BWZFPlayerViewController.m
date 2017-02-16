@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic)  IBOutlet UIView *playerSuperView;
 @property (strong, nonatomic) ZFPlayerView *playerView;
+@property (strong, nonatomic) ZFPlayerControlView *controlView;  ///< Control View
 @property (nonatomic, assign) BOOL isPlaying;
 @property (nonatomic, strong) ZFPlayerModel *playerModel;
 
@@ -56,10 +57,10 @@
     self.playerView = [[ZFPlayerView alloc] init];
     
     // 自定义视频播放控制视图
-    ZFPlayerControlView *controlView = [[ZFPlayerControlView alloc] init];
-    UIView *backBtn = (UIView *)[controlView valueForKey:@"backBtn"];
+    self.controlView = [[ZFPlayerControlView alloc] init];
+    UIView *backBtn = (UIView *)[self.controlView valueForKey:@"backBtn"];
     if (backBtn) backBtn.hidden = YES;
-    [self.playerView playerControlView:controlView playerModel:self.playerModel];
+    [self.playerView playerControlView:self.controlView playerModel:self.playerModel];
     
     // 设置代理
     self.playerView.delegate = self;
@@ -84,22 +85,15 @@
 
 #pragma mark - ZFPlayerDelegate
 
-- (void)zf_playerBackAction
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 - (void)zf_playerDownload:(NSString *)url
 {
-    // 此处是截取的下载地址，可以自己根据服务器的视频名称来赋值
-//    NSString *name = [url lastPathComponent];
-//    [[ZFDownloadManager sharedDownloadManager] downFileUrl:url filename:name fileimage:nil];
-//    // 设置最多同时下载个数（默认是3）
-//    [ZFDownloadManager sharedDownloadManager].maxCount = 4;
-    
-    
-    
-    [[BWVideoManager sharedManager] downloadVideoWithURL:url];
+    __weak typeof(self) weakSelf = self;
+    [[BWVideoManager sharedManager] downloadVideoWithURL:url progress:^(NSProgress *progress) {
+        
+    } completion:^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf setDownloadButtonState:NO];
+    }];
 }
 
 #pragma mark - Getter
@@ -114,11 +108,22 @@
         NSURL *URL = [[BWVideoManager sharedManager] getVideoURLWithURLString:URLString];
         NSLog(@"URL is %@", URL);
         
+        if ([URL.absoluteString hasPrefix:@"file"]) {
+            [self setDownloadButtonState:NO];
+        }
+        
         _playerModel.videoURL = URL;
-        _playerModel.placeholderImage = [UIImage imageNamed:@"loading_bgView1"];
+        _playerModel.placeholderImage = [UIImage imageNamed:@"bg_image"];
         _playerModel.fatherView = self.playerSuperView;
     }
     return _playerModel;
+}
+
+#pragma mark - Tool
+
+- (void)setDownloadButtonState:(BOOL)enable {
+    UIButton *downLoadButton = (UIButton *)[self.controlView valueForKey:@"downLoadBtn"];
+    if (downLoadButton) downLoadButton.enabled = enable;
 }
 
 @end
