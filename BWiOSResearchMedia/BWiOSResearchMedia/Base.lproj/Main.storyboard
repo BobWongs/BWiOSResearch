@@ -23,9 +23,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ip-2G-gyt">
-                                <rect key="frame" x="172" y="134" width="30" height="30"/>
+                                <rect key="frame" x="163" y="134" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Play"/>
+                                <state key="normal" title="Video0"/>
                                 <connections>
                                     <segue destination="nwy-db-mC2" kind="show" id="N9L-ie-qqC"/>
                                 </connections>
@@ -52,12 +52,17 @@
                                     <action selector="clearAllCache:" destination="2y2-4k-mT2" eventType="touchUpInside" id="H1F-ga-pVY"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m4k-K1-OHf">
+                                <rect key="frame" x="67" y="500" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="1kk-Xt-UWK"/>
                     <connections>
                         <outlet property="cacheSizeLabel" destination="mra-Ha-3wP" id="k8f-Vn-Caf"/>
+                        <outlet property="imageView" destination="m4k-K1-OHf" id="bk9-dI-1jt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NEv-O3-YgF" userLabel="First Responder" sceneMemberID="firstResponder"/>

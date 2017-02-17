@@ -14,6 +14,8 @@
 #define VIDEO_CACHE_DIRECTORY_PATH [NSString stringWithFormat:@"%@/%@", DOCUMENT_PATH, @"VideoCache"]
 #define NSFileDefaultManager [NSFileManager defaultManager]
 
+#define DEFAULT_MAX_DOWNLOADING_COUNT 5
+
 @interface BWVideoManager ()
 
 @property (strong, nonatomic) NSMutableArray *downloadingURLArray;  ///< Downloading URL array
@@ -21,6 +23,8 @@
 @end
 
 @implementation BWVideoManager
+
+#pragma mark - 单例
 
 + (instancetype)sharedManager {
     static BWVideoManager *sharedManager = nil;
@@ -33,11 +37,13 @@
 
 - (instancetype)init {
     if (self = [super init]) {
+        self.maxDownloadingCount = 0;
         self.downloadingURLArray = [NSMutableArray new];
     }
     return self;
 }
 
+#pragma mark - 下载
 
 - (void)downloadVideoWithURL:(NSString *)URLString progress:(void (^)(NSProgress *))progress completion:(dispatch_block_t)completion {
     // Local file or not?
@@ -55,7 +61,8 @@
         return ;
     }
     // Over Downloading count.
-    if (self.downloadingURLArray.count >= 5) {
+    NSUInteger maxDownloadCount = self.maxDownloadingCount ? self.maxDownloadingCount : DEFAULT_MAX_DOWNLOADING_COUNT;
+    if (self.downloadingURLArray.count >= maxDownloadCount) {
         [[self class] confirmAlertWithTitle:@"超过最大同时下载数!"];
         return ;
     }
@@ -89,8 +96,10 @@
     } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
         NSLog(@"File downloaded to: %@", filePath);
         
-        typeof(weakSelf) __strong strongSelf = weakSelf;
-        [strongSelf.downloadingURLArray removeObject:URLString];
+        if (response && !error) {
+            typeof(weakSelf) __strong strongSelf = weakSelf;
+            [strongSelf.downloadingURLArray removeObject:URLString];
+        }
         
         completion();
     }];
@@ -112,8 +121,10 @@
     }
 }
 
-- (double)getCache {
-    return [[self class] directorySizeAtPath:VIDEO_CACHE_DIRECTORY_PATH];
+#pragma mark - 缓存
+
+- (NSUInteger)getCache {
+    return [[self class] directoryByteSizeAtPath:VIDEO_CACHE_DIRECTORY_PATH];
 }
 
 - (void)clearAllCache {
@@ -133,28 +144,19 @@
 
 #pragma mark - 工具
 
-// Get a file size.
-//+ (long long)fileSizeAtPath:(NSString*)filePath {
-//    NSFileManager *manager = [NSFileManager defaultManager];
-//    if ([manager fileExistsAtPath:filePath]) {
-//        return [[manager attributesOfItemAtPath:filePath error:nil] fileSize];
-//    }
-//    return 0;
-//}
-
-//遍历文件夹获得文件夹大小，返回多少M
-+ (double)directorySizeAtPath:(NSString*)directoryPath{
+// 遍历文件夹获得文件夹大小，返回Size已Byte为单位
++ (NSUInteger)directoryByteSizeAtPath:(NSString *)directoryPath {
     NSFileManager *manager = [NSFileManager defaultManager];
-    if (![manager fileExistsAtPath:directoryPath]) return 0.0;
+    if (![manager fileExistsAtPath:directoryPath]) return 0;
     
     NSEnumerator *childFilesEnumerator = [[manager subpathsAtPath:directoryPath] objectEnumerator];
     NSString *fileName;
-    long long directorySize = 0.0;
+    NSUInteger directorySize = 0;
     while ((fileName = [childFilesEnumerator nextObject]) != nil) {
         NSString *fileAbsolutePath = [directoryPath stringByAppendingPathComponent:fileName];
         directorySize += [[manager attributesOfItemAtPath:fileAbsolutePath error:nil] fileSize];
     }
-    return directorySize / (1024.0 * 1024.0);
+    return directorySize;
 }
 
 + (UIViewController *)topViewController {

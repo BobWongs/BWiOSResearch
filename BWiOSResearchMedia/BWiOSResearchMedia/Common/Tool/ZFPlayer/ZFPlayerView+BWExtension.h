@@ -10,6 +10,14 @@
 
 @interface ZFPlayerView (BWExtension)
 
-- (instancetype)bw_initCustomView;
+/**
+ 创建默认样式的播放View
+ */
++ (ZFPlayerView *)bw_playerViewWithPlayerModel:(ZFPlayerModel *)playerModel;
+
+/**
+ 设置下载按钮的状态，是否为已下载
+ */
+- (void)setDownloadButtonState:(BOOL)enable;
 
 @end

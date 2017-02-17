@@ -4,5 +4,6 @@ target 'BWiOSResearchMedia' do
 
 pod 'ZFPlayer'
 pod 'AFNetworking'
+pod 'SDWebImage'
 
 end

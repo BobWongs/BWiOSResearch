@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 
 #define BWVideoSharedManager [BWVideoManager sharedManager]
-#define MAX_DOWNLOAD_COUNT 5
 
 @interface BWVideoManager : NSObject
+
+@property (assign, nonatomic) NSUInteger maxDownloadingCount;  ///< 最大的正在下载数，默认为5，如果为0，则使用默认值
 
 + (instancetype)sharedManager;
 
@@ -27,7 +28,7 @@
  */
 - (void)clearAllCache;
 
-- (double)getCache;
+- (NSUInteger)getCache;
 
 - (BOOL)clearCacheWithFileName:(NSString *)fileName;
 

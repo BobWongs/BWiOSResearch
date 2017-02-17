@@ -7,33 +7,85 @@
 //
 
 #import "ZFPlayerView+BWExtension.h"
+#import "BWVideoManager.h"
+#import "Masonry.h"
+
+@interface ZFPlayerView () <ZFPlayerDelegate>
+
+@end
 
 @implementation ZFPlayerView (BWExtension)
 
-- (ZFPlayerView *)bw_initWithPlayerModel:(ZFPlayerModel *)playerModel {
+#pragma mark - Init
+
++ (ZFPlayerView *)bw_playerViewWithPlayerModel:(ZFPlayerModel *)playerModel {
     ZFPlayerView *playerView = [[ZFPlayerView alloc] init];
     
     // 自定义视频播放控制视图
     ZFPlayerControlView *controlView = [[ZFPlayerControlView alloc] init];
     UIView *backBtn = (UIView *)[controlView valueForKey:@"backBtn"];
-    if (backBtn) backBtn.hidden = YES;
-    [playerView playerControlView:controlView playerModel:playerModel];
+    if (backBtn) backBtn.hidden = YES;  // 隐藏视频播放框架的返回按钮
     
-    // 设置代理
-    playerView.delegate = self;
+    ZFPlayerModel *playerModelCopy = [[self class] playerModelCopyFromModel:playerModel];
+    NSURL *resultURLString = [[BWVideoManager sharedManager] getVideoURLWithURLString:playerModelCopy.videoURL.absoluteString];  // 若有本地文件，则转换为本地URL
+    playerModelCopy.videoURL = resultURLString;
     
-    //（可选设置）可以设置视频的填充模式，内部设置默认（ZFPlayerLayerGravityResizeAspect：等比例填充，直到一个维度到达区域边界）
-    // self.playerView.playerLayerGravity = ZFPlayerLayerGravityResizeAspect;
+    [playerView playerControlView:controlView playerModel:playerModelCopy];
     
-    // 打开下载功能（默认没有这个功能）
-    playerView.hasDownload    = YES;
-    // 打开预览图
-    playerView.hasPreviewView = YES;
+    playerView.delegate = playerView;  // 设置代理
+    playerView.hasDownload    = YES;  // 打开下载功能（默认没有这个功能）
+    playerView.hasPreviewView = YES;  // 打开预览图
+    if ([resultURLString.absoluteString.lowercaseString hasPrefix:@"file"]) [playerView setDownloadButtonState:NO];  // 为本地文件
     
-    // 是否自动播放，默认不自动播放
-    //    [self.playerView autoPlayTheVideo];
+    
+    // 初始隐藏播放控件
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.03 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        SEL hideSelector = @selector(zf_playerHideControlView);
+        if ([controlView respondsToSelector:hideSelector]) [controlView performSelector:hideSelector];
+    });
+#pragma clang diagnostic pop
     
     return playerView;
+}
+
+#pragma mark - ZFPlayerDelegate
+
+- (void)zf_playerDownload:(NSString *)url
+{
+    __weak typeof(self) weakSelf = self;
+    [[BWVideoManager sharedManager] downloadVideoWithURL:url progress:^(NSProgress *progress) {
+        
+    } completion:^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf setDownloadButtonState:NO];
+    }];
+}
+
+#pragma mark - Tool
+
+- (void)setDownloadButtonState:(BOOL)enable {
+    ZFPlayerControlView *controlView = (ZFPlayerControlView *)[self valueForKey:@"controlView"];
+    if (controlView) {
+        UIButton *downLoadButton = (UIButton *)[controlView valueForKey:@"downLoadBtn"];
+        if (downLoadButton) downLoadButton.enabled = enable;
+    }
+}
+
++ (ZFPlayerModel *)playerModelCopyFromModel:(ZFPlayerModel *)playerModel {
+    ZFPlayerModel *copyModel = [ZFPlayerModel new];
+    copyModel.title = playerModel.title;
+    copyModel.videoURL = playerModel.videoURL;
+    copyModel.placeholderImage = playerModel.placeholderImage;
+    copyModel.placeholderImageURLString = playerModel.placeholderImageURLString;
+    copyModel.resolutionDic = playerModel.resolutionDic;
+    copyModel.seekTime=playerModel.seekTime;
+    copyModel.tableView=playerModel.tableView;
+    copyModel.indexPath=playerModel.indexPath;
+    copyModel.fatherView=playerModel.fatherView;
+    return copyModel;
 }
 
 @end
