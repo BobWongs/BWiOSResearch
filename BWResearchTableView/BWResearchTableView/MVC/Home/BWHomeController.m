@@ -12,6 +12,7 @@
 #import "BWHybridController.h"
 #import "BWSortByPinyinVC.h"
 #import "BWLayoutXibVC.h"
+#import "BWResearchViewController.h"
 
 #define bw_NSStringFromClass(Class) NSStringFromClass([Class class])
 
@@ -32,7 +33,8 @@
                     bw_NSStringFromClass(BWFlexibleController),
                     bw_NSStringFromClass(BWHybridController),
                     bw_NSStringFromClass(BWSortByPinyinVC),
-                    bw_NSStringFromClass(BWLayoutXibVC)
+                    bw_NSStringFromClass(BWLayoutXibVC),
+                    bw_NSStringFromClass(BWResearchViewController)
                     ];
     
     [self setUI];

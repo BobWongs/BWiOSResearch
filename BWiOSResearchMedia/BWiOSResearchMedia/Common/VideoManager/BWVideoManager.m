@@ -45,6 +45,81 @@
 
 #pragma mark - 下载
 
+#ifdef AFNETWORKING_2
+
+- (void)downloadVideoWithURL:(NSString *)URLString progress:(void (^)(NSProgress *))progress completion:(dispatch_block_t)completion {
+    // Local file or not?
+    
+    // Downloaded or not.
+    NSString *fileName = URLString.lastPathComponent;
+    NSString *filePath = [NSString stringWithFormat:@"%@/%@", VIDEO_CACHE_DIRECTORY_PATH, fileName];
+    if ([NSFileDefaultManager fileExistsAtPath:filePath]) {
+        [[self class] confirmAlertWithTitle:@"已下载!"];
+        return ;
+    }
+    // Downloading.
+    if ([self.downloadingURLArray containsObject:URLString]) {
+        [[self class] confirmAlertWithTitle:@"下载中!"];
+        return ;
+    }
+    // Over Downloading count.
+    NSUInteger maxDownloadCount = self.maxDownloadingCount ? self.maxDownloadingCount : DEFAULT_MAX_DOWNLOADING_COUNT;
+    if (self.downloadingURLArray.count >= maxDownloadCount) {
+        [[self class] confirmAlertWithTitle:@"超过最大同时下载数!"];
+        return ;
+    }
+    // Create directory.
+    if (![NSFileDefaultManager fileExistsAtPath:VIDEO_CACHE_DIRECTORY_PATH]) {
+        if (![NSFileDefaultManager createDirectoryAtPath:VIDEO_CACHE_DIRECTORY_PATH withIntermediateDirectories:YES attributes:nil error:nil]) {
+            NSLog(@"Path create failed: %@", VIDEO_CACHE_DIRECTORY_PATH);
+            return ;
+        }
+    }
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    NSURL *url = [NSURL URLWithString:URLString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSProgress *kProgress;
+    __weak typeof(self) weakSelf = self;
+    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:&kProgress destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        NSLog(@"targetPath is %@", filePath);
+        return [NSURL fileURLWithPath:filePath];
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+        if (response && !error) {
+            typeof(weakSelf) __strong strongSelf = weakSelf;
+            [strongSelf.downloadingURLArray removeObject:URLString];
+            
+            [kProgress removeObserver:self forKeyPath:@"fractionCompleted"];
+        }
+        
+        completion();
+    }];
+    
+    [self.downloadingURLArray addObject:URLString];
+    [kProgress addObserver:self
+                forKeyPath:@"fractionCompleted"
+                   options:NSKeyValueObservingOptionNew
+                   context:NULL];
+    [downloadTask resume];
+    
+    NSLog(@"总大小：%lld,当前大小:%lld",kProgress.totalUnitCount,kProgress.completedUnitCount);
+    
+    progress(kProgress);
+}
+                                              
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+  //拿到进度
+  if ([keyPath isEqualToString:@"fractionCompleted"] && [object isKindOfClass:[NSProgress class]]) {
+      NSProgress *progress = (NSProgress *)object;
+      NSLog(@"Progress is %f", progress.fractionCompleted);
+  }
+}
+
+#else
+
 - (void)downloadVideoWithURL:(NSString *)URLString progress:(void (^)(NSProgress *))progress completion:(dispatch_block_t)completion {
     // Local file or not?
 
@@ -107,6 +182,8 @@
     [self.downloadingURLArray addObject:URLString];
     [downloadTask resume];
 }
+
+#endif
 
 - (NSURL *)getVideoURLWithURLString:(NSString *)URLString {
     NSString *fileName = URLString.lastPathComponent;

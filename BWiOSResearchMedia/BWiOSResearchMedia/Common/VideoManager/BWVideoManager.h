@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define AFNETWORKING_2  // AFNetworking版本，注释掉为3.0
+
 #define BWVideoSharedManager [BWVideoManager sharedManager]
 
 @interface BWVideoManager : NSObject
@@ -16,7 +18,11 @@
 
 + (instancetype)sharedManager;
 
+#ifdef AFNETWORKING_2
 - (void)downloadVideoWithURL:(NSString *)URLString progress:(void (^)(NSProgress *))progress completion:(dispatch_block_t)completion;
+#else
+- (void)downloadVideoWithURL:(NSString *)URLString progress:(void (^)(NSProgress *))progress completion:(dispatch_block_t)completion;
+#endif
 
 /**
  *  Get video URL, if has cache, return the cache URL.

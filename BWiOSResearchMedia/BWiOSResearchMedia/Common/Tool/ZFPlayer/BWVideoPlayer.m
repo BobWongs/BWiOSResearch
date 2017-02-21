@@ -85,8 +85,17 @@
 - (void)playButtonAction:(UIButton *)sender
 {
     self.playButton.hidden = YES;
-//    self.playerView.state = ZFPlayerStatePlaying;
-    [self.playerView play];
+//    [self.playerView play];
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+    UIButton *playButton = (UIButton *)[self.controlView valueForKey:@"playeBtn"];
+    if (playButton) {
+        SEL playSelector = @selector(playBtnClick:);
+        if ([self.controlView respondsToSelector:playSelector]) [self.controlView performSelector:playSelector withObject:playButton];
+    }
+#pragma clang diagnostic pop
 }
 
 #pragma mark - ZFPlayerDelegate

@@ -35,23 +35,23 @@
     return _dataSource ? _dataSource.count : 0;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *cellId = <#@"Cell"#>;
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#cellId#>];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:<#UITableViewCellStyle#> reuseIdentifier:<#cellId#>];
-    }
-    
-    return cell;
-}
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    static NSString *cellId = <#@"Cell"#>;
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#cellId#>];
+//    if (!cell) {
+//        cell = [[UITableViewCell alloc] initWithStyle:<#UITableViewCellStyle#> reuseIdentifier:<#cellId#>];
+//    }
+//    
+//    return cell;
+//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return <#CGFloat#>;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return <#CGFloat#>;
+//}
 
 @end

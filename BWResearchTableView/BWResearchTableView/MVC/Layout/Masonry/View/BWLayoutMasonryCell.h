@@ -10,11 +10,11 @@
 
 @interface BWLayoutMasonryCell : UITableViewCell
 
-@property (nonatomic, strong) <#DataType#> *<#member#>;  ///< <#Comments#>
-@property (nonatomic, strong) <#DataType#> *<#member#>;  ///< <#Comments#>
-@property (nonatomic, strong) <#DataType#> *<#member#>;  ///< <#Comments#>
-@property (nonatomic, strong) <#DataType#> *<#member#>;  ///< <#Comments#>
-@property (nonatomic, strong) <#DataType#> *<#member#>;  ///< <#Comments#>
-@property (nonatomic, strong) <#DataType#> *<#member#>;  ///< <#Comments#>
+//@property (nonatomic, strong) <#DataType#> *<#member#>;  ///< <#Comments#>
+//@property (nonatomic, strong) <#DataType#> *<#member#>;  ///< <#Comments#>
+//@property (nonatomic, strong) <#DataType#> *<#member#>;  ///< <#Comments#>
+//@property (nonatomic, strong) <#DataType#> *<#member#>;  ///< <#Comments#>
+//@property (nonatomic, strong) <#DataType#> *<#member#>;  ///< <#Comments#>
+//@property (nonatomic, strong) <#DataType#> *<#member#>;  ///< <#Comments#>
 
 @end

@@ -16,6 +16,7 @@
 		B452B8531DEE84B600CA97FE /* BWLayoutMasonryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B452B8521DEE84B600CA97FE /* BWLayoutMasonryCell.m */; };
 		B48102E21DBDF05000BE0E17 /* BWSortByPinyinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B48102E11DBDF04F00BE0E17 /* BWSortByPinyinVC.m */; };
 		B48102E41DBDF0BB00BE0E17 /* pinyin_source.plist in Resources */ = {isa = PBXBuildFile; fileRef = B48102E31DBDF0BB00BE0E17 /* pinyin_source.plist */; };
+		B4C4F5C51E5AC19400954B85 /* BWResearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C4F5C41E5AC19400954B85 /* BWResearchViewController.m */; };
 		B4F516D81DB8A02500EC5057 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F516D71DB8A02500EC5057 /* main.m */; };
 		B4F516DB1DB8A02500EC5057 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F516DA1DB8A02500EC5057 /* AppDelegate.m */; };
 		B4F516E31DB8A02500EC5057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F516E21DB8A02500EC5057 /* Assets.xcassets */; };
@@ -67,6 +68,8 @@
 		B48102E01DBDF04F00BE0E17 /* BWSortByPinyinVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSortByPinyinVC.h; sourceTree = "<group>"; };
 		B48102E11DBDF04F00BE0E17 /* BWSortByPinyinVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSortByPinyinVC.m; sourceTree = "<group>"; };
 		B48102E31DBDF0BB00BE0E17 /* pinyin_source.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pinyin_source.plist; sourceTree = "<group>"; };
+		B4C4F5C31E5AC19400954B85 /* BWResearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearchViewController.h; sourceTree = "<group>"; };
+		B4C4F5C41E5AC19400954B85 /* BWResearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearchViewController.m; sourceTree = "<group>"; };
 		B4F516D31DB8A02500EC5057 /* BWResearchTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWResearchTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F516D71DB8A02500EC5057 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4F516D91DB8A02500EC5057 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -257,6 +260,15 @@
 			path = SortByPinyin;
 			sourceTree = "<group>";
 		};
+		B4C4F5C21E5AC18500954B85 /* Research */ = {
+			isa = PBXGroup;
+			children = (
+				B4C4F5C31E5AC19400954B85 /* BWResearchViewController.h */,
+				B4C4F5C41E5AC19400954B85 /* BWResearchViewController.m */,
+			);
+			path = Research;
+			sourceTree = "<group>";
+		};
 		B4F516CA1DB8A02400EC5057 = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +343,7 @@
 				B4F517141DB8A3F500EC5057 /* Hybrid */,
 				B48102DF1DBDF02600BE0E17 /* SortByPinyin */,
 				B452B7ED1DED775400CA97FE /* Layout */,
+				B4C4F5C21E5AC18500954B85 /* Research */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -577,6 +590,7 @@
 				B4F517201DB8A44B00EC5057 /* BWFlexibleController.m in Sources */,
 				B4F516D81DB8A02500EC5057 /* main.m in Sources */,
 				B4F5171D1DB8A43E00EC5057 /* BWDynamicHeightController.m in Sources */,
+				B4C4F5C51E5AC19400954B85 /* BWResearchViewController.m in Sources */,
 				B4F517171DB8A41000EC5057 /* BWBaseController.m in Sources */,
 				B4F5171A1DB8A42700EC5057 /* BWHomeController.m in Sources */,
 				B452B8021DED7C8B00CA97FE /* BWLayoutXibCell.m in Sources */,
