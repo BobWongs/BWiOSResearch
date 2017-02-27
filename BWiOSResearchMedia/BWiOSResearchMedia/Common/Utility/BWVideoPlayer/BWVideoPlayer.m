@@ -85,7 +85,6 @@
 - (void)playButtonAction:(UIButton *)sender
 {
     self.playButton.hidden = YES;
-//    [self.playerView play];
     
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
@@ -96,6 +95,16 @@
         if ([self.controlView respondsToSelector:playSelector]) [self.controlView performSelector:playSelector withObject:playButton];
     }
 #pragma clang diagnostic pop
+}
+
+#pragma mark - Public Method
+
+- (void)play {
+    
+}
+
+- (void)pause {
+    if (self.playerView.state == ZFPlayerStatePlaying) [self.playerView pause];
 }
 
 #pragma mark - ZFPlayerDelegate
@@ -132,10 +141,10 @@
     copyModel.placeholderImage = playerModel.placeholderImage;
     copyModel.placeholderImageURLString = playerModel.placeholderImageURLString;
     copyModel.resolutionDic = playerModel.resolutionDic;
-    copyModel.seekTime=playerModel.seekTime;
-    copyModel.tableView=playerModel.tableView;
-    copyModel.indexPath=playerModel.indexPath;
-    copyModel.fatherView=playerModel.fatherView;
+    copyModel.seekTime = playerModel.seekTime;
+    copyModel.tableView = playerModel.tableView;
+    copyModel.indexPath = playerModel.indexPath;
+    copyModel.fatherView = playerModel.fatherView;
     return copyModel;
 }
 
@@ -154,8 +163,12 @@
 - (ZFPlayerControlView *)controlView {
     if (!_controlView) {
         _controlView = [[ZFPlayerControlView alloc] init];
+        _controlView.clipsToBounds = YES;
         UIView *backBtn = (UIView *)[_controlView valueForKey:@"backBtn"];
         if (backBtn) backBtn.hidden = YES;  // 隐藏视频播放框架的返回按钮
+        
+        UIImageView *placeholderImageView = (UIImageView *)[_controlView valueForKey:@"placeholderImageView"];
+        if (placeholderImageView) placeholderImageView.contentMode =UIViewContentModeScaleAspectFill;
     }
     return _controlView;
 }

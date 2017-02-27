@@ -18,11 +18,10 @@
 		B4879A2A1E49A42B0007D41B /* BWiOSResearchMediaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4879A291E49A42B0007D41B /* BWiOSResearchMediaUITests.m */; };
 		B4879A3F1E49B2730007D41B /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B4879A3E1E49B2470007D41B /* test.mp4 */; };
 		B48C6A4E1E5598A300B00CB8 /* bg_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48C6A4D1E5598A300B00CB8 /* bg_image@2x.png */; };
-		B48C6A541E55A80600B00CB8 /* ZFPlayerView+BWExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B48C6A531E55A80600B00CB8 /* ZFPlayerView+BWExtension.m */; };
+		B48E04931E5BEC27006887DC /* BWVideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B48E048F1E5BEC27006887DC /* BWVideoManager.m */; };
+		B48E04951E5BEC27006887DC /* BWVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B48E04921E5BEC27006887DC /* BWVideoPlayer.m */; };
+		B48E04971E5BECD1006887DC /* btn_video_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48E04961E5BECD1006887DC /* btn_video_play@2x.png */; };
 		B49A65341E518DC8002A0E35 /* BWZFPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49A65331E518DC8002A0E35 /* BWZFPlayerViewController.m */; };
-		B49A65391E51A241002A0E35 /* BWVideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B49A65381E51A241002A0E35 /* BWVideoManager.m */; };
-		B4A0DD301E56CEDB00C88CFF /* BWVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0DD2F1E56CEDB00C88CFF /* BWVideoPlayer.m */; };
-		B4A0DD321E56E3D700C88CFF /* btn_video_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A0DD311E56E3D700C88CFF /* btn_video_play@2x.png */; };
 		B4B911261E52FEA2001C6988 /* ZFHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B911251E52FEA2001C6988 /* ZFHomeViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -67,15 +66,13 @@
 		B4879A3A1E49A5250007D41B /* BMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPlayer.m; sourceTree = "<group>"; };
 		B4879A3E1E49B2470007D41B /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
 		B48C6A4D1E5598A300B00CB8 /* bg_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_image@2x.png"; sourceTree = "<group>"; };
-		B48C6A521E55A80600B00CB8 /* ZFPlayerView+BWExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZFPlayerView+BWExtension.h"; sourceTree = "<group>"; };
-		B48C6A531E55A80600B00CB8 /* ZFPlayerView+BWExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZFPlayerView+BWExtension.m"; sourceTree = "<group>"; };
+		B48E048E1E5BEC27006887DC /* BWVideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWVideoManager.h; sourceTree = "<group>"; };
+		B48E048F1E5BEC27006887DC /* BWVideoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWVideoManager.m; sourceTree = "<group>"; };
+		B48E04911E5BEC27006887DC /* BWVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWVideoPlayer.h; sourceTree = "<group>"; };
+		B48E04921E5BEC27006887DC /* BWVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWVideoPlayer.m; sourceTree = "<group>"; };
+		B48E04961E5BECD1006887DC /* btn_video_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_video_play@2x.png"; sourceTree = "<group>"; };
 		B49A65321E518DC8002A0E35 /* BWZFPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWZFPlayerViewController.h; sourceTree = "<group>"; };
 		B49A65331E518DC8002A0E35 /* BWZFPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWZFPlayerViewController.m; sourceTree = "<group>"; };
-		B49A65371E51A241002A0E35 /* BWVideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWVideoManager.h; sourceTree = "<group>"; };
-		B49A65381E51A241002A0E35 /* BWVideoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWVideoManager.m; sourceTree = "<group>"; };
-		B4A0DD2E1E56CEDB00C88CFF /* BWVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWVideoPlayer.h; sourceTree = "<group>"; };
-		B4A0DD2F1E56CEDB00C88CFF /* BWVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWVideoPlayer.m; sourceTree = "<group>"; };
-		B4A0DD311E56E3D700C88CFF /* btn_video_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_video_play@2x.png"; sourceTree = "<group>"; };
 		B4B911241E52FEA2001C6988 /* ZFHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFHomeViewController.h; sourceTree = "<group>"; };
 		B4B911251E52FEA2001C6988 /* ZFHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,9 +192,8 @@
 		B4879A371E49A5250007D41B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B48E048C1E5BEC27006887DC /* Utility */,
 				B4879A381E49A5250007D41B /* BMPlayer */,
-				B49A65361E51A22E002A0E35 /* VideoManager */,
-				B48C6A4F1E55A76500B00CB8 /* Tool */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -211,24 +207,24 @@
 			path = BMPlayer;
 			sourceTree = "<group>";
 		};
-		B48C6A4F1E55A76500B00CB8 /* Tool */ = {
+		B48E048C1E5BEC27006887DC /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				B48C6A511E55A7D200B00CB8 /* ZFPlayer */,
+				B48E048D1E5BEC27006887DC /* BWVideoPlayer */,
 			);
-			path = Tool;
+			path = Utility;
 			sourceTree = "<group>";
 		};
-		B48C6A511E55A7D200B00CB8 /* ZFPlayer */ = {
+		B48E048D1E5BEC27006887DC /* BWVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				B48C6A521E55A80600B00CB8 /* ZFPlayerView+BWExtension.h */,
-				B48C6A531E55A80600B00CB8 /* ZFPlayerView+BWExtension.m */,
-				B4A0DD2E1E56CEDB00C88CFF /* BWVideoPlayer.h */,
-				B4A0DD2F1E56CEDB00C88CFF /* BWVideoPlayer.m */,
-				B4A0DD311E56E3D700C88CFF /* btn_video_play@2x.png */,
+				B48E048E1E5BEC27006887DC /* BWVideoManager.h */,
+				B48E048F1E5BEC27006887DC /* BWVideoManager.m */,
+				B48E04911E5BEC27006887DC /* BWVideoPlayer.h */,
+				B48E04921E5BEC27006887DC /* BWVideoPlayer.m */,
+				B48E04961E5BECD1006887DC /* btn_video_play@2x.png */,
 			);
-			path = ZFPlayer;
+			path = BWVideoPlayer;
 			sourceTree = "<group>";
 		};
 		B49A65301E518DA5002A0E35 /* MVC */ = {
@@ -255,15 +251,6 @@
 			children = (
 			);
 			path = Library;
-			sourceTree = "<group>";
-		};
-		B49A65361E51A22E002A0E35 /* VideoManager */ = {
-			isa = PBXGroup;
-			children = (
-				B49A65371E51A241002A0E35 /* BWVideoManager.h */,
-				B49A65381E51A241002A0E35 /* BWVideoManager.m */,
-			);
-			path = VideoManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,7 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4879A3F1E49B2730007D41B /* test.mp4 in Resources */,
-				B4A0DD321E56E3D700C88CFF /* btn_video_play@2x.png in Resources */,
+				B48E04971E5BECD1006887DC /* btn_video_play@2x.png in Resources */,
 				B48C6A4E1E5598A300B00CB8 /* bg_image@2x.png in Resources */,
 				B4879A141E49A42B0007D41B /* LaunchScreen.storyboard in Resources */,
 				B4879A111E49A42B0007D41B /* Assets.xcassets in Resources */,
@@ -456,14 +443,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B49A65391E51A241002A0E35 /* BWVideoManager.m in Sources */,
 				B4B911261E52FEA2001C6988 /* ZFHomeViewController.m in Sources */,
+				B48E04951E5BEC27006887DC /* BWVideoPlayer.m in Sources */,
 				B4879A0C1E49A42B0007D41B /* ViewController.m in Sources */,
 				B4879A091E49A42B0007D41B /* AppDelegate.m in Sources */,
 				B49A65341E518DC8002A0E35 /* BWZFPlayerViewController.m in Sources */,
-				B48C6A541E55A80600B00CB8 /* ZFPlayerView+BWExtension.m in Sources */,
+				B48E04931E5BEC27006887DC /* BWVideoManager.m in Sources */,
 				B4879A061E49A42B0007D41B /* main.m in Sources */,
-				B4A0DD301E56CEDB00C88CFF /* BWVideoPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,6 @@
 #import "ZFPlayer.h"
 #import "AFNetworking.h"
 #import "BWVideoManager.h"
-#import "ZFPlayerView+BWExtension.h"
 #import "BWVideoPlayer.h"
 
 @interface BWZFPlayerViewController ()
@@ -35,33 +34,41 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
-//    // pop回来时候是否自动播放
-//    if (self.navigationController.viewControllers.count == 2 && self.playerView && self.isPlaying) {
-//        self.isPlaying = NO;
-//        [self.playerView play];
-//    }
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    // pop回来时候是否自动播放
+    if (self.navigationController.viewControllers.count == 2 && self.playerView && self.isPlaying) {
+        self.isPlaying = NO;
+        [self.playerView play];
+    }
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    if (self.videoPlayer && self.isPlaying) {
+        self.isPlaying = NO;
+        [self.playerView play];
+    }
+}
+
+
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
-//    // push出下一级页面时候暂停
-//    if (self.navigationController.viewControllers.count == 3 && self.playerView && !self.playerView.isPauseByUser)
-//    {
-//        self.isPlaying = YES;
-//        [self.playerView pause];
-//    }
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+    // push出下一级页面时候暂停
+    if (self.navigationController.viewControllers.count == 3 && self.playerView && !self.playerView.isPauseByUser)
+    {
+        self.isPlaying = YES;
+        [self.playerView pause];
+    }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    self.playerView = [ZFPlayerView bw_playerViewWithPlayerModel:self.playerModel];
-    
+        
     self.videoPlayer = [[BWVideoPlayer alloc] initCustomPlayerWithPlayerModel:self.playerModel];
-    
 }
 
 // 返回值要必须为NO

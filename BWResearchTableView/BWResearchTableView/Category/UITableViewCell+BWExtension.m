@@ -13,7 +13,7 @@
 + (instancetype)bw_cellAllocWithTableView:(UITableView *)tableView {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
     if (!cell) {
-        cell = [[[self class] alloc] initWithStyle:0 reuseIdentifier:NSStringFromClass([self class])];
+        cell = [[[self class] alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([self class])];
     }
     return cell;
 }
@@ -24,6 +24,10 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] firstObject];
     }
     return cell;
+}
+
++ (instancetype)bw_cellInTableView:(UITableView *)tableView withIdentifier:(NSString *)identifier {
+    
 }
 
 @end

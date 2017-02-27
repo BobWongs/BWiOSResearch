@@ -12,5 +12,7 @@
 @interface BWVideoPlayer : NSObject
 
 - (instancetype)initCustomPlayerWithPlayerModel:(ZFPlayerModel *)playerModel;
+- (void)play;
+- (void)pause;
 
 @end

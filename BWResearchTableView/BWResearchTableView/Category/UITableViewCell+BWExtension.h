@@ -11,6 +11,7 @@
 @interface UITableViewCell (BWExtension)
 
 + (instancetype)bw_cellAllocWithTableView:(UITableView *)tableView;
+
 + (instancetype)bw_cellXibWithTableView:(UITableView *)tableView;
 
 @end
