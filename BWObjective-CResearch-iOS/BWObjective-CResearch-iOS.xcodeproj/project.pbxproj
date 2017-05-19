@@ -34,6 +34,9 @@
 		B46B25CC1DB620CA00B9FF54 /* BWMeSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B25CB1DB620CA00B9FF54 /* BWMeSecondViewController.m */; };
 		B46B25D11DB72CE800B9FF54 /* bw_icon_back_100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B46B25D01DB72CE800B9FF54 /* bw_icon_back_100@2x.png */; };
 		B47A37BB1E01305900E130AA /* bg_study@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B47A37BA1E01305900E130AA /* bg_study@2x.png */; };
+		B491B0111E66BF2E005CAD43 /* BWResearch3VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B491B0101E66BF2E005CAD43 /* BWResearch3VC.m */; };
+		B4A0CF071E6551DD00CC8C92 /* BWResearch2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0CF061E6551DD00CC8C92 /* BWResearch2VC.m */; };
+		B4ABFCAD1EAF2FAA004F9F49 /* BWResearch4VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABFCAC1EAF2FAA004F9F49 /* BWResearch4VC.m */; };
 		B4AC5FB61DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC5FA91DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m */; };
 		B4AC5FB71DB4CC5200D880FB /* _JZValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC5FAB1DB4CC5100D880FB /* _JZValue.m */; };
 		B4AC5FB81DB4CC5200D880FB /* NSNumber+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC5FAD1DB4CC5100D880FB /* NSNumber+JZExtension.m */; };
@@ -45,6 +48,7 @@
 		B4B631311DAE384F00DF0907 /* UITableViewCell+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B6312D1DAE384F00DF0907 /* UITableViewCell+JZExtension.m */; };
 		B4B631321DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B6312F1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m */; };
 		B4B631331DAE384F00DF0907 /* UITableViewRowAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B631301DAE384F00DF0907 /* UITableViewRowAction.m */; };
+		B4C60FF31EC0244600D6EB15 /* BMLeftTextRightIconStyle0Button.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C60FF21EC0244600D6EB15 /* BMLeftTextRightIconStyle0Button.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +115,12 @@
 		B46B25CB1DB620CA00B9FF54 /* BWMeSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWMeSecondViewController.m; sourceTree = "<group>"; };
 		B46B25D01DB72CE800B9FF54 /* bw_icon_back_100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bw_icon_back_100@2x.png"; sourceTree = "<group>"; };
 		B47A37BA1E01305900E130AA /* bg_study@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_study@2x.png"; sourceTree = "<group>"; };
+		B491B00F1E66BF2E005CAD43 /* BWResearch3VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch3VC.h; sourceTree = "<group>"; };
+		B491B0101E66BF2E005CAD43 /* BWResearch3VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch3VC.m; sourceTree = "<group>"; };
+		B4A0CF051E6551DD00CC8C92 /* BWResearch2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch2VC.h; sourceTree = "<group>"; };
+		B4A0CF061E6551DD00CC8C92 /* BWResearch2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch2VC.m; sourceTree = "<group>"; };
+		B4ABFCAB1EAF2FAA004F9F49 /* BWResearch4VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch4VC.h; sourceTree = "<group>"; };
+		B4ABFCAC1EAF2FAA004F9F49 /* BWResearch4VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch4VC.m; sourceTree = "<group>"; };
 		B4AC5FA51DB4CC5100D880FB /* JZNavigationExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZNavigationExtension.h; sourceTree = "<group>"; };
 		B4AC5FA71DB4CC5100D880FB /* _JZ-objc-internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "_JZ-objc-internal.h"; sourceTree = "<group>"; };
 		B4AC5FA81DB4CC5100D880FB /* _JZNavigationInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _JZNavigationInteractiveTransition.h; sourceTree = "<group>"; };
@@ -133,6 +143,8 @@
 		B4B6312E1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewRowAction+JZExtension.h"; sourceTree = "<group>"; };
 		B4B6312F1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewRowAction+JZExtension.m"; sourceTree = "<group>"; };
 		B4B631301DAE384F00DF0907 /* UITableViewRowAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewRowAction.m; sourceTree = "<group>"; };
+		B4C60FF11EC0244600D6EB15 /* BMLeftTextRightIconStyle0Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLeftTextRightIconStyle0Button.h; sourceTree = "<group>"; };
+		B4C60FF21EC0244600D6EB15 /* BMLeftTextRightIconStyle0Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLeftTextRightIconStyle0Button.m; sourceTree = "<group>"; };
 		C103FEAD4813AE671D13F2D2 /* Pods-BWObjective-CResearch-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		DAEA5361C98C05D3A8AC261A /* Pods-BWObjective-CResearch-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DD13E253539AA17662F57D49 /* Pods-BWObjective-CResearch-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOSUITests/Pods-BWObjective-CResearch-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				B41093F61E10CED800D59621 /* Utility */,
+				B4C60FF01EC0242E00D6EB15 /* View */,
 			);
 			name = Common;
 			path = Category/Common;
@@ -356,6 +369,33 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		B491B00B1E66BF05005CAD43 /* Research3 */ = {
+			isa = PBXGroup;
+			children = (
+				B491B00F1E66BF2E005CAD43 /* BWResearch3VC.h */,
+				B491B0101E66BF2E005CAD43 /* BWResearch3VC.m */,
+			);
+			path = Research3;
+			sourceTree = "<group>";
+		};
+		B4A0CF041E6551CA00CC8C92 /* Research2 */ = {
+			isa = PBXGroup;
+			children = (
+				B4A0CF051E6551DD00CC8C92 /* BWResearch2VC.h */,
+				B4A0CF061E6551DD00CC8C92 /* BWResearch2VC.m */,
+			);
+			path = Research2;
+			sourceTree = "<group>";
+		};
+		B4ABFCAA1EAF2F9A004F9F49 /* Research4 */ = {
+			isa = PBXGroup;
+			children = (
+				B4ABFCAB1EAF2FAA004F9F49 /* BWResearch4VC.h */,
+				B4ABFCAC1EAF2FAA004F9F49 /* BWResearch4VC.m */,
+			);
+			path = Research4;
+			sourceTree = "<group>";
+		};
 		B4AC5FA41DB4CC5100D880FB /* JZNavigationExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,6 +443,9 @@
 				B46B25561DB5EDDD00B9FF54 /* Home */,
 				B46B25641DB5EE0500B9FF54 /* Me */,
 				B461B66F1DDD50D300FB7BC1 /* Research */,
+				B4A0CF041E6551CA00CC8C92 /* Research2 */,
+				B491B00B1E66BF05005CAD43 /* Research3 */,
+				B4ABFCAA1EAF2F9A004F9F49 /* Research4 */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -416,6 +459,15 @@
 				B4B631301DAE384F00DF0907 /* UITableViewRowAction.m */,
 			);
 			path = JZTableViewRowAction;
+			sourceTree = "<group>";
+		};
+		B4C60FF01EC0242E00D6EB15 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4C60FF11EC0244600D6EB15 /* BMLeftTextRightIconStyle0Button.h */,
+				B4C60FF21EC0244600D6EB15 /* BMLeftTextRightIconStyle0Button.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B4FF7E891DACDD220015089F /* Library */ = {
@@ -726,13 +778,17 @@
 				B4B631331DAE384F00DF0907 /* UITableViewRowAction.m in Sources */,
 				B41093F91E10CEF700D59621 /* BWAddressBookManager.m in Sources */,
 				B46B25601DB5EDDD00B9FF54 /* BWHomeViewController.m in Sources */,
+				B4A0CF071E6551DD00CC8C92 /* BWResearch2VC.m in Sources */,
 				B4AC5FBC1DB4CC5200D880FB /* UIViewController+JZExtension.m in Sources */,
 				B46B25521DB5DCD800B9FF54 /* BWBaseViewController.m in Sources */,
 				B4AC5FB81DB4CC5200D880FB /* NSNumber+JZExtension.m in Sources */,
 				B4AC5FB61DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m in Sources */,
+				B4C60FF31EC0244600D6EB15 /* BMLeftTextRightIconStyle0Button.m in Sources */,
 				B46B25CC1DB620CA00B9FF54 /* BWMeSecondViewController.m in Sources */,
 				B443A1DE1D548382003D66C5 /* AppDelegate.m in Sources */,
+				B4ABFCAD1EAF2FAA004F9F49 /* BWResearch4VC.m in Sources */,
 				B46B25681DB5EE1C00B9FF54 /* BWMeController.m in Sources */,
+				B491B0111E66BF2E005CAD43 /* BWResearch3VC.m in Sources */,
 				B4AC5FBA1DB4CC5200D880FB /* UIToolbar+JZExtension.m in Sources */,
 				B4AC5FBB1DB4CC5200D880FB /* UINavigationController+JZExtension.m in Sources */,
 				B443A1DB1D548382003D66C5 /* main.m in Sources */,

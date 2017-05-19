@@ -7,25 +7,79 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BWClass.h"
 
 // Function declaration
 void stringType();
 void objectType();
+void test0();
+void test1();
+void test2();
+void test3();
+void test4();
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-//        stringType();
-//        objectType();
         
-        if ([@"HTTPS://" localizedCaseInsensitiveContainsString:@"http"]) {
-            NSLog(@"contain");
-        } else {
-            NSLog(@"not contain");
-        }
         
     }
     return 0;
+}
+
+// Test
+void test0() {
+    stringType();
+    objectType();
+
+    if ([@"HTTPS://" localizedCaseInsensitiveContainsString:@"http"]) {
+        NSLog(@"contain");
+    } else {
+        NSLog(@"not contain");
+    }
+}
+
+void test1() {
+    NSString *str0 = @"str0";
+    NSMutableString *mutableStr0 = [NSMutableString stringWithString:str0];
+    NSString *str1 = mutableStr0;
+    NSString *str2 = [mutableStr0 copy];
+    [mutableStr0 appendString:@"append str0"];
+    NSLog(@"str1 is %@", str1);
+    NSLog(@"str2 is %@", str2);
+}
+
+void test2() {
+    NSString *arrayClassString = NSStringFromClass([NSArray class]);
+    NSLog(@"arrayClassString is %@", arrayClassString);
+    
+    //        id maybeArray = @[@"123", @"231", @"312"];
+    id maybeArray = [NSArray arrayWithObjects:@"1", @"2", nil];
+    if ([maybeArray class] == [NSArray class]) {
+        NSLog(@"equal");
+    } else {
+        NSLog(@"not equal");
+    }
+    
+    NSString *maybeArrayClassString = NSStringFromClass([maybeArray class]);
+    NSLog(@"maybeArrayClassString is %@", maybeArrayClassString);
+}
+
+void test3() {
+    BWClass *object = [BWClass new];
+//    [object performSelector:NSSelectorFromString(@"no_finded_method")];
+//    [object doSomething];
+//    [object performSelector:@selector(objectAtIndex:)];
+//    id firstObject = [object performSelector:@selector(firstObject)];
+    id firstObject = [object performSelector:@selector(arrayWithObject:)];
+    NSLog(@"first object is %@", firstObject);
+}
+
+void test4() {
+    NSObject *object = [NSObject new];
+    [[object class] isSubclassOfClass:[NSObject class]];
+    [object isKindOfClass:[NSObject class]];
+    [object isMemberOfClass:[NSObject class]];
 }
 
 // Function definition

@@ -10,6 +10,9 @@
 #import "BWHomeViewController.h"
 #import "BWMeController.h"
 #import "BWBaseNavigationController.h"
+#import "BWResearch2VC.h"
+#import "BWResearch3VC.h"
+#import "BWResearch4VC.h"
 
 @interface AppDelegate ()
 
@@ -19,32 +22,43 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *comps = nil;
-    comps = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[NSDate date]];
-    NSDateComponents *adcomps = [[NSDateComponents alloc] init];
-    [adcomps setYear:0];
-    [adcomps setMonth:0];
-    [adcomps setDay:-1];
-
-    NSDate *dateLast = [calendar dateByAddingComponents:adcomps toDate:[NSDate date] options:0];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyyMMddHHmmss"];
-    NSString *dateStringLast = [formatter stringFromDate:dateLast];
-    NSLog(@"%@", dateStringLast);
+//    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+//    NSDateComponents *comps = nil;
+//    comps = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[NSDate date]];
+//    NSDateComponents *adcomps = [[NSDateComponents alloc] init];
+//    [adcomps setYear:0];
+//    [adcomps setMonth:0];
+//    [adcomps setDay:-1];
+//
+//    NSDate *dateLast = [calendar dateByAddingComponents:adcomps toDate:[NSDate date] options:0];
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    [formatter setDateFormat:@"yyyyMMddHHmmss"];
+//    NSString *dateStringLast = [formatter stringFromDate:dateLast];
+//    NSLog(@"%@", dateStringLast);
     
     
-    BWHomeViewController *vcHome = [[BWHomeViewController alloc] init];
-    UINavigationController *nvgtVCHome = [[UINavigationController alloc] initWithRootViewController:vcHome];
-    nvgtVCHome.tabBarItem.title = @"HomeTab";
+//    BWHomeViewController *vcHome = [[BWHomeViewController alloc] init];
+//    UINavigationController *nvgtVCHome = [[UINavigationController alloc] initWithRootViewController:vcHome];
+//    nvgtVCHome.tabBarItem.title = @"HomeTab";
+//    
+//    BWMeController *vcMe = [BWMeController new];
+//    vcMe.title = @"Me";
+//    BWBaseNavigationController *nvgtVCMe = [[BWBaseNavigationController alloc] initFullScreenBackWithRootViewController:vcMe];
+//    nvgtVCMe.tabBarItem.title = @"MeTab";
     
-    BWMeController *vcMe = [BWMeController new];
-    vcMe.title = @"Me";
-    BWBaseNavigationController *nvgtVCMe = [[BWBaseNavigationController alloc] initFullScreenBackWithRootViewController:vcMe];
-    nvgtVCMe.tabBarItem.title = @"MeTab";
+    
+//    BWResearch2VC *researchVC = [BWResearch2VC new];
+//    UINavigationController *researchNvgtVC = [[UINavigationController alloc] initWithRootViewController:researchVC];
+//    researchNvgtVC.tabBarItem.title = @"Research2";
+    
+//    BWResearch3VC *researchVC = [BWResearch3VC new];
+    BWResearch4VC *researchVC = [BWResearch4VC new];
+    
+    UINavigationController *researchNvgtVC = [[UINavigationController alloc] initWithRootViewController:researchVC];
+    researchNvgtVC.tabBarItem.title = NSStringFromClass([BWResearch4VC class]);
     
     UITabBarController *tabVC = [UITabBarController new];
-    tabVC.viewControllers = @[nvgtVCHome, nvgtVCMe];
+    tabVC.viewControllers = @[researchNvgtVC];
 //    tabVC.selectedIndex = 1;
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
