@@ -14,6 +14,7 @@
 #import "BWResearch3VC.h"
 #import "BWResearch4VC.h"
 #import "BWResearch5VC.h"
+#import "BWResearch6VC.h"
 
 @interface AppDelegate ()
 
@@ -55,7 +56,7 @@
 //    BWResearch3VC *researchVC = [BWResearch3VC new];
 //    BWResearch4VC *researchVC = [BWResearch4VC new];
 //    BWResearch5VC  *researchVC = [BWResearch5VC new];
-    Class vcClass = [BWResearch5VC class];
+    Class vcClass = [BWResearch6VC class];
     
     UINavigationController *researchNvgtVC = [[UINavigationController alloc] initWithRootViewController:[vcClass new]];
     researchNvgtVC.tabBarItem.title = NSStringFromClass(vcClass);

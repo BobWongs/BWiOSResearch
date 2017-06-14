@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class BMNewRegionModel;
+#import "BMNewRegionModel.h"
 
 @interface BMNewAddressPicker : NSObject
 

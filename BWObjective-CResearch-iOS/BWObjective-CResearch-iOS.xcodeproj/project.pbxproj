@@ -43,6 +43,8 @@
 		B48CC7541EF1124B008E3856 /* BMNewAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B48CC74B1EF1124B008E3856 /* BMNewAddressPickerView.m */; };
 		B48CC75D1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48CC75B1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@2x.png */; };
 		B48CC75E1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48CC75C1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@3x.png */; };
+		B48CC7621EF12129008E3856 /* BWResearch6VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B48CC7601EF12129008E3856 /* BWResearch6VC.m */; };
+		B48CC7631EF12129008E3856 /* BWResearch6VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48CC7611EF12129008E3856 /* BWResearch6VC.xib */; };
 		B491B0111E66BF2E005CAD43 /* BWResearch3VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B491B0101E66BF2E005CAD43 /* BWResearch3VC.m */; };
 		B4A0CF071E6551DD00CC8C92 /* BWResearch2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0CF061E6551DD00CC8C92 /* BWResearch2VC.m */; };
 		B4A8610C1EEE45F5006C07FC /* BWResearch5VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A8610B1EEE45F5006C07FC /* BWResearch5VC.m */; };
@@ -139,6 +141,9 @@
 		B48CC74B1EF1124B008E3856 /* BMNewAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerView.m; sourceTree = "<group>"; };
 		B48CC75B1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_new_address_picker_checkbox_blue@2x.png"; sourceTree = "<group>"; };
 		B48CC75C1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_new_address_picker_checkbox_blue@3x.png"; sourceTree = "<group>"; };
+		B48CC75F1EF12129008E3856 /* BWResearch6VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch6VC.h; sourceTree = "<group>"; };
+		B48CC7601EF12129008E3856 /* BWResearch6VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch6VC.m; sourceTree = "<group>"; };
+		B48CC7611EF12129008E3856 /* BWResearch6VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWResearch6VC.xib; sourceTree = "<group>"; };
 		B491B00F1E66BF2E005CAD43 /* BWResearch3VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch3VC.h; sourceTree = "<group>"; };
 		B491B0101E66BF2E005CAD43 /* BWResearch3VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch3VC.m; sourceTree = "<group>"; };
 		B4A0CF051E6551DD00CC8C92 /* BWResearch2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch2VC.h; sourceTree = "<group>"; };
@@ -444,6 +449,9 @@
 		B48CC7551EF11EDF008E3856 /* Research6 */ = {
 			isa = PBXGroup;
 			children = (
+				B48CC75F1EF12129008E3856 /* BWResearch6VC.h */,
+				B48CC7601EF12129008E3856 /* BWResearch6VC.m */,
+				B48CC7611EF12129008E3856 /* BWResearch6VC.xib */,
 			);
 			path = Research6;
 			sourceTree = "<group>";
@@ -698,6 +706,7 @@
 				B48CC7531EF1124B008E3856 /* BMNewAddressPickerCell.xib in Resources */,
 				B46B25D11DB72CE800B9FF54 /* bw_icon_back_100@2x.png in Resources */,
 				B46B25631DB5EDDD00B9FF54 /* BWHomeTableViewCell.xib in Resources */,
+				B48CC7631EF12129008E3856 /* BWResearch6VC.xib in Resources */,
 				B426B0091DF7ABD400F438F3 /* icon_discovery_unselected@2x.png in Resources */,
 				B48CC75D1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@2x.png in Resources */,
 				B426B0081DF7ABD400F438F3 /* icon_discovery_selected@2x.png in Resources */,
@@ -883,6 +892,7 @@
 				B46B25CC1DB620CA00B9FF54 /* BWMeSecondViewController.m in Sources */,
 				B443A1DE1D548382003D66C5 /* AppDelegate.m in Sources */,
 				B4ABFCAD1EAF2FAA004F9F49 /* BWResearch4VC.m in Sources */,
+				B48CC7621EF12129008E3856 /* BWResearch6VC.m in Sources */,
 				B46B25681DB5EE1C00B9FF54 /* BWMeController.m in Sources */,
 				B491B0111E66BF2E005CAD43 /* BWResearch3VC.m in Sources */,
 				B4AC5FBA1DB4CC5200D880FB /* UIToolbar+JZExtension.m in Sources */,

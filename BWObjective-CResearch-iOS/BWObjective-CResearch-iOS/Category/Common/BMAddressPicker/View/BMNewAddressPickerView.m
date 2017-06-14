@@ -37,7 +37,7 @@ NSInteger const BMAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
 
 @property (strong, nonatomic) UIView *selectionView;  ///< Selection view
 @property (strong, nonatomic) UIScrollView *leftScrollView;  ///< ScrollView
-@property (strong, nonatomic) UIButton *cancelButton;  ///< Cancel button
+//@property (strong, nonatomic) UIButton *cancelButton;  ///< Cancel button
 @property (strong, nonatomic) UIView *lineView;  ///< Line
 @property (strong, nonatomic) UIView *hightlightedBlockView;  ///< 选中的高亮块
 
@@ -152,7 +152,10 @@ NSInteger const BMAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
     NSNumber *number = (_selectedIndexArray.count > tableViewIndex) ? _selectedIndexArray[tableViewIndex] : nil;
     
     cell.titleLabel.text = array[row];
-    cell.iconImageView.hidden = !(number && number.integerValue == row);
+    
+    BOOL isSelected = (number && number.integerValue == row);
+    cell.titleLabel.textColor = isSelected ? BM_ADDRESS_PICKER_1fb8ff : BM_ADDRESS_PICKER_333333;
+    cell.iconImageView.hidden = !isSelected;
     
     return cell;
 }
@@ -219,15 +222,15 @@ NSInteger const BMAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
     self.selectionView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.frame), CGRectGetWidth(self.frame), BMAddressPickerHeight)];
     self.selectionView.backgroundColor = [UIColor whiteColor];
     
-    CGFloat width_cancel_button = 65;  // 取消按钮宽度
+    CGFloat width_cancel_button = 0;  // 取消按钮宽度为0，不显示取消按钮
     self.leftScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.selectionView.frame) - width_cancel_button, BMAddressPickerTopViewHeight)];
     
-    self.cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.cancelButton.frame = CGRectMake(CGRectGetMaxX(self.leftScrollView.frame), 0, width_cancel_button, BMAddressPickerTopViewHeight);
-    [self.cancelButton setTitle:@"取消" forState:UIControlStateNormal];
-    [self.cancelButton setTitleColor:BM_ADDRESS_PICKER_333333 forState:UIControlStateNormal];
-    self.cancelButton.titleLabel.font = [UIFont systemFontOfSize:12.0];
-    [self.cancelButton addTarget:self action:@selector(cancelAction:) forControlEvents:UIControlEventTouchUpInside];
+//    self.cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    self.cancelButton.frame = CGRectMake(CGRectGetMaxX(self.leftScrollView.frame), 0, width_cancel_button, BMAddressPickerTopViewHeight);
+//    [self.cancelButton setTitle:@"取消" forState:UIControlStateNormal];
+//    [self.cancelButton setTitleColor:BM_ADDRESS_PICKER_333333 forState:UIControlStateNormal];
+//    self.cancelButton.titleLabel.font = [UIFont systemFontOfSize:12.0];
+//    [self.cancelButton addTarget:self action:@selector(cancelAction:) forControlEvents:UIControlEventTouchUpInside];
     
     self.lineView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.leftScrollView.frame) - 1, CGRectGetWidth(self.selectionView.frame), 1)];
     self.lineView.backgroundColor = BM_ADDRESS_PICKER_e5e5e5;
@@ -248,7 +251,7 @@ NSInteger const BMAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
     [self addSubview:self.selectionView];
     
     [self.selectionView addSubview:self.leftScrollView];
-    [self.selectionView addSubview:self.cancelButton];
+//    [self.selectionView addSubview:self.cancelButton];
     [self.selectionView addSubview:self.lineView];
     [self.selectionView addSubview:self.hightlightedBlockView];
     [self.selectionView addSubview:self.bottomScrollView];
@@ -275,7 +278,16 @@ NSInteger const BMAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
             return;
         }
         
-        UIColor *titleColor = [string isEqualToString:BMAddressPickerTextToSelect] ? BM_ADDRESS_PICKER_999999 : BM_ADDRESS_PICKER_1fb8ff;  // “请选择”和选中的地址颜色不同
+        // “请选择”、选中的地址、显示已选择地址颜色不同
+        UIColor *titleColor;
+        if ([string isEqualToString:BMAddressPickerTextToSelect]) {
+            titleColor = BM_ADDRESS_PICKER_999999;
+        } else if (idx == _currentAddressIndex) {
+            titleColor = BM_ADDRESS_PICKER_1fb8ff;
+        } else {
+            titleColor = BM_ADDRESS_PICKER_333333;
+        }
+        
         UIFont *font = [UIFont systemFontOfSize:12.0];
         CGFloat width_text = [[self class] widthForString:string font:font] + BMAddressPickerHorizontalInset * 2;
         

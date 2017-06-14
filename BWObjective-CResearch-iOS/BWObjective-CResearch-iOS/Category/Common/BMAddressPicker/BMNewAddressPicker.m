@@ -9,7 +9,6 @@
 #import "BMNewAddressPicker.h"
 #import "BMNewAddressPickerView.h"
 #import "BMNewAddressSourceManager.h"
-#import "BMNewRegionModel.h"
 
 #define BM_ADDRESS_TYPE_ARRAY @[BMAddressTypeProvince, BMAddressTypeCity, BMAddressTypeCounty]  // 类型数组
 
