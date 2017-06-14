@@ -1,19 +1,19 @@
 //
-//  BWNewAddressSourceManager.h
+//  BMNewAddressSourceManager.h
 //  BMiOSUIComponents
 //
-//  Created by BobWong on 2017/6/1.
+//  Created by BoBMong on 2017/6/1.
 //  Copyright © 2017年 月亮小屋（中国）有限公司. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 @class BMNewRegionModel;
 
-extern NSString *const BWAddressTypeProvince;
-extern NSString *const BWAddressTypeCity;
-extern NSString *const BWAddressTypeCounty;
+extern NSString *const BMAddressTypeProvince;
+extern NSString *const BMAddressTypeCity;
+extern NSString *const BMAddressTypeCounty;
 
-@interface BWNewAddressSourceManager : NSObject
+@interface BMNewAddressSourceManager : NSObject
 
 /**
  *  获取地址数据源

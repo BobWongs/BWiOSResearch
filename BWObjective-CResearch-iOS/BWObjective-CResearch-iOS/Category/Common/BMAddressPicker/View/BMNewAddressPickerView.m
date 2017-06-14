@@ -9,26 +9,26 @@
 #import "BMNewAddressPickerView.h"
 #import "BMNewAddressPickerCell.h"
 
-#define BW_ADDRESS_PICKER_LINE_WIDTH (1 / [UIScreen mainScreen].scale)
-#define BW_ADDRESS_PICKER_TIME_ANIMATION 0.25
+#define BM_ADDRESS_PICKER_LINE_WIDTH (1 / [UIScreen mainScreen].scale)
+#define BM_ADDRESS_PICKER_TIME_ANIMATION 0.25
 
-#define BW_ADDRESS_PICKER_SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
-#define BW_ADDRESS_PICKER_SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define BM_ADDRESS_PICKER_SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define BM_ADDRESS_PICKER_SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
-CGFloat const BWAddressPickerTopViewHeight = 35.0;  // Top view height
-CGFloat const BWAddressPickerBottomViewHeight = 240.0;   // Bottom table view height
-CGFloat const BWAddressPickerHeight = BWAddressPickerTopViewHeight + BWAddressPickerBottomViewHeight;
+CGFloat const BMAddressPickerTopViewHeight = 36.0;  // Top view height
+CGFloat const BMAddressPickerBottomViewHeight = 244.0;   // Bottom table view height
+CGFloat const BMAddressPickerHeight = BMAddressPickerTopViewHeight + BMAddressPickerBottomViewHeight;
 CGFloat const BMNewAddressPickerCellHeight = 40.0;   // Cell height
-CGFloat const BWAddressPickerVerticalInset = 20.0;  // Button inset
+CGFloat const BMAddressPickerHorizontalInset = 12.0;  // Button inset
 
-NSInteger const BWAddressPickerSelectableCount = 3;  // 最多选三级
+NSInteger const BMAddressPickerSelectableCount = 3;  // 最多选三级
 
 NSString *const BMNewAddressPickerCellId = @"BMNewAddressPickerCellId";
 
-NSString *const BWAddressPickerTextToSelect = @"请选择";
+NSString *const BMAddressPickerTextToSelect = @"请选择";
 
-NSInteger const BWAddressPickerFirstTableViewTag = 100;  // 第一个TableView的Tag值为100，之后的+1
-NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值为200，为了找寻选中Label
+NSInteger const BMAddressPickerFirstTableViewTag = 100;  // 第一个TableView的Tag值为100，之后的+1
+NSInteger const BMAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值为200，为了找寻选中Label
 
 @interface BMNewAddressPickerView () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 
@@ -99,7 +99,7 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
         [self.selectedTitleMutableArray addObject:titleArray[[selectedIndexNumber integerValue]]];
         [self addNextTableView];
     }];
-    [self.selectedTitleMutableArray addObject:BWAddressPickerTextToSelect];  // 最后一个为“请选择”
+    [self.selectedTitleMutableArray addObject:BMAddressPickerTextToSelect];  // 最后一个为“请选择”
     
     self.currentAddressIndex = self.addressArrayM.count - 1;
     [self refreshUIWithCurrentSelectedIndex];
@@ -108,7 +108,7 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
 // 添加选中的地址和下一级地址数组
 - (void)addNextAddressDataWithNewAddressArray:(NSArray *)newAddressArray {
     if (_selectedTitleMutableArray.count == 0) {
-        [_selectedTitleMutableArray addObject:BWAddressPickerTextToSelect];
+        [_selectedTitleMutableArray addObject:BMAddressPickerTextToSelect];
     }
     
     [_addressArrayM addObject:newAddressArray];
@@ -127,7 +127,7 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
 
 - (void)selectTitleAction:(UIButton *)sender
 {
-    NSInteger selectedIndex = sender.tag - BWAddressPickerFirstButtonTag;
+    NSInteger selectedIndex = sender.tag - BMAddressPickerFirstButtonTag;
     
     [self makeBarScrollToIndex:selectedIndex];
     [self makeTableViewScrollToIndex:selectedIndex];
@@ -137,7 +137,7 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSInteger tableViewIndex = tableView.tag - BWAddressPickerFirstTableViewTag;
+    NSInteger tableViewIndex = tableView.tag - BMAddressPickerFirstTableViewTag;
     NSArray *array = _addressArrayM[tableViewIndex];
     return array ? array.count : 0;
 }
@@ -147,7 +147,7 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
     BMNewAddressPickerCell *cell = [tableView dequeueReusableCellWithIdentifier:BMNewAddressPickerCellId];
     
     NSInteger row = indexPath.row;
-    NSInteger tableViewIndex = tableView.tag - BWAddressPickerFirstTableViewTag;
+    NSInteger tableViewIndex = tableView.tag - BMAddressPickerFirstTableViewTag;
     NSArray *array = _addressArrayM[tableViewIndex];
     NSNumber *number = (_selectedIndexArray.count > tableViewIndex) ? _selectedIndexArray[tableViewIndex] : nil;
     
@@ -159,7 +159,7 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger row = indexPath.row;
-    NSInteger tableViewIndex = tableView.tag - BWAddressPickerFirstTableViewTag;
+    NSInteger tableViewIndex = tableView.tag - BMAddressPickerFirstTableViewTag;
     
     [self reselectAddressWithTableViewIndex:tableViewIndex selectedRow:row];  // 若为重选，则先进行移除
     
@@ -170,9 +170,9 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
     NSArray *array = _addressArrayM[tableViewIndex];
     [_selectedTitleMutableArray insertObject:array[row] atIndex:_selectedTitleMutableArray.count - 1];
     
-    if (tableViewIndex == BWAddressPickerSelectableCount - 1) {
+    if (tableViewIndex == BMAddressPickerSelectableCount - 1) {
         // 设置最后一个Button
-        [self setTitleButtonWithTag:tableViewIndex + BWAddressPickerFirstButtonTag title:array[row]];
+        [self setTitleButtonWithTag:tableViewIndex + BMAddressPickerFirstButtonTag title:array[row]];
         [self makeBarScrollToIndex:tableViewIndex];
         
         if (self.didSelectBlock) self.didSelectBlock(_selectedIndexArray);
@@ -216,27 +216,27 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
     [self.shadowView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cancelAction:)]];
     
     // ---------- Selection view ----------
-    self.selectionView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.frame), CGRectGetWidth(self.frame), BWAddressPickerHeight)];
+    self.selectionView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.frame), CGRectGetWidth(self.frame), BMAddressPickerHeight)];
     self.selectionView.backgroundColor = [UIColor whiteColor];
     
     CGFloat width_cancel_button = 65;  // 取消按钮宽度
-    self.leftScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.selectionView.frame) - width_cancel_button, BWAddressPickerTopViewHeight)];
+    self.leftScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.selectionView.frame) - width_cancel_button, BMAddressPickerTopViewHeight)];
     
     self.cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.cancelButton.frame = CGRectMake(CGRectGetMaxX(self.leftScrollView.frame), 0, width_cancel_button, BWAddressPickerTopViewHeight);
+    self.cancelButton.frame = CGRectMake(CGRectGetMaxX(self.leftScrollView.frame), 0, width_cancel_button, BMAddressPickerTopViewHeight);
     [self.cancelButton setTitle:@"取消" forState:UIControlStateNormal];
-    [self.cancelButton setTitleColor:BW_ADDRESS_PICKER_333333 forState:UIControlStateNormal];
+    [self.cancelButton setTitleColor:BM_ADDRESS_PICKER_333333 forState:UIControlStateNormal];
     self.cancelButton.titleLabel.font = [UIFont systemFontOfSize:12.0];
     [self.cancelButton addTarget:self action:@selector(cancelAction:) forControlEvents:UIControlEventTouchUpInside];
     
-    self.lineView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.leftScrollView.frame) - BW_ADDRESS_PICKER_LINE_WIDTH, CGRectGetWidth(self.selectionView.frame), BW_ADDRESS_PICKER_LINE_WIDTH)];
-    self.lineView.backgroundColor = BW_ADDRESS_PICKER_UIColorFromRGB(0xcccccc);
+    self.lineView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.leftScrollView.frame) - 1, CGRectGetWidth(self.selectionView.frame), 1)];
+    self.lineView.backgroundColor = BM_ADDRESS_PICKER_e5e5e5;
     
     CGFloat height_block_view = 2;
-    self.hightlightedBlockView = [[UIView alloc] initWithFrame:CGRectMake(0, BWAddressPickerTopViewHeight - height_block_view, 0, height_block_view)];
-    self.hightlightedBlockView.backgroundColor = BW_ADDRESS_PICKER_UIColorFromRGB(0x1296db);
+    self.hightlightedBlockView = [[UIView alloc] initWithFrame:CGRectMake(0, BMAddressPickerTopViewHeight - height_block_view, 0, height_block_view)];
+    self.hightlightedBlockView.backgroundColor = BM_ADDRESS_PICKER_1fb8ff;
     
-    self.bottomScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.leftScrollView.frame), CGRectGetWidth(self.selectionView.frame), BWAddressPickerBottomViewHeight)];
+    self.bottomScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.leftScrollView.frame), CGRectGetWidth(self.selectionView.frame), BMAddressPickerBottomViewHeight)];
     self.bottomScrollView.delegate = self;
     self.bottomScrollView.pagingEnabled = YES;
     self.bottomScrollView.showsHorizontalScrollIndicator = NO;
@@ -255,11 +255,11 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
 }
 
 - (void)showSelectionView:(BOOL)show completion:(void (^ __nullable)(BOOL finished))completion {
-    CGFloat y_picker_view = show ? (BW_ADDRESS_PICKER_SCREEN_HEIGHT - BWAddressPickerHeight) : BW_ADDRESS_PICKER_SCREEN_HEIGHT;
+    CGFloat y_picker_view = show ? (BM_ADDRESS_PICKER_SCREEN_HEIGHT - BMAddressPickerHeight) : BM_ADDRESS_PICKER_SCREEN_HEIGHT;
     
     CGRect frame = self.selectionView.frame;
     frame.origin.y = y_picker_view;
-    [UIView animateWithDuration:BW_ADDRESS_PICKER_TIME_ANIMATION animations:^{
+    [UIView animateWithDuration:BM_ADDRESS_PICKER_TIME_ANIMATION animations:^{
         self.selectionView.frame = frame;
     } completion:completion];
 }
@@ -267,28 +267,29 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
 - (void)refreshUIWithCurrentSelectedIndex {
     [_leftScrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
-    __block CGFloat x_last = 0;
+    __block CGFloat x_last = 8;
     [self.selectedTitleMutableArray enumerateObjectsUsingBlock:^(NSString * _Nonnull string, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (idx > BWAddressPickerSelectableCount - 1) {
+        if (idx > BMAddressPickerSelectableCount - 1) {
             // 限制可选择的层级数
             *stop = YES;
             return;
         }
         
+        UIColor *titleColor = [string isEqualToString:BMAddressPickerTextToSelect] ? BM_ADDRESS_PICKER_999999 : BM_ADDRESS_PICKER_1fb8ff;  // “请选择”和选中的地址颜色不同
         UIFont *font = [UIFont systemFontOfSize:12.0];
-        CGFloat width_text = [[self class] widthForString:string font:font] + BWAddressPickerVerticalInset * 2;
+        CGFloat width_text = [[self class] widthForString:string font:font] + BMAddressPickerHorizontalInset * 2;
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.tag = BWAddressPickerFirstButtonTag + idx;
-        button.frame = CGRectMake(x_last, 0, width_text, BWAddressPickerTopViewHeight);
+        button.tag = BMAddressPickerFirstButtonTag + idx;
+        button.frame = CGRectMake(x_last, 0, width_text, BMAddressPickerTopViewHeight);
         [button setTitle:string forState:UIControlStateNormal];
-        [button setTitleColor:BW_ADDRESS_PICKER_333333 forState:UIControlStateNormal];
+        [button setTitleColor:titleColor forState:UIControlStateNormal];
         button.titleLabel.font = font;
         [button addTarget:self action:@selector(selectTitleAction:) forControlEvents:UIControlEventTouchUpInside];
-        button.titleEdgeInsets = UIEdgeInsetsMake(0, BWAddressPickerVerticalInset, 0, BWAddressPickerVerticalInset);
+        button.titleEdgeInsets = UIEdgeInsetsMake(0, BMAddressPickerHorizontalInset, 0, BMAddressPickerHorizontalInset);
         [self.leftScrollView addSubview:button];
         
-        x_last = CGRectGetMaxX(button.frame) + 5;
+        x_last = CGRectGetMaxX(button.frame);
         self.leftScrollView.contentSize = CGSizeMake(x_last, 0);
     }];
     
@@ -298,13 +299,13 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
 
 // 让选中条滚动到指定的位置
 - (void)makeBarScrollToIndex:(NSInteger)index {
-    UIView *selectedView = [self.leftScrollView viewWithTag:BWAddressPickerFirstButtonTag + index];
+    UIView *selectedView = [self.leftScrollView viewWithTag:BMAddressPickerFirstButtonTag + index];
     if (!selectedView) return;
     
     CGRect frame = _hightlightedBlockView.frame;
-    frame.origin.x = selectedView.frame.origin.x + BWAddressPickerVerticalInset;
-    frame.size.width = selectedView.frame.size.width - BWAddressPickerVerticalInset * 2;
-    [UIView animateWithDuration:BW_ADDRESS_PICKER_TIME_ANIMATION animations:^{
+    frame.origin.x = selectedView.frame.origin.x + BMAddressPickerHorizontalInset;
+    frame.size.width = selectedView.frame.size.width - BMAddressPickerHorizontalInset * 2;
+    [UIView animateWithDuration:BM_ADDRESS_PICKER_TIME_ANIMATION animations:^{
         self.hightlightedBlockView.frame = frame;
     }];
 }
@@ -315,15 +316,15 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
 }
 
 - (void)addNextTableView {
-    __block NSInteger nextTag = BWAddressPickerFirstTableViewTag;
+    __block NSInteger nextTag = BMAddressPickerFirstTableViewTag;
     do {
         UITableView *tableView = [self.bottomScrollView viewWithTag:nextTag];
         if (!tableView) break;
         
         nextTag += 1;
-    } while (nextTag < BWAddressPickerFirstTableViewTag + 100);  // 设置一个添加的上限
+    } while (nextTag < BMAddressPickerFirstTableViewTag + 100);  // 设置一个添加的上限
     
-    NSInteger tableViewIndex = nextTag - BWAddressPickerFirstTableViewTag;  // TableView的序列，从0开始
+    NSInteger tableViewIndex = nextTag - BMAddressPickerFirstTableViewTag;  // TableView的序列，从0开始
     CGRect frame = CGRectMake(CGRectGetWidth(_bottomScrollView.frame) * tableViewIndex, 0, CGRectGetWidth(_bottomScrollView.frame), CGRectGetHeight(_bottomScrollView.frame));
     UITableView *tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
     tableView.tag = nextTag;
@@ -338,7 +339,7 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
 }
 
 - (void)reloadTableViewWithIndex:(NSInteger)index {
-    UITableView *tableView = [_bottomScrollView viewWithTag:BWAddressPickerFirstTableViewTag + index];
+    UITableView *tableView = [_bottomScrollView viewWithTag:BMAddressPickerFirstTableViewTag + index];
     if (!tableView) return;
     
     [tableView reloadData];
@@ -349,7 +350,7 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
     UIButton *button = [self.leftScrollView viewWithTag:tag];
     [button setTitle:title forState:UIControlStateNormal];
     CGRect frame = button.frame;
-    frame.size.width = [[self class] widthForString:title font:button.titleLabel.font] + BWAddressPickerVerticalInset * 2;
+    frame.size.width = [[self class] widthForString:title font:button.titleLabel.font] + BMAddressPickerHorizontalInset * 2;
     button.frame = frame;
 }
 
@@ -366,7 +367,7 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
 /** 重新选择已选的，先对之前的选择的数据做移除操作 */
 - (void)reselectAddressWithTableViewIndex:(NSInteger)tableViewIndex selectedRow:(NSInteger)selectedRow {
     // ---------- 最后一级的选择 && 选择序列已经选满，先做移除操作 ----------
-    if (tableViewIndex == BWAddressPickerSelectableCount - 1 && _selectedIndexArray.count == BWAddressPickerSelectableCount) {
+    if (tableViewIndex == BMAddressPickerSelectableCount - 1 && _selectedIndexArray.count == BMAddressPickerSelectableCount) {
         [_selectedIndexArray removeLastObject];  // 移除最后一个序列
         [_selectedTitleMutableArray removeObjectAtIndex:_selectedTitleMutableArray.count - 2];  // 移除倒数第二个Title
     }
@@ -383,7 +384,7 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
         
         // 移除和重设bottomScrollView
         [_bottomScrollView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull subview, NSUInteger idx, BOOL * _Nonnull stop) {
-            if (NSLocationInRange(subview.tag - BWAddressPickerFirstTableViewTag, addressArrayRemovedRange)) {
+            if (NSLocationInRange(subview.tag - BMAddressPickerFirstTableViewTag, addressArrayRemovedRange)) {
                 [subview removeFromSuperview];
             }
         }];

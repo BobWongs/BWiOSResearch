@@ -3,6 +3,7 @@ platform :ios, '7.0'
 target 'BWObjective-CResearch-iOS' do
 
   pod 'Masonry'
+  pod 'FMDB', '~> 2.7.2'
 
   target 'BWObjective-CResearch-iOSTests' do
     inherit! :search_paths

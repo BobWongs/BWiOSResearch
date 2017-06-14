@@ -8,10 +8,10 @@
 
 #import "BMNewAddressPicker.h"
 #import "BMNewAddressPickerView.h"
-#import "BWNewAddressSourceManager.h"
+#import "BMNewAddressSourceManager.h"
 #import "BMNewRegionModel.h"
 
-#define BW_ADDRESS_TYPE_ARRAY @[BWAddressTypeProvince, BWAddressTypeCity, BWAddressTypeCounty]  // 类型数组
+#define BM_ADDRESS_TYPE_ARRAY @[BMAddressTypeProvince, BMAddressTypeCity, BMAddressTypeCounty]  // 类型数组
 
 @interface BMNewAddressPicker ()
 
@@ -19,7 +19,7 @@
 @property (strong, nonatomic) BMNewAddressPickerView *pickerView;
 
 /* Data */
-@property (strong, nonatomic) BWNewAddressSourceManager *addressSourceManager;  ///< Address source manager
+@property (strong, nonatomic) BMNewAddressSourceManager *addressSourceManager;  ///< Address source manager
 
 @property (strong, nonatomic) NSMutableArray<NSArray<BMNewRegionModel *> *> *addressArray;  ///< 地址数据源
 
@@ -55,10 +55,10 @@
     NSMutableArray<NSArray<BMNewRegionModel *> *> *selectedAddressArray = [NSMutableArray new];
     NSMutableArray<NSArray<NSString *> *> *namesArray = [NSMutableArray new];
     NSMutableArray<NSNumber *> *selectedNumberArray = [NSMutableArray new];
-    NSArray *typeArray = BW_ADDRESS_TYPE_ARRAY;
+    NSArray *typeArray = BM_ADDRESS_TYPE_ARRAY;
     
     // ---------- 先添加一定有的省数据 ----------
-    NSArray *provinceModelArray = [self.addressSourceManager addressSourceArrayWithParentCode:0 addressType:BWAddressTypeProvince];
+    NSArray *provinceModelArray = [self.addressSourceManager addressSourceArrayWithParentCode:0 addressType:BMAddressTypeProvince];
     [selectedAddressArray addObject:provinceModelArray];
     [namesArray addObject:[[self class] getNameArrayWithModelArray:provinceModelArray]];
     
@@ -92,7 +92,7 @@
 
 - (void)setData {
     self.addressArray = [NSMutableArray new];
-    self.addressSourceManager = [BWNewAddressSourceManager new];
+    self.addressSourceManager = [BMNewAddressSourceManager new];
     
     _pickerView = [BMNewAddressPickerView new];
     
@@ -126,7 +126,7 @@
 }
 
 - (void)getRegionDataWithParentModel:(BMNewRegionModel *)parentModel {
-    NSArray *typeArray = BW_ADDRESS_TYPE_ARRAY;
+    NSArray *typeArray = BM_ADDRESS_TYPE_ARRAY;
     NSInteger typeIndex = _addressArray.count;
     if (typeIndex > typeArray.count - 1) return;
     
