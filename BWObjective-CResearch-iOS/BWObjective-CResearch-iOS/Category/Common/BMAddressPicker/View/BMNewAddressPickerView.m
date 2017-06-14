@@ -175,7 +175,7 @@ NSInteger const BMAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
     
     if (tableViewIndex == BMAddressPickerSelectableCount - 1) {
         // 设置最后一个Button
-        [self setTitleButtonWithTag:tableViewIndex + BMAddressPickerFirstButtonTag title:array[row]];
+        [self setSelectedTitleButtonWithTag:tableViewIndex + BMAddressPickerFirstButtonTag title:array[row]];
         [self makeBarScrollToIndex:tableViewIndex];
         
         if (self.didSelectBlock) self.didSelectBlock(_selectedIndexArray);
@@ -358,7 +358,7 @@ NSInteger const BMAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
 }
 
 // 重设Button文本和宽度，根据title的文本
-- (void)setTitleButtonWithTag:(NSInteger)tag title:(NSString *)title {
+- (void)setSelectedTitleButtonWithTag:(NSInteger)tag title:(NSString *)title {
     UIButton *button = [self.leftScrollView viewWithTag:tag];
     [button setTitle:title forState:UIControlStateNormal];
     CGRect frame = button.frame;
@@ -412,6 +412,10 @@ NSInteger const BMAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
         // 重设Title
         [self refreshUIWithCurrentSelectedIndex];
     }
+}
+
+- (void)resetSelectedTitleColorIndex:(NSInteger)index {
+    
 }
 
 #pragma mark - Getter and Setter
