@@ -17,6 +17,8 @@ void test1();
 void test2();
 void test3();
 void test4();
+void test5();
+void test6();
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -81,6 +83,31 @@ void test4() {
     [object isKindOfClass:[NSObject class]];
     [object isMemberOfClass:[NSObject class]];
 }
+
+void test5() {
+    NSCache *cache = [NSCache new];
+    //        cache.totalCostLimit = 5 * 1024 * 1024; // 5MB
+    //        cache.countLimit = 100;
+    
+    NSString *key = @"name";
+    
+    [cache setObject:@"bob" forKey:key];
+    
+    NSCache *cache2 = [NSCache new];
+    NSString *name = [cache objectForKey:key];
+    NSLog(@"name: %@", name);
+}
+
+void test6() {
+    NSString *str0 = @"str0";
+    
+    NSArray *array = @[@"1", @"2", @"3", str0];
+    NSLog(@"array: %@", array);
+    
+    str0 = @"new str0";
+    NSLog(@"array: %@", array);
+}
+
 
 // Function definition
 void stringType() {

@@ -9,6 +9,8 @@
 #import "BWClass.h"
 #import <objc/runtime.h>
 
+NSString *const BWKey = @"BWKey";
+
 @implementation BWClass
 
 void myMethodIMP(id self, SEL _cmd)

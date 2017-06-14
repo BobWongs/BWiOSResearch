@@ -13,6 +13,7 @@
 #import "BWResearch2VC.h"
 #import "BWResearch3VC.h"
 #import "BWResearch4VC.h"
+#import "BWResearch5VC.h"
 
 @interface AppDelegate ()
 
@@ -52,10 +53,12 @@
 //    researchNvgtVC.tabBarItem.title = @"Research2";
     
 //    BWResearch3VC *researchVC = [BWResearch3VC new];
-    BWResearch4VC *researchVC = [BWResearch4VC new];
+//    BWResearch4VC *researchVC = [BWResearch4VC new];
+//    BWResearch5VC  *researchVC = [BWResearch5VC new];
+    Class vcClass = [BWResearch5VC class];
     
-    UINavigationController *researchNvgtVC = [[UINavigationController alloc] initWithRootViewController:researchVC];
-    researchNvgtVC.tabBarItem.title = NSStringFromClass([BWResearch4VC class]);
+    UINavigationController *researchNvgtVC = [[UINavigationController alloc] initWithRootViewController:[vcClass new]];
+    researchNvgtVC.tabBarItem.title = NSStringFromClass(vcClass);
     
     UITabBarController *tabVC = [UITabBarController new];
     tabVC.viewControllers = @[researchNvgtVC];
@@ -65,6 +68,16 @@
     self.window.rootViewController = tabVC;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    
+//    for (NSInteger i = 0; i < 20000; i++) {
+//        @autoreleasepool {
+//            UIImage *image = [UIImage imageNamed:@"icon_discovery_selected"];
+//            NSNumber *number = [NSNumber numberWithInteger:i];
+//            NSLog(@"number: %@", number);
+//            NSLog(@"image: %@", image);
+//        }
+//    }
     
     return YES;
 }

@@ -38,7 +38,7 @@
 
 - (void)setConstraints
 {
-    <#Code#>
+    
 }
 
 #pragma mark - Getter and Setter
