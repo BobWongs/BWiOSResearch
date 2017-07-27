@@ -320,6 +320,8 @@ NSInteger const BMAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
     [UIView animateWithDuration:BM_ADDRESS_PICKER_TIME_ANIMATION animations:^{
         self.hightlightedBlockView.frame = frame;
     }];
+    
+    [self resetSelectedTitleColorIndex:index];
 }
 
 // 让TableView滚动到指定位置
@@ -361,6 +363,7 @@ NSInteger const BMAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
 - (void)setSelectedTitleButtonWithTag:(NSInteger)tag title:(NSString *)title {
     UIButton *button = [self.leftScrollView viewWithTag:tag];
     [button setTitle:title forState:UIControlStateNormal];
+    [button setTitleColor:BM_ADDRESS_PICKER_1fb8ff forState:UIControlStateNormal];
     CGRect frame = button.frame;
     frame.size.width = [[self class] widthForString:title font:button.titleLabel.font] + BMAddressPickerHorizontalInset * 2;
     button.frame = frame;
@@ -414,8 +417,19 @@ NSInteger const BMAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
     }
 }
 
+/** 重置已选中Title的颜色，当前光标、其他已选中、请选择的颜色不同 */
 - (void)resetSelectedTitleColorIndex:(NSInteger)index {
+    for (UIButton *btn in self.leftScrollView.subviews) {
+        if (![btn isKindOfClass:[UIButton class]]) continue;  // 修改目标类为UIButton
+        if ([btn.titleLabel.text isEqualToString:BMAddressPickerTextToSelect]) continue;  // “请选择”颜色不变
+        [btn setTitleColor:BM_ADDRESS_PICKER_333333 forState:UIControlStateNormal];
+    }
     
+    UIButton *button = [self.leftScrollView viewWithTag:BMAddressPickerFirstButtonTag + index];
+    if (![button isKindOfClass:[UIButton class]]) return;  // 修改目标类为UIButton
+    if ([button.titleLabel.text isEqualToString:BMAddressPickerTextToSelect]) return;  // “请选择”颜色不变
+    
+    [button setTitleColor:BM_ADDRESS_PICKER_1fb8ff forState:UIControlStateNormal];
 }
 
 #pragma mark - Getter and Setter

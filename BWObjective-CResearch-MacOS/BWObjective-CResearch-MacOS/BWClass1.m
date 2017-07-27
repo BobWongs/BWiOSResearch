@@ -8,7 +8,7 @@
 
 #import "BWClass1.h"
 
-NSString *const BWKey = @"BWKey";
+//NSString *const BWKey = @"BWKey";
 
 @implementation BWClass1
 

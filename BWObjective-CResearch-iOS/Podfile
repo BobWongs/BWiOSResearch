@@ -4,6 +4,8 @@ target 'BWObjective-CResearch-iOS' do
 
   pod 'Masonry'
   pod 'FMDB', '~> 2.7.2'
+  pod 'AFNetworking', '~> 3.1.0'
+  pod 'YYCategories', '~> 1.0.4'
 
   target 'BWObjective-CResearch-iOSTests' do
     inherit! :search_paths
