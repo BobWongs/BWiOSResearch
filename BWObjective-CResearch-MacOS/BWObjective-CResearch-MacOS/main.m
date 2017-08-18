@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "BWClass.h"
 
+#define BMFloatEquation(A, B) (ABS(A-B)<=0.00001)
+
 // Function declaration
 void stringType();
 void objectType();
@@ -19,24 +21,20 @@ void test3();
 void test4();
 void test5();
 void test6();
+void test7();
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        NSMutableArray<NSNumber *> *array = [NSMutableArray arrayWithArray:@[@(11), @(243), @(3), @(323), @(2)]];
-        NSLog(@"original array is %@", array);
-
-        // 从大到小，对可变数组进行排序，没有返回值
-        [array sortUsingComparator:^NSComparisonResult(NSNumber *  _Nonnull obj1, NSNumber *  _Nonnull obj2) {
-            return (obj1.integerValue > obj2.integerValue) ? NSOrderedAscending : NSOrderedDescending;
-        }];
-        NSLog(@"original sorted array is %@", array);
-
-        // 从小到大，对数组进行排序，返回排序后的数组
-        NSArray *sortedArray = [array sortedArrayUsingComparator:^NSComparisonResult(NSNumber *  _Nonnull obj1, NSNumber *  _Nonnull obj2) {
-            return (obj1.integerValue < obj2.integerValue) ? NSOrderedAscending : NSOrderedDescending;
-        }];
-        NSLog(@"array is %@", sortedArray);
+        float a = 100.0;
+        float b = 101.0;
+        NSLog(@"a: %f, b: %f", a, b);
+        
+        if (BMFloatEquation(a, b)) {
+            NSLog(@"=");
+        } else {
+            NSLog(@"!=");
+        }
         
     }
     
@@ -122,6 +120,22 @@ void test6() {
     NSLog(@"array: %@", array);
 }
 
+void test7() {
+    NSMutableArray<NSNumber *> *array = [NSMutableArray arrayWithArray:@[@(11), @(243), @(3), @(323), @(2)]];
+    NSLog(@"original array is %@", array);
+    
+    // 从大到小，对可变数组进行排序，没有返回值
+    [array sortUsingComparator:^NSComparisonResult(NSNumber *  _Nonnull obj1, NSNumber *  _Nonnull obj2) {
+        return (obj1.integerValue > obj2.integerValue) ? NSOrderedAscending : NSOrderedDescending;
+    }];
+    NSLog(@"original sorted array is %@", array);
+    
+    // 从小到大，对数组进行排序，返回排序后的数组
+    NSArray *sortedArray = [array sortedArrayUsingComparator:^NSComparisonResult(NSNumber *  _Nonnull obj1, NSNumber *  _Nonnull obj2) {
+        return (obj1.integerValue < obj2.integerValue) ? NSOrderedAscending : NSOrderedDescending;
+    }];
+    NSLog(@"array is %@", sortedArray);
+}
 
 // Function definition
 void stringType() {

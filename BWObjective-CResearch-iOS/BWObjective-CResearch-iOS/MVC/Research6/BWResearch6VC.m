@@ -38,6 +38,11 @@
     
     
 //    [self networkOriginalStatus];
+    
+}
+
+- (void)backToHome {
+    [[UIApplication sharedApplication] performSelector:NSSelectorFromString(@"suspend")];
 }
 
 + (NSString *)getIPAddressSecond {
@@ -116,7 +121,7 @@
     button.frame = CGRectMake(0, 0, 50, 21);
     button.backgroundColor = [UIColor orangeColor];
     [button setTitle:@"我的收益" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(getIPAddress) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(backToHome) forControlEvents:UIControlEventTouchUpInside];
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
     self.navigationItem.rightBarButtonItem = item;

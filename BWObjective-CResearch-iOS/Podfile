@@ -1,4 +1,4 @@
-platform :ios, '7.0'
+platform :ios, '8.0'
 
 target 'BWObjective-CResearch-iOS' do
 
@@ -6,6 +6,7 @@ target 'BWObjective-CResearch-iOS' do
   pod 'FMDB', '~> 2.7.2'
   pod 'AFNetworking', '~> 3.1.0'
   pod 'YYCategories', '~> 1.0.4'
+  pod 'BWPodRepository', '0.2.0'
 
   target 'BWObjective-CResearch-iOSTests' do
     inherit! :search_paths

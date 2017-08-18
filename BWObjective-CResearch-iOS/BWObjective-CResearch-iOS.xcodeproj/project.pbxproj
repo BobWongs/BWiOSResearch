@@ -46,6 +46,12 @@
 		B48CC7621EF12129008E3856 /* BWResearch6VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B48CC7601EF12129008E3856 /* BWResearch6VC.m */; };
 		B48CC7631EF12129008E3856 /* BWResearch6VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48CC7611EF12129008E3856 /* BWResearch6VC.xib */; };
 		B491B0111E66BF2E005CAD43 /* BWResearch3VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B491B0101E66BF2E005CAD43 /* BWResearch3VC.m */; };
+		B494E6631F304CFD008284C0 /* BWResearch7VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B494E6611F304CFD008284C0 /* BWResearch7VC.m */; };
+		B494E6641F304CFD008284C0 /* BWResearch7VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B494E6621F304CFD008284C0 /* BWResearch7VC.xib */; };
+		B494E6761F3057AA008284C0 /* temp0.txt in Resources */ = {isa = PBXBuildFile; fileRef = B494E6741F3057AA008284C0 /* temp0.txt */; };
+		B494E6771F3057AA008284C0 /* BWResource2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B494E6751F3057AA008284C0 /* BWResource2.bundle */; };
+		B494E67A1F3057B2008284C0 /* BWResource1 in Resources */ = {isa = PBXBuildFile; fileRef = B494E6781F3057B2008284C0 /* BWResource1 */; };
+		B494E67B1F3057B2008284C0 /* BWResource3.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B494E6791F3057B2008284C0 /* BWResource3.bundle */; };
 		B4A0CF071E6551DD00CC8C92 /* BWResearch2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0CF061E6551DD00CC8C92 /* BWResearch2VC.m */; };
 		B4A8610C1EEE45F5006C07FC /* BWResearch5VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A8610B1EEE45F5006C07FC /* BWResearch5VC.m */; };
 		B4ABFCAD1EAF2FAA004F9F49 /* BWResearch4VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABFCAC1EAF2FAA004F9F49 /* BWResearch4VC.m */; };
@@ -60,7 +66,8 @@
 		B4B631311DAE384F00DF0907 /* UITableViewCell+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B6312D1DAE384F00DF0907 /* UITableViewCell+JZExtension.m */; };
 		B4B631321DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B6312F1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m */; };
 		B4B631331DAE384F00DF0907 /* UITableViewRowAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B631301DAE384F00DF0907 /* UITableViewRowAction.m */; };
-		B4C60FF31EC0244600D6EB15 /* BMLeftTextRightIconStyle0Button.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C60FF21EC0244600D6EB15 /* BMLeftTextRightIconStyle0Button.m */; };
+		B4D191681F46E6D400A3F337 /* BMLeftTextRightIconStyle0Button.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D191671F46E6D400A3F337 /* BMLeftTextRightIconStyle0Button.m */; };
+		B4D1916C1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D1916B1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +153,13 @@
 		B48CC7611EF12129008E3856 /* BWResearch6VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWResearch6VC.xib; sourceTree = "<group>"; };
 		B491B00F1E66BF2E005CAD43 /* BWResearch3VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch3VC.h; sourceTree = "<group>"; };
 		B491B0101E66BF2E005CAD43 /* BWResearch3VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch3VC.m; sourceTree = "<group>"; };
+		B494E6601F304CFD008284C0 /* BWResearch7VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch7VC.h; sourceTree = "<group>"; };
+		B494E6611F304CFD008284C0 /* BWResearch7VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch7VC.m; sourceTree = "<group>"; };
+		B494E6621F304CFD008284C0 /* BWResearch7VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWResearch7VC.xib; sourceTree = "<group>"; };
+		B494E6741F3057AA008284C0 /* temp0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = temp0.txt; sourceTree = "<group>"; };
+		B494E6751F3057AA008284C0 /* BWResource2.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BWResource2.bundle; sourceTree = "<group>"; };
+		B494E6781F3057B2008284C0 /* BWResource1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BWResource1; sourceTree = "<group>"; };
+		B494E6791F3057B2008284C0 /* BWResource3.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BWResource3.bundle; sourceTree = "<group>"; };
 		B4A0CF051E6551DD00CC8C92 /* BWResearch2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch2VC.h; sourceTree = "<group>"; };
 		B4A0CF061E6551DD00CC8C92 /* BWResearch2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch2VC.m; sourceTree = "<group>"; };
 		B4A8610A1EEE45F5006C07FC /* BWResearch5VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch5VC.h; sourceTree = "<group>"; };
@@ -174,8 +188,10 @@
 		B4B6312E1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewRowAction+JZExtension.h"; sourceTree = "<group>"; };
 		B4B6312F1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewRowAction+JZExtension.m"; sourceTree = "<group>"; };
 		B4B631301DAE384F00DF0907 /* UITableViewRowAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewRowAction.m; sourceTree = "<group>"; };
-		B4C60FF11EC0244600D6EB15 /* BMLeftTextRightIconStyle0Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLeftTextRightIconStyle0Button.h; sourceTree = "<group>"; };
-		B4C60FF21EC0244600D6EB15 /* BMLeftTextRightIconStyle0Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLeftTextRightIconStyle0Button.m; sourceTree = "<group>"; };
+		B4D191661F46E6D400A3F337 /* BMLeftTextRightIconStyle0Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLeftTextRightIconStyle0Button.h; sourceTree = "<group>"; };
+		B4D191671F46E6D400A3F337 /* BMLeftTextRightIconStyle0Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLeftTextRightIconStyle0Button.m; sourceTree = "<group>"; };
+		B4D1916A1F46EC4200A3F337 /* CAGradientLayer+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAGradientLayer+BMExtension.h"; sourceTree = "<group>"; };
+		B4D1916B1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAGradientLayer+BMExtension.m"; sourceTree = "<group>"; };
 		C103FEAD4813AE671D13F2D2 /* Pods-BWObjective-CResearch-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		DAEA5361C98C05D3A8AC261A /* Pods-BWObjective-CResearch-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DD13E253539AA17662F57D49 /* Pods-BWObjective-CResearch-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOSUITests/Pods-BWObjective-CResearch-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -280,6 +296,10 @@
 				B4FF7E891DACDD220015089F /* Library */,
 				B46B25CD1DB72C9A00B9FF54 /* Resource */,
 				B443A1E51D548382003D66C5 /* Assets.xcassets */,
+				B494E6731F3057AA008284C0 /* BWResource0 */,
+				B494E6781F3057B2008284C0 /* BWResource1 */,
+				B494E6751F3057AA008284C0 /* BWResource2.bundle */,
+				B494E6791F3057B2008284C0 /* BWResource3.bundle */,
 				B443A1D91D548382003D66C5 /* Supporting Files */,
 			);
 			path = "BWObjective-CResearch-iOS";
@@ -465,6 +485,24 @@
 			path = Research3;
 			sourceTree = "<group>";
 		};
+		B494E65F1F304CE1008284C0 /* Research7 */ = {
+			isa = PBXGroup;
+			children = (
+				B494E6601F304CFD008284C0 /* BWResearch7VC.h */,
+				B494E6611F304CFD008284C0 /* BWResearch7VC.m */,
+				B494E6621F304CFD008284C0 /* BWResearch7VC.xib */,
+			);
+			path = Research7;
+			sourceTree = "<group>";
+		};
+		B494E6731F3057AA008284C0 /* BWResource0 */ = {
+			isa = PBXGroup;
+			children = (
+				B494E6741F3057AA008284C0 /* temp0.txt */,
+			);
+			path = BWResource0;
+			sourceTree = "<group>";
+		};
 		B4A0CF041E6551CA00CC8C92 /* Research2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -526,6 +564,7 @@
 		B4AC5FBD1DB4CFFA00D880FB /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				B4D191691F46EC2D00A3F337 /* B2BMall */,
 				B4AC5FBE1DB4D01200D880FB /* UIViewController+BWExtension.h */,
 				B4AC5FBF1DB4D01200D880FB /* UIViewController+BWExtension.m */,
 			);
@@ -544,6 +583,7 @@
 				B4ABFCAA1EAF2F9A004F9F49 /* Research4 */,
 				B4A861091EEE45C8006C07FC /* Research5 */,
 				B48CC7551EF11EDF008E3856 /* Research6 */,
+				B494E65F1F304CE1008284C0 /* Research7 */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -562,10 +602,27 @@
 		B4C60FF01EC0242E00D6EB15 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B4C60FF11EC0244600D6EB15 /* BMLeftTextRightIconStyle0Button.h */,
-				B4C60FF21EC0244600D6EB15 /* BMLeftTextRightIconStyle0Button.m */,
+				B4D191651F46E6D400A3F337 /* BMLeftTextRightIconStyle0Button */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B4D191651F46E6D400A3F337 /* BMLeftTextRightIconStyle0Button */ = {
+			isa = PBXGroup;
+			children = (
+				B4D191661F46E6D400A3F337 /* BMLeftTextRightIconStyle0Button.h */,
+				B4D191671F46E6D400A3F337 /* BMLeftTextRightIconStyle0Button.m */,
+			);
+			path = BMLeftTextRightIconStyle0Button;
+			sourceTree = "<group>";
+		};
+		B4D191691F46EC2D00A3F337 /* B2BMall */ = {
+			isa = PBXGroup;
+			children = (
+				B4D1916A1F46EC4200A3F337 /* CAGradientLayer+BMExtension.h */,
+				B4D1916B1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m */,
+			);
+			path = B2BMall;
 			sourceTree = "<group>";
 		};
 		B4FF7E891DACDD220015089F /* Library */ = {
@@ -705,8 +762,10 @@
 			files = (
 				B48CC7531EF1124B008E3856 /* BMNewAddressPickerCell.xib in Resources */,
 				B46B25D11DB72CE800B9FF54 /* bw_icon_back_100@2x.png in Resources */,
+				B494E67B1F3057B2008284C0 /* BWResource3.bundle in Resources */,
 				B46B25631DB5EDDD00B9FF54 /* BWHomeTableViewCell.xib in Resources */,
 				B48CC7631EF12129008E3856 /* BWResearch6VC.xib in Resources */,
+				B494E6771F3057AA008284C0 /* BWResource2.bundle in Resources */,
 				B426B0091DF7ABD400F438F3 /* icon_discovery_unselected@2x.png in Resources */,
 				B48CC75D1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@2x.png in Resources */,
 				B426B0081DF7ABD400F438F3 /* icon_discovery_selected@2x.png in Resources */,
@@ -715,6 +774,9 @@
 				B443A1E91D548382003D66C5 /* LaunchScreen.storyboard in Resources */,
 				B47A37BB1E01305900E130AA /* bg_study@2x.png in Resources */,
 				B443A1E61D548382003D66C5 /* Assets.xcassets in Resources */,
+				B494E67A1F3057B2008284C0 /* BWResource1 in Resources */,
+				B494E6641F304CFD008284C0 /* BWResearch7VC.xib in Resources */,
+				B494E6761F3057AA008284C0 /* temp0.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,13 +833,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BWObjective-CResearch-iOSUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		80A7D13EE6B75BD8CA475ECC /* [CP] Embed Pods Frameworks */ = {
@@ -816,13 +881,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BWObjective-CResearch-iOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C1ADF132BCD855D8A760CB19 /* [CP] Copy Pods Resources */ = {
@@ -861,13 +929,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BWObjective-CResearch-iOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -878,6 +949,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4AC5FB91DB4CC5200D880FB /* UINavigationBar+JZExtension.m in Sources */,
+				B4D1916C1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m in Sources */,
 				B4B631331DAE384F00DF0907 /* UITableViewRowAction.m in Sources */,
 				B41093F91E10CEF700D59621 /* BWAddressBookManager.m in Sources */,
 				B46B25601DB5EDDD00B9FF54 /* BWHomeViewController.m in Sources */,
@@ -886,9 +958,10 @@
 				B46B25521DB5DCD800B9FF54 /* BWBaseViewController.m in Sources */,
 				B4AC5FB81DB4CC5200D880FB /* NSNumber+JZExtension.m in Sources */,
 				B48CC7541EF1124B008E3856 /* BMNewAddressPickerView.m in Sources */,
+				B4D191681F46E6D400A3F337 /* BMLeftTextRightIconStyle0Button.m in Sources */,
 				B4AC5FB61DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m in Sources */,
-				B4C60FF31EC0244600D6EB15 /* BMLeftTextRightIconStyle0Button.m in Sources */,
 				B48CC74C1EF1124B008E3856 /* BMNewAddressSourceManager.m in Sources */,
+				B494E6631F304CFD008284C0 /* BWResearch7VC.m in Sources */,
 				B46B25CC1DB620CA00B9FF54 /* BWMeSecondViewController.m in Sources */,
 				B443A1DE1D548382003D66C5 /* AppDelegate.m in Sources */,
 				B4ABFCAD1EAF2FAA004F9F49 /* BWResearch4VC.m in Sources */,
