@@ -46,6 +46,9 @@
 		B48CC7621EF12129008E3856 /* BWResearch6VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B48CC7601EF12129008E3856 /* BWResearch6VC.m */; };
 		B48CC7631EF12129008E3856 /* BWResearch6VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48CC7611EF12129008E3856 /* BWResearch6VC.xib */; };
 		B491B0111E66BF2E005CAD43 /* BWResearch3VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B491B0101E66BF2E005CAD43 /* BWResearch3VC.m */; };
+		B494DEB31F4AB80C00A43EC5 /* UIView+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B494DEB21F4AB80C00A43EC5 /* UIView+BMExtension.m */; };
+		B494DEB61F4AB87500A43EC5 /* UIButton+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B494DEB51F4AB87500A43EC5 /* UIButton+BMExtension.m */; };
+		B494DEB91F4ABC8500A43EC5 /* UIImage+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B494DEB81F4ABC8500A43EC5 /* UIImage+BMExtension.m */; };
 		B494E6631F304CFD008284C0 /* BWResearch7VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B494E6611F304CFD008284C0 /* BWResearch7VC.m */; };
 		B494E6641F304CFD008284C0 /* BWResearch7VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B494E6621F304CFD008284C0 /* BWResearch7VC.xib */; };
 		B494E6761F3057AA008284C0 /* temp0.txt in Resources */ = {isa = PBXBuildFile; fileRef = B494E6741F3057AA008284C0 /* temp0.txt */; };
@@ -153,6 +156,13 @@
 		B48CC7611EF12129008E3856 /* BWResearch6VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWResearch6VC.xib; sourceTree = "<group>"; };
 		B491B00F1E66BF2E005CAD43 /* BWResearch3VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch3VC.h; sourceTree = "<group>"; };
 		B491B0101E66BF2E005CAD43 /* BWResearch3VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch3VC.m; sourceTree = "<group>"; };
+		B494DEB11F4AB80C00A43EC5 /* UIView+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BMExtension.h"; sourceTree = "<group>"; };
+		B494DEB21F4AB80C00A43EC5 /* UIView+BMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BMExtension.m"; sourceTree = "<group>"; };
+		B494DEB41F4AB87500A43EC5 /* UIButton+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BMExtension.h"; sourceTree = "<group>"; };
+		B494DEB51F4AB87500A43EC5 /* UIButton+BMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BMExtension.m"; sourceTree = "<group>"; };
+		B494DEB71F4ABC8500A43EC5 /* UIImage+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BMExtension.h"; sourceTree = "<group>"; };
+		B494DEB81F4ABC8500A43EC5 /* UIImage+BMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BMExtension.m"; sourceTree = "<group>"; };
+		B494DEBA1F4AC89C00A43EC5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B494E6601F304CFD008284C0 /* BWResearch7VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch7VC.h; sourceTree = "<group>"; };
 		B494E6611F304CFD008284C0 /* BWResearch7VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch7VC.m; sourceTree = "<group>"; };
 		B494E6621F304CFD008284C0 /* BWResearch7VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWResearch7VC.xib; sourceTree = "<group>"; };
@@ -311,6 +321,7 @@
 				B443A1DA1D548382003D66C5 /* main.m */,
 				B443A1EA1D548382003D66C5 /* Info.plist */,
 				B443A1E71D548382003D66C5 /* LaunchScreen.storyboard */,
+				B494DEBA1F4AC89C00A43EC5 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -621,6 +632,12 @@
 			children = (
 				B4D1916A1F46EC4200A3F337 /* CAGradientLayer+BMExtension.h */,
 				B4D1916B1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m */,
+				B494DEB11F4AB80C00A43EC5 /* UIView+BMExtension.h */,
+				B494DEB21F4AB80C00A43EC5 /* UIView+BMExtension.m */,
+				B494DEB41F4AB87500A43EC5 /* UIButton+BMExtension.h */,
+				B494DEB51F4AB87500A43EC5 /* UIButton+BMExtension.m */,
+				B494DEB71F4ABC8500A43EC5 /* UIImage+BMExtension.h */,
+				B494DEB81F4ABC8500A43EC5 /* UIImage+BMExtension.m */,
 			);
 			path = B2BMall;
 			sourceTree = "<group>";
@@ -951,6 +968,7 @@
 				B4AC5FB91DB4CC5200D880FB /* UINavigationBar+JZExtension.m in Sources */,
 				B4D1916C1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m in Sources */,
 				B4B631331DAE384F00DF0907 /* UITableViewRowAction.m in Sources */,
+				B494DEB31F4AB80C00A43EC5 /* UIView+BMExtension.m in Sources */,
 				B41093F91E10CEF700D59621 /* BWAddressBookManager.m in Sources */,
 				B46B25601DB5EDDD00B9FF54 /* BWHomeViewController.m in Sources */,
 				B4A0CF071E6551DD00CC8C92 /* BWResearch2VC.m in Sources */,
@@ -967,7 +985,9 @@
 				B4ABFCAD1EAF2FAA004F9F49 /* BWResearch4VC.m in Sources */,
 				B48CC7621EF12129008E3856 /* BWResearch6VC.m in Sources */,
 				B46B25681DB5EE1C00B9FF54 /* BWMeController.m in Sources */,
+				B494DEB61F4AB87500A43EC5 /* UIButton+BMExtension.m in Sources */,
 				B491B0111E66BF2E005CAD43 /* BWResearch3VC.m in Sources */,
+				B494DEB91F4ABC8500A43EC5 /* UIImage+BMExtension.m in Sources */,
 				B4AC5FBA1DB4CC5200D880FB /* UIToolbar+JZExtension.m in Sources */,
 				B4AC5FBB1DB4CC5200D880FB /* UINavigationController+JZExtension.m in Sources */,
 				B443A1DB1D548382003D66C5 /* main.m in Sources */,
@@ -1169,6 +1189,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1FD232541ED7BCEA92DF3EFA /* Pods-BWObjective-CResearch-iOSUITests.debug.xcconfig */;
 			buildSettings = {
+				GCC_PREFIX_HEADER = "BWObjective-CResearch-iOS/PrefixHeader.pch";
 				INFOPLIST_FILE = "BWObjective-CResearch-iOSUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bws.BWObjective-CResearch-iOSUITests";
@@ -1181,6 +1202,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DD13E253539AA17662F57D49 /* Pods-BWObjective-CResearch-iOSUITests.release.xcconfig */;
 			buildSettings = {
+				GCC_PREFIX_HEADER = "BWObjective-CResearch-iOS/PrefixHeader.pch";
 				INFOPLIST_FILE = "BWObjective-CResearch-iOSUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bws.BWObjective-CResearch-iOSUITests";

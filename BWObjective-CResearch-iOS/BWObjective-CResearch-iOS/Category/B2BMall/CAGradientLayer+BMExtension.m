@@ -7,11 +7,32 @@
 //
 
 #import "CAGradientLayer+BMExtension.h"
+#import <UIKit/UIColor.h>
+
+#define BMb2b_Gradient_Start_Point CGPointMake(0, 1)
+#define BMb2b_Gradient_End_Point CGPointMake(1, 0)
 
 @implementation CAGradientLayer (BMExtension)
 
-+ (CAGradientLayer *)bm_gradientLayerWithSomething {
-    return nil;
++ (CAGradientLayer *)bm_gradientLayerWithSize:(CGSize)size
+                                   startColor:(CGColorRef)startColorRef
+                                     endColor:(CGColorRef)endColorRef
+                                   startPoint:(CGPoint)startPoint
+                                     endPoint:(CGPoint)endPoint {
+    CAGradientLayer *gLayer = [[CAGradientLayer alloc] init];
+    gLayer.frame = CGRectMake(0, 0, size.width, size.height);
+    gLayer.colors = @[(__bridge id)startColorRef, (__bridge id)endColorRef];
+    gLayer.startPoint = startPoint;
+    gLayer.endPoint = endPoint;
+    return gLayer;
+}
+
++ (CAGradientLayer *)bm_gradientLayerInB2BBrandColor1WithSize:(CGSize)size {
+    return [[self class] bm_gradientLayerWithSize:size startColor:BMb2b_brand_color1_start.CGColor endColor:BMb2b_brand_color1_end.CGColor startPoint:BMb2b_Gradient_Start_Point endPoint:BMb2b_Gradient_End_Point];
+}
+
++ (CAGradientLayer *)bm_gradientLayerInB2BBrandColor2WithSize:(CGSize)size {
+    return [[self class] bm_gradientLayerWithSize:size startColor:BMb2b_brand_color2_start.CGColor endColor:BMb2b_brand_color2_end.CGColor startPoint:BMb2b_Gradient_Start_Point endPoint:BMb2b_Gradient_End_Point];
 }
 
 @end
