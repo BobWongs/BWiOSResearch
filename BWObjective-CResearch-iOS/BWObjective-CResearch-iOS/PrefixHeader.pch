@@ -27,6 +27,10 @@
 #define BMb2b_text_color2 [UIColor bm_colorWithHexString:@"80848C"]  // 副标题、补充内容
 #define BMb2b_text_color3 [UIColor bm_colorWithHexString:@"C0C4CD"]  // 提示语、小标题
 
+// 其他
+#define BMb2b_AFD0F8 [UIColor bm_colorWithHexString:@"AFD0F8"]  // 浅白色
+#define BMb2b_F8C4AF [UIColor bm_colorWithHexString:@"F8C4AF"]  // 浅橙色
+
 
 /* -------------------- Font -------------------- */
 

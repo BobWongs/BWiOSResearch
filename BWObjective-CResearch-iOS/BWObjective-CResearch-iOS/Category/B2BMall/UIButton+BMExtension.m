@@ -47,18 +47,11 @@
     }
 }
 
-//+ (UIButton *)bm_buttonWithTitleFont:(UIFont *)titleFont titleColor:(UIColor *)titleColor normalBgImage:(UIImage *)normalBgImage highlightedBgColor:(UIColor *)highlightedBgColor disabledBgColor:(UIColor *)disabledBgColor cornerRadius:(CGFloat)cornerRadius borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth {
-//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-//    
-//}
 
-+ (UIButton *)bm_b2bButton1WithNormalBgGradientColorArray:(NSArray<UIColor *> *)colorArray {
-    return [self bm_buttonWithTitleFont:<#(UIFont *)#> titleColor:<#(UIColor *)#> normalBgImage:<#(UIImage *)#> highlightedBgColor:<#(UIColor *)#> disabledBgColor:<#(UIColor *)#> cornerRadius:<#(CGFloat)#> borderColor:<#(UIColor *)#> borderWidth:<#(CGFloat)#>]
-}
 
-- (void)bm_setB2bButton1WithNormalBgGradientColorArray:(NSArray<UIColor *> *)colorArray {
+- (void)bm_setB2bButton1WithNormalBgGradientColorArray:(NSArray<UIColor *> *)colorArray highlightedBgColor:(UIColor *)highlightedBgColor disabledBgColor:(UIColor *)disabledBgColor {
     UIImage *normalBgImage = [UIImage bm_gradientImageWithColorArray:colorArray size:CGSizeMake(1, 1)];
-    [self bm_setButtonWithTitleFont:[UIFont boldSystemFontOfSize:16.0] titleColor:[UIColor whiteColor] normalBgImage:normalBgImage highlightedBgColor:BMb2b_sub_color1 disabledBgColor:<#(UIColor *)#> cornerRadius:<#(CGFloat)#> borderColor:<#(UIColor *)#> borderWidth:<#(CGFloat)#>]
+    [self bm_setButtonWithTitleFont:[UIFont boldSystemFontOfSize:16.0] titleColor:[UIColor whiteColor] normalBgImage:normalBgImage highlightedBgColor:highlightedBgColor disabledBgColor:disabledBgColor cornerRadius:4.0 borderColor:nil borderWidth:0];
 }
 
 + (UIButton *)bm_b2bButton2WithBackgroundImageStartColor:(UIColor *)startColor endColor:(UIColor *)endColr {
@@ -81,6 +74,10 @@
         self.layer.borderColor = borderColor.CGColor;
         self.layer.borderWidth = borderWidth;
     }
+}
+
+- (void)bm_setBackgroundGradientNormalImageWithColorArray:(NSArray<UIColor *> *)colorArray {
+    [self setBackgroundImage:[UIImage bm_gradientImageWithColorArray:colorArray size:CGSizeMake(1.0, 1.0)] forState:UIControlStateNormal];
 }
 
 @end
