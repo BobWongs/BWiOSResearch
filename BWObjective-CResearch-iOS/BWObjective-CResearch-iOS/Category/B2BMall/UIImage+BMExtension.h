@@ -13,12 +13,14 @@
 + (UIImage *)bm_gradientImageFromLayer:(CALayer *)layer;
 
 + (UIImage *)bm_gradientImageWithSize:(CGSize)size
-                           startColor:(CGColorRef)startColorRef
-                             endColor:(CGColorRef)endColorRef
+                           startColor:(UIColor *)startColor
+                             endColor:(UIColor *)endColor
                            startPoint:(CGPoint)startPoint
                              endPoint:(CGPoint)endPoint;
 
-+ (UIImage *)bm_gradientImageInB2BBrandColor1WithSize:(CGSize)size;
-+ (UIImage *)bm_gradientImageInB2BBrandColor2WithSize:(CGSize)size;
++ (UIImage *)bm_gradientImageWithColorArray:(NSArray<UIColor *> *)colorArray size:(CGSize)size;
+
++ (UIImage *)bm_imageWithColor:(UIColor *)color;
++ (UIImage *)bm_imageWithColor:(UIColor *)color size:(CGSize)size;
 
 @end

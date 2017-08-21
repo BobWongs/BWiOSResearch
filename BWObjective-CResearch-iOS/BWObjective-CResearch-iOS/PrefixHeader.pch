@@ -14,4 +14,35 @@
 
 #import <YYCategories.h>
 
+
+// 辅助颜色
+#define BMb2b_sub_color1 [UIColor bm_colorWithHexString:@"0378FF"]  // 可点击字段、提示语颜色、状态显示颜色
+#define BMb2b_sub_color2 [UIColor bm_colorWithHexString:@"FF7F1E"]  // 金额颜色
+#define BMb2b_sub_color3 [UIColor bm_colorWithHexString:@"FF682A"]  // 角标颜色
+#define BMb2b_page_color [UIColor bm_colorWithHexString:@"F2F5F9"]  // 页面底色
+#define BMb2b_line_color [UIColor bm_colorWithHexString:@"DCE2EA"]  // 分隔线颜色
+
+// 字体颜色
+#define BMb2b_text_color1 [UIColor bm_colorWithHexString:@"071A47"]  // 标题、正文
+#define BMb2b_text_color2 [UIColor bm_colorWithHexString:@"80848C"]  // 副标题、补充内容
+#define BMb2b_text_color3 [UIColor bm_colorWithHexString:@"C0C4CD"]  // 提示语、小标题
+
+
+/* -------------------- Font -------------------- */
+
+#define BMb2b_t1 [UIFont systemFontOfSize:20.0]  // 总金额显示、提示页面正文
+#define BMb2b_t2 [UIFont systemFontOfSize:16.0]  // btn文字(大按钮、弹窗按钮)、数量、页面标题
+#define BMb2b_t3 [UIFont systemFontOfSize:14.0]  // 标题、正文
+#define BMb2b_t4 [UIFont systemFontOfSize:12.0]  // 正文、小标题
+#define BMb2b_t5 [UIFont systemFontOfSize:10.0]  // 提示语、小标题
+
+
+/* -------------------- Space -------------------- */
+
+#define BMb2b_gap_24 24.0  // 页面元素间最大间距、明显分离元素
+#define BMb2b_gap_12 12.0  // 页面左右间距；元素间标准间距
+#define BMb2b_gap_8 8.0  // 属性不同但有关联关系的元素间间距
+#define BMb2b_gap_4 4.0  // 同一模块内标题与正文上下间距
+#define BMb2b_gap_2 2.0  // 紧密联系并共同表达一个功能的元素间距
+
 #endif /* PrefixHeader_pch */

@@ -20,22 +20,33 @@
 }
 
 + (UIImage *)bm_gradientImageWithSize:(CGSize)size
-                           startColor:(CGColorRef)startColorRef
-                             endColor:(CGColorRef)endColorRef
+                           startColor:(UIColor *)startColor
+                             endColor:(UIColor *)endColor
                            startPoint:(CGPoint)startPoint
                              endPoint:(CGPoint)endPoint {
-    CAGradientLayer *layer = [CAGradientLayer bm_gradientLayerWithSize:size startColor:startColorRef endColor:endColorRef startPoint:startPoint endPoint:endPoint];
-    return [[self class] bm_gradientImageFromLayer:layer];
+    CAGradientLayer *layer = [CAGradientLayer bm_gradientLayerWithSize:size startColor:startColor.CGColor endColor:endColor.CGColor startPoint:startPoint endPoint:endPoint];
+    return [self bm_gradientImageFromLayer:layer];
 }
 
-+ (UIImage *)bm_gradientImageInB2BBrandColor1WithSize:(CGSize)size {
-    CAGradientLayer *layer = [CAGradientLayer bm_gradientLayerInB2BBrandColor1WithSize:size];
-    return [[self class] bm_gradientImageFromLayer:layer];
++ (UIImage *)bm_gradientImageWithColorArray:(NSArray<UIColor *> *)colorArray size:(CGSize)size {
+    CAGradientLayer *layer = [CAGradientLayer bm_gradientLayerWithColorArray:colorArray size:size];
+    return [self bm_gradientImageFromLayer:layer];
 }
 
-+ (UIImage *)bm_gradientImageInB2BBrandColor2WithSize:(CGSize)size {
-    CAGradientLayer *layer = [CAGradientLayer bm_gradientLayerInB2BBrandColor2WithSize:size];
-    return [[self class] bm_gradientImageFromLayer:layer];
++ (UIImage *)bm_imageWithColor:(UIColor *)color {
+    return [self bm_imageWithColor:color size:CGSizeMake(1, 1)];
+}
+
++ (UIImage *)bm_imageWithColor:(UIColor *)color size:(CGSize)size {
+    if (!color || size.width <= 0 || size.height <= 0) return nil;
+    CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 @end
