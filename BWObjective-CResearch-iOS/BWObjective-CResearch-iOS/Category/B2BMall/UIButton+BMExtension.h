@@ -22,6 +22,9 @@ typedef NS_ENUM(NSInteger, BMb2bButtonType) {
     BMb2bButtonType_btn3_4
 };
 
+/**
+ * UIButton的扩展，外部需要使用自定义按钮样式时，注意把Button样式在创建时设置为UIButtonTypeCustom
+ */
 @interface UIButton (BMExtension)
 
 + (UIButton *)bm_buttonWithType:(BMb2bButtonType)type;
