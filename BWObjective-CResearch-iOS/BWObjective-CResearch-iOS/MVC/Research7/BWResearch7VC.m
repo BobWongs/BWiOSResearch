@@ -35,8 +35,26 @@
     
     
     [self testUI];
+    
+    [self navBar];
 }
 
+- (void)navBar {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 0, 60, 44);
+    [button setTitle:@"Back" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    button.backgroundColor = [UIColor greenColor];
+//    [button addTarget:<#target#> action:@selector(<#buttonAct#>) forControlEvents:<#UIControlEvent#>];
+    
+    UIBarButtonItem *itemLeft = [[UIBarButtonItem alloc] initWithCustomView:button];
+    UIBarButtonItem * spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];  // 创建UIBarButtonSystemItemFixedSpace
+    spaceItem.width = -20;  // 创建UIBarButtonSystemItemFixedSpace的Item，让返回按钮紧靠屏幕边缘
+//    self.navigationItem.leftBarButtonItems = @[spaceItem, itemLeft];
+//    self.navigationItem.leftBarButtonItems = @[itemLeft];
+    
+    self.navigationItem.rightBarButtonItems = @[spaceItem, itemLeft];
+}
 
 - (void)alertVC {
     UIAlertController *alertVC = [UIAlertController bmB2B_alertControllerDefaultStyleWithMessage:@"提示文案" confirmHandler:^(UIAlertAction * _Nonnull action) {

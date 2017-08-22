@@ -18,4 +18,7 @@
 
 - (void)bmB2B_setNavigationRightItemWithTitle:(NSString *)title action:(SEL)action;
 
+
++ (NSArray<UIBarButtonItem *> *)bm_arrayAddedFixedSpaceItemWithItemArray:(NSArray<UIBarButtonItem *> *)itemArray;
+
 @end
