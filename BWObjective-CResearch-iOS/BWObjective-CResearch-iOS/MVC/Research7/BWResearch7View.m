@@ -14,7 +14,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    [self.button bm_setButtonWithType:BMb2bButtonType_btn1_1];
+    [self.button bmB2B_setButtonWithType:BMb2bButtonType_btn1_1];
 }
 
 @end

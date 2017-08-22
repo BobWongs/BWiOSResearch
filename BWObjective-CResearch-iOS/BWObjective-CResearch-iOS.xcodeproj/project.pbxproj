@@ -59,6 +59,7 @@
 		B4A583E71F4BD14700370A62 /* BWResearch7View.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A583E61F4BD14700370A62 /* BWResearch7View.m */; };
 		B4A583E91F4BD15300370A62 /* BWResearch7View.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A583E81F4BD15300370A62 /* BWResearch7View.xib */; };
 		B4A583EC1F4BF90C00370A62 /* UIAlertController+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A583EB1F4BF90C00370A62 /* UIAlertController+BMExtension.m */; };
+		B4A583EF1F4C181800370A62 /* UIViewController+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A583EE1F4C181800370A62 /* UIViewController+BMExtension.m */; };
 		B4A8610C1EEE45F5006C07FC /* BWResearch5VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A8610B1EEE45F5006C07FC /* BWResearch5VC.m */; };
 		B4ABFCAD1EAF2FAA004F9F49 /* BWResearch4VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABFCAC1EAF2FAA004F9F49 /* BWResearch4VC.m */; };
 		B4AC5FB61DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC5FA91DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m */; };
@@ -68,7 +69,6 @@
 		B4AC5FBA1DB4CC5200D880FB /* UIToolbar+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC5FB11DB4CC5100D880FB /* UIToolbar+JZExtension.m */; };
 		B4AC5FBB1DB4CC5200D880FB /* UINavigationController+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC5FB31DB4CC5100D880FB /* UINavigationController+JZExtension.m */; };
 		B4AC5FBC1DB4CC5200D880FB /* UIViewController+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC5FB51DB4CC5100D880FB /* UIViewController+JZExtension.m */; };
-		B4AC5FC01DB4D01200D880FB /* UIViewController+BWExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC5FBF1DB4D01200D880FB /* UIViewController+BWExtension.m */; };
 		B4B631311DAE384F00DF0907 /* UITableViewCell+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B6312D1DAE384F00DF0907 /* UITableViewCell+JZExtension.m */; };
 		B4B631321DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B6312F1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m */; };
 		B4B631331DAE384F00DF0907 /* UITableViewRowAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B631301DAE384F00DF0907 /* UITableViewRowAction.m */; };
@@ -181,6 +181,8 @@
 		B4A583E81F4BD15300370A62 /* BWResearch7View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWResearch7View.xib; sourceTree = "<group>"; };
 		B4A583EA1F4BF90C00370A62 /* UIAlertController+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+BMExtension.h"; sourceTree = "<group>"; };
 		B4A583EB1F4BF90C00370A62 /* UIAlertController+BMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+BMExtension.m"; sourceTree = "<group>"; };
+		B4A583ED1F4C181800370A62 /* UIViewController+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BMExtension.h"; sourceTree = "<group>"; };
+		B4A583EE1F4C181800370A62 /* UIViewController+BMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BMExtension.m"; sourceTree = "<group>"; };
 		B4A8610A1EEE45F5006C07FC /* BWResearch5VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch5VC.h; sourceTree = "<group>"; };
 		B4A8610B1EEE45F5006C07FC /* BWResearch5VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch5VC.m; sourceTree = "<group>"; };
 		B4ABFCAB1EAF2FAA004F9F49 /* BWResearch4VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch4VC.h; sourceTree = "<group>"; };
@@ -201,8 +203,6 @@
 		B4AC5FB31DB4CC5100D880FB /* UINavigationController+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JZExtension.m"; sourceTree = "<group>"; };
 		B4AC5FB41DB4CC5100D880FB /* UIViewController+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JZExtension.h"; sourceTree = "<group>"; };
 		B4AC5FB51DB4CC5100D880FB /* UIViewController+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JZExtension.m"; sourceTree = "<group>"; };
-		B4AC5FBE1DB4D01200D880FB /* UIViewController+BWExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BWExtension.h"; sourceTree = "<group>"; };
-		B4AC5FBF1DB4D01200D880FB /* UIViewController+BWExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BWExtension.m"; sourceTree = "<group>"; };
 		B4B6312D1DAE384F00DF0907 /* UITableViewCell+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+JZExtension.m"; sourceTree = "<group>"; };
 		B4B6312E1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewRowAction+JZExtension.h"; sourceTree = "<group>"; };
 		B4B6312F1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewRowAction+JZExtension.m"; sourceTree = "<group>"; };
@@ -589,8 +589,6 @@
 			isa = PBXGroup;
 			children = (
 				B4D191691F46EC2D00A3F337 /* B2BMall */,
-				B4AC5FBE1DB4D01200D880FB /* UIViewController+BWExtension.h */,
-				B4AC5FBF1DB4D01200D880FB /* UIViewController+BWExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -653,6 +651,8 @@
 				B494DEB21F4AB80C00A43EC5 /* UIView+BMExtension.m */,
 				B4A583EA1F4BF90C00370A62 /* UIAlertController+BMExtension.h */,
 				B4A583EB1F4BF90C00370A62 /* UIAlertController+BMExtension.m */,
+				B4A583ED1F4C181800370A62 /* UIViewController+BMExtension.h */,
+				B4A583EE1F4C181800370A62 /* UIViewController+BMExtension.m */,
 			);
 			path = B2BMall;
 			sourceTree = "<group>";
@@ -1003,6 +1003,7 @@
 				B46B25681DB5EE1C00B9FF54 /* BWMeController.m in Sources */,
 				B494DEB61F4AB87500A43EC5 /* UIButton+BMExtension.m in Sources */,
 				B491B0111E66BF2E005CAD43 /* BWResearch3VC.m in Sources */,
+				B4A583EF1F4C181800370A62 /* UIViewController+BMExtension.m in Sources */,
 				B494DEB91F4ABC8500A43EC5 /* UIImage+BMExtension.m in Sources */,
 				B4AC5FBA1DB4CC5200D880FB /* UIToolbar+JZExtension.m in Sources */,
 				B4AC5FBB1DB4CC5200D880FB /* UINavigationController+JZExtension.m in Sources */,
@@ -1012,7 +1013,6 @@
 				B4A583E71F4BD14700370A62 /* BWResearch7View.m in Sources */,
 				B46B25621DB5EDDD00B9FF54 /* BWHomeTableViewCell.m in Sources */,
 				B4B631321DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m in Sources */,
-				B4AC5FC01DB4D01200D880FB /* UIViewController+BWExtension.m in Sources */,
 				B461B6721DDD50FB00FB7BC1 /* BWResearchVC.m in Sources */,
 				B48CC74D1EF1124B008E3856 /* BMNewRegionModel.m in Sources */,
 				B426B1261DFA943F00F438F3 /* BWResearchCell.m in Sources */,

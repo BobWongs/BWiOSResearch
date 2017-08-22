@@ -57,9 +57,9 @@
     [self.view addSubview:button];
     
     
-    [button bm_setButtonWithType:BMb2bButtonType_btn1_1];
+    [button bmB2B_setButtonWithType:BMb2bButtonType_btn1_1];
     
-    [self.fromIBButton bm_setButtonWithType:BMb2bButtonType_btn1_1];
+    [self.fromIBButton bmB2B_setButtonWithType:BMb2bButtonType_btn1_1];
     
     
     [self.fromIBButton addTarget:self action:@selector(alertVC) forControlEvents:UIControlEventTouchUpInside];

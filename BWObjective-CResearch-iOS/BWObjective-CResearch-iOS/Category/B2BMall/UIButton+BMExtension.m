@@ -14,13 +14,13 @@
 
 @implementation UIButton (BMExtension)
 
-+ (UIButton *)bm_buttonWithType:(BMb2bButtonType)type {
++ (UIButton *)bmB2B_buttonWithType:(BMb2bButtonType)type {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button bm_setButtonWithType:type];
+    [button bmB2B_setButtonWithType:type];
     return button;
 }
 
-- (void)bm_setButtonWithType:(BMb2bButtonType)type {
+- (void)bmB2B_setButtonWithType:(BMb2bButtonType)type {
     switch (type) {
         case BMb2bButtonType_btn1_1:
             [self bm_setB2bButton1WithNormalBgGradientColorArray:BMb2b_brand_color1 highlightedBgColor:BMb2b_sub_color1 disabledBgColor:BMb2b_AFD0F8];
