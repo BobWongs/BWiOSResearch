@@ -24,6 +24,8 @@
 // 其他
 #define BMb2b_AFD0F8 [UIColor colorWithHexString:@"AFD0F8"]  // 浅白色
 #define BMb2b_F8C4AF [UIColor colorWithHexString:@"F8C4AF"]  // 浅橙色
+#define BMb2b_FFEDDF [UIColor colorWithHexString:@"FFEDDF"]  // 浅白橙色
+#define BMb2b_DBECFF [UIColor colorWithHexString:@"DBECFF"]  // 浅灰色
 
 
 /* -------------------- Font -------------------- */
@@ -48,12 +50,9 @@
 #define BMb2b_brand_color2_start [UIColor colorWithHexString:@"FFA909"]  // 与购物相关流程的按钮，起始渐变色
 #define BMb2b_brand_color2_end [UIColor colorWithHexString:@"FF682A"]  // 终止渐变色
 
-//#define BMb2b_brand_color1_start [UIColor greenColor]  // 影响主流程的控件：按钮、icon，起始渐变色
-//#define BMb2b_brand_color1_end [UIColor yellowColor]  // 终止渐变色
-//#define BMb2b_brand_color2_start [UIColor whiteColor]  // 与购物相关流程的按钮，起始渐变色
-//#define BMb2b_brand_color2_end [UIColor blackColor]  // 终止渐变色
-
 #define BMb2b_brand_color1 @[BMb2b_brand_color1_start, BMb2b_brand_color1_end]
 #define BMb2b_brand_color2 @[BMb2b_brand_color2_start, BMb2b_brand_color2_end]
+
+#define BMb2b_brand_white_colors @[[UIColor whiteColor], [UIColor whiteColor]]
 
 #endif /* BMMacro_h */
