@@ -10,6 +10,11 @@
 
 @interface UIImage (BMExtension)
 
++ (UIImage *)bm_imageWithColor:(UIColor *)color;
++ (UIImage *)bm_imageWithColor:(UIColor *)color size:(CGSize)size;
+
++ (UIImage *)bm_gradientImageWithColorArray:(NSArray<UIColor *> *)colorArray size:(CGSize)size;
+
 + (UIImage *)bm_gradientImageFromLayer:(CALayer *)layer;
 
 + (UIImage *)bm_gradientImageWithSize:(CGSize)size
@@ -17,10 +22,5 @@
                              endColor:(UIColor *)endColor
                            startPoint:(CGPoint)startPoint
                              endPoint:(CGPoint)endPoint;
-
-+ (UIImage *)bm_gradientImageWithColorArray:(NSArray<UIColor *> *)colorArray size:(CGSize)size;
-
-+ (UIImage *)bm_imageWithColor:(UIColor *)color;
-+ (UIImage *)bm_imageWithColor:(UIColor *)color size:(CGSize)size;
 
 @end

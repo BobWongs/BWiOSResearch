@@ -10,4 +10,7 @@
 
 @interface UIView (BMExtension)
 
+- (void)bm_setGradientBackgroundWithColorArray:(NSArray<UIColor *> *)colorArray;
+- (void)bm_setGradientBackgroundWithColorArray:(NSArray<UIColor *> *)colorArray size:(CGSize)size;
+
 @end
