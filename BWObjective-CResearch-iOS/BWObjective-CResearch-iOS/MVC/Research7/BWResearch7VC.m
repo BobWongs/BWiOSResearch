@@ -10,6 +10,7 @@
 #import <UILabel+BWExtension.h>
 #import "UIButton+BMExtension.h"
 #import "BWResearch7View.h"
+#import "UIAlertController+BMExtension.h"
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -37,6 +38,15 @@
 }
 
 
+- (void)alertVC {
+    UIAlertController *alertVC = [UIAlertController bmB2B_alertControllerDefaultStyleWithMessage:@"提示文案" confirmHandler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"confirm");
+    } cancelHandler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"cancel");
+    }];
+    [self.navigationController presentViewController:alertVC animated:YES completion:nil];
+}
+
 #pragma mark - UI Control
 
 - (void)testUI {
@@ -50,6 +60,9 @@
     [button bm_setButtonWithType:BMb2bButtonType_btn1_1];
     
     [self.fromIBButton bm_setButtonWithType:BMb2bButtonType_btn1_1];
+    
+    
+    [self.fromIBButton addTarget:self action:@selector(alertVC) forControlEvents:UIControlEventTouchUpInside];
 }
 
 

@@ -58,6 +58,7 @@
 		B4A0CF071E6551DD00CC8C92 /* BWResearch2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0CF061E6551DD00CC8C92 /* BWResearch2VC.m */; };
 		B4A583E71F4BD14700370A62 /* BWResearch7View.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A583E61F4BD14700370A62 /* BWResearch7View.m */; };
 		B4A583E91F4BD15300370A62 /* BWResearch7View.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A583E81F4BD15300370A62 /* BWResearch7View.xib */; };
+		B4A583EC1F4BF90C00370A62 /* UIAlertController+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A583EB1F4BF90C00370A62 /* UIAlertController+BMExtension.m */; };
 		B4A8610C1EEE45F5006C07FC /* BWResearch5VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A8610B1EEE45F5006C07FC /* BWResearch5VC.m */; };
 		B4ABFCAD1EAF2FAA004F9F49 /* BWResearch4VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABFCAC1EAF2FAA004F9F49 /* BWResearch4VC.m */; };
 		B4AC5FB61DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC5FA91DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m */; };
@@ -178,6 +179,8 @@
 		B4A583E51F4BD14700370A62 /* BWResearch7View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch7View.h; sourceTree = "<group>"; };
 		B4A583E61F4BD14700370A62 /* BWResearch7View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch7View.m; sourceTree = "<group>"; };
 		B4A583E81F4BD15300370A62 /* BWResearch7View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWResearch7View.xib; sourceTree = "<group>"; };
+		B4A583EA1F4BF90C00370A62 /* UIAlertController+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+BMExtension.h"; sourceTree = "<group>"; };
+		B4A583EB1F4BF90C00370A62 /* UIAlertController+BMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+BMExtension.m"; sourceTree = "<group>"; };
 		B4A8610A1EEE45F5006C07FC /* BWResearch5VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch5VC.h; sourceTree = "<group>"; };
 		B4A8610B1EEE45F5006C07FC /* BWResearch5VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch5VC.m; sourceTree = "<group>"; };
 		B4ABFCAB1EAF2FAA004F9F49 /* BWResearch4VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch4VC.h; sourceTree = "<group>"; };
@@ -648,6 +651,8 @@
 				B494DEB51F4AB87500A43EC5 /* UIButton+BMExtension.m */,
 				B494DEB11F4AB80C00A43EC5 /* UIView+BMExtension.h */,
 				B494DEB21F4AB80C00A43EC5 /* UIView+BMExtension.m */,
+				B4A583EA1F4BF90C00370A62 /* UIAlertController+BMExtension.h */,
+				B4A583EB1F4BF90C00370A62 /* UIAlertController+BMExtension.m */,
 			);
 			path = B2BMall;
 			sourceTree = "<group>";
@@ -1003,6 +1008,7 @@
 				B4AC5FBB1DB4CC5200D880FB /* UINavigationController+JZExtension.m in Sources */,
 				B443A1DB1D548382003D66C5 /* main.m in Sources */,
 				B48CC74E1EF1124B008E3856 /* BMNewAddressPicker.m in Sources */,
+				B4A583EC1F4BF90C00370A62 /* UIAlertController+BMExtension.m in Sources */,
 				B4A583E71F4BD14700370A62 /* BWResearch7View.m in Sources */,
 				B46B25621DB5EDDD00B9FF54 /* BWHomeTableViewCell.m in Sources */,
 				B4B631321DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m in Sources */,
