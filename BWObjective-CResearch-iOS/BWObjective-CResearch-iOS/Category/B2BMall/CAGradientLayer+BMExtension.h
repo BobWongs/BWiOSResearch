@@ -18,7 +18,6 @@
                                    startPoint:(CGPoint)startPoint
                                      endPoint:(CGPoint)endPoint;
 
-/** 创建渐变Layer */
 + (CAGradientLayer *)bm_gradientLayerWithSize:(CGSize)size
                                    startColor:(CGColorRef)startColorRef
                                      endColor:(CGColorRef)endColorRef
