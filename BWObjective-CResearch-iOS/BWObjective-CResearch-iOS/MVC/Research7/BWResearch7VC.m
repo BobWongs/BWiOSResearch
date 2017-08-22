@@ -9,11 +9,15 @@
 #import "BWResearch7VC.h"
 #import <UILabel+BWExtension.h>
 #import "UIButton+BMExtension.h"
+#import "BWResearch7View.h"
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
 @interface BWResearch7VC ()
+
+@property (weak, nonatomic) IBOutlet UIButton *fromIBButton;
+@property (strong, nonatomic) IBOutlet BWResearch7View *topView;
 
 @end
 
@@ -44,6 +48,8 @@
     
     
     [button bm_setButtonWithType:BMb2bButtonType_btn1_1];
+    
+    [self.fromIBButton bm_setButtonWithType:BMb2bButtonType_btn1_1];
 }
 
 

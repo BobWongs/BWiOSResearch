@@ -56,6 +56,8 @@
 		B494E67A1F3057B2008284C0 /* BWResource1 in Resources */ = {isa = PBXBuildFile; fileRef = B494E6781F3057B2008284C0 /* BWResource1 */; };
 		B494E67B1F3057B2008284C0 /* BWResource3.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B494E6791F3057B2008284C0 /* BWResource3.bundle */; };
 		B4A0CF071E6551DD00CC8C92 /* BWResearch2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0CF061E6551DD00CC8C92 /* BWResearch2VC.m */; };
+		B4A583E71F4BD14700370A62 /* BWResearch7View.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A583E61F4BD14700370A62 /* BWResearch7View.m */; };
+		B4A583E91F4BD15300370A62 /* BWResearch7View.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A583E81F4BD15300370A62 /* BWResearch7View.xib */; };
 		B4A8610C1EEE45F5006C07FC /* BWResearch5VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A8610B1EEE45F5006C07FC /* BWResearch5VC.m */; };
 		B4ABFCAD1EAF2FAA004F9F49 /* BWResearch4VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ABFCAC1EAF2FAA004F9F49 /* BWResearch4VC.m */; };
 		B4AC5FB61DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC5FA91DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m */; };
@@ -173,6 +175,9 @@
 		B4A0CF061E6551DD00CC8C92 /* BWResearch2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch2VC.m; sourceTree = "<group>"; };
 		B4A583E31F4BC78000370A62 /* BMResearch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMResearch.pch; sourceTree = "<group>"; };
 		B4A583E41F4BC88700370A62 /* BMMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMMacro.h; sourceTree = "<group>"; };
+		B4A583E51F4BD14700370A62 /* BWResearch7View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch7View.h; sourceTree = "<group>"; };
+		B4A583E61F4BD14700370A62 /* BWResearch7View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch7View.m; sourceTree = "<group>"; };
+		B4A583E81F4BD15300370A62 /* BWResearch7View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWResearch7View.xib; sourceTree = "<group>"; };
 		B4A8610A1EEE45F5006C07FC /* BWResearch5VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch5VC.h; sourceTree = "<group>"; };
 		B4A8610B1EEE45F5006C07FC /* BWResearch5VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch5VC.m; sourceTree = "<group>"; };
 		B4ABFCAB1EAF2FAA004F9F49 /* BWResearch4VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch4VC.h; sourceTree = "<group>"; };
@@ -504,6 +509,9 @@
 				B494E6601F304CFD008284C0 /* BWResearch7VC.h */,
 				B494E6611F304CFD008284C0 /* BWResearch7VC.m */,
 				B494E6621F304CFD008284C0 /* BWResearch7VC.xib */,
+				B4A583E51F4BD14700370A62 /* BWResearch7View.h */,
+				B4A583E61F4BD14700370A62 /* BWResearch7View.m */,
+				B4A583E81F4BD15300370A62 /* BWResearch7View.xib */,
 			);
 			path = Research7;
 			sourceTree = "<group>";
@@ -787,6 +795,7 @@
 				B494E6771F3057AA008284C0 /* BWResource2.bundle in Resources */,
 				B426B0091DF7ABD400F438F3 /* icon_discovery_unselected@2x.png in Resources */,
 				B48CC75D1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@2x.png in Resources */,
+				B4A583E91F4BD15300370A62 /* BWResearch7View.xib in Resources */,
 				B426B0081DF7ABD400F438F3 /* icon_discovery_selected@2x.png in Resources */,
 				B48CC75E1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@3x.png in Resources */,
 				B48CC74F1EF1124B008E3856 /* address.db in Resources */,
@@ -994,6 +1003,7 @@
 				B4AC5FBB1DB4CC5200D880FB /* UINavigationController+JZExtension.m in Sources */,
 				B443A1DB1D548382003D66C5 /* main.m in Sources */,
 				B48CC74E1EF1124B008E3856 /* BMNewAddressPicker.m in Sources */,
+				B4A583E71F4BD14700370A62 /* BWResearch7View.m in Sources */,
 				B46B25621DB5EDDD00B9FF54 /* BWHomeTableViewCell.m in Sources */,
 				B4B631321DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m in Sources */,
 				B4AC5FC01DB4D01200D880FB /* UIViewController+BWExtension.m in Sources */,

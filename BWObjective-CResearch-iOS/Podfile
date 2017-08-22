@@ -7,6 +7,7 @@ target 'BWObjective-CResearch-iOS' do
   pod 'AFNetworking', '~> 3.1.0'
   pod 'YYCategories', '~> 1.0.4'
   pod 'BWPodRepository', '0.2.0'
+  pod 'XXNibBridge', '~> 2.3.1'
 
   target 'BWObjective-CResearch-iOSTests' do
     inherit! :search_paths

@@ -48,8 +48,8 @@
 }
 
 - (void)bm_setB2bButton1WithNormalBgGradientColorArray:(NSArray<UIColor *> *)colorArray highlightedBgColor:(UIColor *)highlightedBgColor disabledBgColor:(UIColor *)disabledBgColor {
-    UIImage *normalBgImage = [UIImage bm_gradientImageWithColorArray:colorArray size:CGSizeMake(1, 1)];
-    [self bm_setButtonWithTitleFont:[UIFont boldSystemFontOfSize:16.0] titleColor:[UIColor whiteColor] normalBgImage:normalBgImage highlightedBgColor:highlightedBgColor disabledBgColor:disabledBgColor cornerRadius:4.0 borderColor:nil borderWidth:0];
+    [self bm_setButtonWithTitleFont:[UIFont boldSystemFontOfSize:16.0] titleColor:[UIColor whiteColor] highlightedBgColor:highlightedBgColor disabledBgColor:disabledBgColor cornerRadius:4.0 borderColor:nil borderWidth:0];
+    [self bm_setBackgroundGradientNormalImageWithColorArray:colorArray size:self.frame.size];
 }
 
 + (UIButton *)bm_b2bButton2WithBackgroundImageStartColor:(UIColor *)startColor endColor:(UIColor *)endColr {
@@ -60,11 +60,11 @@
     return nil;
 }
 
-- (void)bm_setButtonWithTitleFont:(UIFont *)titleFont titleColor:(UIColor *)titleColor normalBgImage:(UIImage *)normalBgImage highlightedBgColor:(UIColor *)highlightedBgColor disabledBgColor:(UIColor *)disabledBgColor cornerRadius:(CGFloat)cornerRadius borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth {
+- (void)bm_setButtonWithTitleFont:(UIFont *)titleFont titleColor:(UIColor *)titleColor highlightedBgColor:(UIColor *)highlightedBgColor disabledBgColor:(UIColor *)disabledBgColor cornerRadius:(CGFloat)cornerRadius borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth {
     self.titleLabel.font = titleFont;
     [self setTitleColor:titleColor forState:UIControlStateNormal];
     self.layer.cornerRadius = cornerRadius;
-    [self setBackgroundImage:normalBgImage forState:UIControlStateNormal];
+    self.clipsToBounds = YES;
     [self setBackgroundImage:[UIImage bm_imageWithColor:highlightedBgColor] forState:UIControlStateHighlighted];
     [self setBackgroundImage:[UIImage bm_imageWithColor:disabledBgColor] forState:UIControlStateDisabled];
     
