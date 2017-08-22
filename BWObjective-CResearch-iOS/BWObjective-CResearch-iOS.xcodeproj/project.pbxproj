@@ -642,12 +642,12 @@
 			children = (
 				B4D1916A1F46EC4200A3F337 /* CAGradientLayer+BMExtension.h */,
 				B4D1916B1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m */,
-				B494DEB11F4AB80C00A43EC5 /* UIView+BMExtension.h */,
-				B494DEB21F4AB80C00A43EC5 /* UIView+BMExtension.m */,
-				B494DEB41F4AB87500A43EC5 /* UIButton+BMExtension.h */,
-				B494DEB51F4AB87500A43EC5 /* UIButton+BMExtension.m */,
 				B494DEB71F4ABC8500A43EC5 /* UIImage+BMExtension.h */,
 				B494DEB81F4ABC8500A43EC5 /* UIImage+BMExtension.m */,
+				B494DEB41F4AB87500A43EC5 /* UIButton+BMExtension.h */,
+				B494DEB51F4AB87500A43EC5 /* UIButton+BMExtension.m */,
+				B494DEB11F4AB80C00A43EC5 /* UIView+BMExtension.h */,
+				B494DEB21F4AB80C00A43EC5 /* UIView+BMExtension.m */,
 			);
 			path = B2BMall;
 			sourceTree = "<group>";

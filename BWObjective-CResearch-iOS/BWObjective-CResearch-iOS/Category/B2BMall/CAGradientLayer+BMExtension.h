@@ -11,6 +11,8 @@
 
 @interface CAGradientLayer (BMExtension)
 
++ (CAGradientLayer *)bm_gradientLayerWithColorArray:(NSArray<UIColor *> *)colorArray size:(CGSize)size;
+
 + (CAGradientLayer *)bm_gradientLayerWithSize:(CGSize)size
                                    colorArray:(NSArray<UIColor *> *)colorArray
                                    startPoint:(CGPoint)startPoint
@@ -22,7 +24,5 @@
                                      endColor:(CGColorRef)endColorRef
                                    startPoint:(CGPoint)startPoint
                                      endPoint:(CGPoint)endPoint;
-
-+ (CAGradientLayer *)bm_gradientLayerWithColorArray:(NSArray<UIColor *> *)colorArray size:(CGSize)size;
 
 @end

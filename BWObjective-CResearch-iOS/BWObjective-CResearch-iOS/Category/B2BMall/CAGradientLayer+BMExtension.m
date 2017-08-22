@@ -14,6 +14,12 @@
 
 @implementation CAGradientLayer (BMExtension)
 
++ (CAGradientLayer *)bm_gradientLayerWithColorArray:(NSArray<UIColor *> *)colorArray size:(CGSize)size {
+    if (!colorArray || colorArray.count < 2) return [CAGradientLayer new];
+    
+    return [self  bm_gradientLayerWithSize:size startColor:colorArray.firstObject.CGColor endColor:colorArray.lastObject.CGColor startPoint:BMb2b_Gradient_Start_Point endPoint:BMb2b_Gradient_End_Point];
+}
+
 + (CAGradientLayer *)bm_gradientLayerWithSize:(CGSize)size
                                    colorArray:(NSArray<UIColor *> *)colorArray
                                    startPoint:(CGPoint)startPoint
@@ -33,19 +39,5 @@
                                      endPoint:(CGPoint)endPoint {
     return [self bm_gradientLayerWithSize:size colorArray:@[(__bridge id)startColorRef, (__bridge id)endColorRef] startPoint:startPoint endPoint:endPoint];
 }
-
-+ (CAGradientLayer *)bm_gradientLayerWithColorArray:(NSArray<UIColor *> *)colorArray size:(CGSize)size {
-    if (!colorArray || colorArray.count < 2) return [CAGradientLayer new];
-    
-    return [self  bm_gradientLayerWithSize:size startColor:colorArray.firstObject.CGColor endColor:colorArray.lastObject.CGColor startPoint:BMb2b_Gradient_Start_Point endPoint:BMb2b_Gradient_End_Point];
-}
-
-//+ (CAGradientLayer *)bm_gradientLayerInB2BBrandColor1WithSize:(CGSize)size {
-//    return [self bm_gradientLayerWithColorArray:BMb2b_brand_color1 size:size];
-//}
-//
-//+ (CAGradientLayer *)bm_gradientLayerInB2BBrandColor2WithSize:(CGSize)size {
-//    return [self bm_gradientLayerWithColorArray:BMb2b_brand_color2 size:size];
-//}
 
 @end
