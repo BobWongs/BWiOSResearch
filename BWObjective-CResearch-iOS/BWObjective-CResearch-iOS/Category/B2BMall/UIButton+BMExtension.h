@@ -26,4 +26,8 @@ typedef NS_ENUM(NSInteger, BMb2bButtonType) {
 
 + (UIButton *)bm_buttonWithType:(BMb2bButtonType)type;
 
+- (void)bm_setButtonWithType:(BMb2bButtonType)type;
+
+- (void)bm_setBackgroundGradientNormalImageWithColorArray:(NSArray<UIColor *> *)colorArray;
+
 @end

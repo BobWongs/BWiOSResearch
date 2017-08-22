@@ -21,33 +21,31 @@
 - (void)bm_setButtonWithType:(BMb2bButtonType)type {
     switch (type) {
         case BMb2bButtonType_btn1_1:
-            self
+            [self bm_setB2bButton1WithNormalBgGradientColorArray:BMb2b_brand_color1 highlightedBgColor:BMb2b_sub_color1 disabledBgColor:BMb2b_AFD0F8];
             break;
         case BMb2bButtonType_btn1_2:
-            <#statements#>
+            [self bm_setB2bButton1WithNormalBgGradientColorArray:BMb2b_brand_color2 highlightedBgColor:BMb2b_sub_color2 disabledBgColor:BMb2b_F8C4AF];
             break;
-        case BMb2bButtonType_btn2_1:
-            <#statements#>
-            break;
-        case BMb2bButtonType_btn2_2:
-            <#statements#>
-            break;
-        case BMb2bButtonType_btn3_1:
-            <#statements#>
-            break;
-        case BMb2bButtonType_btn3_2:
-            <#statements#>
-            break;
-        case BMb2bButtonType_btn3_3:
-            <#statements#>
-            break;
-        case BMb2bButtonType_btn3_4:
-            <#statements#>
-            break;
+//        case BMb2bButtonType_btn2_1:
+//            <#statements#>
+//            break;
+//        case BMb2bButtonType_btn2_2:
+//            <#statements#>
+//            break;
+//        case BMb2bButtonType_btn3_1:
+//            <#statements#>
+//            break;
+//        case BMb2bButtonType_btn3_2:
+//            <#statements#>
+//            break;
+//        case BMb2bButtonType_btn3_3:
+//            <#statements#>
+//            break;
+//        case BMb2bButtonType_btn3_4:
+//            <#statements#>
+//            break;
     }
 }
-
-
 
 - (void)bm_setB2bButton1WithNormalBgGradientColorArray:(NSArray<UIColor *> *)colorArray highlightedBgColor:(UIColor *)highlightedBgColor disabledBgColor:(UIColor *)disabledBgColor {
     UIImage *normalBgImage = [UIImage bm_gradientImageWithColorArray:colorArray size:CGSizeMake(1, 1)];
@@ -55,11 +53,11 @@
 }
 
 + (UIButton *)bm_b2bButton2WithBackgroundImageStartColor:(UIColor *)startColor endColor:(UIColor *)endColr {
-    
+    return nil;
 }
 
 + (UIButton *)bm_b2bButton3WithBackgroundImageStartColor:(UIColor *)startColor endColor:(UIColor *)endColr {
-    
+    return nil;
 }
 
 - (void)bm_setButtonWithTitleFont:(UIFont *)titleFont titleColor:(UIColor *)titleColor normalBgImage:(UIImage *)normalBgImage highlightedBgColor:(UIColor *)highlightedBgColor disabledBgColor:(UIColor *)disabledBgColor cornerRadius:(CGFloat)cornerRadius borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth {
@@ -77,7 +75,11 @@
 }
 
 - (void)bm_setBackgroundGradientNormalImageWithColorArray:(NSArray<UIColor *> *)colorArray {
-    [self setBackgroundImage:[UIImage bm_gradientImageWithColorArray:colorArray size:CGSizeMake(1.0, 1.0)] forState:UIControlStateNormal];
+    [self bm_setBackgroundGradientNormalImageWithColorArray:colorArray size:CGSizeMake(1.0, 1.0)];
+}
+
+- (void)bm_setBackgroundGradientNormalImageWithColorArray:(NSArray<UIColor *> *)colorArray size:(CGSize)size {
+    [self setBackgroundImage:[UIImage bm_gradientImageWithColorArray:colorArray size:size] forState:UIControlStateNormal];
 }
 
 @end

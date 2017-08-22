@@ -9,8 +9,8 @@
 #import "CAGradientLayer+BMExtension.h"
 #import <UIKit/UIColor.h>
 
-#define BMb2b_Gradient_Start_Point CGPointMake(0, 1)
-#define BMb2b_Gradient_End_Point CGPointMake(1, 0)
+#define BMb2b_Gradient_Start_Point CGPointMake(0, 0)
+#define BMb2b_Gradient_End_Point CGPointMake(1, 1)
 
 @implementation CAGradientLayer (BMExtension)
 
@@ -35,7 +35,9 @@
 }
 
 + (CAGradientLayer *)bm_gradientLayerWithColorArray:(NSArray<UIColor *> *)colorArray size:(CGSize)size {
-    return [self  bm_gradientLayerWithSize:size startColor:BMb2b_brand_color1_start.CGColor endColor:BMb2b_brand_color1_end.CGColor startPoint:BMb2b_Gradient_Start_Point endPoint:BMb2b_Gradient_End_Point];
+    if (!colorArray || colorArray.count < 2) return [CAGradientLayer new];
+    
+    return [self  bm_gradientLayerWithSize:size startColor:colorArray.firstObject.CGColor endColor:colorArray.lastObject.CGColor startPoint:BMb2b_Gradient_Start_Point endPoint:BMb2b_Gradient_End_Point];
 }
 
 //+ (CAGradientLayer *)bm_gradientLayerInB2BBrandColor1WithSize:(CGSize)size {

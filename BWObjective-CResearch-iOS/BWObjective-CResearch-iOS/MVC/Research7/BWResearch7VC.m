@@ -8,6 +8,10 @@
 
 #import "BWResearch7VC.h"
 #import <UILabel+BWExtension.h>
+#import "UIButton+BMExtension.h"
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
 @interface BWResearch7VC ()
 
@@ -18,9 +22,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    
 //    [self bundle];
-    [self sandbox];
+//    [self sandbox];
+    
+    
+    
+    [self testUI];
 }
+
+
+#pragma mark - UI Control
+
+- (void)testUI {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(40, 64 + 50, SCREEN_WIDTH - 40 * 2, 50);
+    [button setTitle:@"Button: Code + Frame" forState:UIControlStateNormal];
+//    button.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:button];
+    
+    
+    [button bm_setButtonWithType:BMb2bButtonType_btn1_1];
+}
+
+
+#pragma mark - File System
 
 - (void)bundle {
     NSString *mainBundlePath = [NSBundle mainBundle].bundlePath;
