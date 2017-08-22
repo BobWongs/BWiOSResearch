@@ -11,6 +11,7 @@
 #import "UIButton+BMExtension.h"
 #import "BWResearch7View.h"
 #import "UIAlertController+BMExtension.h"
+#import "UIViewController+BMExtension.h"
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -36,7 +37,17 @@
     
     [self testUI];
     
-    [self navBar];
+//    [self navBar];
+    [self navBarSecond];
+}
+
+- (void)hasAction {
+    NSLog(@"hasAction");
+}
+
+- (void)navBarSecond {
+    [self bmB2B_setNavigationLeftItemWithTitle:@"商城" action:@selector(hasAction)];
+    [self bmB2B_setNavigationRightItemWithTitle:@"菜单" action:@selector(hasAction)];
 }
 
 - (void)navBar {
@@ -45,7 +56,6 @@
     [button setTitle:@"Back" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     button.backgroundColor = [UIColor greenColor];
-//    [button addTarget:<#target#> action:@selector(<#buttonAct#>) forControlEvents:<#UIControlEvent#>];
     
     UIBarButtonItem *itemLeft = [[UIBarButtonItem alloc] initWithCustomView:button];
     UIBarButtonItem * spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];  // 创建UIBarButtonSystemItemFixedSpace
