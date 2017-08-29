@@ -45,6 +45,9 @@
 		B48CC75E1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48CC75C1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@3x.png */; };
 		B48CC7621EF12129008E3856 /* BWResearch6VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B48CC7601EF12129008E3856 /* BWResearch6VC.m */; };
 		B48CC7631EF12129008E3856 /* BWResearch6VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48CC7611EF12129008E3856 /* BWResearch6VC.xib */; };
+		B48F5DBE1F550C4B000CFA4D /* UINavigationController+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B48F5DBD1F550C4B000CFA4D /* UINavigationController+BMExtension.m */; };
+		B48F5DC21F550DD6000CFA4D /* nav_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48F5DC01F550DD6000CFA4D /* nav_bg@2x.png */; };
+		B48F5DC31F550DD6000CFA4D /* nav_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48F5DC11F550DD6000CFA4D /* nav_bg@3x.png */; };
 		B491B0111E66BF2E005CAD43 /* BWResearch3VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B491B0101E66BF2E005CAD43 /* BWResearch3VC.m */; };
 		B494DEB31F4AB80C00A43EC5 /* UIView+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B494DEB21F4AB80C00A43EC5 /* UIView+BMExtension.m */; };
 		B494DEB61F4AB87500A43EC5 /* UIButton+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B494DEB51F4AB87500A43EC5 /* UIButton+BMExtension.m */; };
@@ -157,6 +160,10 @@
 		B48CC75F1EF12129008E3856 /* BWResearch6VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch6VC.h; sourceTree = "<group>"; };
 		B48CC7601EF12129008E3856 /* BWResearch6VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch6VC.m; sourceTree = "<group>"; };
 		B48CC7611EF12129008E3856 /* BWResearch6VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWResearch6VC.xib; sourceTree = "<group>"; };
+		B48F5DBC1F550C4B000CFA4D /* UINavigationController+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+BMExtension.h"; sourceTree = "<group>"; };
+		B48F5DBD1F550C4B000CFA4D /* UINavigationController+BMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+BMExtension.m"; sourceTree = "<group>"; };
+		B48F5DC01F550DD6000CFA4D /* nav_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_bg@2x.png"; sourceTree = "<group>"; };
+		B48F5DC11F550DD6000CFA4D /* nav_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_bg@3x.png"; sourceTree = "<group>"; };
 		B491B00F1E66BF2E005CAD43 /* BWResearch3VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch3VC.h; sourceTree = "<group>"; };
 		B491B0101E66BF2E005CAD43 /* BWResearch3VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch3VC.m; sourceTree = "<group>"; };
 		B494DEB11F4AB80C00A43EC5 /* UIView+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BMExtension.h"; sourceTree = "<group>"; };
@@ -438,6 +445,7 @@
 				B426B0061DF7ABD400F438F3 /* icon_discovery_selected@2x.png */,
 				B426B0071DF7ABD400F438F3 /* icon_discovery_unselected@2x.png */,
 				B47A37BA1E01305900E130AA /* bg_study@2x.png */,
+				B48F5DBF1F550DD6000CFA4D /* B2BMall */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -495,6 +503,15 @@
 				B48CC7611EF12129008E3856 /* BWResearch6VC.xib */,
 			);
 			path = Research6;
+			sourceTree = "<group>";
+		};
+		B48F5DBF1F550DD6000CFA4D /* B2BMall */ = {
+			isa = PBXGroup;
+			children = (
+				B48F5DC01F550DD6000CFA4D /* nav_bg@2x.png */,
+				B48F5DC11F550DD6000CFA4D /* nav_bg@3x.png */,
+			);
+			path = B2BMall;
 			sourceTree = "<group>";
 		};
 		B491B00B1E66BF05005CAD43 /* Research3 */ = {
@@ -653,6 +670,8 @@
 				B4A583EB1F4BF90C00370A62 /* UIAlertController+BMExtension.m */,
 				B4A583ED1F4C181800370A62 /* UIViewController+BMExtension.h */,
 				B4A583EE1F4C181800370A62 /* UIViewController+BMExtension.m */,
+				B48F5DBC1F550C4B000CFA4D /* UINavigationController+BMExtension.h */,
+				B48F5DBD1F550C4B000CFA4D /* UINavigationController+BMExtension.m */,
 			);
 			path = B2BMall;
 			sourceTree = "<group>";
@@ -796,6 +815,8 @@
 				B46B25D11DB72CE800B9FF54 /* bw_icon_back_100@2x.png in Resources */,
 				B494E67B1F3057B2008284C0 /* BWResource3.bundle in Resources */,
 				B46B25631DB5EDDD00B9FF54 /* BWHomeTableViewCell.xib in Resources */,
+				B48F5DC31F550DD6000CFA4D /* nav_bg@3x.png in Resources */,
+				B48F5DC21F550DD6000CFA4D /* nav_bg@2x.png in Resources */,
 				B48CC7631EF12129008E3856 /* BWResearch6VC.xib in Resources */,
 				B494E6771F3057AA008284C0 /* BWResource2.bundle in Resources */,
 				B426B0091DF7ABD400F438F3 /* icon_discovery_unselected@2x.png in Resources */,
@@ -1016,6 +1037,7 @@
 				B461B6721DDD50FB00FB7BC1 /* BWResearchVC.m in Sources */,
 				B48CC74D1EF1124B008E3856 /* BMNewRegionModel.m in Sources */,
 				B426B1261DFA943F00F438F3 /* BWResearchCell.m in Sources */,
+				B48F5DBE1F550C4B000CFA4D /* UINavigationController+BMExtension.m in Sources */,
 				B46B25551DB5ED6500B9FF54 /* BWBaseNavigationController.m in Sources */,
 				B48CC7521EF1124B008E3856 /* BMNewAddressPickerCell.m in Sources */,
 				B4A8610C1EEE45F5006C07FC /* BWResearch5VC.m in Sources */,

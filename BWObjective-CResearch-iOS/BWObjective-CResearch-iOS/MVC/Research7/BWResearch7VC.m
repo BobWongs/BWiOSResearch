@@ -12,6 +12,7 @@
 #import "BWResearch7View.h"
 #import "UIAlertController+BMExtension.h"
 #import "UIViewController+BMExtension.h"
+#import "UINavigationController+BMExtension.h"
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -39,6 +40,16 @@
     
 //    [self navBar];
     [self navBarSecond];
+}
+
+- (void)presentCustomNvgtVC {
+    UIViewController *vc = [[self class] new];
+    UINavigationController *navgVC = [UINavigationController bmB2B_defaultStyleWithRootViewController:vc];
+    [self presentViewController:navgVC animated:YES completion:nil];
+}
+
+- (void)dismissVC {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)hasAction {
@@ -82,6 +93,7 @@
     button.frame = CGRectMake(40, 64 + 50, SCREEN_WIDTH - 40 * 2, 50);
     [button setTitle:@"Button: Code + Frame" forState:UIControlStateNormal];
 //    button.backgroundColor = [UIColor lightGrayColor];
+    [button addTarget:self action:@selector(dismissVC) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
     
@@ -90,7 +102,7 @@
     [self.fromIBButton bmB2B_setButtonWithType:BMb2bButtonType_btn1_1];
     
     
-    [self.fromIBButton addTarget:self action:@selector(alertVC) forControlEvents:UIControlEventTouchUpInside];
+    [self.fromIBButton addTarget:self action:@selector(presentCustomNvgtVC) forControlEvents:UIControlEventTouchUpInside];
 }
 
 

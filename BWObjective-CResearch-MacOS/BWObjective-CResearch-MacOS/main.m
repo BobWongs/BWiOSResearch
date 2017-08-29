@@ -22,19 +22,19 @@ void test4();
 void test5();
 void test6();
 void test7();
+void test8();
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        float a = 100.0;
-        float b = 101.0;
-        NSLog(@"a: %f, b: %f", a, b);
+//        NSMutableArray *arrayM = [NSMutableArray arrayWithCapacity:10];
+////        NSMutableArray *arrayM = [NSMutableArray new];
+//        arrayM[2] = @"30";
+//        NSLog(@"ArrayM: %@", arrayM);
         
-        if (BMFloatEquation(a, b)) {
-            NSLog(@"=");
-        } else {
-            NSLog(@"!=");
-        }
+        NSDictionary *dict = @{};
+        NSString *param0 = dict[@"key0"];
+        NSLog(@"%@", param0);
         
     }
     
@@ -135,6 +135,18 @@ void test7() {
         return (obj1.integerValue < obj2.integerValue) ? NSOrderedAscending : NSOrderedDescending;
     }];
     NSLog(@"array is %@", sortedArray);
+}
+
+void test8() {
+    float a = 100.0;
+    float b = 101.0;
+    NSLog(@"a: %f, b: %f", a, b);
+    
+    if (BMFloatEquation(a, b)) {
+        NSLog(@"=");
+    } else {
+        NSLog(@"!=");
+    }
 }
 
 // Function definition

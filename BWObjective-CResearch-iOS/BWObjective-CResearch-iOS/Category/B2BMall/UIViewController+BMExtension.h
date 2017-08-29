@@ -10,6 +10,7 @@
 
 @interface UIViewController (BMExtension)
 
+- (void)bmB2B_setNavigationLeftItemWithTitle:(NSString *)title;
 - (void)bmB2B_setNavigationLeftItemWithTitle:(NSString *)title action:(SEL)action;
 
 
