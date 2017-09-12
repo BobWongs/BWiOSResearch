@@ -8,6 +8,12 @@ target 'BWObjective-CResearch-iOS' do
   pod 'YYCategories', '~> 1.0.4'
   pod 'BWPodRepository', '0.2.0'
   pod 'XXNibBridge', '~> 2.3.1'
+  pod 'MBProgressHUD', '~> 1.0.0'
+  pod 'SVProgressHUD', '~> 2.1.2'
+  pod 'SDWebImage', '~> 4.1.0'
+  pod 'FLAnimatedImage', '~> 1.0.12'
+  pod 'TMCache', '~> 2.1.0'
+  pod 'pop', '~> 1.0.10'
 
   target 'BWObjective-CResearch-iOSTests' do
     inherit! :search_paths

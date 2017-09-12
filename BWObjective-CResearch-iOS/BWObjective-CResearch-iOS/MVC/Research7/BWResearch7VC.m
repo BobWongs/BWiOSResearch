@@ -34,12 +34,19 @@
 //    [self bundle];
 //    [self sandbox];
     
-    
+    self.title = @"测试";
     
     [self testUI];
     
 //    [self navBar];
     [self navBarSecond];
+}
+
+- (IBAction)pushIntoAction:(id)sender {
+    UIViewController *vc = [UIViewController new];
+    vc.title = @"我的详情";
+    vc.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)presentCustomNvgtVC {
@@ -56,9 +63,16 @@
     NSLog(@"hasAction");
 }
 
+- (void)hasAction2 {
+    NSLog(@"hasAction2");
+}
+
 - (void)navBarSecond {
-    [self bmB2B_setNavigationLeftItemWithTitle:@"商城" action:@selector(hasAction)];
-    [self bmB2B_setNavigationRightItemWithTitle:@"菜单" action:@selector(hasAction)];
+//    [self bmB2B_setNavigationLeftItemWithTitle:@"商城" action:@selector(hasAction)];
+//    [self bmB2B_setNavigationRightItemWithTitle:@"菜单" action:@selector(hasAction)];
+    
+    [self bmB2B_setNavigationLeftItemWithTitle:@"商城"];
+    [self bmB2B_setNavigationRightItemWithIconArray:@[[UIImage imageNamed:@"search"], [UIImage imageNamed:@"category"]] actionArray:@[NSStringFromSelector(@selector(hasAction)), NSStringFromSelector(@selector(hasAction2))]];
 }
 
 - (void)navBar {

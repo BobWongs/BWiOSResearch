@@ -14,7 +14,6 @@
 		2167F5CE1E083C39003427D3 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2167F5CD1E083C39003427D3 /* ContactsUI.framework */; };
 		3B324D32EC3EAEE6B439E99B /* libPods-BWObjective-CResearch-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C8A96D8F4FE77C47230880 /* libPods-BWObjective-CResearch-iOS.a */; };
 		557FF8853EA0C3DDEB77EA8D /* libPods-BWObjective-CResearch-iOSUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7062A3E511621014B08B0E /* libPods-BWObjective-CResearch-iOSUITests.a */; };
-		B41093F91E10CEF700D59621 /* BWAddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B41093F81E10CEF700D59621 /* BWAddressBookManager.m */; };
 		B426B0081DF7ABD400F438F3 /* icon_discovery_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B426B0061DF7ABD400F438F3 /* icon_discovery_selected@2x.png */; };
 		B426B0091DF7ABD400F438F3 /* icon_discovery_unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B426B0071DF7ABD400F438F3 /* icon_discovery_unselected@2x.png */; };
 		B426B1261DFA943F00F438F3 /* BWResearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B426B1251DFA943F00F438F3 /* BWResearchCell.m */; };
@@ -33,22 +32,37 @@
 		B46B25681DB5EE1C00B9FF54 /* BWMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B25671DB5EE1C00B9FF54 /* BWMeController.m */; };
 		B46B25CC1DB620CA00B9FF54 /* BWMeSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B25CB1DB620CA00B9FF54 /* BWMeSecondViewController.m */; };
 		B46B25D11DB72CE800B9FF54 /* bw_icon_back_100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B46B25D01DB72CE800B9FF54 /* bw_icon_back_100@2x.png */; };
+		B46F349F1F676E86002F3631 /* BWResearch8SecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B46F349D1F676E86002F3631 /* BWResearch8SecondVC.m */; };
+		B46F34A01F676E86002F3631 /* BWResearch8SecondVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46F349E1F676E86002F3631 /* BWResearch8SecondVC.xib */; };
 		B47A37BB1E01305900E130AA /* bg_study@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B47A37BA1E01305900E130AA /* bg_study@2x.png */; };
-		B48CC74C1EF1124B008E3856 /* BMNewAddressSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B48CC73D1EF1124B008E3856 /* BMNewAddressSourceManager.m */; };
-		B48CC74D1EF1124B008E3856 /* BMNewRegionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B48CC73F1EF1124B008E3856 /* BMNewRegionModel.m */; };
-		B48CC74E1EF1124B008E3856 /* BMNewAddressPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = B48CC7411EF1124B008E3856 /* BMNewAddressPicker.m */; };
-		B48CC74F1EF1124B008E3856 /* address.db in Resources */ = {isa = PBXBuildFile; fileRef = B48CC7431EF1124B008E3856 /* address.db */; };
-		B48CC7521EF1124B008E3856 /* BMNewAddressPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B48CC7481EF1124B008E3856 /* BMNewAddressPickerCell.m */; };
-		B48CC7531EF1124B008E3856 /* BMNewAddressPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48CC7491EF1124B008E3856 /* BMNewAddressPickerCell.xib */; };
-		B48CC7541EF1124B008E3856 /* BMNewAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B48CC74B1EF1124B008E3856 /* BMNewAddressPickerView.m */; };
-		B48CC75D1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48CC75B1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@2x.png */; };
-		B48CC75E1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48CC75C1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@3x.png */; };
 		B48CC7621EF12129008E3856 /* BWResearch6VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B48CC7601EF12129008E3856 /* BWResearch6VC.m */; };
 		B48CC7631EF12129008E3856 /* BWResearch6VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48CC7611EF12129008E3856 /* BWResearch6VC.xib */; };
 		B48F5DBE1F550C4B000CFA4D /* UINavigationController+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B48F5DBD1F550C4B000CFA4D /* UINavigationController+BMExtension.m */; };
 		B48F5DC21F550DD6000CFA4D /* nav_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48F5DC01F550DD6000CFA4D /* nav_bg@2x.png */; };
 		B48F5DC31F550DD6000CFA4D /* nav_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48F5DC11F550DD6000CFA4D /* nav_bg@3x.png */; };
+		B48F5DC81F553660000CFA4D /* category@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48F5DC41F553660000CFA4D /* category@2x.png */; };
+		B48F5DC91F553660000CFA4D /* category@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48F5DC51F553660000CFA4D /* category@3x.png */; };
+		B48F5DCA1F553660000CFA4D /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48F5DC61F553660000CFA4D /* search@2x.png */; };
+		B48F5DCB1F553660000CFA4D /* search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48F5DC71F553660000CFA4D /* search@3x.png */; };
+		B48F5DCE1F5537B8000CFA4D /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48F5DCC1F5537B8000CFA4D /* back@2x.png */; };
+		B48F5DCF1F5537B8000CFA4D /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48F5DCD1F5537B8000CFA4D /* back@3x.png */; };
+		B48F5ECE1F5559A0000CFA4D /* BWResearch8VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B48F5ECC1F5559A0000CFA4D /* BWResearch8VC.m */; };
+		B48F5ECF1F5559A0000CFA4D /* BWResearch8VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48F5ECD1F5559A0000CFA4D /* BWResearch8VC.xib */; };
+		B48F5ED11F555A6E000CFA4D /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = B48F5ED01F555A6E000CFA4D /* loading.gif */; };
 		B491B0111E66BF2E005CAD43 /* BWResearch3VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B491B0101E66BF2E005CAD43 /* BWResearch3VC.m */; };
+		B4945B2D1F676D1F0084CC88 /* BMNewAddressSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4945B101F676D1F0084CC88 /* BMNewAddressSourceManager.m */; };
+		B4945B2E1F676D1F0084CC88 /* BMNewAddressPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = B4945B121F676D1F0084CC88 /* BMNewAddressPicker.m */; };
+		B4945B2F1F676D1F0084CC88 /* BMNewRegionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4945B141F676D1F0084CC88 /* BMNewRegionModel.m */; };
+		B4945B301F676D1F0084CC88 /* address.db in Resources */ = {isa = PBXBuildFile; fileRef = B4945B161F676D1F0084CC88 /* address.db */; };
+		B4945B311F676D1F0084CC88 /* icon_new_address_picker_checkbox_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4945B171F676D1F0084CC88 /* icon_new_address_picker_checkbox_blue@2x.png */; };
+		B4945B321F676D1F0084CC88 /* icon_new_address_picker_checkbox_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4945B181F676D1F0084CC88 /* icon_new_address_picker_checkbox_blue@3x.png */; };
+		B4945B331F676D1F0084CC88 /* BMNewAddressPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4945B1B1F676D1F0084CC88 /* BMNewAddressPickerCell.m */; };
+		B4945B341F676D1F0084CC88 /* BMNewAddressPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4945B1C1F676D1F0084CC88 /* BMNewAddressPickerCell.xib */; };
+		B4945B351F676D1F0084CC88 /* BMNewAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4945B1E1F676D1F0084CC88 /* BMNewAddressPickerView.m */; };
+		B4945B361F676D1F0084CC88 /* BMValidCodeTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4945B221F676D1F0084CC88 /* BMValidCodeTimeManager.m */; };
+		B4945B371F676D1F0084CC88 /* BMValidCodeTimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4945B241F676D1F0084CC88 /* BMValidCodeTimeModel.m */; };
+		B4945B381F676D1F0084CC88 /* BWAddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4945B271F676D1F0084CC88 /* BWAddressBookManager.m */; };
+		B4945B391F676D1F0084CC88 /* BMLeftTextRightIconStyle0Button.m in Sources */ = {isa = PBXBuildFile; fileRef = B4945B2C1F676D1F0084CC88 /* BMLeftTextRightIconStyle0Button.m */; };
 		B494DEB31F4AB80C00A43EC5 /* UIView+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B494DEB21F4AB80C00A43EC5 /* UIView+BMExtension.m */; };
 		B494DEB61F4AB87500A43EC5 /* UIButton+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B494DEB51F4AB87500A43EC5 /* UIButton+BMExtension.m */; };
 		B494DEB91F4ABC8500A43EC5 /* UIImage+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B494DEB81F4ABC8500A43EC5 /* UIImage+BMExtension.m */; };
@@ -75,7 +89,6 @@
 		B4B631311DAE384F00DF0907 /* UITableViewCell+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B6312D1DAE384F00DF0907 /* UITableViewCell+JZExtension.m */; };
 		B4B631321DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B6312F1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m */; };
 		B4B631331DAE384F00DF0907 /* UITableViewRowAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B631301DAE384F00DF0907 /* UITableViewRowAction.m */; };
-		B4D191681F46E6D400A3F337 /* BMLeftTextRightIconStyle0Button.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D191671F46E6D400A3F337 /* BMLeftTextRightIconStyle0Button.m */; };
 		B4D1916C1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D1916B1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m */; };
 /* End PBXBuildFile section */
 
@@ -107,8 +120,6 @@
 		89C8A96D8F4FE77C47230880 /* libPods-BWObjective-CResearch-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWObjective-CResearch-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		939CCA86B04B9F509C97601C /* Pods-BWObjective-CResearch-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOSTests/Pods-BWObjective-CResearch-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		AC7062A3E511621014B08B0E /* libPods-BWObjective-CResearch-iOSUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWObjective-CResearch-iOSUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B41093F71E10CEF700D59621 /* BWAddressBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressBookManager.h; sourceTree = "<group>"; };
-		B41093F81E10CEF700D59621 /* BWAddressBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressBookManager.m; sourceTree = "<group>"; };
 		B426B0061DF7ABD400F438F3 /* icon_discovery_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_discovery_selected@2x.png"; sourceTree = "<group>"; };
 		B426B0071DF7ABD400F438F3 /* icon_discovery_unselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_discovery_unselected@2x.png"; sourceTree = "<group>"; };
 		B426B1241DFA943F00F438F3 /* BWResearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearchCell.h; sourceTree = "<group>"; };
@@ -142,21 +153,10 @@
 		B46B25CA1DB620CA00B9FF54 /* BWMeSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWMeSecondViewController.h; sourceTree = "<group>"; };
 		B46B25CB1DB620CA00B9FF54 /* BWMeSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWMeSecondViewController.m; sourceTree = "<group>"; };
 		B46B25D01DB72CE800B9FF54 /* bw_icon_back_100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bw_icon_back_100@2x.png"; sourceTree = "<group>"; };
+		B46F349C1F676E86002F3631 /* BWResearch8SecondVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch8SecondVC.h; sourceTree = "<group>"; };
+		B46F349D1F676E86002F3631 /* BWResearch8SecondVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch8SecondVC.m; sourceTree = "<group>"; };
+		B46F349E1F676E86002F3631 /* BWResearch8SecondVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWResearch8SecondVC.xib; sourceTree = "<group>"; };
 		B47A37BA1E01305900E130AA /* bg_study@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_study@2x.png"; sourceTree = "<group>"; };
-		B48CC73C1EF1124B008E3856 /* BMNewAddressSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressSourceManager.h; sourceTree = "<group>"; };
-		B48CC73D1EF1124B008E3856 /* BMNewAddressSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressSourceManager.m; sourceTree = "<group>"; };
-		B48CC73E1EF1124B008E3856 /* BMNewRegionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewRegionModel.h; sourceTree = "<group>"; };
-		B48CC73F1EF1124B008E3856 /* BMNewRegionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewRegionModel.m; sourceTree = "<group>"; };
-		B48CC7401EF1124B008E3856 /* BMNewAddressPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPicker.h; sourceTree = "<group>"; };
-		B48CC7411EF1124B008E3856 /* BMNewAddressPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPicker.m; sourceTree = "<group>"; };
-		B48CC7431EF1124B008E3856 /* address.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = address.db; sourceTree = "<group>"; };
-		B48CC7471EF1124B008E3856 /* BMNewAddressPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerCell.h; sourceTree = "<group>"; };
-		B48CC7481EF1124B008E3856 /* BMNewAddressPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerCell.m; sourceTree = "<group>"; };
-		B48CC7491EF1124B008E3856 /* BMNewAddressPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMNewAddressPickerCell.xib; sourceTree = "<group>"; };
-		B48CC74A1EF1124B008E3856 /* BMNewAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerView.h; sourceTree = "<group>"; };
-		B48CC74B1EF1124B008E3856 /* BMNewAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerView.m; sourceTree = "<group>"; };
-		B48CC75B1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_new_address_picker_checkbox_blue@2x.png"; sourceTree = "<group>"; };
-		B48CC75C1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_new_address_picker_checkbox_blue@3x.png"; sourceTree = "<group>"; };
 		B48CC75F1EF12129008E3856 /* BWResearch6VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch6VC.h; sourceTree = "<group>"; };
 		B48CC7601EF12129008E3856 /* BWResearch6VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch6VC.m; sourceTree = "<group>"; };
 		B48CC7611EF12129008E3856 /* BWResearch6VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWResearch6VC.xib; sourceTree = "<group>"; };
@@ -164,8 +164,40 @@
 		B48F5DBD1F550C4B000CFA4D /* UINavigationController+BMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+BMExtension.m"; sourceTree = "<group>"; };
 		B48F5DC01F550DD6000CFA4D /* nav_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_bg@2x.png"; sourceTree = "<group>"; };
 		B48F5DC11F550DD6000CFA4D /* nav_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_bg@3x.png"; sourceTree = "<group>"; };
+		B48F5DC41F553660000CFA4D /* category@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category@2x.png"; sourceTree = "<group>"; };
+		B48F5DC51F553660000CFA4D /* category@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category@3x.png"; sourceTree = "<group>"; };
+		B48F5DC61F553660000CFA4D /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
+		B48F5DC71F553660000CFA4D /* search@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@3x.png"; sourceTree = "<group>"; };
+		B48F5DCC1F5537B8000CFA4D /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		B48F5DCD1F5537B8000CFA4D /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
+		B48F5ECB1F5559A0000CFA4D /* BWResearch8VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch8VC.h; sourceTree = "<group>"; };
+		B48F5ECC1F5559A0000CFA4D /* BWResearch8VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch8VC.m; sourceTree = "<group>"; };
+		B48F5ECD1F5559A0000CFA4D /* BWResearch8VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWResearch8VC.xib; sourceTree = "<group>"; };
+		B48F5ED01F555A6E000CFA4D /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		B491B00F1E66BF2E005CAD43 /* BWResearch3VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch3VC.h; sourceTree = "<group>"; };
 		B491B0101E66BF2E005CAD43 /* BWResearch3VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch3VC.m; sourceTree = "<group>"; };
+		B4945B0F1F676D1F0084CC88 /* BMNewAddressSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressSourceManager.h; sourceTree = "<group>"; };
+		B4945B101F676D1F0084CC88 /* BMNewAddressSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressSourceManager.m; sourceTree = "<group>"; };
+		B4945B111F676D1F0084CC88 /* BMNewAddressPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPicker.h; sourceTree = "<group>"; };
+		B4945B121F676D1F0084CC88 /* BMNewAddressPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPicker.m; sourceTree = "<group>"; };
+		B4945B131F676D1F0084CC88 /* BMNewRegionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewRegionModel.h; sourceTree = "<group>"; };
+		B4945B141F676D1F0084CC88 /* BMNewRegionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewRegionModel.m; sourceTree = "<group>"; };
+		B4945B161F676D1F0084CC88 /* address.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = address.db; sourceTree = "<group>"; };
+		B4945B171F676D1F0084CC88 /* icon_new_address_picker_checkbox_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_new_address_picker_checkbox_blue@2x.png"; sourceTree = "<group>"; };
+		B4945B181F676D1F0084CC88 /* icon_new_address_picker_checkbox_blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_new_address_picker_checkbox_blue@3x.png"; sourceTree = "<group>"; };
+		B4945B1A1F676D1F0084CC88 /* BMNewAddressPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerCell.h; sourceTree = "<group>"; };
+		B4945B1B1F676D1F0084CC88 /* BMNewAddressPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerCell.m; sourceTree = "<group>"; };
+		B4945B1C1F676D1F0084CC88 /* BMNewAddressPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMNewAddressPickerCell.xib; sourceTree = "<group>"; };
+		B4945B1D1F676D1F0084CC88 /* BMNewAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerView.h; sourceTree = "<group>"; };
+		B4945B1E1F676D1F0084CC88 /* BMNewAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerView.m; sourceTree = "<group>"; };
+		B4945B211F676D1F0084CC88 /* BMValidCodeTimeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMValidCodeTimeManager.h; sourceTree = "<group>"; };
+		B4945B221F676D1F0084CC88 /* BMValidCodeTimeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMValidCodeTimeManager.m; sourceTree = "<group>"; };
+		B4945B231F676D1F0084CC88 /* BMValidCodeTimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMValidCodeTimeModel.h; sourceTree = "<group>"; };
+		B4945B241F676D1F0084CC88 /* BMValidCodeTimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMValidCodeTimeModel.m; sourceTree = "<group>"; };
+		B4945B261F676D1F0084CC88 /* BWAddressBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressBookManager.h; sourceTree = "<group>"; };
+		B4945B271F676D1F0084CC88 /* BWAddressBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressBookManager.m; sourceTree = "<group>"; };
+		B4945B2B1F676D1F0084CC88 /* BMLeftTextRightIconStyle0Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLeftTextRightIconStyle0Button.h; sourceTree = "<group>"; };
+		B4945B2C1F676D1F0084CC88 /* BMLeftTextRightIconStyle0Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLeftTextRightIconStyle0Button.m; sourceTree = "<group>"; };
 		B494DEB11F4AB80C00A43EC5 /* UIView+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BMExtension.h"; sourceTree = "<group>"; };
 		B494DEB21F4AB80C00A43EC5 /* UIView+BMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BMExtension.m"; sourceTree = "<group>"; };
 		B494DEB41F4AB87500A43EC5 /* UIButton+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BMExtension.h"; sourceTree = "<group>"; };
@@ -214,8 +246,6 @@
 		B4B6312E1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewRowAction+JZExtension.h"; sourceTree = "<group>"; };
 		B4B6312F1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewRowAction+JZExtension.m"; sourceTree = "<group>"; };
 		B4B631301DAE384F00DF0907 /* UITableViewRowAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewRowAction.m; sourceTree = "<group>"; };
-		B4D191661F46E6D400A3F337 /* BMLeftTextRightIconStyle0Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLeftTextRightIconStyle0Button.h; sourceTree = "<group>"; };
-		B4D191671F46E6D400A3F337 /* BMLeftTextRightIconStyle0Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLeftTextRightIconStyle0Button.m; sourceTree = "<group>"; };
 		B4D1916A1F46EC4200A3F337 /* CAGradientLayer+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAGradientLayer+BMExtension.h"; sourceTree = "<group>"; };
 		B4D1916B1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAGradientLayer+BMExtension.m"; sourceTree = "<group>"; };
 		C103FEAD4813AE671D13F2D2 /* Pods-BWObjective-CResearch-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -269,26 +299,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B41093F51E10CED800D59621 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				B48CC73A1EF1124B008E3856 /* BMAddressPicker */,
-				B41093F61E10CED800D59621 /* Utility */,
-				B4C60FF01EC0242E00D6EB15 /* View */,
-			);
-			name = Common;
-			path = Category/Common;
-			sourceTree = "<group>";
-		};
-		B41093F61E10CED800D59621 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				B41093F71E10CEF700D59621 /* BWAddressBookManager.h */,
-				B41093F81E10CEF700D59621 /* BWAddressBookManager.m */,
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
 		B443A1CD1D548382003D66C5 = {
 			isa = PBXGroup;
 			children = (
@@ -318,7 +328,7 @@
 				B443A1DD1D548382003D66C5 /* AppDelegate.m */,
 				B4B630D41DAE1FDB00DF0907 /* MVC */,
 				B4AC5FBD1DB4CFFA00D880FB /* Category */,
-				B41093F51E10CED800D59621 /* Common */,
+				B4945B0C1F676D1F0084CC88 /* Common */,
 				B4FF7E891DACDD220015089F /* Library */,
 				B46B25CD1DB72C9A00B9FF54 /* Resource */,
 				B443A1E51D548382003D66C5 /* Assets.xcassets */,
@@ -450,51 +460,6 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		B48CC73A1EF1124B008E3856 /* BMAddressPicker */ = {
-			isa = PBXGroup;
-			children = (
-				B48CC73E1EF1124B008E3856 /* BMNewRegionModel.h */,
-				B48CC73F1EF1124B008E3856 /* BMNewRegionModel.m */,
-				B48CC7401EF1124B008E3856 /* BMNewAddressPicker.h */,
-				B48CC7411EF1124B008E3856 /* BMNewAddressPicker.m */,
-				B48CC73B1EF1124B008E3856 /* AddressSource */,
-				B48CC7461EF1124B008E3856 /* View */,
-				B48CC7421EF1124B008E3856 /* Resource */,
-			);
-			path = BMAddressPicker;
-			sourceTree = "<group>";
-		};
-		B48CC73B1EF1124B008E3856 /* AddressSource */ = {
-			isa = PBXGroup;
-			children = (
-				B48CC73C1EF1124B008E3856 /* BMNewAddressSourceManager.h */,
-				B48CC73D1EF1124B008E3856 /* BMNewAddressSourceManager.m */,
-			);
-			path = AddressSource;
-			sourceTree = "<group>";
-		};
-		B48CC7421EF1124B008E3856 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				B48CC7431EF1124B008E3856 /* address.db */,
-				B48CC75B1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@2x.png */,
-				B48CC75C1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@3x.png */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
-		B48CC7461EF1124B008E3856 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B48CC7471EF1124B008E3856 /* BMNewAddressPickerCell.h */,
-				B48CC7481EF1124B008E3856 /* BMNewAddressPickerCell.m */,
-				B48CC7491EF1124B008E3856 /* BMNewAddressPickerCell.xib */,
-				B48CC74A1EF1124B008E3856 /* BMNewAddressPickerView.h */,
-				B48CC74B1EF1124B008E3856 /* BMNewAddressPickerView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		B48CC7551EF11EDF008E3856 /* Research6 */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,8 +475,28 @@
 			children = (
 				B48F5DC01F550DD6000CFA4D /* nav_bg@2x.png */,
 				B48F5DC11F550DD6000CFA4D /* nav_bg@3x.png */,
+				B48F5DC41F553660000CFA4D /* category@2x.png */,
+				B48F5DC51F553660000CFA4D /* category@3x.png */,
+				B48F5DC61F553660000CFA4D /* search@2x.png */,
+				B48F5DC71F553660000CFA4D /* search@3x.png */,
+				B48F5DCC1F5537B8000CFA4D /* back@2x.png */,
+				B48F5DCD1F5537B8000CFA4D /* back@3x.png */,
+				B48F5ED01F555A6E000CFA4D /* loading.gif */,
 			);
 			path = B2BMall;
+			sourceTree = "<group>";
+		};
+		B48F5EC21F5549EC000CFA4D /* Research8 */ = {
+			isa = PBXGroup;
+			children = (
+				B48F5ECB1F5559A0000CFA4D /* BWResearch8VC.h */,
+				B48F5ECC1F5559A0000CFA4D /* BWResearch8VC.m */,
+				B48F5ECD1F5559A0000CFA4D /* BWResearch8VC.xib */,
+				B46F349C1F676E86002F3631 /* BWResearch8SecondVC.h */,
+				B46F349D1F676E86002F3631 /* BWResearch8SecondVC.m */,
+				B46F349E1F676E86002F3631 /* BWResearch8SecondVC.xib */,
+			);
+			path = Research8;
 			sourceTree = "<group>";
 		};
 		B491B00B1E66BF05005CAD43 /* Research3 */ = {
@@ -521,6 +506,115 @@
 				B491B0101E66BF2E005CAD43 /* BWResearch3VC.m */,
 			);
 			path = Research3;
+			sourceTree = "<group>";
+		};
+		B4945B0C1F676D1F0084CC88 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B4945B0D1F676D1F0084CC88 /* BMAddressPicker */,
+				B4945B1F1F676D1F0084CC88 /* Utility */,
+				B4945B281F676D1F0084CC88 /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B4945B0D1F676D1F0084CC88 /* BMAddressPicker */ = {
+			isa = PBXGroup;
+			children = (
+				B4945B0E1F676D1F0084CC88 /* AddressSource */,
+				B4945B111F676D1F0084CC88 /* BMNewAddressPicker.h */,
+				B4945B121F676D1F0084CC88 /* BMNewAddressPicker.m */,
+				B4945B131F676D1F0084CC88 /* BMNewRegionModel.h */,
+				B4945B141F676D1F0084CC88 /* BMNewRegionModel.m */,
+				B4945B151F676D1F0084CC88 /* Resource */,
+				B4945B191F676D1F0084CC88 /* View */,
+			);
+			path = BMAddressPicker;
+			sourceTree = "<group>";
+		};
+		B4945B0E1F676D1F0084CC88 /* AddressSource */ = {
+			isa = PBXGroup;
+			children = (
+				B4945B0F1F676D1F0084CC88 /* BMNewAddressSourceManager.h */,
+				B4945B101F676D1F0084CC88 /* BMNewAddressSourceManager.m */,
+			);
+			path = AddressSource;
+			sourceTree = "<group>";
+		};
+		B4945B151F676D1F0084CC88 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B4945B161F676D1F0084CC88 /* address.db */,
+				B4945B171F676D1F0084CC88 /* icon_new_address_picker_checkbox_blue@2x.png */,
+				B4945B181F676D1F0084CC88 /* icon_new_address_picker_checkbox_blue@3x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B4945B191F676D1F0084CC88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4945B1A1F676D1F0084CC88 /* BMNewAddressPickerCell.h */,
+				B4945B1B1F676D1F0084CC88 /* BMNewAddressPickerCell.m */,
+				B4945B1C1F676D1F0084CC88 /* BMNewAddressPickerCell.xib */,
+				B4945B1D1F676D1F0084CC88 /* BMNewAddressPickerView.h */,
+				B4945B1E1F676D1F0084CC88 /* BMNewAddressPickerView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4945B1F1F676D1F0084CC88 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				B4945B201F676D1F0084CC88 /* BMValidCodeManager */,
+				B4945B251F676D1F0084CC88 /* BWAddressBookManager */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		B4945B201F676D1F0084CC88 /* BMValidCodeManager */ = {
+			isa = PBXGroup;
+			children = (
+				B4945B211F676D1F0084CC88 /* BMValidCodeTimeManager.h */,
+				B4945B221F676D1F0084CC88 /* BMValidCodeTimeManager.m */,
+				B4945B231F676D1F0084CC88 /* BMValidCodeTimeModel.h */,
+				B4945B241F676D1F0084CC88 /* BMValidCodeTimeModel.m */,
+			);
+			path = BMValidCodeManager;
+			sourceTree = "<group>";
+		};
+		B4945B251F676D1F0084CC88 /* BWAddressBookManager */ = {
+			isa = PBXGroup;
+			children = (
+				B4945B261F676D1F0084CC88 /* BWAddressBookManager.h */,
+				B4945B271F676D1F0084CC88 /* BWAddressBookManager.m */,
+			);
+			path = BWAddressBookManager;
+			sourceTree = "<group>";
+		};
+		B4945B281F676D1F0084CC88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4945B291F676D1F0084CC88 /* BMB2BBrand */,
+				B4945B2A1F676D1F0084CC88 /* BMLeftTextRightIconStyle0Button */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4945B291F676D1F0084CC88 /* BMB2BBrand */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BMB2BBrand;
+			sourceTree = "<group>";
+		};
+		B4945B2A1F676D1F0084CC88 /* BMLeftTextRightIconStyle0Button */ = {
+			isa = PBXGroup;
+			children = (
+				B4945B2B1F676D1F0084CC88 /* BMLeftTextRightIconStyle0Button.h */,
+				B4945B2C1F676D1F0084CC88 /* BMLeftTextRightIconStyle0Button.m */,
+			);
+			path = BMLeftTextRightIconStyle0Button;
 			sourceTree = "<group>";
 		};
 		B494E65F1F304CE1008284C0 /* Research7 */ = {
@@ -623,6 +717,7 @@
 				B4A861091EEE45C8006C07FC /* Research5 */,
 				B48CC7551EF11EDF008E3856 /* Research6 */,
 				B494E65F1F304CE1008284C0 /* Research7 */,
+				B48F5EC21F5549EC000CFA4D /* Research8 */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -636,23 +731,6 @@
 				B4B631301DAE384F00DF0907 /* UITableViewRowAction.m */,
 			);
 			path = JZTableViewRowAction;
-			sourceTree = "<group>";
-		};
-		B4C60FF01EC0242E00D6EB15 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B4D191651F46E6D400A3F337 /* BMLeftTextRightIconStyle0Button */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		B4D191651F46E6D400A3F337 /* BMLeftTextRightIconStyle0Button */ = {
-			isa = PBXGroup;
-			children = (
-				B4D191661F46E6D400A3F337 /* BMLeftTextRightIconStyle0Button.h */,
-				B4D191671F46E6D400A3F337 /* BMLeftTextRightIconStyle0Button.m */,
-			);
-			path = BMLeftTextRightIconStyle0Button;
 			sourceTree = "<group>";
 		};
 		B4D191691F46EC2D00A3F337 /* B2BMall */ = {
@@ -811,24 +889,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B48CC7531EF1124B008E3856 /* BMNewAddressPickerCell.xib in Resources */,
 				B46B25D11DB72CE800B9FF54 /* bw_icon_back_100@2x.png in Resources */,
 				B494E67B1F3057B2008284C0 /* BWResource3.bundle in Resources */,
 				B46B25631DB5EDDD00B9FF54 /* BWHomeTableViewCell.xib in Resources */,
 				B48F5DC31F550DD6000CFA4D /* nav_bg@3x.png in Resources */,
+				B4945B311F676D1F0084CC88 /* icon_new_address_picker_checkbox_blue@2x.png in Resources */,
 				B48F5DC21F550DD6000CFA4D /* nav_bg@2x.png in Resources */,
 				B48CC7631EF12129008E3856 /* BWResearch6VC.xib in Resources */,
+				B46F34A01F676E86002F3631 /* BWResearch8SecondVC.xib in Resources */,
+				B4945B301F676D1F0084CC88 /* address.db in Resources */,
+				B48F5DCE1F5537B8000CFA4D /* back@2x.png in Resources */,
 				B494E6771F3057AA008284C0 /* BWResource2.bundle in Resources */,
 				B426B0091DF7ABD400F438F3 /* icon_discovery_unselected@2x.png in Resources */,
-				B48CC75D1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@2x.png in Resources */,
+				B48F5DCB1F553660000CFA4D /* search@3x.png in Resources */,
 				B4A583E91F4BD15300370A62 /* BWResearch7View.xib in Resources */,
 				B426B0081DF7ABD400F438F3 /* icon_discovery_selected@2x.png in Resources */,
-				B48CC75E1EF12063008E3856 /* icon_new_address_picker_checkbox_blue@3x.png in Resources */,
-				B48CC74F1EF1124B008E3856 /* address.db in Resources */,
+				B48F5DCF1F5537B8000CFA4D /* back@3x.png in Resources */,
+				B48F5ECF1F5559A0000CFA4D /* BWResearch8VC.xib in Resources */,
 				B443A1E91D548382003D66C5 /* LaunchScreen.storyboard in Resources */,
 				B47A37BB1E01305900E130AA /* bg_study@2x.png in Resources */,
 				B443A1E61D548382003D66C5 /* Assets.xcassets in Resources */,
+				B48F5DC91F553660000CFA4D /* category@3x.png in Resources */,
+				B48F5DC81F553660000CFA4D /* category@2x.png in Resources */,
 				B494E67A1F3057B2008284C0 /* BWResource1 in Resources */,
+				B4945B321F676D1F0084CC88 /* icon_new_address_picker_checkbox_blue@3x.png in Resources */,
+				B48F5DCA1F553660000CFA4D /* search@2x.png in Resources */,
+				B4945B341F676D1F0084CC88 /* BMNewAddressPickerCell.xib in Resources */,
+				B48F5ED11F555A6E000CFA4D /* loading.gif in Resources */,
 				B494E6641F304CFD008284C0 /* BWResearch7VC.xib in Resources */,
 				B494E6761F3057AA008284C0 /* temp0.txt in Resources */,
 			);
@@ -953,9 +1040,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1005,41 +1095,45 @@
 				B4AC5FB91DB4CC5200D880FB /* UINavigationBar+JZExtension.m in Sources */,
 				B4D1916C1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m in Sources */,
 				B4B631331DAE384F00DF0907 /* UITableViewRowAction.m in Sources */,
+				B4945B351F676D1F0084CC88 /* BMNewAddressPickerView.m in Sources */,
+				B48F5ECE1F5559A0000CFA4D /* BWResearch8VC.m in Sources */,
 				B494DEB31F4AB80C00A43EC5 /* UIView+BMExtension.m in Sources */,
-				B41093F91E10CEF700D59621 /* BWAddressBookManager.m in Sources */,
 				B46B25601DB5EDDD00B9FF54 /* BWHomeViewController.m in Sources */,
 				B4A0CF071E6551DD00CC8C92 /* BWResearch2VC.m in Sources */,
 				B4AC5FBC1DB4CC5200D880FB /* UIViewController+JZExtension.m in Sources */,
 				B46B25521DB5DCD800B9FF54 /* BWBaseViewController.m in Sources */,
 				B4AC5FB81DB4CC5200D880FB /* NSNumber+JZExtension.m in Sources */,
-				B48CC7541EF1124B008E3856 /* BMNewAddressPickerView.m in Sources */,
-				B4D191681F46E6D400A3F337 /* BMLeftTextRightIconStyle0Button.m in Sources */,
 				B4AC5FB61DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m in Sources */,
-				B48CC74C1EF1124B008E3856 /* BMNewAddressSourceManager.m in Sources */,
 				B494E6631F304CFD008284C0 /* BWResearch7VC.m in Sources */,
 				B46B25CC1DB620CA00B9FF54 /* BWMeSecondViewController.m in Sources */,
+				B4945B331F676D1F0084CC88 /* BMNewAddressPickerCell.m in Sources */,
 				B443A1DE1D548382003D66C5 /* AppDelegate.m in Sources */,
 				B4ABFCAD1EAF2FAA004F9F49 /* BWResearch4VC.m in Sources */,
 				B48CC7621EF12129008E3856 /* BWResearch6VC.m in Sources */,
+				B4945B2E1F676D1F0084CC88 /* BMNewAddressPicker.m in Sources */,
 				B46B25681DB5EE1C00B9FF54 /* BWMeController.m in Sources */,
 				B494DEB61F4AB87500A43EC5 /* UIButton+BMExtension.m in Sources */,
 				B491B0111E66BF2E005CAD43 /* BWResearch3VC.m in Sources */,
 				B4A583EF1F4C181800370A62 /* UIViewController+BMExtension.m in Sources */,
 				B494DEB91F4ABC8500A43EC5 /* UIImage+BMExtension.m in Sources */,
+				B4945B2D1F676D1F0084CC88 /* BMNewAddressSourceManager.m in Sources */,
+				B4945B2F1F676D1F0084CC88 /* BMNewRegionModel.m in Sources */,
 				B4AC5FBA1DB4CC5200D880FB /* UIToolbar+JZExtension.m in Sources */,
 				B4AC5FBB1DB4CC5200D880FB /* UINavigationController+JZExtension.m in Sources */,
 				B443A1DB1D548382003D66C5 /* main.m in Sources */,
-				B48CC74E1EF1124B008E3856 /* BMNewAddressPicker.m in Sources */,
 				B4A583EC1F4BF90C00370A62 /* UIAlertController+BMExtension.m in Sources */,
 				B4A583E71F4BD14700370A62 /* BWResearch7View.m in Sources */,
 				B46B25621DB5EDDD00B9FF54 /* BWHomeTableViewCell.m in Sources */,
 				B4B631321DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m in Sources */,
+				B4945B371F676D1F0084CC88 /* BMValidCodeTimeModel.m in Sources */,
 				B461B6721DDD50FB00FB7BC1 /* BWResearchVC.m in Sources */,
-				B48CC74D1EF1124B008E3856 /* BMNewRegionModel.m in Sources */,
 				B426B1261DFA943F00F438F3 /* BWResearchCell.m in Sources */,
+				B4945B361F676D1F0084CC88 /* BMValidCodeTimeManager.m in Sources */,
+				B4945B391F676D1F0084CC88 /* BMLeftTextRightIconStyle0Button.m in Sources */,
+				B4945B381F676D1F0084CC88 /* BWAddressBookManager.m in Sources */,
 				B48F5DBE1F550C4B000CFA4D /* UINavigationController+BMExtension.m in Sources */,
 				B46B25551DB5ED6500B9FF54 /* BWBaseNavigationController.m in Sources */,
-				B48CC7521EF1124B008E3856 /* BMNewAddressPickerCell.m in Sources */,
+				B46F349F1F676E86002F3631 /* BWResearch8SecondVC.m in Sources */,
 				B4A8610C1EEE45F5006C07FC /* BWResearch5VC.m in Sources */,
 				B4B631311DAE384F00DF0907 /* UITableViewCell+JZExtension.m in Sources */,
 				B4AC5FB71DB4CC5200D880FB /* _JZValue.m in Sources */,

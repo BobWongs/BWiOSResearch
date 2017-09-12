@@ -29,21 +29,31 @@
                     <state key="normal" title="Button from IB"/>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLd-D4-MyD" customClass="BWResearch7View">
-                    <rect key="frame" x="52" y="347" width="270" height="177"/>
+                    <rect key="frame" x="52" y="300" width="270" height="177"/>
                     <color key="backgroundColor" red="0.55091688368055558" green="0.67472330729166663" blue="0.97257486979166663" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="177" id="dkf-d7-ytU"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07X-5e-cRZ">
+                    <rect key="frame" x="52" y="547" width="270" height="30"/>
+                    <state key="normal" title="Push into"/>
+                    <connections>
+                        <action selector="pushIntoAction:" destination="-1" eventType="touchUpInside" id="jES-Ys-SeN"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="gLd-D4-MyD" secondAttribute="trailing" constant="53" id="4mO-UO-NIA"/>
                 <constraint firstItem="gLd-D4-MyD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="52" id="8vk-sj-6C9"/>
+                <constraint firstItem="07X-5e-cRZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="52" id="Q09-yk-LYP"/>
                 <constraint firstItem="8pT-J6-hGt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="T3U-NY-nQe"/>
                 <constraint firstItem="8pT-J6-hGt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="200" id="TO0-za-iq6"/>
                 <constraint firstAttribute="trailing" secondItem="8pT-J6-hGt" secondAttribute="trailing" constant="16" id="eTs-Oe-d8s"/>
-                <constraint firstItem="gLd-D4-MyD" firstAttribute="top" secondItem="8pT-J6-hGt" secondAttribute="bottom" constant="87" id="sc6-0N-KtA"/>
+                <constraint firstItem="07X-5e-cRZ" firstAttribute="top" secondItem="gLd-D4-MyD" secondAttribute="bottom" constant="70" id="l8e-Xb-oTo"/>
+                <constraint firstAttribute="trailing" secondItem="07X-5e-cRZ" secondAttribute="trailing" constant="53" id="nx2-i6-oVw"/>
+                <constraint firstItem="gLd-D4-MyD" firstAttribute="top" secondItem="8pT-J6-hGt" secondAttribute="bottom" constant="40" id="sc6-0N-KtA"/>
             </constraints>
             <point key="canvasLocation" x="78.5" y="54.5"/>
         </view>

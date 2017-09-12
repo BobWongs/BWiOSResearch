@@ -16,6 +16,8 @@
 #import "BWResearch5VC.h"
 #import "BWResearch6VC.h"
 #import "BWResearch7VC.h"
+#import "BWResearch8VC.h"
+#import "UINavigationController+BMExtension.h"
 
 @interface AppDelegate ()
 
@@ -57,9 +59,9 @@
 //    BWResearch3VC *researchVC = [BWResearch3VC new];
 //    BWResearch4VC *researchVC = [BWResearch4VC new];
 //    BWResearch5VC  *researchVC = [BWResearch5VC new];
-    Class vcClass = [BWResearch7VC class];
+    Class vcClass = [BWResearch8VC class];
     
-    UINavigationController *researchNvgtVC = [[UINavigationController alloc] initWithRootViewController:[vcClass new]];
+    UINavigationController *researchNvgtVC = [UINavigationController bmB2B_defaultStyleWithRootViewController:[vcClass new]];
     researchNvgtVC.tabBarItem.title = NSStringFromClass(vcClass);
     
     UITabBarController *tabVC = [UITabBarController new];
