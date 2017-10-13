@@ -15,6 +15,8 @@
 @interface BWResearch8VC ()
 
 @property (weak, nonatomic) IBOutlet UIButton *actionButton;
+@property (weak, nonatomic) IBOutlet UITextView *inputedTextView;
+@property (weak, nonatomic) IBOutlet UILabel *showInputedLabel;
 
 @end
 
@@ -24,7 +26,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [[BMValidCodeTimeManager sharedInstance] continuteLastCountDownAnimation:self.actionButton withType:BMValidCodeTimeTypeQuickLogin];
+//    [[BMValidCodeTimeManager sharedInstance] continuteLastCountDownAnimation:self.actionButton withType:BMValidCodeTimeTypeQuickLogin];
+    
+    
+}
+
+- (IBAction)confirmInputedAction:(id)sender {
+    NSString *inputedText = self.inputedTextView.text;;
+    NSArray<NSString *> *array = [inputedText componentsSeparatedByString:@"\n"];
+    __block NSString *showText = @"";
+    [array enumerateObjectsUsingBlock:^(NSString * _Nonnull substring, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (substring && substring.length > 0) {
+            showText = [showText stringByAppendingString:[NSString stringWithFormat:@"%@\n", substring]];
+        }
+    }];
+    showText = [showText substringToIndex:showText.length - 1];
+    
+    self.showInputedLabel.text = showText;
 }
 
 - (IBAction)startAction:(id)sender {

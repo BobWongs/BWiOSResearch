@@ -17,7 +17,11 @@
 #import "BWResearch6VC.h"
 #import "BWResearch7VC.h"
 #import "BWResearch8VC.h"
+#import "BWResearch9VC.h"
+#import "BWResearch10VC.h"
 #import "UINavigationController+BMExtension.h"
+#import "BWResearch11VC.h"
+#import "BWResearch12VC.h"
 
 @interface AppDelegate ()
 
@@ -26,6 +30,9 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    UIApplication.sharedApplication.statusBarHidden = NO;
+    
     
 //    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 //    NSDateComponents *comps = nil;
@@ -59,9 +66,10 @@
 //    BWResearch3VC *researchVC = [BWResearch3VC new];
 //    BWResearch4VC *researchVC = [BWResearch4VC new];
 //    BWResearch5VC  *researchVC = [BWResearch5VC new];
-    Class vcClass = [BWResearch8VC class];
+    Class vcClass = [BWResearch11VC class];
     
-    UINavigationController *researchNvgtVC = [UINavigationController bmB2B_defaultStyleWithRootViewController:[vcClass new]];
+//    UINavigationController *researchNvgtVC = [UINavigationController bmB2B_defaultStyleWithRootViewController:[vcClass new]];
+    UINavigationController *researchNvgtVC = [[UINavigationController alloc] initWithRootViewController:[vcClass new]];
     researchNvgtVC.tabBarItem.title = NSStringFromClass(vcClass);
     
     UITabBarController *tabVC = [UITabBarController new];
