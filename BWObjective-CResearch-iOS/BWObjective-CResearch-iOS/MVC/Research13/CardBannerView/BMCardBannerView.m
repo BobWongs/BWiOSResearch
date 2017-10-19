@@ -9,10 +9,12 @@
 #import "BMCardBannerView.h"
 #import <iCarousel.h>
 #import <UIImageView+WebCache.h>
+#import "BMCardBannerIndicatorView.h"
 
 @interface BMCardBannerView () <iCarouselDataSource, iCarouselDelegate>
 
 @property (strong, nonatomic) iCarousel *carousel;
+@property (strong, nonatomic) BMCardBannerIndicatorView *indicatorView;
 
 @end
 
@@ -32,13 +34,8 @@
 #pragma mark - Private Method
 
 - (void)setUI {
-    iCarousel *carousel = [[iCarousel alloc] initWithFrame:self.bounds];
-    self.carousel = carousel;
-    carousel.dataSource = self;
-    carousel.delegate = self;
-    carousel.type = iCarouselTypeRotary;  // 为圆轮状
-    carousel.pagingEnabled = YES;
-    [self addSubview:carousel];
+    [self addSubview:self.carousel];
+    [self addSubview:self.indicatorView];
 }
 
 #pragma mark - iCarousel Protocol
@@ -116,6 +113,26 @@
 - (void)setImageURLStringArray:(NSArray<NSString *> *)imageURLStringArray {
     _imageURLStringArray = imageURLStringArray;
     [self.carousel reloadData];
+    
+    [self.indicatorView setViewWithPointCount:imageURLStringArray.count];
+}
+
+- (iCarousel *)carousel {
+    if (!_carousel) {
+        _carousel = [[iCarousel alloc] initWithFrame:self.bounds];
+        _carousel.dataSource = self;
+        _carousel.delegate = self;
+        _carousel.type = iCarouselTypeRotary;  // 为圆轮状
+        _carousel.pagingEnabled = YES;
+    }
+    return _carousel;
+}
+
+- (BMCardBannerIndicatorView *)indicatorView {
+    if (!_indicatorView) {
+        _indicatorView = [BMCardBannerIndicatorView new];
+    }
+    return _indicatorView;
 }
 
 @end

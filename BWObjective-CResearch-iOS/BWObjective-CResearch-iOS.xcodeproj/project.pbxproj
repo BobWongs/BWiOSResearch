@@ -77,6 +77,7 @@
 		B494E6771F3057AA008284C0 /* BWResource2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B494E6751F3057AA008284C0 /* BWResource2.bundle */; };
 		B494E67A1F3057B2008284C0 /* BWResource1 in Resources */ = {isa = PBXBuildFile; fileRef = B494E6781F3057B2008284C0 /* BWResource1 */; };
 		B494E67B1F3057B2008284C0 /* BWResource3.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B494E6791F3057B2008284C0 /* BWResource3.bundle */; };
+		B49E2F161F985A2F004F64E2 /* BMCardBannerIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E2F151F985A2F004F64E2 /* BMCardBannerIndicatorView.m */; };
 		B4A0CF071E6551DD00CC8C92 /* BWResearch2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0CF061E6551DD00CC8C92 /* BWResearch2VC.m */; };
 		B4A583E71F4BD14700370A62 /* BWResearch7View.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A583E61F4BD14700370A62 /* BWResearch7View.m */; };
 		B4A583E91F4BD15300370A62 /* BWResearch7View.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A583E81F4BD15300370A62 /* BWResearch7View.xib */; };
@@ -236,6 +237,8 @@
 		B494E6751F3057AA008284C0 /* BWResource2.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BWResource2.bundle; sourceTree = "<group>"; };
 		B494E6781F3057B2008284C0 /* BWResource1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BWResource1; sourceTree = "<group>"; };
 		B494E6791F3057B2008284C0 /* BWResource3.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BWResource3.bundle; sourceTree = "<group>"; };
+		B49E2F141F985A2F004F64E2 /* BMCardBannerIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCardBannerIndicatorView.h; sourceTree = "<group>"; };
+		B49E2F151F985A2F004F64E2 /* BMCardBannerIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCardBannerIndicatorView.m; sourceTree = "<group>"; };
 		B4A0CF051E6551DD00CC8C92 /* BWResearch2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch2VC.h; sourceTree = "<group>"; };
 		B4A0CF061E6551DD00CC8C92 /* BWResearch2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch2VC.m; sourceTree = "<group>"; };
 		B4A583E31F4BC78000370A62 /* BMResearch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMResearch.pch; sourceTree = "<group>"; };
@@ -696,6 +699,15 @@
 			path = BWResource0;
 			sourceTree = "<group>";
 		};
+		B49E2F131F985A2F004F64E2 /* CardBannerIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				B49E2F141F985A2F004F64E2 /* BMCardBannerIndicatorView.h */,
+				B49E2F151F985A2F004F64E2 /* BMCardBannerIndicatorView.m */,
+			);
+			path = CardBannerIndicator;
+			sourceTree = "<group>";
+		};
 		B4A0CF041E6551CA00CC8C92 /* Research2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -769,6 +781,7 @@
 				B4AC62D21F96F982008C8D6F /* BWResearch13VC.m */,
 				B4AC62D31F96F982008C8D6F /* BWResearch13VC.xib */,
 				B4AC62D61F9704F9008C8D6F /* CardBannerView */,
+				B49E2F131F985A2F004F64E2 /* CardBannerIndicator */,
 			);
 			path = Research13;
 			sourceTree = "<group>";
@@ -1246,6 +1259,7 @@
 				B46B25601DB5EDDD00B9FF54 /* BWHomeViewController.m in Sources */,
 				B4A0CF071E6551DD00CC8C92 /* BWResearch2VC.m in Sources */,
 				B4AC5FBC1DB4CC5200D880FB /* UIViewController+JZExtension.m in Sources */,
+				B49E2F161F985A2F004F64E2 /* BMCardBannerIndicatorView.m in Sources */,
 				B46B25521DB5DCD800B9FF54 /* BWBaseViewController.m in Sources */,
 				B4AC5FB81DB4CC5200D880FB /* NSNumber+JZExtension.m in Sources */,
 				B4AC5FB61DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m in Sources */,
