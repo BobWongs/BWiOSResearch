@@ -14,6 +14,7 @@ target 'BWObjective-CResearch-iOS' do
   pod 'FLAnimatedImage', '~> 1.0.12'
   pod 'TMCache', '~> 2.1.0'
   pod 'pop', '~> 1.0.10'
+  pod 'iCarousel', '~> 1.8.3'
 
   target 'BWObjective-CResearch-iOSTests' do
     inherit! :search_paths

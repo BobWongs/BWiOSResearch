@@ -52,7 +52,8 @@ BOOL showType = YES;
         layout.itemSize = CGSizeMake(sw, 50);
     }
     
-    [self.collectionView reloadData];
+    self.collectionView.collectionViewLayout = layout;
+    [self.collectionView reloadData];  // 调用reload已运用对应的Cell
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {

@@ -22,6 +22,7 @@
 #import "UINavigationController+BMExtension.h"
 #import "BWResearch11VC.h"
 #import "BWResearch12VC.h"
+#import "BWResearch13VC.h"
 
 @interface AppDelegate ()
 
@@ -66,7 +67,7 @@
 //    BWResearch3VC *researchVC = [BWResearch3VC new];
 //    BWResearch4VC *researchVC = [BWResearch4VC new];
 //    BWResearch5VC  *researchVC = [BWResearch5VC new];
-    Class vcClass = [BWResearch11VC class];
+    Class vcClass = [BWResearch13VC class];
     
 //    UINavigationController *researchNvgtVC = [UINavigationController bmB2B_defaultStyleWithRootViewController:[vcClass new]];
     UINavigationController *researchNvgtVC = [[UINavigationController alloc] initWithRootViewController:[vcClass new]];

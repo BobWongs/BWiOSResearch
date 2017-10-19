@@ -11,6 +11,7 @@
 
 @interface BWResearch12VC ()
 
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIView *test1View0;
 
 @end
@@ -21,7 +22,8 @@
     [super viewDidLoad];
     
 //    [self test1];
-    [self test2];
+//    [self test2];
+    [self test3];
 }
 
 - (void)test0 {
@@ -52,6 +54,17 @@
     UINavigationBar *bar = self.navigationController.navigationBar;
     NSLog(@"attr is %@", bar.titleTextAttributes);
     NSLog(@"tint color %@", bar.tintColor);
+}
+
+- (void)test3 {
+    CGFloat sw = [UIScreen mainScreen].bounds.size.width;
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, sw, 44)];
+    view.backgroundColor = [UIColor lightGrayColor];
+    self.navigationItem.titleView = view;
+    
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:[UIView new]];
+    UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];  // 创建
+    self.navigationItem.leftBarButtonItems = @[spaceItem, leftItem];
 }
 
 @end

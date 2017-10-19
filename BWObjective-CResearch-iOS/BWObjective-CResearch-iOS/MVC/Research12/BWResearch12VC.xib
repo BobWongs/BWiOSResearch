@@ -5,13 +5,14 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12121"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BWResearch12VC">
             <connections>
                 <outlet property="test1View0" destination="Kna-LU-zEt" id="ue6-U1-1Xo"/>
+                <outlet property="textField" destination="BSJ-Qj-NR2" id="tzh-id-JGR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,13 +39,26 @@
                         <constraint firstItem="6hG-Vt-YCW" firstAttribute="leading" secondItem="Kna-LU-zEt" secondAttribute="leading" id="seL-8H-94W"/>
                     </constraints>
                 </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BSJ-Qj-NR2">
+                    <rect key="frame" x="60" y="103" width="255" height="45"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="ER4-8H-fc4"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="BSJ-Qj-NR2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="103" id="8Be-Hg-klp"/>
+                <constraint firstItem="BSJ-Qj-NR2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="Ar0-wn-6xq"/>
                 <constraint firstItem="Kna-LU-zEt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UZW-uF-qLq"/>
+                <constraint firstAttribute="trailing" secondItem="BSJ-Qj-NR2" secondAttribute="trailing" constant="60" id="oiM-IT-6MA"/>
                 <constraint firstItem="Kna-LU-zEt" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="pxf-uo-knw"/>
             </constraints>
-            <point key="canvasLocation" x="33.5" y="53.5"/>
+            <point key="canvasLocation" x="-119" y="17"/>
         </view>
     </objects>
 </document>
