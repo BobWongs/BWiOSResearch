@@ -43,8 +43,9 @@
 
 - (BMCardBannerView *)bannerView {
     if (!_bannerView) {
-        CGFloat sw = [UIScreen mainScreen].bounds.size.width;
-        _bannerView = [[BMCardBannerView alloc] initWithFrame:CGRectMake(0, 50, sw, 160)];
+        CGFloat width = [UIScreen mainScreen].bounds.size.width;
+        CGFloat height = 160 * width / 320;
+        _bannerView = [[BMCardBannerView alloc] initWithFrame:CGRectMake(0, 50, width, height)];
         _bannerView.selectedAction = ^(NSInteger index) {
             NSLog(@"index: %ld", (long)index);
         };

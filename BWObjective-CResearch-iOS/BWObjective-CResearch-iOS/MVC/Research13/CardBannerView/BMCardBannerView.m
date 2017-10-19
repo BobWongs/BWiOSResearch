@@ -51,7 +51,7 @@
     {
         // 圆角加在UIImageView，阴影加在reusingView
         CGFloat width = carousel.frame.size.width - 10 * 2;
-        CGFloat height = width / 300 * 160;
+        CGFloat height = carousel.frame.size.height;
         view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
         view.layer.shadowColor = [UIColor colorWithHexString:@"0656f1"].CGColor;
         view.layer.shadowRadius = 4;
@@ -79,11 +79,17 @@
 }
 
 - (void)carouselDidScroll:(iCarousel *)carousel {
-#warning 滚动偏移，供指示点使用
-    CGFloat scrollOffset = carousel.scrollOffset;
-    CGSize contentOffset = carousel.contentOffset;
-    CGSize viewpointOffset = carousel.viewpointOffset;
-    NSLog(@"carouselDidScroll");
+    CGFloat scrollOffset = carousel.scrollOffset;  // Offset is from 0 to numberOfItems-1
+    NSInteger numberOfItems = carousel.numberOfItems;
+    
+    if (scrollOffset < 0 || scrollOffset > numberOfItems - 1 || numberOfItems - 1 == 0) return;
+    
+    CGFloat xRate = scrollOffset / (numberOfItems - 1);  // Get the rate
+
+    CGFloat offsetDecimal = ABS(scrollOffset - (NSInteger)scrollOffset);
+    CGFloat offsetRate = ABS(0.5 - offsetDecimal) + 0.5;
+    
+    [self.indicatorView setCircleCenterXRate:xRate circleOffsetRate:offsetRate];
 }
 
 - (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value {
@@ -131,6 +137,7 @@
 - (BMCardBannerIndicatorView *)indicatorView {
     if (!_indicatorView) {
         _indicatorView = [BMCardBannerIndicatorView new];
+        _indicatorView.selectedStyle = BMCardBannerIndicatorSelectedStyleRoundCircle;
     }
     return _indicatorView;
 }

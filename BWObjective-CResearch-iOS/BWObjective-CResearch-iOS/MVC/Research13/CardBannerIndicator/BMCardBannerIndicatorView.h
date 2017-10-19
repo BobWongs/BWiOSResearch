@@ -31,10 +31,15 @@ typedef NS_ENUM(NSInteger, BMCardBannerIndicatorSelectedStyle) {
 @property (assign, nonatomic) CGFloat verticalMargin;
 @property (strong, nonatomic) UIColor *normalColor;
 @property (strong, nonatomic) UIColor *selectedColor;
+@property (assign, nonatomic) CGFloat roundCircleWidth;
+@property (assign, nonatomic) CGFloat roundCircleHeight;
+@property (assign, nonatomic) CGFloat roundCircleCornerRadius;
 
 @property (assign, nonatomic) NSInteger selectedIndex;
 
 - (void)setViewWithPointCount:(NSInteger)count;
 - (void)setViewWithPointCount:(NSInteger)count selectedIndex:(NSInteger)index;
+
+- (void)setCircleCenterXRate:(CGFloat)circleCenterXRate circleOffsetRate:(CGFloat)offsetRate;
 
 @end
