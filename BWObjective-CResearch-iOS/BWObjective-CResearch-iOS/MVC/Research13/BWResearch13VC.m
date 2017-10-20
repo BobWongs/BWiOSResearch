@@ -37,7 +37,7 @@
 }
 
 - (void)test1 {
-    self.bannerView.imageURLStringArray = @[@"http://img4.imgtn.bdimg.com/it/u=2263551760,3456847720&fm=27&gp=0.jpg", @"http://img2.imgtn.bdimg.com/it/u=1572089896,3318564242&fm=200&gp=0.jpg", @"http://img3.imgtn.bdimg.com/it/u=2336514904,1850230253&fm=200&gp=0.jpg"];
+    self.bannerView.imageURLStringArray = @[@"http://img4.imgtn.bdimg.com/it/u=2263551760,3456847720&fm=27&gp=0.jpg", @"http://img2.imgtn.bdimg.com/it/u=1572089896,3318564242&fm=200&gp=0.jpg", @"http://img3.imgtn.bdimg.com/it/u=2336514904,1850230253&fm=200&gp=0.jpg", @"http://img3.imgtn.bdimg.com/it/u=2336514904,1850230253&fm=200&gp=0.jpg", @"http://img3.imgtn.bdimg.com/it/u=2336514904,1850230253&fm=200&gp=0.jpg"];
     [self.view addSubview:self.bannerView];
 }
 

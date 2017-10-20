@@ -16,6 +16,8 @@
 @property (strong, nonatomic) iCarousel *carousel;
 @property (strong, nonatomic) BMCardBannerIndicatorView *indicatorView;
 
+@property (nonatomic, strong) NSTimer *timer;
+
 @end
 
 @implementation BMCardBannerView
@@ -36,6 +38,37 @@
 - (void)setUI {
     [self addSubview:self.carousel];
     [self addSubview:self.indicatorView];
+}
+
+/** 开启自动翻页动画 */
+- (void)startAnimation
+{
+    NSInteger numberOfItems = self.carousel.numberOfItems;
+    if (numberOfItems == 0 || numberOfItems == 1) return;
+    
+    if (!_timer)
+    {
+        self.timer = [NSTimer timerWithTimeInterval:5.0
+                                             target:self
+                                           selector:@selector(autoPaging)
+                                           userInfo:nil
+                                            repeats:YES];
+        [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSDefaultRunLoopMode];
+    }
+}
+
+/** 关闭自动翻页动画 */
+- (void)stopAnimation
+{
+    [_timer invalidate];
+    _timer = nil;
+}
+
+- (void)autoPaging {
+    NSInteger numberOfItems = self.carousel.numberOfItems;
+    NSInteger toIndex = self.carousel.currentItemIndex + 1;
+    if (toIndex > numberOfItems - 1) toIndex = 0;
+    [self.carousel scrollToItemAtIndex:toIndex animated:YES];
 }
 
 #pragma mark - iCarousel Protocol
@@ -86,8 +119,8 @@
     
     CGFloat xRate = scrollOffset / (numberOfItems - 1);  // Get the rate
 
-    CGFloat offsetDecimal = ABS(scrollOffset - (NSInteger)scrollOffset);
-    CGFloat offsetRate = ABS(0.5 - offsetDecimal) + 0.5;
+    CGFloat offsetDecimal = ABS(scrollOffset - (NSInteger)scrollOffset);  // Decimal part
+    CGFloat offsetRate = ABS(0.5 - offsetDecimal) + 0.5;  // (The distance to 0.5) + 0.5, 0.5 means mmiddle
     
     [self.indicatorView setCircleCenterXRate:xRate circleOffsetRate:offsetRate];
 }
@@ -114,6 +147,14 @@
     }
 }
 
+- (void)carouselWillBeginDragging:(iCarousel *)carousel {
+    [self stopAnimation];
+}
+
+- (void)carouselDidEndScrollingAnimation:(iCarousel *)carousel {
+    [self startAnimation];
+}
+
 #pragma mark - Getter and Setter
 
 - (void)setImageURLStringArray:(NSArray<NSString *> *)imageURLStringArray {
@@ -121,6 +162,12 @@
     [self.carousel reloadData];
     
     [self.indicatorView setViewWithPointCount:imageURLStringArray.count];
+    
+    if (!imageURLStringArray || imageURLStringArray.count == 0 || imageURLStringArray.count == 1) {
+        [self stopAnimation];
+    } else {
+        [self startAnimation];
+    }
 }
 
 - (iCarousel *)carousel {
@@ -130,6 +177,7 @@
         _carousel.delegate = self;
         _carousel.type = iCarouselTypeRotary;  // 为圆轮状
         _carousel.pagingEnabled = YES;
+        _carousel.bounces = NO;
     }
     return _carousel;
 }
