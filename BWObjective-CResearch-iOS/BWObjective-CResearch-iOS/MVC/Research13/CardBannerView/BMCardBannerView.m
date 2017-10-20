@@ -31,14 +31,11 @@
     return self;
 }
 
-#pragma mark - Public Method
-
-#pragma mark - Private Method
-
-- (void)setUI {
-    [self addSubview:self.carousel];
-    [self addSubview:self.indicatorView];
+- (void)dealloc {
+    [self stopAnimation];
 }
+
+#pragma mark - Public Method
 
 /** 开启自动翻页动画 */
 - (void)startAnimation
@@ -56,12 +53,18 @@
         [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSDefaultRunLoopMode];
     }
 }
-
 /** 关闭自动翻页动画 */
 - (void)stopAnimation
 {
     [_timer invalidate];
     _timer = nil;
+}
+
+#pragma mark - Private Method
+
+- (void)setUI {
+    [self addSubview:self.carousel];
+    [self addSubview:self.indicatorView];
 }
 
 - (void)autoPaging {
@@ -103,7 +106,7 @@
         imageView = (UIImageView *)[view viewWithTag:1];
     }
 
-    [imageView sd_setImageWithURL:[NSURL URLWithString:self.imageURLStringArray[index]] placeholderImage:nil];
+    [imageView sd_setImageWithURL:[NSURL URLWithString:self.imageURLStringArray[index]] placeholderImage:self.placeholderImage];
     return view;
 }
 

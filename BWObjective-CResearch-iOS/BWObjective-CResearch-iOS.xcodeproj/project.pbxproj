@@ -54,6 +54,8 @@
 		B48F5ECE1F5559A0000CFA4D /* BWResearch8VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B48F5ECC1F5559A0000CFA4D /* BWResearch8VC.m */; };
 		B48F5ECF1F5559A0000CFA4D /* BWResearch8VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48F5ECD1F5559A0000CFA4D /* BWResearch8VC.xib */; };
 		B48F5ED11F555A6E000CFA4D /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = B48F5ED01F555A6E000CFA4D /* loading.gif */; };
+		B4900CC41F99E7F700A95274 /* BMButtonsScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4900CC31F99E7F700A95274 /* BMButtonsScrollView.m */; };
+		B4900CC71F99E80300A95274 /* BMMoonWashCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4900CC61F99E80300A95274 /* BMMoonWashCategoryView.m */; };
 		B491B0111E66BF2E005CAD43 /* BWResearch3VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B491B0101E66BF2E005CAD43 /* BWResearch3VC.m */; };
 		B4945B2D1F676D1F0084CC88 /* BMNewAddressSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4945B101F676D1F0084CC88 /* BMNewAddressSourceManager.m */; };
 		B4945B2E1F676D1F0084CC88 /* BMNewAddressPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = B4945B121F676D1F0084CC88 /* BMNewAddressPicker.m */; };
@@ -200,6 +202,10 @@
 		B48F5ECC1F5559A0000CFA4D /* BWResearch8VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch8VC.m; sourceTree = "<group>"; };
 		B48F5ECD1F5559A0000CFA4D /* BWResearch8VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWResearch8VC.xib; sourceTree = "<group>"; };
 		B48F5ED01F555A6E000CFA4D /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
+		B4900CC21F99E7F700A95274 /* BMButtonsScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMButtonsScrollView.h; sourceTree = "<group>"; };
+		B4900CC31F99E7F700A95274 /* BMButtonsScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMButtonsScrollView.m; sourceTree = "<group>"; };
+		B4900CC51F99E80300A95274 /* BMMoonWashCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMoonWashCategoryView.h; sourceTree = "<group>"; };
+		B4900CC61F99E80300A95274 /* BMMoonWashCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMoonWashCategoryView.m; sourceTree = "<group>"; };
 		B491B00F1E66BF2E005CAD43 /* BWResearch3VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch3VC.h; sourceTree = "<group>"; };
 		B491B0101E66BF2E005CAD43 /* BWResearch3VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch3VC.m; sourceTree = "<group>"; };
 		B4945B0F1F676D1F0084CC88 /* BMNewAddressSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressSourceManager.h; sourceTree = "<group>"; };
@@ -560,6 +566,24 @@
 			path = Research8;
 			sourceTree = "<group>";
 		};
+		B4900CC01F99E7E000A95274 /* ButtonsScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				B4900CC21F99E7F700A95274 /* BMButtonsScrollView.h */,
+				B4900CC31F99E7F700A95274 /* BMButtonsScrollView.m */,
+			);
+			path = ButtonsScrollView;
+			sourceTree = "<group>";
+		};
+		B4900CC11F99E7E000A95274 /* MoonWashCategoryView */ = {
+			isa = PBXGroup;
+			children = (
+				B4900CC51F99E80300A95274 /* BMMoonWashCategoryView.h */,
+				B4900CC61F99E80300A95274 /* BMMoonWashCategoryView.m */,
+			);
+			path = MoonWashCategoryView;
+			sourceTree = "<group>";
+		};
 		B491B00B1E66BF05005CAD43 /* Research3 */ = {
 			isa = PBXGroup;
 			children = (
@@ -780,6 +804,8 @@
 				B4AC62D11F96F982008C8D6F /* BWResearch13VC.h */,
 				B4AC62D21F96F982008C8D6F /* BWResearch13VC.m */,
 				B4AC62D31F96F982008C8D6F /* BWResearch13VC.xib */,
+				B4900CC01F99E7E000A95274 /* ButtonsScrollView */,
+				B4900CC11F99E7E000A95274 /* MoonWashCategoryView */,
 				B4AC62D61F9704F9008C8D6F /* CardBannerView */,
 				B49E2F131F985A2F004F64E2 /* CardBannerIndicator */,
 			);
@@ -1250,6 +1276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4900CC41F99E7F700A95274 /* BMButtonsScrollView.m in Sources */,
 				B4AC5FB91DB4CC5200D880FB /* UINavigationBar+JZExtension.m in Sources */,
 				B4D1916C1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m in Sources */,
 				B4B631331DAE384F00DF0907 /* UITableViewRowAction.m in Sources */,
@@ -1299,6 +1326,7 @@
 				B4945B381F676D1F0084CC88 /* BWAddressBookManager.m in Sources */,
 				B48F5DBE1F550C4B000CFA4D /* UINavigationController+BMExtension.m in Sources */,
 				B46B25551DB5ED6500B9FF54 /* BWBaseNavigationController.m in Sources */,
+				B4900CC71F99E80300A95274 /* BMMoonWashCategoryView.m in Sources */,
 				B46F349F1F676E86002F3631 /* BWResearch8SecondVC.m in Sources */,
 				B4B6FA9E1F8C694200506412 /* BWResearch11VC.m in Sources */,
 				B4A8610C1EEE45F5006C07FC /* BWResearch5VC.m in Sources */,

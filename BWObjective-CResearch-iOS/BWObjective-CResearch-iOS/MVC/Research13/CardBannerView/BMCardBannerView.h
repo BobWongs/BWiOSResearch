@@ -10,7 +10,12 @@
 
 @interface BMCardBannerView : UIView
 
+@property (strong, nonatomic) UIImage *placeholderImage;
+
 @property (strong, nonatomic) NSArray<NSString *> *imageURLStringArray;  ///< 图片路径数据
 @property (copy, nonatomic) void(^selectedAction)(NSInteger);
+
+- (void)startAnimation;
+- (void)stopAnimation;
 
 @end
