@@ -27,14 +27,8 @@ void test8();
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-//        NSMutableArray *arrayM = [NSMutableArray arrayWithCapacity:10];
-////        NSMutableArray *arrayM = [NSMutableArray new];
-//        arrayM[2] = @"30";
-//        NSLog(@"ArrayM: %@", arrayM);
-        
-        NSDictionary *dict = @{};
-        NSString *param0 = dict[@"key0"];
-        NSLog(@"%@", param0);
+        CGFloat a = 0.0;
+        NSLog(@"a: %f", a);
         
     }
     
@@ -42,6 +36,17 @@ int main(int argc, const char * argv[]) {
 }
 
 // Test
+void test9() {
+    //        NSMutableArray *arrayM = [NSMutableArray arrayWithCapacity:10];
+    ////        NSMutableArray *arrayM = [NSMutableArray new];
+    //        arrayM[2] = @"30";
+    //        NSLog(@"ArrayM: %@", arrayM);
+    
+    NSDictionary *dict = @{};
+    NSString *param0 = dict[@"key0"];
+    NSLog(@"%@", param0);
+}
+
 void test0() {
     stringType();
     objectType();

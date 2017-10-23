@@ -19,9 +19,9 @@ typedef NS_ENUM(NSInteger, BMButtonsScrollViewAlignment) {
 @property (strong, nonatomic) UIColor *normalColor;
 @property (strong, nonatomic) UIColor *selectedColor;
 @property (strong, nonatomic) UIFont *font;
-@property (assign, nonatomic) CGFloat space;
+@property (assign, nonatomic) CGFloat space;  ///< Horizontal space, used when alignment is Left
 @property (assign, nonatomic) CGFloat inset;
-@property (assign, nonatomic) BOOL showIndicator;
+@property (assign, nonatomic) BOOL showIndicator;  ///< Default is no.
 @property (assign, nonatomic) CGFloat indicatorHeight;
 @property (strong, nonatomic) UIColor *indicatorColor;
 
