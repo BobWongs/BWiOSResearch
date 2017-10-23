@@ -28,6 +28,6 @@ typedef NS_ENUM(NSInteger, BMButtonsScrollViewAlignment) {
 @property (copy, nonatomic) void(^selectedBlock)(NSInteger);
 
 @property (strong, nonatomic) NSArray<NSString *> *titleArray;
-@property (assign, nonatomic) NSInteger toSelectIndex;
+@property (assign, nonatomic) NSInteger selectedIndex;
 
 @end

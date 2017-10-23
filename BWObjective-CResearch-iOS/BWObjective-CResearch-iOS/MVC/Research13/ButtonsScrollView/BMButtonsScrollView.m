@@ -22,7 +22,7 @@ alpha:1.0]
 
 @implementation BMButtonsScrollView
 
-@dynamic titleArray, toSelectIndex;  // 去掉属性生成
+@dynamic titleArray;  // 去掉属性生成
 
 #pragma mark - View Life
 
@@ -112,11 +112,12 @@ alpha:1.0]
         self.contentSize = CGSizeMake(max_x - _space, self.contentSize.width);
     }
     
-    self.toSelectIndex = 0;
+    self.selectedIndex = 0;
 }
 
-- (void)setToSelectIndex:(NSInteger)toSelectIndex {
-    UIButton *button = [self viewWithTag:1 + toSelectIndex];
+- (void)setSelectedIndex:(NSInteger)selectedIndex {
+    _selectedIndex = selectedIndex;
+    UIButton *button = [self viewWithTag:1 + selectedIndex];
     [self selectAction:button];
 }
 

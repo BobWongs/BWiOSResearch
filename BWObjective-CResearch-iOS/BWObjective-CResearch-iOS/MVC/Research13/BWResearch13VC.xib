@@ -27,13 +27,22 @@
                         <constraint firstAttribute="height" constant="130" id="ejk-fP-YLF"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="衣服" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxE-GA-WZx">
+                    <rect key="frame" x="328" y="106" width="25" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="GxE-GA-WZx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="106" id="2RH-C8-jHq"/>
                 <constraint firstAttribute="trailing" secondItem="YPd-qq-H4i" secondAttribute="trailing" constant="60" id="4em-ND-uT0"/>
                 <constraint firstItem="YPd-qq-H4i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="4ur-bz-mRL"/>
                 <constraint firstAttribute="bottom" secondItem="YPd-qq-H4i" secondAttribute="bottom" constant="60" id="7JU-cd-S9e"/>
+                <constraint firstAttribute="trailing" secondItem="GxE-GA-WZx" secondAttribute="trailing" constant="22" id="RrR-Bn-hI8"/>
             </constraints>
+            <point key="canvasLocation" x="-46.5" y="54.5"/>
         </view>
     </objects>
 </document>

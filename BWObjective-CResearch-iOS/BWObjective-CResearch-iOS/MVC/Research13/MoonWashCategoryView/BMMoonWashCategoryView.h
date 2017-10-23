@@ -10,9 +10,10 @@
 
 @interface BMMoonWashCategoryView : UIView
 
-@property (strong, nonatomic) NSArray<NSString *> *firstArray;
-@property (strong, nonatomic) NSArray<NSString *> *secondArray;
+@property (strong, nonatomic) NSArray<NSString *> *firstArray;  ///< 一级菜单
+@property (strong, nonatomic) NSArray<NSString *> *secondArray;  ///< 二级菜单
 
-@property (copy, nonatomic) void(^selectedAction)(NSArray<NSNumber *> *selectedArray);  ///< 选中数组
+@property (copy, nonatomic) void(^firstSelectedAction)(NSInteger firstSelectedIndex);  ///< 一级选中Action
+@property (copy, nonatomic) void(^secondSelectedAction)(NSArray<NSNumber *> *selectedArray);  ///< 二级选中Action
 
 @end
