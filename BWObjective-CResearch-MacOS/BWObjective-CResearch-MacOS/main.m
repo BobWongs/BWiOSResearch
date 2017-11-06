@@ -27,8 +27,30 @@ void test8();
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        CGFloat a = 0.0;
-        NSLog(@"a: %f", a);
+//        NSDictionary *dict = @{@(1): @"first",
+//                               @(2): @"second",
+//                               @(3): @"third",
+//                               @(1): @"forth"};
+//        NSLog(@"dict is %@", dict);
+//        
+//        NSMutableDictionary *dictM = [dict mutableCopy];
+//        dictM[@(1)] = @"fifth";
+//        NSLog(@"dictM is %@", dictM);
+//        
+//        id object = dictM[@(100)];
+//        NSLog(@"object: %@", object);
+        
+//        NSArray *array = @[@"first"];
+//        id object = array[0];
+//        object = @"second";
+//        NSLog(@"object: %@", object);
+//        NSLog(@"array: %@", array);
+        
+//        BOOL has;
+//        NSLog(@"%d", has);
+        
+        NSString *str = @"123";
+        NSLog(@"%@", [str substringToIndex:1]);
         
     }
     
@@ -36,6 +58,17 @@ int main(int argc, const char * argv[]) {
 }
 
 // Test
+void test10() {
+    double yuan = 1990 / 100.0;
+    NSLog(@"yuan: %f", yuan);
+    
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.roundingMode = NSNumberFormatterRoundDown;  // 19.9 -> 19, -19.9 -> 19, round towards to zero.
+    [formatter setPositiveFormat:@",##0;"];
+    NSString *string = [formatter stringFromNumber:[NSNumber numberWithDouble:yuan]];
+    NSLog(@"str: %@", string);
+}
+
 void test9() {
     //        NSMutableArray *arrayM = [NSMutableArray arrayWithCapacity:10];
     ////        NSMutableArray *arrayM = [NSMutableArray new];

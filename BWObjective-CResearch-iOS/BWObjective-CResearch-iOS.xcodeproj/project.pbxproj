@@ -80,6 +80,8 @@
 		B494E67A1F3057B2008284C0 /* BWResource1 in Resources */ = {isa = PBXBuildFile; fileRef = B494E6781F3057B2008284C0 /* BWResource1 */; };
 		B494E67B1F3057B2008284C0 /* BWResource3.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B494E6791F3057B2008284C0 /* BWResource3.bundle */; };
 		B49E2F161F985A2F004F64E2 /* BMCardBannerIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E2F151F985A2F004F64E2 /* BMCardBannerIndicatorView.m */; };
+		B49FC69C1FA1944100DAC7D4 /* BMTest13View.m in Sources */ = {isa = PBXBuildFile; fileRef = B49FC69B1FA1944100DAC7D4 /* BMTest13View.m */; };
+		B49FC69E1FA1944800DAC7D4 /* BMTest13View.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49FC69D1FA1944800DAC7D4 /* BMTest13View.xib */; };
 		B4A0CF071E6551DD00CC8C92 /* BWResearch2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0CF061E6551DD00CC8C92 /* BWResearch2VC.m */; };
 		B4A583E71F4BD14700370A62 /* BWResearch7View.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A583E61F4BD14700370A62 /* BWResearch7View.m */; };
 		B4A583E91F4BD15300370A62 /* BWResearch7View.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A583E81F4BD15300370A62 /* BWResearch7View.xib */; };
@@ -245,6 +247,9 @@
 		B494E6791F3057B2008284C0 /* BWResource3.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BWResource3.bundle; sourceTree = "<group>"; };
 		B49E2F141F985A2F004F64E2 /* BMCardBannerIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCardBannerIndicatorView.h; sourceTree = "<group>"; };
 		B49E2F151F985A2F004F64E2 /* BMCardBannerIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCardBannerIndicatorView.m; sourceTree = "<group>"; };
+		B49FC69A1FA1944100DAC7D4 /* BMTest13View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTest13View.h; sourceTree = "<group>"; };
+		B49FC69B1FA1944100DAC7D4 /* BMTest13View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTest13View.m; sourceTree = "<group>"; };
+		B49FC69D1FA1944800DAC7D4 /* BMTest13View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMTest13View.xib; sourceTree = "<group>"; };
 		B4A0CF051E6551DD00CC8C92 /* BWResearch2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch2VC.h; sourceTree = "<group>"; };
 		B4A0CF061E6551DD00CC8C92 /* BWResearch2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch2VC.m; sourceTree = "<group>"; };
 		B4A583E31F4BC78000370A62 /* BMResearch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMResearch.pch; sourceTree = "<group>"; };
@@ -732,6 +737,16 @@
 			path = CardBannerIndicator;
 			sourceTree = "<group>";
 		};
+		B49FC6991FA1942B00DAC7D4 /* TestView */ = {
+			isa = PBXGroup;
+			children = (
+				B49FC69A1FA1944100DAC7D4 /* BMTest13View.h */,
+				B49FC69B1FA1944100DAC7D4 /* BMTest13View.m */,
+				B49FC69D1FA1944800DAC7D4 /* BMTest13View.xib */,
+			);
+			path = TestView;
+			sourceTree = "<group>";
+		};
 		B4A0CF041E6551CA00CC8C92 /* Research2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -804,6 +819,7 @@
 				B4AC62D11F96F982008C8D6F /* BWResearch13VC.h */,
 				B4AC62D21F96F982008C8D6F /* BWResearch13VC.m */,
 				B4AC62D31F96F982008C8D6F /* BWResearch13VC.xib */,
+				B49FC6991FA1942B00DAC7D4 /* TestView */,
 				B4900CC01F99E7E000A95274 /* ButtonsScrollView */,
 				B4900CC11F99E7E000A95274 /* MoonWashCategoryView */,
 				B4AC62D61F9704F9008C8D6F /* CardBannerView */,
@@ -1099,6 +1115,7 @@
 				B48F5ED11F555A6E000CFA4D /* loading.gif in Resources */,
 				B494E6641F304CFD008284C0 /* BWResearch7VC.xib in Resources */,
 				B494E6761F3057AA008284C0 /* temp0.txt in Resources */,
+				B49FC69E1FA1944800DAC7D4 /* BMTest13View.xib in Resources */,
 				B48354361F8CC710003D722B /* BWResearch12VC.xib in Resources */,
 				B4B8BABB1F7CA5BD00F25065 /* BWResearch10VC.xib in Resources */,
 				B4B6FA9F1F8C694200506412 /* BWResearch11VC.xib in Resources */,
@@ -1319,6 +1336,7 @@
 				B4945B371F676D1F0084CC88 /* BMValidCodeTimeModel.m in Sources */,
 				B48354291F8C9BF3003D722B /* BWResearch11ReusableView.m in Sources */,
 				B461B6721DDD50FB00FB7BC1 /* BWResearchVC.m in Sources */,
+				B49FC69C1FA1944100DAC7D4 /* BMTest13View.m in Sources */,
 				B426B1261DFA943F00F438F3 /* BWResearchCell.m in Sources */,
 				B4945B361F676D1F0084CC88 /* BMValidCodeTimeManager.m in Sources */,
 				B48354351F8CC70F003D722B /* BWResearch12VC.m in Sources */,
