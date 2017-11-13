@@ -79,6 +79,11 @@
 		B494E6771F3057AA008284C0 /* BWResource2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B494E6751F3057AA008284C0 /* BWResource2.bundle */; };
 		B494E67A1F3057B2008284C0 /* BWResource1 in Resources */ = {isa = PBXBuildFile; fileRef = B494E6781F3057B2008284C0 /* BWResource1 */; };
 		B494E67B1F3057B2008284C0 /* BWResource3.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B494E6791F3057B2008284C0 /* BWResource3.bundle */; };
+		B49D69741FB1693600B22F5B /* BWResearch14VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B49D69721FB1693600B22F5B /* BWResearch14VC.m */; };
+		B49D69751FB1693600B22F5B /* BWResearch14VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49D69731FB1693600B22F5B /* BWResearch14VC.xib */; };
+		B49D697B1FB17CFE00B22F5B /* BMCardCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B49D697A1FB17CFE00B22F5B /* BMCardCycleView.m */; };
+		B49D69841FB189CC00B22F5B /* BMCardCycleItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B49D69821FB189CC00B22F5B /* BMCardCycleItemCell.m */; };
+		B49D69851FB189CC00B22F5B /* BMCardCycleItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49D69831FB189CC00B22F5B /* BMCardCycleItemCell.xib */; };
 		B49E2F161F985A2F004F64E2 /* BMCardBannerIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E2F151F985A2F004F64E2 /* BMCardBannerIndicatorView.m */; };
 		B49FC69C1FA1944100DAC7D4 /* BMTest13View.m in Sources */ = {isa = PBXBuildFile; fileRef = B49FC69B1FA1944100DAC7D4 /* BMTest13View.m */; };
 		B49FC69E1FA1944800DAC7D4 /* BMTest13View.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49FC69D1FA1944800DAC7D4 /* BMTest13View.xib */; };
@@ -98,7 +103,7 @@
 		B4AC5FBC1DB4CC5200D880FB /* UIViewController+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC5FB51DB4CC5100D880FB /* UIViewController+JZExtension.m */; };
 		B4AC62D41F96F982008C8D6F /* BWResearch13VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC62D21F96F982008C8D6F /* BWResearch13VC.m */; };
 		B4AC62D51F96F982008C8D6F /* BWResearch13VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4AC62D31F96F982008C8D6F /* BWResearch13VC.xib */; };
-		B4AC62D91F97052A008C8D6F /* BMCardBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC62D81F97052A008C8D6F /* BMCardBannerView.m */; };
+		B4AC62D91F97052A008C8D6F /* BMCarouselBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC62D81F97052A008C8D6F /* BMCarouselBannerView.m */; };
 		B4B631311DAE384F00DF0907 /* UITableViewCell+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B6312D1DAE384F00DF0907 /* UITableViewCell+JZExtension.m */; };
 		B4B631321DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B6312F1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m */; };
 		B4B631331DAE384F00DF0907 /* UITableViewRowAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B631301DAE384F00DF0907 /* UITableViewRowAction.m */; };
@@ -245,6 +250,14 @@
 		B494E6751F3057AA008284C0 /* BWResource2.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BWResource2.bundle; sourceTree = "<group>"; };
 		B494E6781F3057B2008284C0 /* BWResource1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BWResource1; sourceTree = "<group>"; };
 		B494E6791F3057B2008284C0 /* BWResource3.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BWResource3.bundle; sourceTree = "<group>"; };
+		B49D69711FB1693600B22F5B /* BWResearch14VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch14VC.h; sourceTree = "<group>"; };
+		B49D69721FB1693600B22F5B /* BWResearch14VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch14VC.m; sourceTree = "<group>"; };
+		B49D69731FB1693600B22F5B /* BWResearch14VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWResearch14VC.xib; sourceTree = "<group>"; };
+		B49D69791FB17CFE00B22F5B /* BMCardCycleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCardCycleView.h; sourceTree = "<group>"; };
+		B49D697A1FB17CFE00B22F5B /* BMCardCycleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCardCycleView.m; sourceTree = "<group>"; };
+		B49D69811FB189CC00B22F5B /* BMCardCycleItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCardCycleItemCell.h; sourceTree = "<group>"; };
+		B49D69821FB189CC00B22F5B /* BMCardCycleItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCardCycleItemCell.m; sourceTree = "<group>"; };
+		B49D69831FB189CC00B22F5B /* BMCardCycleItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMCardCycleItemCell.xib; sourceTree = "<group>"; };
 		B49E2F141F985A2F004F64E2 /* BMCardBannerIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCardBannerIndicatorView.h; sourceTree = "<group>"; };
 		B49E2F151F985A2F004F64E2 /* BMCardBannerIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCardBannerIndicatorView.m; sourceTree = "<group>"; };
 		B49FC69A1FA1944100DAC7D4 /* BMTest13View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTest13View.h; sourceTree = "<group>"; };
@@ -284,8 +297,8 @@
 		B4AC62D11F96F982008C8D6F /* BWResearch13VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearch13VC.h; sourceTree = "<group>"; };
 		B4AC62D21F96F982008C8D6F /* BWResearch13VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearch13VC.m; sourceTree = "<group>"; };
 		B4AC62D31F96F982008C8D6F /* BWResearch13VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWResearch13VC.xib; sourceTree = "<group>"; };
-		B4AC62D71F97052A008C8D6F /* BMCardBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCardBannerView.h; sourceTree = "<group>"; };
-		B4AC62D81F97052A008C8D6F /* BMCardBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCardBannerView.m; sourceTree = "<group>"; };
+		B4AC62D71F97052A008C8D6F /* BMCarouselBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCarouselBannerView.h; sourceTree = "<group>"; };
+		B4AC62D81F97052A008C8D6F /* BMCarouselBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCarouselBannerView.m; sourceTree = "<group>"; };
 		B4B6312D1DAE384F00DF0907 /* UITableViewCell+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+JZExtension.m"; sourceTree = "<group>"; };
 		B4B6312E1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewRowAction+JZExtension.h"; sourceTree = "<group>"; };
 		B4B6312F1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewRowAction+JZExtension.m"; sourceTree = "<group>"; };
@@ -728,6 +741,37 @@
 			path = BWResource0;
 			sourceTree = "<group>";
 		};
+		B49D69701FB1692000B22F5B /* Research14 */ = {
+			isa = PBXGroup;
+			children = (
+				B49D69711FB1693600B22F5B /* BWResearch14VC.h */,
+				B49D69721FB1693600B22F5B /* BWResearch14VC.m */,
+				B49D69731FB1693600B22F5B /* BWResearch14VC.xib */,
+				B49D69781FB17CFE00B22F5B /* CardCycleView */,
+				B49D69771FB16ACB00B22F5B /* View */,
+			);
+			path = Research14;
+			sourceTree = "<group>";
+		};
+		B49D69771FB16ACB00B22F5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B49D69781FB17CFE00B22F5B /* CardCycleView */ = {
+			isa = PBXGroup;
+			children = (
+				B49D69791FB17CFE00B22F5B /* BMCardCycleView.h */,
+				B49D697A1FB17CFE00B22F5B /* BMCardCycleView.m */,
+				B49D69811FB189CC00B22F5B /* BMCardCycleItemCell.h */,
+				B49D69821FB189CC00B22F5B /* BMCardCycleItemCell.m */,
+				B49D69831FB189CC00B22F5B /* BMCardCycleItemCell.xib */,
+			);
+			path = CardCycleView;
+			sourceTree = "<group>";
+		};
 		B49E2F131F985A2F004F64E2 /* CardBannerIndicator */ = {
 			isa = PBXGroup;
 			children = (
@@ -831,8 +875,8 @@
 		B4AC62D61F9704F9008C8D6F /* CardBannerView */ = {
 			isa = PBXGroup;
 			children = (
-				B4AC62D71F97052A008C8D6F /* BMCardBannerView.h */,
-				B4AC62D81F97052A008C8D6F /* BMCardBannerView.m */,
+				B4AC62D71F97052A008C8D6F /* BMCarouselBannerView.h */,
+				B4AC62D81F97052A008C8D6F /* BMCarouselBannerView.m */,
 			);
 			path = CardBannerView;
 			sourceTree = "<group>";
@@ -863,6 +907,7 @@
 				B4B6FA9A1F8C692E00506412 /* Research11 */,
 				B48354311F8CC6F7003D722B /* Research12 */,
 				B4AC62D01F96F96D008C8D6F /* Research13 */,
+				B49D69701FB1692000B22F5B /* Research14 */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -1086,6 +1131,7 @@
 				B494E67B1F3057B2008284C0 /* BWResource3.bundle in Resources */,
 				B46B25631DB5EDDD00B9FF54 /* BWHomeTableViewCell.xib in Resources */,
 				B48F5DC31F550DD6000CFA4D /* nav_bg@3x.png in Resources */,
+				B49D69851FB189CC00B22F5B /* BMCardCycleItemCell.xib in Resources */,
 				B4945B311F676D1F0084CC88 /* icon_new_address_picker_checkbox_blue@2x.png in Resources */,
 				B48F5DC21F550DD6000CFA4D /* nav_bg@2x.png in Resources */,
 				B48CC7631EF12129008E3856 /* BWResearch6VC.xib in Resources */,
@@ -1119,6 +1165,7 @@
 				B48354361F8CC710003D722B /* BWResearch12VC.xib in Resources */,
 				B4B8BABB1F7CA5BD00F25065 /* BWResearch10VC.xib in Resources */,
 				B4B6FA9F1F8C694200506412 /* BWResearch11VC.xib in Resources */,
+				B49D69751FB1693600B22F5B /* BWResearch14VC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1305,6 +1352,7 @@
 				B4AC5FBC1DB4CC5200D880FB /* UIViewController+JZExtension.m in Sources */,
 				B49E2F161F985A2F004F64E2 /* BMCardBannerIndicatorView.m in Sources */,
 				B46B25521DB5DCD800B9FF54 /* BWBaseViewController.m in Sources */,
+				B49D69841FB189CC00B22F5B /* BMCardCycleItemCell.m in Sources */,
 				B4AC5FB81DB4CC5200D880FB /* NSNumber+JZExtension.m in Sources */,
 				B4AC5FB61DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m in Sources */,
 				B4B8BABA1F7CA5BD00F25065 /* BWResearch10VC.m in Sources */,
@@ -1313,6 +1361,7 @@
 				B4945B331F676D1F0084CC88 /* BMNewAddressPickerCell.m in Sources */,
 				B443A1DE1D548382003D66C5 /* AppDelegate.m in Sources */,
 				B4BEDFAE1F6FC56B00C98A0B /* BWResearch9VC.m in Sources */,
+				B49D697B1FB17CFE00B22F5B /* BMCardCycleView.m in Sources */,
 				B4ABFCAD1EAF2FAA004F9F49 /* BWResearch4VC.m in Sources */,
 				B48CC7621EF12129008E3856 /* BWResearch6VC.m in Sources */,
 				B4945B2E1F676D1F0084CC88 /* BMNewAddressPicker.m in Sources */,
@@ -1324,7 +1373,7 @@
 				B494DEB91F4ABC8500A43EC5 /* UIImage+BMExtension.m in Sources */,
 				B4945B2D1F676D1F0084CC88 /* BMNewAddressSourceManager.m in Sources */,
 				B4945B2F1F676D1F0084CC88 /* BMNewRegionModel.m in Sources */,
-				B4AC62D91F97052A008C8D6F /* BMCardBannerView.m in Sources */,
+				B4AC62D91F97052A008C8D6F /* BMCarouselBannerView.m in Sources */,
 				B4AC5FBA1DB4CC5200D880FB /* UIToolbar+JZExtension.m in Sources */,
 				B4AC5FBB1DB4CC5200D880FB /* UINavigationController+JZExtension.m in Sources */,
 				B443A1DB1D548382003D66C5 /* main.m in Sources */,
@@ -1339,6 +1388,7 @@
 				B49FC69C1FA1944100DAC7D4 /* BMTest13View.m in Sources */,
 				B426B1261DFA943F00F438F3 /* BWResearchCell.m in Sources */,
 				B4945B361F676D1F0084CC88 /* BMValidCodeTimeManager.m in Sources */,
+				B49D69741FB1693600B22F5B /* BWResearch14VC.m in Sources */,
 				B48354351F8CC70F003D722B /* BWResearch12VC.m in Sources */,
 				B4945B391F676D1F0084CC88 /* BMLeftTextRightIconStyle0Button.m in Sources */,
 				B4945B381F676D1F0084CC88 /* BWAddressBookManager.m in Sources */,

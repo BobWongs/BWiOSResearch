@@ -1,17 +1,17 @@
 //
-//  BMCardBannerView.m
+//  BMCarouselBannerView.m
 //  BWObjective-CResearch-iOS
 //
 //  Created by BobWong on 2017/10/18.
 //  Copyright © 2017年 BobWong. All rights reserved.
 //
 
-#import "BMCardBannerView.h"
+#import "BMCarouselBannerView.h"
 #import <iCarousel.h>
 #import <UIImageView+WebCache.h>
 #import "BMCardBannerIndicatorView.h"
 
-@interface BMCardBannerView () <iCarouselDataSource, iCarouselDelegate>
+@interface BMCarouselBannerView () <iCarouselDataSource, iCarouselDelegate>
 
 @property (strong, nonatomic) iCarousel *carousel;
 @property (strong, nonatomic) BMCardBannerIndicatorView *indicatorView;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation BMCardBannerView
+@implementation BMCarouselBannerView
 
 #pragma mark - View Life
 

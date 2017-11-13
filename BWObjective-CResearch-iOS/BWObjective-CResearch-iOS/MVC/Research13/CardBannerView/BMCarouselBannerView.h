@@ -1,5 +1,5 @@
 //
-//  BMCardBannerView.h
+//  BMCarouselBannerView.h
 //  BWObjective-CResearch-iOS
 //
 //  Created by BobWong on 2017/10/18.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BMCardBannerView : UIView
+@interface BMCarouselBannerView : UIView
 
 @property (strong, nonatomic) UIImage *placeholderImage;
 
