@@ -1,53 +1,36 @@
 //
-//  BWResearch17VC.m
+//  BMMapView.m
 //  BWObjective-CResearch-iOS
 //
-//  Created by BobWong on 2017/11/29.
+//  Created by BobWong on 2017/11/30.
 //  Copyright © 2017年 BobWong. All rights reserved.
 //
 
-#import "BWResearch17VC.h"
+#import "BMMapView.h"
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapLocationKit/AMapLocationKit.h>
 #import "BMCustomAnnotationView.h"
 
-@interface BWResearch17VC () <AMapLocationManagerDelegate, MAMapViewDelegate>
+@interface BMMapView () <AMapLocationManagerDelegate, MAMapViewDelegate>
 
-@property (strong, nonatomic) MAMapView *mapView;
+@property (nonatomic, strong) MAMapView *mapView;
+@property (nonatomic, strong) UIButton *locateButton;
+@property (nonatomic, strong) UIButton *scalingButton;
+
 @property (strong, nonatomic) AMapLocationManager *locationManager;
 
 @end
 
-@implementation BWResearch17VC
+@implementation BMMapView
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    
-    [self amapDemo];
-    [self amapLocatingDemo];
-}
+#pragma mark - Life Cycle
 
-- (void)amapDemo {
-    [[AMapServices sharedServices] setEnableHTTPS:YES];
-    
-    ///把地图添加至view
-    [self.view addSubview:self.mapView];
-    
-    MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
-    pointAnnotation.coordinate = CLLocationCoordinate2DMake(23.143315, 113.538691);
-    pointAnnotation.title = @"体育生态公园";
-    pointAnnotation.subtitle = @"公园Subtitle";
-    [self.mapView addAnnotation:pointAnnotation];
-}
-
-- (void)amapLocatingDemo {
-    [self.locationManager startUpdatingLocation];
-}
-
-- (void)stopAmapLocating {
-    [self.locationManager stopUpdatingLocation];
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        
+    }
+    return self;
 }
 
 #pragma mark - AMapLocationManagerDelegate

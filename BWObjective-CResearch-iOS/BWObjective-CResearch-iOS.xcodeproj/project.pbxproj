@@ -19,8 +19,9 @@
 		B426B1261DFA943F00F438F3 /* BWResearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B426B1251DFA943F00F438F3 /* BWResearchCell.m */; };
 		B42A470F1FCE66650013B5DD /* BWResearch17VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A470D1FCE66650013B5DD /* BWResearch17VC.m */; };
 		B42A47101FCE66650013B5DD /* BWResearch17VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B42A470E1FCE66650013B5DD /* BWResearch17VC.xib */; };
-		B42A47141FCFE6770013B5DD /* BMCustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A47131FCFE6770013B5DD /* BMCustomCalloutView.m */; };
-		B42A47171FCFFF7D0013B5DD /* BMCustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A47161FCFFF7D0013B5DD /* BMCustomAnnotationView.m */; };
+		B42A471B1FD003200013B5DD /* BMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A471A1FD003200013B5DD /* BMMapView.m */; };
+		B42A47201FD0047C0013B5DD /* BMCustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A471D1FD0047B0013B5DD /* BMCustomAnnotationView.m */; };
+		B42A47211FD0047C0013B5DD /* BMCustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A471E1FD0047C0013B5DD /* BMCustomCalloutView.m */; };
 		B43EE5FA1F78CF2000AAAE80 /* voucher_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B43EE5F81F78CF2000AAAE80 /* voucher_empty@2x.png */; };
 		B43EE5FB1F78CF2000AAAE80 /* voucher_empty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B43EE5F91F78CF2000AAAE80 /* voucher_empty@3x.png */; };
 		B443A1DB1D548382003D66C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B443A1DA1D548382003D66C5 /* main.m */; };
@@ -165,10 +166,12 @@
 		B42A470C1FCE66650013B5DD /* BWResearch17VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWResearch17VC.h; sourceTree = "<group>"; };
 		B42A470D1FCE66650013B5DD /* BWResearch17VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWResearch17VC.m; sourceTree = "<group>"; };
 		B42A470E1FCE66650013B5DD /* BWResearch17VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWResearch17VC.xib; sourceTree = "<group>"; };
-		B42A47121FCFE6770013B5DD /* BMCustomCalloutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMCustomCalloutView.h; sourceTree = "<group>"; };
-		B42A47131FCFE6770013B5DD /* BMCustomCalloutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMCustomCalloutView.m; sourceTree = "<group>"; };
-		B42A47151FCFFF7D0013B5DD /* BMCustomAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMCustomAnnotationView.h; sourceTree = "<group>"; };
-		B42A47161FCFFF7D0013B5DD /* BMCustomAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMCustomAnnotationView.m; sourceTree = "<group>"; };
+		B42A47191FD003200013B5DD /* BMMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMMapView.h; sourceTree = "<group>"; };
+		B42A471A1FD003200013B5DD /* BMMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMMapView.m; sourceTree = "<group>"; };
+		B42A471C1FD0047B0013B5DD /* BMCustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCustomAnnotationView.h; sourceTree = "<group>"; };
+		B42A471D1FD0047B0013B5DD /* BMCustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCustomAnnotationView.m; sourceTree = "<group>"; };
+		B42A471E1FD0047C0013B5DD /* BMCustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCustomCalloutView.m; sourceTree = "<group>"; };
+		B42A471F1FD0047C0013B5DD /* BMCustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCustomCalloutView.h; sourceTree = "<group>"; };
 		B43EE5F81F78CF2000AAAE80 /* voucher_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voucher_empty@2x.png"; sourceTree = "<group>"; };
 		B43EE5F91F78CF2000AAAE80 /* voucher_empty@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voucher_empty@3x.png"; sourceTree = "<group>"; };
 		B443A1D61D548382003D66C5 /* BWObjective-CResearch-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BWObjective-CResearch-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -404,6 +407,7 @@
 				B42A470C1FCE66650013B5DD /* BWResearch17VC.h */,
 				B42A470D1FCE66650013B5DD /* BWResearch17VC.m */,
 				B42A470E1FCE66650013B5DD /* BWResearch17VC.xib */,
+				B42A47181FD003110013B5DD /* BMMapView */,
 				B42A47111FCFE62B0013B5DD /* View */,
 			);
 			path = Research17;
@@ -412,12 +416,21 @@
 		B42A47111FCFE62B0013B5DD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B42A47121FCFE6770013B5DD /* BMCustomCalloutView.h */,
-				B42A47131FCFE6770013B5DD /* BMCustomCalloutView.m */,
-				B42A47151FCFFF7D0013B5DD /* BMCustomAnnotationView.h */,
-				B42A47161FCFFF7D0013B5DD /* BMCustomAnnotationView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B42A47181FD003110013B5DD /* BMMapView */ = {
+			isa = PBXGroup;
+			children = (
+				B42A47191FD003200013B5DD /* BMMapView.h */,
+				B42A471A1FD003200013B5DD /* BMMapView.m */,
+				B42A471C1FD0047B0013B5DD /* BMCustomAnnotationView.h */,
+				B42A471D1FD0047B0013B5DD /* BMCustomAnnotationView.m */,
+				B42A471F1FD0047C0013B5DD /* BMCustomCalloutView.h */,
+				B42A471E1FD0047C0013B5DD /* BMCustomCalloutView.m */,
+			);
+			path = BMMapView;
 			sourceTree = "<group>";
 		};
 		B443A1CD1D548382003D66C5 = {
@@ -1452,14 +1465,15 @@
 				B46B25521DB5DCD800B9FF54 /* BWBaseViewController.m in Sources */,
 				B49D69841FB189CC00B22F5B /* BMCardCycleItemCell.m in Sources */,
 				B4AC5FB81DB4CC5200D880FB /* NSNumber+JZExtension.m in Sources */,
+				B42A471B1FD003200013B5DD /* BMMapView.m in Sources */,
 				B4AC5FB61DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m in Sources */,
 				B4B8BABA1F7CA5BD00F25065 /* BWResearch10VC.m in Sources */,
 				B494E6631F304CFD008284C0 /* BWResearch7VC.m in Sources */,
 				B46B25CC1DB620CA00B9FF54 /* BWMeSecondViewController.m in Sources */,
-				B42A47141FCFE6770013B5DD /* BMCustomCalloutView.m in Sources */,
 				B4DBC4AB1FC6804A00E9EFC6 /* BWResearch16View.m in Sources */,
 				B4945B331F676D1F0084CC88 /* BMNewAddressPickerCell.m in Sources */,
 				B443A1DE1D548382003D66C5 /* AppDelegate.m in Sources */,
+				B42A47211FD0047C0013B5DD /* BMCustomCalloutView.m in Sources */,
 				B4BEDFAE1F6FC56B00C98A0B /* BWResearch9VC.m in Sources */,
 				B49D697B1FB17CFE00B22F5B /* BMCardCycleView.m in Sources */,
 				B44665E91FB936A800E1A4B5 /* BWResearch15VC.m in Sources */,
@@ -1472,7 +1486,7 @@
 				B4A583EF1F4C181800370A62 /* UIViewController+BMExtension.m in Sources */,
 				B4B6FAA31F8C6A3900506412 /* BWResearch11Cell.m in Sources */,
 				B494DEB91F4ABC8500A43EC5 /* UIImage+BMExtension.m in Sources */,
-				B42A47171FCFFF7D0013B5DD /* BMCustomAnnotationView.m in Sources */,
+				B42A47201FD0047C0013B5DD /* BMCustomAnnotationView.m in Sources */,
 				B4945B2D1F676D1F0084CC88 /* BMNewAddressSourceManager.m in Sources */,
 				B4945B2F1F676D1F0084CC88 /* BMNewRegionModel.m in Sources */,
 				B4AC62D91F97052A008C8D6F /* BMCarouselBannerView.m in Sources */,
