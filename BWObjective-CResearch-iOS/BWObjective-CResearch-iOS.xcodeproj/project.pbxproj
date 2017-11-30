@@ -17,6 +17,10 @@
 		B426B0081DF7ABD400F438F3 /* icon_discovery_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B426B0061DF7ABD400F438F3 /* icon_discovery_selected@2x.png */; };
 		B426B0091DF7ABD400F438F3 /* icon_discovery_unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B426B0071DF7ABD400F438F3 /* icon_discovery_unselected@2x.png */; };
 		B426B1261DFA943F00F438F3 /* BWResearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B426B1251DFA943F00F438F3 /* BWResearchCell.m */; };
+		B42A470F1FCE66650013B5DD /* BWResearch17VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A470D1FCE66650013B5DD /* BWResearch17VC.m */; };
+		B42A47101FCE66650013B5DD /* BWResearch17VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B42A470E1FCE66650013B5DD /* BWResearch17VC.xib */; };
+		B42A47141FCFE6770013B5DD /* BMCustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A47131FCFE6770013B5DD /* BMCustomCalloutView.m */; };
+		B42A47171FCFFF7D0013B5DD /* BMCustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A47161FCFFF7D0013B5DD /* BMCustomAnnotationView.m */; };
 		B43EE5FA1F78CF2000AAAE80 /* voucher_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B43EE5F81F78CF2000AAAE80 /* voucher_empty@2x.png */; };
 		B43EE5FB1F78CF2000AAAE80 /* voucher_empty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B43EE5F91F78CF2000AAAE80 /* voucher_empty@3x.png */; };
 		B443A1DB1D548382003D66C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B443A1DA1D548382003D66C5 /* main.m */; };
@@ -25,6 +29,8 @@
 		B443A1E91D548382003D66C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B443A1E71D548382003D66C5 /* LaunchScreen.storyboard */; };
 		B443A1F41D548382003D66C5 /* BWObjective_CResearch_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B443A1F31D548382003D66C5 /* BWObjective_CResearch_iOSTests.m */; };
 		B443A1FF1D548382003D66C5 /* BWObjective_CResearch_iOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B443A1FE1D548382003D66C5 /* BWObjective_CResearch_iOSUITests.m */; };
+		B44665E91FB936A800E1A4B5 /* BWResearch15VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B44665E71FB936A800E1A4B5 /* BWResearch15VC.m */; };
+		B44665EA1FB936A800E1A4B5 /* BWResearch15VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B44665E81FB936A800E1A4B5 /* BWResearch15VC.xib */; };
 		B461B6721DDD50FB00FB7BC1 /* BWResearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B461B6711DDD50FB00FB7BC1 /* BWResearchVC.m */; };
 		B46B25521DB5DCD800B9FF54 /* BWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B25511DB5DCD800B9FF54 /* BWBaseViewController.m */; };
 		B46B25551DB5ED6500B9FF54 /* BWBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B25541DB5ED6500B9FF54 /* BWBaseNavigationController.m */; };
@@ -118,6 +124,10 @@
 		B4BEDFAE1F6FC56B00C98A0B /* BWResearch9VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BEDFAC1F6FC56B00C98A0B /* BWResearch9VC.m */; };
 		B4BEDFAF1F6FC56B00C98A0B /* BWResearch9VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BEDFAD1F6FC56B00C98A0B /* BWResearch9VC.xib */; };
 		B4D1916C1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D1916B1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m */; };
+		B4DBC46A1FC2AAF300E9EFC6 /* BWTest15View.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DBC4691FC2AAF300E9EFC6 /* BWTest15View.m */; };
+		B4DBC4A71FC6803A00E9EFC6 /* BWResearch16VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DBC4A51FC6803A00E9EFC6 /* BWResearch16VC.m */; };
+		B4DBC4A81FC6803A00E9EFC6 /* BWResearch16VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4DBC4A61FC6803A00E9EFC6 /* BWResearch16VC.xib */; };
+		B4DBC4AB1FC6804A00E9EFC6 /* BWResearch16View.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DBC4AA1FC6804A00E9EFC6 /* BWResearch16View.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +162,13 @@
 		B426B0071DF7ABD400F438F3 /* icon_discovery_unselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_discovery_unselected@2x.png"; sourceTree = "<group>"; };
 		B426B1241DFA943F00F438F3 /* BWResearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearchCell.h; sourceTree = "<group>"; };
 		B426B1251DFA943F00F438F3 /* BWResearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearchCell.m; sourceTree = "<group>"; };
+		B42A470C1FCE66650013B5DD /* BWResearch17VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWResearch17VC.h; sourceTree = "<group>"; };
+		B42A470D1FCE66650013B5DD /* BWResearch17VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWResearch17VC.m; sourceTree = "<group>"; };
+		B42A470E1FCE66650013B5DD /* BWResearch17VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWResearch17VC.xib; sourceTree = "<group>"; };
+		B42A47121FCFE6770013B5DD /* BMCustomCalloutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMCustomCalloutView.h; sourceTree = "<group>"; };
+		B42A47131FCFE6770013B5DD /* BMCustomCalloutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMCustomCalloutView.m; sourceTree = "<group>"; };
+		B42A47151FCFFF7D0013B5DD /* BMCustomAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMCustomAnnotationView.h; sourceTree = "<group>"; };
+		B42A47161FCFFF7D0013B5DD /* BMCustomAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMCustomAnnotationView.m; sourceTree = "<group>"; };
 		B43EE5F81F78CF2000AAAE80 /* voucher_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voucher_empty@2x.png"; sourceTree = "<group>"; };
 		B43EE5F91F78CF2000AAAE80 /* voucher_empty@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voucher_empty@3x.png"; sourceTree = "<group>"; };
 		B443A1D61D548382003D66C5 /* BWObjective-CResearch-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BWObjective-CResearch-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +184,9 @@
 		B443A1FA1D548382003D66C5 /* BWObjective-CResearch-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BWObjective-CResearch-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B443A1FE1D548382003D66C5 /* BWObjective_CResearch_iOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWObjective_CResearch_iOSUITests.m; sourceTree = "<group>"; };
 		B443A2001D548382003D66C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B44665E61FB936A800E1A4B5 /* BWResearch15VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWResearch15VC.h; sourceTree = "<group>"; };
+		B44665E71FB936A800E1A4B5 /* BWResearch15VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWResearch15VC.m; sourceTree = "<group>"; };
+		B44665E81FB936A800E1A4B5 /* BWResearch15VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWResearch15VC.xib; sourceTree = "<group>"; };
 		B461B6701DDD50FB00FB7BC1 /* BWResearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearchVC.h; sourceTree = "<group>"; };
 		B461B6711DDD50FB00FB7BC1 /* BWResearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearchVC.m; sourceTree = "<group>"; };
 		B46B25501DB5DCD800B9FF54 /* BWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWBaseViewController.h; sourceTree = "<group>"; };
@@ -320,6 +340,13 @@
 		B4BEDFAD1F6FC56B00C98A0B /* BWResearch9VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWResearch9VC.xib; sourceTree = "<group>"; };
 		B4D1916A1F46EC4200A3F337 /* CAGradientLayer+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAGradientLayer+BMExtension.h"; sourceTree = "<group>"; };
 		B4D1916B1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAGradientLayer+BMExtension.m"; sourceTree = "<group>"; };
+		B4DBC4681FC2AAF300E9EFC6 /* BWTest15View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWTest15View.h; sourceTree = "<group>"; };
+		B4DBC4691FC2AAF300E9EFC6 /* BWTest15View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWTest15View.m; sourceTree = "<group>"; };
+		B4DBC4A41FC6803A00E9EFC6 /* BWResearch16VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWResearch16VC.h; sourceTree = "<group>"; };
+		B4DBC4A51FC6803A00E9EFC6 /* BWResearch16VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWResearch16VC.m; sourceTree = "<group>"; };
+		B4DBC4A61FC6803A00E9EFC6 /* BWResearch16VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWResearch16VC.xib; sourceTree = "<group>"; };
+		B4DBC4A91FC6804A00E9EFC6 /* BWResearch16View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWResearch16View.h; sourceTree = "<group>"; };
+		B4DBC4AA1FC6804A00E9EFC6 /* BWResearch16View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWResearch16View.m; sourceTree = "<group>"; };
 		C103FEAD4813AE671D13F2D2 /* Pods-BWObjective-CResearch-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		DAEA5361C98C05D3A8AC261A /* Pods-BWObjective-CResearch-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DD13E253539AA17662F57D49 /* Pods-BWObjective-CResearch-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOSUITests/Pods-BWObjective-CResearch-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -369,6 +396,28 @@
 				AC7062A3E511621014B08B0E /* libPods-BWObjective-CResearch-iOSUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B42A470B1FCE664D0013B5DD /* Research17 */ = {
+			isa = PBXGroup;
+			children = (
+				B42A470C1FCE66650013B5DD /* BWResearch17VC.h */,
+				B42A470D1FCE66650013B5DD /* BWResearch17VC.m */,
+				B42A470E1FCE66650013B5DD /* BWResearch17VC.xib */,
+				B42A47111FCFE62B0013B5DD /* View */,
+			);
+			path = Research17;
+			sourceTree = "<group>";
+		};
+		B42A47111FCFE62B0013B5DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B42A47121FCFE6770013B5DD /* BMCustomCalloutView.h */,
+				B42A47131FCFE6770013B5DD /* BMCustomCalloutView.m */,
+				B42A47151FCFFF7D0013B5DD /* BMCustomAnnotationView.h */,
+				B42A47161FCFFF7D0013B5DD /* BMCustomAnnotationView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B443A1CD1D548382003D66C5 = {
@@ -441,6 +490,17 @@
 				B443A2001D548382003D66C5 /* Info.plist */,
 			);
 			path = "BWObjective-CResearch-iOSUITests";
+			sourceTree = "<group>";
+		};
+		B44665E51FB9369500E1A4B5 /* Research15 */ = {
+			isa = PBXGroup;
+			children = (
+				B44665E61FB936A800E1A4B5 /* BWResearch15VC.h */,
+				B44665E71FB936A800E1A4B5 /* BWResearch15VC.m */,
+				B44665E81FB936A800E1A4B5 /* BWResearch15VC.xib */,
+				B4DBC4671FC2AAE000E9EFC6 /* View */,
+			);
+			path = Research15;
 			sourceTree = "<group>";
 		};
 		B461B66F1DDD50D300FB7BC1 /* Research */ = {
@@ -908,6 +968,9 @@
 				B48354311F8CC6F7003D722B /* Research12 */,
 				B4AC62D01F96F96D008C8D6F /* Research13 */,
 				B49D69701FB1692000B22F5B /* Research14 */,
+				B44665E51FB9369500E1A4B5 /* Research15 */,
+				B4DBC49D1FC67F8000E9EFC6 /* Research16 */,
+				B42A470B1FCE664D0013B5DD /* Research17 */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -988,6 +1051,35 @@
 				B48F5DBD1F550C4B000CFA4D /* UINavigationController+BMExtension.m */,
 			);
 			path = B2BMall;
+			sourceTree = "<group>";
+		};
+		B4DBC4671FC2AAE000E9EFC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4DBC4681FC2AAF300E9EFC6 /* BWTest15View.h */,
+				B4DBC4691FC2AAF300E9EFC6 /* BWTest15View.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4DBC49D1FC67F8000E9EFC6 /* Research16 */ = {
+			isa = PBXGroup;
+			children = (
+				B4DBC4A41FC6803A00E9EFC6 /* BWResearch16VC.h */,
+				B4DBC4A51FC6803A00E9EFC6 /* BWResearch16VC.m */,
+				B4DBC4A61FC6803A00E9EFC6 /* BWResearch16VC.xib */,
+				B4DBC4A31FC6801800E9EFC6 /* View */,
+			);
+			path = Research16;
+			sourceTree = "<group>";
+		};
+		B4DBC4A31FC6801800E9EFC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4DBC4A91FC6804A00E9EFC6 /* BWResearch16View.h */,
+				B4DBC4AA1FC6804A00E9EFC6 /* BWResearch16View.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B4FF7E891DACDD220015089F /* Library */ = {
@@ -1127,6 +1219,7 @@
 			files = (
 				B4BEDFAF1F6FC56B00C98A0B /* BWResearch9VC.xib in Resources */,
 				B4B6FAA41F8C6A3900506412 /* BWResearch11Cell.xib in Resources */,
+				B42A47101FCE66650013B5DD /* BWResearch17VC.xib in Resources */,
 				B46B25D11DB72CE800B9FF54 /* bw_icon_back_100@2x.png in Resources */,
 				B494E67B1F3057B2008284C0 /* BWResource3.bundle in Resources */,
 				B46B25631DB5EDDD00B9FF54 /* BWHomeTableViewCell.xib in Resources */,
@@ -1139,6 +1232,7 @@
 				B4945B301F676D1F0084CC88 /* address.db in Resources */,
 				B48F5DCE1F5537B8000CFA4D /* back@2x.png in Resources */,
 				B494E6771F3057AA008284C0 /* BWResource2.bundle in Resources */,
+				B4DBC4A81FC6803A00E9EFC6 /* BWResearch16VC.xib in Resources */,
 				B426B0091DF7ABD400F438F3 /* icon_discovery_unselected@2x.png in Resources */,
 				B48F5DCB1F553660000CFA4D /* search@3x.png in Resources */,
 				B4A583E91F4BD15300370A62 /* BWResearch7View.xib in Resources */,
@@ -1151,6 +1245,7 @@
 				B47A37BB1E01305900E130AA /* bg_study@2x.png in Resources */,
 				B443A1E61D548382003D66C5 /* Assets.xcassets in Resources */,
 				B48F5DC91F553660000CFA4D /* category@3x.png in Resources */,
+				B44665EA1FB936A800E1A4B5 /* BWResearch15VC.xib in Resources */,
 				B48F5DC81F553660000CFA4D /* category@2x.png in Resources */,
 				B4B8BAC11F7CA60B00F25065 /* BWTest10View.xib in Resources */,
 				B494E67A1F3057B2008284C0 /* BWResource1 in Resources */,
@@ -1289,6 +1384,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS-resources.sh",
+				"${PODS_ROOT}/AMap2DMap-NO-IDFA/MAMapKit.framework/AMap.bundle",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -1350,6 +1447,7 @@
 				B46B25601DB5EDDD00B9FF54 /* BWHomeViewController.m in Sources */,
 				B4A0CF071E6551DD00CC8C92 /* BWResearch2VC.m in Sources */,
 				B4AC5FBC1DB4CC5200D880FB /* UIViewController+JZExtension.m in Sources */,
+				B4DBC46A1FC2AAF300E9EFC6 /* BWTest15View.m in Sources */,
 				B49E2F161F985A2F004F64E2 /* BMCardBannerIndicatorView.m in Sources */,
 				B46B25521DB5DCD800B9FF54 /* BWBaseViewController.m in Sources */,
 				B49D69841FB189CC00B22F5B /* BMCardCycleItemCell.m in Sources */,
@@ -1358,10 +1456,13 @@
 				B4B8BABA1F7CA5BD00F25065 /* BWResearch10VC.m in Sources */,
 				B494E6631F304CFD008284C0 /* BWResearch7VC.m in Sources */,
 				B46B25CC1DB620CA00B9FF54 /* BWMeSecondViewController.m in Sources */,
+				B42A47141FCFE6770013B5DD /* BMCustomCalloutView.m in Sources */,
+				B4DBC4AB1FC6804A00E9EFC6 /* BWResearch16View.m in Sources */,
 				B4945B331F676D1F0084CC88 /* BMNewAddressPickerCell.m in Sources */,
 				B443A1DE1D548382003D66C5 /* AppDelegate.m in Sources */,
 				B4BEDFAE1F6FC56B00C98A0B /* BWResearch9VC.m in Sources */,
 				B49D697B1FB17CFE00B22F5B /* BMCardCycleView.m in Sources */,
+				B44665E91FB936A800E1A4B5 /* BWResearch15VC.m in Sources */,
 				B4ABFCAD1EAF2FAA004F9F49 /* BWResearch4VC.m in Sources */,
 				B48CC7621EF12129008E3856 /* BWResearch6VC.m in Sources */,
 				B4945B2E1F676D1F0084CC88 /* BMNewAddressPicker.m in Sources */,
@@ -1371,6 +1472,7 @@
 				B4A583EF1F4C181800370A62 /* UIViewController+BMExtension.m in Sources */,
 				B4B6FAA31F8C6A3900506412 /* BWResearch11Cell.m in Sources */,
 				B494DEB91F4ABC8500A43EC5 /* UIImage+BMExtension.m in Sources */,
+				B42A47171FCFFF7D0013B5DD /* BMCustomAnnotationView.m in Sources */,
 				B4945B2D1F676D1F0084CC88 /* BMNewAddressSourceManager.m in Sources */,
 				B4945B2F1F676D1F0084CC88 /* BMNewRegionModel.m in Sources */,
 				B4AC62D91F97052A008C8D6F /* BMCarouselBannerView.m in Sources */,
@@ -1379,6 +1481,7 @@
 				B443A1DB1D548382003D66C5 /* main.m in Sources */,
 				B4A583EC1F4BF90C00370A62 /* UIAlertController+BMExtension.m in Sources */,
 				B4A583E71F4BD14700370A62 /* BWResearch7View.m in Sources */,
+				B42A470F1FCE66650013B5DD /* BWResearch17VC.m in Sources */,
 				B4AC62D41F96F982008C8D6F /* BWResearch13VC.m in Sources */,
 				B46B25621DB5EDDD00B9FF54 /* BWHomeTableViewCell.m in Sources */,
 				B4B631321DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m in Sources */,
@@ -1387,6 +1490,7 @@
 				B461B6721DDD50FB00FB7BC1 /* BWResearchVC.m in Sources */,
 				B49FC69C1FA1944100DAC7D4 /* BMTest13View.m in Sources */,
 				B426B1261DFA943F00F438F3 /* BWResearchCell.m in Sources */,
+				B4DBC4A71FC6803A00E9EFC6 /* BWResearch16VC.m in Sources */,
 				B4945B361F676D1F0084CC88 /* BMValidCodeTimeManager.m in Sources */,
 				B49D69741FB1693600B22F5B /* BWResearch14VC.m in Sources */,
 				B48354351F8CC70F003D722B /* BWResearch12VC.m in Sources */,
@@ -1539,7 +1643,7 @@
 				INFOPLIST_FILE = "BWObjective-CResearch-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bws.BWObjective-CResearch-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bws.research;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1554,7 +1658,7 @@
 				INFOPLIST_FILE = "BWObjective-CResearch-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bws.BWObjective-CResearch-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bws.research;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

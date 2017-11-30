@@ -16,6 +16,11 @@ target 'BWObjective-CResearch-iOS' do
   pod 'pop', '~> 1.0.10'
   pod 'iCarousel', '~> 1.8.3'
   pod 'TYCyclePagerView', '1.0.6'
+  pod 'IQKeyboardManager', '~> 5.0.4'
+  
+  # 高德地图，无IDFA
+  pod 'AMap2DMap-NO-IDFA', '4.6.0'  # 2D地图SDK
+  pod 'AMapLocation-NO-IDFA', '2.5.0'  # 定位SDK
 
   target 'BWObjective-CResearch-iOSTests' do
     inherit! :search_paths

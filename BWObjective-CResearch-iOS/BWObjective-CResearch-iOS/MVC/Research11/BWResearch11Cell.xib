@@ -1,37 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BWResearch11Cell">
-            <rect key="frame" x="0.0" y="0.0" width="157" height="131"/>
+            <rect key="frame" x="0.0" y="0.0" width="100" height="135"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="157" height="131"/>
+                <rect key="frame" x="0.0" y="0.0" width="100" height="135"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSb-Sp-XOi">
-                        <rect key="frame" x="0.0" y="0.0" width="157" height="131"/>
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="74"/>
                         <color key="backgroundColor" red="0.65098039215686276" green="0.66274509803921566" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="p9t-U1-otP"/>
+                        </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FQ-ce-wmC">
+                        <rect key="frame" x="0.0" y="74" width="100" height="61"/>
+                        <string key="text">Label
+Label
+Label</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="bSb-Sp-XOi" secondAttribute="bottom" id="0pv-ag-FIb"/>
                 <constraint firstItem="bSb-Sp-XOi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ASX-ly-0wx"/>
                 <constraint firstItem="bSb-Sp-XOi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="NfD-jg-tmI"/>
-                <constraint firstAttribute="trailing" secondItem="bSb-Sp-XOi" secondAttribute="trailing" id="SaD-G7-8Lq"/>
+                <constraint firstAttribute="bottom" secondItem="2FQ-ce-wmC" secondAttribute="bottom" id="OQ0-X2-6lG"/>
+                <constraint firstAttribute="trailing" secondItem="2FQ-ce-wmC" secondAttribute="trailing" id="WDS-GD-lLo"/>
+                <constraint firstAttribute="trailing" secondItem="bSb-Sp-XOi" secondAttribute="trailing" id="cez-GQ-9Jr"/>
+                <constraint firstItem="2FQ-ce-wmC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="g67-cw-AoI"/>
+                <constraint firstItem="2FQ-ce-wmC" firstAttribute="top" secondItem="bSb-Sp-XOi" secondAttribute="bottom" id="hHd-gb-6cJ"/>
             </constraints>
-            <size key="customSize" width="157" height="131"/>
-            <point key="canvasLocation" x="87.5" y="94.5"/>
+            <size key="customSize" width="100" height="135"/>
+            <connections>
+                <outlet property="label" destination="2FQ-ce-wmC" id="gOr-FO-Lnj"/>
+                <outlet property="topViewWidth" destination="p9t-U1-otP" id="QOM-hx-baP"/>
+            </connections>
+            <point key="canvasLocation" x="59" y="96.5"/>
         </collectionViewCell>
     </objects>
 </document>

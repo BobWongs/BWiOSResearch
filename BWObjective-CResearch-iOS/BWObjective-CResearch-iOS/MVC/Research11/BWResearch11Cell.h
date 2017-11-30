@@ -10,4 +10,6 @@
 
 @interface BWResearch11Cell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *label;
+
 @end

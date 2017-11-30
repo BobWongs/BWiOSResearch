@@ -32,6 +32,17 @@ NSString *const BWCellId = @"BWCellId";
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(changeShowTypeAction)];
     self.navigationItem.rightBarButtonItem = item;
+    
+    
+    
+    BWResearch11Cell *cell = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([BWResearch11Cell class]) owner:nil options:nil].firstObject;
+    [self.view addSubview:cell];
+    [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(20);
+        make.width.mas_equalTo(200);
+        make.top.mas_equalTo(100);
+        make.height.mas_equalTo(100);
+    }];
 }
 
 BOOL showType = YES;
@@ -61,12 +72,28 @@ BOOL showType = YES;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 4;
+    return 20;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:BWCellId forIndexPath:indexPath];
+    BWResearch11Cell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:BWCellId forIndexPath:indexPath];
+//    BWResearch11Cell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:BWCellId forIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    
+    static int num = 0;
+    NSString *text = @"text";
+    for (NSInteger index = 0; index < num; index++) {
+        text = [text stringByAppendingString:@"\nText"];
+    }
+    cell.label.text = text;
+    num += 1;
+    if (num == 4) {
+        num = 0;
+    }
     return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(50, 135);
 }
 
 //- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -94,14 +121,19 @@ BOOL showType = YES;
         layout.minimumInteritemSpacing = 4;
         layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
 //        layout.headerReferenceSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, 100);
+        layout.headerReferenceSize = CGSizeMake(kScreenWidth, 100);
         
         CGFloat sw = [UIScreen mainScreen].bounds.size.width;
-        layout.itemSize = CGSizeMake((sw - 4)/2.0, (sw - 4)/2.0 + 111);
+//        layout.itemSize = CGSizeMake((sw - 4)/2.0, (sw - 4)/2.0 + 111);
+//        layout.estimatedItemSize = CGSizeMake((sw - 4)/2.0, (sw - 4)/2.0 + 111);  // Dynamic height
+        layout.estimatedItemSize = CGSizeMake(45, 100);
         
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
         _collectionView.delegate   = self;
         _collectionView.dataSource = self;
         [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([BWResearch11Cell class]) bundle:nil] forCellWithReuseIdentifier:BWCellId];
+        
+        _collectionView.backgroundColor = [UIColor whiteColor];
     }
     return _collectionView;
 }

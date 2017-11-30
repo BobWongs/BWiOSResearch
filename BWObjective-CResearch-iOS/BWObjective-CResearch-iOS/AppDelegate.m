@@ -24,6 +24,10 @@
 #import "BWResearch12VC.h"
 #import "BWResearch13VC.h"
 #import "BWResearch14VC.h"
+#import "BWResearch15VC.h"
+#import "BWResearch16VC.h"
+#import "BWResearch17VC.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
 
 @interface AppDelegate ()
 
@@ -32,6 +36,9 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [AMapServices sharedServices].apiKey = @"da91820d52ede7ec7c5c2375944283d6";
+    
     
     UIApplication.sharedApplication.statusBarHidden = NO;
     
@@ -68,7 +75,7 @@
 //    BWResearch3VC *researchVC = [BWResearch3VC new];
 //    BWResearch4VC *researchVC = [BWResearch4VC new];
 //    BWResearch5VC  *researchVC = [BWResearch5VC new];
-    Class vcClass = [BWResearch14VC class];
+    Class vcClass = [BWResearch17VC class];
     
 //    UINavigationController *researchNvgtVC = [UINavigationController bmB2B_defaultStyleWithRootViewController:[vcClass new]];
     UINavigationController *researchNvgtVC = [[UINavigationController alloc] initWithRootViewController:[vcClass new]];

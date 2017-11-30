@@ -8,11 +8,19 @@
 
 #import "BWResearch11Cell.h"
 
+@interface BWResearch11Cell ()
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topViewWidth;
+
+@end
+
 @implementation BWResearch11Cell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.backgroundColor = [UIColor orangeColor];
+    
+    self.topViewWidth.constant = kScreenWidth / 6;
 }
 
 @end

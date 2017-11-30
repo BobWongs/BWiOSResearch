@@ -24,33 +24,27 @@ void test6();
 void test7();
 void test8();
 
+typedef NS_ENUM(NSInteger, BWType) {
+    BWType0,
+    BWType1,
+    BWType2
+};
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-//        NSDictionary *dict = @{@(1): @"first",
-//                               @(2): @"second",
-//                               @(3): @"third",
-//                               @(1): @"forth"};
-//        NSLog(@"dict is %@", dict);
-//        
-//        NSMutableDictionary *dictM = [dict mutableCopy];
-//        dictM[@(1)] = @"fifth";
-//        NSLog(@"dictM is %@", dictM);
-//        
-//        id object = dictM[@(100)];
-//        NSLog(@"object: %@", object);
-        
-//        NSArray *array = @[@"first"];
-//        id object = array[0];
-//        object = @"second";
-//        NSLog(@"object: %@", object);
-//        NSLog(@"array: %@", array);
-        
-//        BOOL has;
-//        NSLog(@"%d", has);
-        
-        NSString *str = @"123";
-        NSLog(@"%@", [str substringToIndex:1]);
+        BWType type = BWType1;
+        switch (type) {
+            case BWType0: {
+                NSLog(@"BWType0");
+            }
+                break;
+            case BWType1:
+            case BWType2: {
+                NSLog(@"BWType2");
+            }
+                break;
+        }
         
     }
     
@@ -58,6 +52,33 @@ int main(int argc, const char * argv[]) {
 }
 
 // Test
+void test11() {
+    //        NSDictionary *dict = @{@(1): @"first",
+    //                               @(2): @"second",
+    //                               @(3): @"third",
+    //                               @(1): @"forth"};
+    //        NSLog(@"dict is %@", dict);
+    //
+    //        NSMutableDictionary *dictM = [dict mutableCopy];
+    //        dictM[@(1)] = @"fifth";
+    //        NSLog(@"dictM is %@", dictM);
+    //
+    //        id object = dictM[@(100)];
+    //        NSLog(@"object: %@", object);
+    
+    //        NSArray *array = @[@"first"];
+    //        id object = array[0];
+    //        object = @"second";
+    //        NSLog(@"object: %@", object);
+    //        NSLog(@"array: %@", array);
+    
+    //        BOOL has;
+    //        NSLog(@"%d", has);
+    
+    NSString *str = @"123";
+    NSLog(@"%@", [str substringToIndex:1]);
+}
+
 void test10() {
     double yuan = 1990 / 100.0;
     NSLog(@"yuan: %f", yuan);
