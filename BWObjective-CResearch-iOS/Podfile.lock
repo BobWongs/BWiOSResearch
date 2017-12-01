@@ -1,0 +1,84 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - AMap2DMap-NO-IDFA (4.6.0):
+    - AMapFoundation-NO-IDFA (~> 1.3)
+  - AMapFoundation-NO-IDFA (1.4.2)
+  - AMapLocation-NO-IDFA (2.5.0):
+    - AMapFoundation-NO-IDFA (~> 1.4)
+  - BWPodRepository (0.2.0)
+  - FLAnimatedImage (1.0.12)
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
+  - iCarousel (1.8.3)
+  - IQKeyboardManager (5.0.4)
+  - Masonry (1.0.2)
+  - MBProgressHUD (1.0.0)
+  - pop (1.0.10)
+  - SDWebImage (4.1.0):
+    - SDWebImage/Core (= 4.1.0)
+  - SDWebImage/Core (4.1.0)
+  - SVProgressHUD (2.1.2)
+  - TMCache (2.1.0)
+  - TYCyclePagerView (1.0.6)
+  - XXNibBridge (2.3.1)
+  - YYCategories (1.0.4):
+    - YYCategories/no-arc (= 1.0.4)
+  - YYCategories/no-arc (1.0.4)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - AMap2DMap-NO-IDFA (= 4.6.0)
+  - AMapLocation-NO-IDFA (= 2.5.0)
+  - BWPodRepository (= 0.2.0)
+  - FLAnimatedImage (~> 1.0.12)
+  - FMDB (~> 2.7.2)
+  - iCarousel (~> 1.8.3)
+  - IQKeyboardManager (~> 5.0.4)
+  - Masonry
+  - MBProgressHUD (~> 1.0.0)
+  - pop (~> 1.0.10)
+  - SDWebImage (~> 4.1.0)
+  - SVProgressHUD (~> 2.1.2)
+  - TMCache (~> 2.1.0)
+  - TYCyclePagerView (= 1.0.6)
+  - XXNibBridge (~> 2.3.1)
+  - YYCategories (~> 1.0.4)
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AMap2DMap-NO-IDFA: 01c80e7e93568617b1b1b452cfec71f974f5bc8a
+  AMapFoundation-NO-IDFA: 3b9ce87abc6a37c718cc320687469d0b74d5c953
+  AMapLocation-NO-IDFA: be669085a8cc0d22820022fc61d58811d24b4e3a
+  BWPodRepository: d01faf8efb5fa6809a0d2681222ae451ae52877a
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
+  IQKeyboardManager: 1df9c0f147af1681cfb2d9977bc30309d45a7e76
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
+  TYCyclePagerView: 11f124799d3a90a6a80af83ff2468482cac448cb
+  XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
+  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
+
+PODFILE CHECKSUM: cf77810027623a741bce1ef48c1c4aa04773cb13
+
+COCOAPODS: 1.3.1
