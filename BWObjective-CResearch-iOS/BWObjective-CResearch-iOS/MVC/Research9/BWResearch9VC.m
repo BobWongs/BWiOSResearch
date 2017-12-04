@@ -24,12 +24,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     
 //    [self test1];
-    [self test2];
+//    [self test2];
+//    [self test3];
+//    [self test4];
+}
+
+- (void)test4 {
+    NSLog(@"current vc: %@", [[self class] currentViewController]);
+}
+
+- (void)test3 {
+    NSLog(@"%@", self.view);
+    
+    CGRect frame = self.view.frame;
+    NSLog(@"%f, %f", CGRectGetWidth(frame), CGRectGetHeight(frame));
 }
 
 - (void)test2 {
+    UIViewController *rootVC = UIApplication.sharedApplication.keyWindow.rootViewController;
+    NSLog(@"rootVC: %@", rootVC);
+    
     UIViewController *parentVC = UIApplication.sharedApplication.keyWindow.rootViewController.parentViewController;
     UIViewController *presentingVC = UIApplication.sharedApplication.keyWindow.rootViewController.presentingViewController;
     UIViewController *presentedVC = UIApplication.sharedApplication.keyWindow.rootViewController.presentedViewController;
@@ -37,6 +54,24 @@
     NSLog(@"\n parent: %@", parentVC);
     
     UITabBarController *tabBarVC = (UITabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+}
+
++ (UIViewController *)currentViewController {
+    UIViewController *rootVC = UIApplication.sharedApplication.keyWindow.rootViewController;
+    if ([rootVC isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *navRootVC = (UINavigationController *)rootVC;
+        return navRootVC.viewControllers.lastObject;
+    }
+    if ([rootVC isKindOfClass:[UITabBarController class]]) {
+        UITabBarController *tabBarRootVC = (UITabBarController *)rootVC;
+        UIViewController *selectedVC = tabBarRootVC.selectedViewController;
+        if ([selectedVC isKindOfClass:[UINavigationController class]]) {
+            UINavigationController *navSelectedVC = (UINavigationController *)selectedVC;
+            return navSelectedVC.viewControllers.lastObject;
+        }
+        return selectedVC;
+    }
+    return rootVC;
 }
 
 - (void)test0 {

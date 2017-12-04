@@ -33,18 +33,7 @@ typedef NS_ENUM(NSInteger, BWType) {
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        BWType type = BWType1;
-        switch (type) {
-            case BWType0: {
-                NSLog(@"BWType0");
-            }
-                break;
-            case BWType1:
-            case BWType2: {
-                NSLog(@"BWType2");
-            }
-                break;
-        }
+        CGPoint points[] = {};
         
     }
     
@@ -52,6 +41,21 @@ int main(int argc, const char * argv[]) {
 }
 
 // Test
+void test12() {
+    BWType type = BWType1;
+    switch (type) {
+        case BWType0: {
+            NSLog(@"BWType0");
+        }
+            break;
+        case BWType1:
+        case BWType2: {
+            NSLog(@"BWType2");
+        }
+            break;
+    }
+}
+
 void test11() {
     //        NSDictionary *dict = @{@(1): @"first",
     //                               @(2): @"second",

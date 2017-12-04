@@ -31,7 +31,7 @@
 		B44665EA1FB936A800E1A4B5 /* BWResearch15VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B44665E81FB936A800E1A4B5 /* BWResearch15VC.xib */; };
 		B44971071FD104C100455089 /* BMCustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B44971021FD104C100455089 /* BMCustomAnnotationView.m */; };
 		B44971081FD104C100455089 /* BMCustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = B44971041FD104C100455089 /* BMCustomCalloutView.m */; };
-		B44971091FD104C100455089 /* BMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = B44971061FD104C100455089 /* BMMapView.m */; };
+		B44971091FD104C100455089 /* BMAmapView.m in Sources */ = {isa = PBXBuildFile; fileRef = B44971061FD104C100455089 /* BMAmapView.m */; };
 		B461B6721DDD50FB00FB7BC1 /* BWResearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B461B6711DDD50FB00FB7BC1 /* BWResearchVC.m */; };
 		B46B25521DB5DCD800B9FF54 /* BWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B25511DB5DCD800B9FF54 /* BWBaseViewController.m */; };
 		B46B25551DB5ED6500B9FF54 /* BWBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B25541DB5ED6500B9FF54 /* BWBaseNavigationController.m */; };
@@ -130,6 +130,7 @@
 		B4DBC4A81FC6803A00E9EFC6 /* BWResearch16VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4DBC4A61FC6803A00E9EFC6 /* BWResearch16VC.xib */; };
 		B4DBC4AB1FC6804A00E9EFC6 /* BWResearch16View.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DBC4AA1FC6804A00E9EFC6 /* BWResearch16View.m */; };
 		B4F50FE11FD51B150099AE0F /* BMMapNavigationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F50FE01FD51B150099AE0F /* BMMapNavigationTool.m */; };
+		B4F50FE41FD537EB0099AE0F /* BMAmapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F50FE31FD537EB0099AE0F /* BMAmapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,8 +190,8 @@
 		B44971021FD104C100455089 /* BMCustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCustomAnnotationView.m; sourceTree = "<group>"; };
 		B44971031FD104C100455089 /* BMCustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCustomCalloutView.h; sourceTree = "<group>"; };
 		B44971041FD104C100455089 /* BMCustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCustomCalloutView.m; sourceTree = "<group>"; };
-		B44971051FD104C100455089 /* BMMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMapView.h; sourceTree = "<group>"; };
-		B44971061FD104C100455089 /* BMMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMapView.m; sourceTree = "<group>"; };
+		B44971051FD104C100455089 /* BMAmapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMAmapView.h; sourceTree = "<group>"; };
+		B44971061FD104C100455089 /* BMAmapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMAmapView.m; sourceTree = "<group>"; };
 		B461B6701DDD50FB00FB7BC1 /* BWResearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearchVC.h; sourceTree = "<group>"; };
 		B461B6711DDD50FB00FB7BC1 /* BWResearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearchVC.m; sourceTree = "<group>"; };
 		B46B25501DB5DCD800B9FF54 /* BWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWBaseViewController.h; sourceTree = "<group>"; };
@@ -353,6 +354,8 @@
 		B4DBC4AA1FC6804A00E9EFC6 /* BWResearch16View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWResearch16View.m; sourceTree = "<group>"; };
 		B4F50FDF1FD51B150099AE0F /* BMMapNavigationTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMMapNavigationTool.h; sourceTree = "<group>"; };
 		B4F50FE01FD51B150099AE0F /* BMMapNavigationTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMMapNavigationTool.m; sourceTree = "<group>"; };
+		B4F50FE21FD537EB0099AE0F /* BMAmapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMAmapViewController.h; sourceTree = "<group>"; };
+		B4F50FE31FD537EB0099AE0F /* BMAmapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMAmapViewController.m; sourceTree = "<group>"; };
 		C103FEAD4813AE671D13F2D2 /* Pods-BWObjective-CResearch-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		DAEA5361C98C05D3A8AC261A /* Pods-BWObjective-CResearch-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DD13E253539AA17662F57D49 /* Pods-BWObjective-CResearch-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOSUITests/Pods-BWObjective-CResearch-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -410,6 +413,8 @@
 				B42A470C1FCE66650013B5DD /* BWResearch17VC.h */,
 				B42A470D1FCE66650013B5DD /* BWResearch17VC.m */,
 				B42A470E1FCE66650013B5DD /* BWResearch17VC.xib */,
+				B4F50FE21FD537EB0099AE0F /* BMAmapViewController.h */,
+				B4F50FE31FD537EB0099AE0F /* BMAmapViewController.m */,
 				B44971001FD104C100455089 /* BMMapView */,
 				B42A47111FCFE62B0013B5DD /* View */,
 			);
@@ -509,8 +514,8 @@
 		B44971001FD104C100455089 /* BMMapView */ = {
 			isa = PBXGroup;
 			children = (
-				B44971051FD104C100455089 /* BMMapView.h */,
-				B44971061FD104C100455089 /* BMMapView.m */,
+				B44971051FD104C100455089 /* BMAmapView.h */,
+				B44971061FD104C100455089 /* BMAmapView.m */,
 				B44971011FD104C100455089 /* BMCustomAnnotationView.h */,
 				B44971021FD104C100455089 /* BMCustomAnnotationView.m */,
 				B44971031FD104C100455089 /* BMCustomCalloutView.h */,
@@ -1199,6 +1204,7 @@
 					B443A1D51D548382003D66C5 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = V3E8GUFW32;
+						ProvisioningStyle = Automatic;
 					};
 					B443A1EE1D548382003D66C5 = {
 						CreatedOnToolsVersion = 7.3;
@@ -1470,7 +1476,7 @@
 				B49E2F161F985A2F004F64E2 /* BMCardBannerIndicatorView.m in Sources */,
 				B46B25521DB5DCD800B9FF54 /* BWBaseViewController.m in Sources */,
 				B49D69841FB189CC00B22F5B /* BMCardCycleItemCell.m in Sources */,
-				B44971091FD104C100455089 /* BMMapView.m in Sources */,
+				B44971091FD104C100455089 /* BMAmapView.m in Sources */,
 				B4AC5FB81DB4CC5200D880FB /* NSNumber+JZExtension.m in Sources */,
 				B4AC5FB61DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m in Sources */,
 				B4B8BABA1F7CA5BD00F25065 /* BWResearch10VC.m in Sources */,
@@ -1509,6 +1515,7 @@
 				B461B6721DDD50FB00FB7BC1 /* BWResearchVC.m in Sources */,
 				B49FC69C1FA1944100DAC7D4 /* BMTest13View.m in Sources */,
 				B426B1261DFA943F00F438F3 /* BWResearchCell.m in Sources */,
+				B4F50FE41FD537EB0099AE0F /* BMAmapViewController.m in Sources */,
 				B4DBC4A71FC6803A00E9EFC6 /* BWResearch16VC.m in Sources */,
 				B4945B361F676D1F0084CC88 /* BMValidCodeTimeManager.m in Sources */,
 				B49D69741FB1693600B22F5B /* BWResearch14VC.m in Sources */,
@@ -1658,13 +1665,16 @@
 			baseConfigurationReference = DAEA5361C98C05D3A8AC261A /* Pods-BWObjective-CResearch-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V3E8GUFW32;
 				GCC_PREFIX_HEADER = "BWObjective-CResearch-iOS/BMResearch.pch";
 				INFOPLIST_FILE = "BWObjective-CResearch-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bws.research;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bws.research1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1673,13 +1683,16 @@
 			baseConfigurationReference = C103FEAD4813AE671D13F2D2 /* Pods-BWObjective-CResearch-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V3E8GUFW32;
 				GCC_PREFIX_HEADER = "BWObjective-CResearch-iOS/BMResearch.pch";
 				INFOPLIST_FILE = "BWObjective-CResearch-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bws.research;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bws.research1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

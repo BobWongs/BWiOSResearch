@@ -96,8 +96,21 @@
 }
 
 + (UIViewController *)currentViewController {
-#warning 待研究
-    return nil;
+    UIViewController *rootVC = UIApplication.sharedApplication.keyWindow.rootViewController;
+    if ([rootVC isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *navRootVC = (UINavigationController *)rootVC;
+        return navRootVC.viewControllers.lastObject;
+    }
+    if ([rootVC isKindOfClass:[UITabBarController class]]) {
+        UITabBarController *tabBarRootVC = (UITabBarController *)rootVC;
+        UIViewController *selectedVC = tabBarRootVC.selectedViewController;
+        if ([selectedVC isKindOfClass:[UINavigationController class]]) {
+            UINavigationController *navSelectedVC = (UINavigationController *)selectedVC;
+            return navSelectedVC.viewControllers.lastObject;
+        }
+        return selectedVC;
+    }
+    return rootVC;
 }
 
 @end

@@ -1,19 +1,19 @@
 //
-//  BMMapView.m
+//  BMAmapView.m
 //  BWObjective-CResearch-iOS
 //
 //  Created by BobWong on 2017/11/30.
 //  Copyright © 2017年 BobWong. All rights reserved.
 //
 
-#import "BMMapView.h"
+#import "BMAmapView.h"
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapLocationKit/AMapLocationKit.h>
 #import "BMCustomAnnotationView.h"
 #import "BMMapNavigationTool.h"
 
-@interface BMMapView () <AMapLocationManagerDelegate, MAMapViewDelegate>
+@interface BMAmapView () <AMapLocationManagerDelegate, MAMapViewDelegate>
 
 @property (nonatomic, strong) MAMapView *mapView;
 @property (nonatomic, strong) UIButton *locateButton;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation BMMapView
+@implementation BMAmapView
 
 #pragma mark - Life Cycle
 
@@ -148,6 +148,11 @@
         _locationManager.delegate = self;
     }
     return _locationManager;
+}
+
+- (void)setAnnotationArray:(NSArray<MAPointAnnotation *> *)annotationArray {
+    _annotationArray = annotationArray;
+    [self.mapView showAnnotations:annotationArray animated:YES];
 }
 
 @end

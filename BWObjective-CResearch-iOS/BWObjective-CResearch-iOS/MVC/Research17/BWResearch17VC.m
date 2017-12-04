@@ -39,7 +39,8 @@
     pointAnnotation.coordinate = CLLocationCoordinate2DMake(23.143315, 113.538691);
     pointAnnotation.title = @"体育生态公园";
     pointAnnotation.subtitle = @"公园Subtitle";
-    [self.mapView addAnnotation:pointAnnotation];
+//    [self.mapView addAnnotation:pointAnnotation];
+    [self.mapView showAnnotations:@[pointAnnotation] animated:YES];
 }
 
 - (void)amapLocatingDemo {
