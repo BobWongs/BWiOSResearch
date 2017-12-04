@@ -7,6 +7,7 @@
 //
 
 #import "BMMapNavigationTool.h"
+#import <MapKit/MapKit.h>
 
 @implementation BMMapNavigationTool
 
@@ -33,19 +34,17 @@
 
 /** 苹果自带地图导航 */
 + (void)appleNavigateWithCoordinate:(CLLocationCoordinate2D)coordinate {
-    //        MKMapItem *currentLocation =[MKMapItem mapItemForCurrentLocation];
-    //
-    //        MKMapItem *toLocation = [[MKMapItem alloc] initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate:self.coordinate addressDictionary:nil]];
-    //
-    //        [MKMapItem openMapsWithItems:@[currentLocation,toLocation] launchOptions:@{MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving,
-    //                                                                                   MKLaunchOptionsShowsTrafficKey:[NSNumber numberWithBool:YES]}];
+    MKMapItem *currentLocation =[MKMapItem mapItemForCurrentLocation];
+    MKMapItem *toLocation = [[MKMapItem alloc] initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate:coordinate addressDictionary:nil]];
+    [MKMapItem openMapsWithItems:@[currentLocation, toLocation] launchOptions:@{MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving,
+                                                                                MKLaunchOptionsShowsTrafficKey:[NSNumber numberWithBool:YES]}];
 }
 
 /** 高德地图导航 */
 + (void)amapNavigateWithCoordinate:(CLLocationCoordinate2D)coordinate {
     if (![self canOpenAmap]) return;
     
-    NSString *applicationName = [NSBundle mainBundle].infoDictionary[@"CFBundleDisplayName"];
+    NSString *applicationName = [self appName];
     NSString *schemeString = [NSString stringWithFormat:@"iosamap://navi?sourceApplication=%@&poiname=fangheng&poiid=BGVIS&lat=%.6f&lon=%.6f&dev=1&style=0", applicationName, coordinate.latitude, coordinate.longitude];
     [self openWithSchemeString:schemeString];
 }
@@ -62,7 +61,24 @@
 
 /** 百度地图导航 */
 + (void)baiduNavigateWithCoordinate:(CLLocationCoordinate2D)coordinate {
+    if (![self canOpenBaiduMap]) return;
     
+#warning 待填坑
+    CLLocationDegrees originLatitude = 0.0;
+    CLLocationDegrees originLongitude = 0.0;
+    NSString *applicationName = [self appName];
+    NSString *schemeString = [NSString stringWithFormat:@"baidumap://map/direction?origin=%.6f,%.6f&destination=%.6f,%.6f&mode=driving&src=Bluemoon|%@", originLatitude, originLongitude, coordinate.latitude, coordinate.longitude, applicationName];
+    [self openWithSchemeString:schemeString];
+}
+
++ (BOOL)canOpenBaiduMap {
+    NSURL *scheme = [NSURL URLWithString:@"baidumap://"];
+    BOOL canOpen = [[UIApplication sharedApplication] canOpenURL:scheme];
+    if (!canOpen) {
+        NSLog(@"未安装百度地图");
+        return NO;
+    }
+    return YES;
 }
 
 + (void)openWithSchemeString:(NSString *)schemeString {
@@ -73,6 +89,10 @@
     else {  // iOS10以前,使用旧API
         [[UIApplication sharedApplication] openURL:scheme];
     }
+}
+
++ (NSString *)appName {
+    return [NSBundle mainBundle].infoDictionary[@"CFBundleDisplayName"];
 }
 
 + (UIViewController *)currentViewController {
