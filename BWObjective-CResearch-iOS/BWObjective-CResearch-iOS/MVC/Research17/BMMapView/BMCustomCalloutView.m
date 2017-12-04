@@ -19,11 +19,13 @@
 
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *subtitleLabel;
-@property (nonatomic, strong) UIButton *rightButton;
+@property (nonatomic, strong, readwrite) UIButton *rightButton;
 
 @end
 
 @implementation BMCustomCalloutView
+
+#pragma mark - Life Cycle
 
 - (void)drawRect:(CGRect)rect
 {
@@ -75,6 +77,8 @@
     return self;
 }
 
+#pragma mark - Private Method
+
 - (void)initSubViews
 {
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(kPortraitMargin, kPortraitMargin, kTitleWidth, kTitleHeight)];
@@ -98,8 +102,12 @@
     [rightButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     rightButton.titleLabel.font = [UIFont systemFontOfSize:15.0];
     rightButton.backgroundColor = [UIColor blueColor];
-//    [<#button#> addTarget:<#target#> action:@selector(<#buttonAct#>) forControlEvents:<#UIControlEvent#>];
+    [rightButton addTarget:self action:@selector(navigationAction) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:rightButton];
+}
+
+- (void)navigationAction {
+    if (self.navigationBlock) self.navigationBlock();
 }
 
 #pragma mark - Setter and Getter

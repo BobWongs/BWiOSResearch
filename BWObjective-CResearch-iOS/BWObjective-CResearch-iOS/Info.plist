@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Research</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,6 +22,10 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>iosamap</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -29,6 +35,12 @@
 	</dict>
 	<key>NSContactsUsageDescription</key>
 	<string>是否允许此App访问你的通讯录？</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>App需要您的同意,才能始终访问位置</string>
+	<key>NSLocationUsageDescription</key>
+	<string>App需要您的同意,才能访问位置</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>App需要您的同意,才能在使用期间访问位置</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -45,11 +57,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>App需要您的同意,才能始终访问位置</string>
-	<key>NSLocationUsageDescription</key>
-	<string>App需要您的同意,才能访问位置</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>App需要您的同意,才能在使用期间访问位置</string>
 </dict>
 </plist>

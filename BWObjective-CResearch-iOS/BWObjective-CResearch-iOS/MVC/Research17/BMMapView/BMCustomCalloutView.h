@@ -12,5 +12,6 @@
 
 @property (copy, nonatomic) NSString *title;
 @property (copy, nonatomic) NSString *subtitle;
+@property (nonatomic, copy) dispatch_block_t navigationBlock;
 
 @end

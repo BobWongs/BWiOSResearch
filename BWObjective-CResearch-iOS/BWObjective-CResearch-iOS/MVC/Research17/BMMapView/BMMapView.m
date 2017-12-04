@@ -11,6 +11,7 @@
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapLocationKit/AMapLocationKit.h>
 #import "BMCustomAnnotationView.h"
+#import "BMMapNavigationTool.h"
 
 @interface BMMapView () <AMapLocationManagerDelegate, MAMapViewDelegate>
 
@@ -39,6 +40,9 @@
 - (void)locatingAction {
 #warning 待研究
     NSLog(@"locatingAction");
+    
+#warning 待验证
+    self.mapView.centerCoordinate = self.mapView.userLocation.coordinate;
 }
 
 - (void)zoomInAction {
@@ -64,7 +68,7 @@
     self.locateButton = locateButton;
     locateButton.frame = CGRectMake(10, CGRectGetMaxY(self.mapView.frame) - 10 - 30, 30, 30);
 #warning 坑位
-    [locateButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+    [locateButton setImage:[UIImage imageNamed:@"icon_discovery_selected"] forState:UIControlStateNormal];
     [locateButton addTarget:self action:@selector(locatingAction) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:locateButton];
     
@@ -72,8 +76,8 @@
     self.zoomOutButton = zoomOutButton;
     zoomOutButton.frame = CGRectMake(CGRectGetWidth(self.mapView.frame) - 10 - 30, CGRectGetHeight(self.mapView.frame) - 10 - 30, 30, 30);
 #warning 待填坑
-    [zoomOutButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-    [zoomOutButton setImage:[UIImage imageNamed:@""] forState:UIControlStateDisabled];
+    [zoomOutButton setImage:[UIImage imageNamed:@"icon_discovery_selected"] forState:UIControlStateNormal];
+    [zoomOutButton setImage:[UIImage imageNamed:@"icon_discovery_selected"] forState:UIControlStateDisabled];
     [zoomOutButton addTarget:self action:@selector(zoomOutAction) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:zoomOutButton];
     
@@ -81,8 +85,8 @@
     self.zoomInButton = zoomInButton;
     zoomInButton.frame = CGRectMake(CGRectGetWidth(self.mapView.frame) - 10 - 30, CGRectGetMinX(zoomOutButton.frame) - 30, 30, 30);
 #warning 待填坑
-    [zoomInButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-    [zoomInButton setImage:[UIImage imageNamed:@""] forState:UIControlStateDisabled];
+    [zoomInButton setImage:[UIImage imageNamed:@"icon_discovery_selected"] forState:UIControlStateNormal];
+    [zoomInButton setImage:[UIImage imageNamed:@"icon_discovery_selected"] forState:UIControlStateDisabled];
     [zoomInButton addTarget:self action:@selector(zoomInAction) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:zoomInButton];
 }
@@ -110,13 +114,15 @@
         {
             annotationView = [[BMCustomAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:reuseIndetifier];
         }
-        annotationView.image = [UIImage imageNamed:@"icon_discovery_selected"];
-        
         // 设置为NO，用以调用自定义的calloutView
         annotationView.canShowCallout = NO;
-        
         // 设置中心点偏移，使得标注底部中间点成为经纬度对应点
+        annotationView.image = [UIImage imageNamed:@"icon_discovery_selected"];
         annotationView.centerOffset = CGPointMake(0, -30);
+        annotationView.calloutView.navigationBlock = ^{
+            [BMMapNavigationTool navigateWithCoordinate:annotation.coordinate];
+        };
+        
         return annotationView;
     }
     return nil;

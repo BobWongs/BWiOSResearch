@@ -129,6 +129,7 @@
 		B4DBC4A71FC6803A00E9EFC6 /* BWResearch16VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DBC4A51FC6803A00E9EFC6 /* BWResearch16VC.m */; };
 		B4DBC4A81FC6803A00E9EFC6 /* BWResearch16VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4DBC4A61FC6803A00E9EFC6 /* BWResearch16VC.xib */; };
 		B4DBC4AB1FC6804A00E9EFC6 /* BWResearch16View.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DBC4AA1FC6804A00E9EFC6 /* BWResearch16View.m */; };
+		B4F50FE11FD51B150099AE0F /* BMMapNavigationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F50FE01FD51B150099AE0F /* BMMapNavigationTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -350,6 +351,8 @@
 		B4DBC4A61FC6803A00E9EFC6 /* BWResearch16VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWResearch16VC.xib; sourceTree = "<group>"; };
 		B4DBC4A91FC6804A00E9EFC6 /* BWResearch16View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWResearch16View.h; sourceTree = "<group>"; };
 		B4DBC4AA1FC6804A00E9EFC6 /* BWResearch16View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWResearch16View.m; sourceTree = "<group>"; };
+		B4F50FDF1FD51B150099AE0F /* BMMapNavigationTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMMapNavigationTool.h; sourceTree = "<group>"; };
+		B4F50FE01FD51B150099AE0F /* BMMapNavigationTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMMapNavigationTool.m; sourceTree = "<group>"; };
 		C103FEAD4813AE671D13F2D2 /* Pods-BWObjective-CResearch-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		DAEA5361C98C05D3A8AC261A /* Pods-BWObjective-CResearch-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DD13E253539AA17662F57D49 /* Pods-BWObjective-CResearch-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOSUITests/Pods-BWObjective-CResearch-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -512,6 +515,8 @@
 				B44971021FD104C100455089 /* BMCustomAnnotationView.m */,
 				B44971031FD104C100455089 /* BMCustomCalloutView.h */,
 				B44971041FD104C100455089 /* BMCustomCalloutView.m */,
+				B4F50FDF1FD51B150099AE0F /* BMMapNavigationTool.h */,
+				B4F50FE01FD51B150099AE0F /* BMMapNavigationTool.m */,
 			);
 			path = BMMapView;
 			sourceTree = "<group>";
@@ -1481,6 +1486,7 @@
 				B48CC7621EF12129008E3856 /* BWResearch6VC.m in Sources */,
 				B4945B2E1F676D1F0084CC88 /* BMNewAddressPicker.m in Sources */,
 				B46B25681DB5EE1C00B9FF54 /* BWMeController.m in Sources */,
+				B4F50FE11FD51B150099AE0F /* BMMapNavigationTool.m in Sources */,
 				B494DEB61F4AB87500A43EC5 /* UIButton+BMExtension.m in Sources */,
 				B491B0111E66BF2E005CAD43 /* BWResearch3VC.m in Sources */,
 				B4A583EF1F4C181800370A62 /* UIViewController+BMExtension.m in Sources */,
