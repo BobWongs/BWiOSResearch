@@ -11,6 +11,7 @@
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapLocationKit/AMapLocationKit.h>
 #import "BMCustomAnnotationView.h"
+#import "BMAmapViewController.h"
 
 @interface BWResearch17VC () <AMapLocationManagerDelegate, MAMapViewDelegate>
 
@@ -25,8 +26,16 @@
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    [self amapDemo];
-    [self amapLocatingDemo];
+//    [self amapDemo];
+//    [self amapLocatingDemo];
+}
+
+- (IBAction)toAmapAction:(id)sender {
+    MAPointAnnotation *pointAnnotation0 = [self testAnnotation0];
+    
+    BMAmapViewController *amapViewController = [BMAmapViewController new];
+    amapViewController.annotationArray = @[pointAnnotation0];
+    [self.navigationController pushViewController:amapViewController animated:YES];
 }
 
 - (void)amapDemo {
@@ -35,12 +44,17 @@
     ///把地图添加至view
     [self.view addSubview:self.mapView];
     
+    MAPointAnnotation *pointAnnotation = [self testAnnotation0];
+//    [self.mapView addAnnotation:pointAnnotation];
+    [self.mapView showAnnotations:@[pointAnnotation] animated:YES];
+}
+
+- (MAPointAnnotation *)testAnnotation0 {
     MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
     pointAnnotation.coordinate = CLLocationCoordinate2DMake(23.143315, 113.538691);
     pointAnnotation.title = @"体育生态公园";
-    pointAnnotation.subtitle = @"公园Subtitle";
-//    [self.mapView addAnnotation:pointAnnotation];
-    [self.mapView showAnnotations:@[pointAnnotation] animated:YES];
+    pointAnnotation.subtitle = @"Subtitle";
+    return pointAnnotation;
 }
 
 - (void)amapLocatingDemo {

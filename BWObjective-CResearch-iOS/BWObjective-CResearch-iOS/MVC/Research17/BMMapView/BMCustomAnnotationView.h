@@ -7,10 +7,18 @@
 //
 
 #import <MAMapKit/MAMapKit.h>
-#import "BMCustomCalloutView.h"
 
-@interface BMCustomAnnotationView : MAAnnotationView
+@interface BMNaviButton : UIButton
 
-@property (nonatomic, readonly) BMCustomCalloutView *calloutView;
+@property (nonatomic, strong) UIImageView *carImageView;
+@property (nonatomic, strong) UILabel *naviLabel;
+
+@end
+
+@interface BMCustomAnnotationView : MAPinAnnotationView
+
+@property (nonatomic, copy) dispatch_block_t navigationBlock;
+
+- (id)initWithAnnotation:(id <MAAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier;
 
 @end

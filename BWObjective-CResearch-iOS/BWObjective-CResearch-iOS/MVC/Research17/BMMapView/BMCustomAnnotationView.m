@@ -8,44 +8,65 @@
 
 #import "BMCustomAnnotationView.h"
 
-@interface BMCustomAnnotationView ()
+#define naviButtonWidth 44
+#define naviButtonHeight 74
 
-@property (nonatomic, strong, readwrite) BMCustomCalloutView *calloutView;
+@implementation BMNaviButton
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    
+    if (self)
+    {
+        [self setBackgroundImage:[UIImage imageNamed:@"naviBackgroundNormal"] forState:UIControlStateNormal];
+        [self setBackgroundImage:[UIImage imageNamed:@"naviBackgroundHighlighted"] forState:UIControlStateSelected];
+        
+        //imageView
+        _carImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navi"]];
+        [self addSubview:_carImageView];
+        
+        //label
+        _naviLabel = [[UILabel alloc] init];
+        _naviLabel.text = @"导航";
+        _naviLabel.font = [_naviLabel.font fontWithSize:9];
+        _naviLabel.textColor = [UIColor whiteColor];
+        [_naviLabel sizeToFit];
+        
+        [self addSubview:_naviLabel];
+    }
+    
+    return self;
+}
+
+#define kMarginRatio 0.1
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    _carImageView.center = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.superview.frame) - CGRectGetHeight(_carImageView.frame) * (0.5 + kMarginRatio));
+    
+    _naviLabel.center = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.superview.frame) + CGRectGetHeight(_naviLabel.frame) * (0.5 + kMarginRatio));
+}
 
 @end
 
 @implementation BMCustomAnnotationView
 
-#define kCalloutWidth       200.0
-#define kCalloutHeight      70.0
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+- (id)initWithAnnotation:(id <MAAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier
 {
-    if (self.selected == selected)
+    self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
+    if (self)
     {
-        return;
+        BMNaviButton *naviButton = [[BMNaviButton alloc] initWithFrame:(CGRectMake(0, 0, naviButtonWidth, naviButtonHeight))];
+        [naviButton addTarget:self action:@selector(navigationAction) forControlEvents:UIControlEventTouchUpInside];
+        self.leftCalloutAccessoryView = naviButton;
     }
-    
-    if (selected)
-    {
-        if (self.calloutView == nil)
-        {
-            self.calloutView = [[BMCustomCalloutView alloc] initWithFrame:CGRectMake(0, 0, kCalloutWidth, kCalloutHeight)];
-            self.calloutView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2.f + self.calloutOffset.x,
-                                                  -CGRectGetHeight(self.calloutView.bounds) / 2.f + self.calloutOffset.y);
-        }
-        
-        self.calloutView.title = self.annotation.title;
-        self.calloutView.subtitle = self.annotation.subtitle;
-        
-        [self addSubview:self.calloutView];
-    }
-    else
-    {
-        [self.calloutView removeFromSuperview];
-    }
-    
-    [super setSelected:selected animated:animated];
+    return self;
+}
+
+- (void)navigationAction {
+    if (self.navigationBlock) self.navigationBlock();
 }
 
 @end

@@ -13,14 +13,14 @@
 #import "BMCustomAnnotationView.h"
 #import "BMMapNavigationTool.h"
 
-@interface BMAmapView () <AMapLocationManagerDelegate, MAMapViewDelegate>
+@interface BMAmapView () <MAMapViewDelegate>
 
 @property (nonatomic, strong) MAMapView *mapView;
 @property (nonatomic, strong) UIButton *locateButton;
-@property (nonatomic, strong) UIButton *zoomInButton;  ///< 放大
-@property (strong, nonatomic) UIButton *zoomOutButton;  ///< 缩小
+//@property (nonatomic, strong) UIButton *zoomInButton;  ///< 放大
+//@property (strong, nonatomic) UIButton *zoomOutButton;  ///< 缩小
 
-@property (strong, nonatomic) AMapLocationManager *locationManager;
+@property (nonatomic, strong) CLLocation *currentLocation;
 
 @end
 
@@ -38,26 +38,22 @@
 #pragma mark - Action
 
 - (void)locatingAction {
-#warning 待研究
-    NSLog(@"locatingAction");
-    
-#warning 待验证
     self.mapView.centerCoordinate = self.mapView.userLocation.coordinate;
 }
 
-- (void)zoomInAction {
-    double zoomLevel = self.mapView.zoomLevel;
-    zoomLevel += 1;
-    [self.mapView setZoomLevel:zoomLevel animated:YES];
-    [self refreshScalingButtons];
-}
-
-- (void)zoomOutAction {
-    double zoomLevel = self.mapView.zoomLevel;
-    zoomLevel -= 1;
-    [self.mapView setZoomLevel:zoomLevel animated:YES];
-    [self refreshScalingButtons];
-}
+//- (void)zoomInAction {
+//    double zoomLevel = self.mapView.zoomLevel;
+//    zoomLevel += 1;
+//    [self.mapView setZoomLevel:zoomLevel animated:YES];
+//    [self refreshScalingButtons];
+//}
+//
+//- (void)zoomOutAction {
+//    double zoomLevel = self.mapView.zoomLevel;
+//    zoomLevel -= 1;
+//    [self.mapView setZoomLevel:zoomLevel animated:YES];
+//    [self refreshScalingButtons];
+//}
 
 #pragma mark - Private Method
 
@@ -72,36 +68,30 @@
     [locateButton addTarget:self action:@selector(locatingAction) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:locateButton];
     
-    UIButton *zoomOutButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.zoomOutButton = zoomOutButton;
-    zoomOutButton.frame = CGRectMake(CGRectGetWidth(self.mapView.frame) - 10 - 30, CGRectGetHeight(self.mapView.frame) - 10 - 30, 30, 30);
-#warning 待填坑
-    [zoomOutButton setImage:[UIImage imageNamed:@"icon_discovery_selected"] forState:UIControlStateNormal];
-    [zoomOutButton setImage:[UIImage imageNamed:@"icon_discovery_selected"] forState:UIControlStateDisabled];
-    [zoomOutButton addTarget:self action:@selector(zoomOutAction) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:zoomOutButton];
-    
-    UIButton *zoomInButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.zoomInButton = zoomInButton;
-    zoomInButton.frame = CGRectMake(CGRectGetWidth(self.mapView.frame) - 10 - 30, CGRectGetMinX(zoomOutButton.frame) - 30, 30, 30);
-#warning 待填坑
-    [zoomInButton setImage:[UIImage imageNamed:@"icon_discovery_selected"] forState:UIControlStateNormal];
-    [zoomInButton setImage:[UIImage imageNamed:@"icon_discovery_selected"] forState:UIControlStateDisabled];
-    [zoomInButton addTarget:self action:@selector(zoomInAction) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:zoomInButton];
+//    UIButton *zoomOutButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    self.zoomOutButton = zoomOutButton;
+//    zoomOutButton.frame = CGRectMake(CGRectGetWidth(self.mapView.frame) - 10 - 30, CGRectGetHeight(self.mapView.frame) - 10 - 30, 30, 30);
+//#warning 待填坑
+//    [zoomOutButton setImage:[UIImage imageNamed:@"icon_discovery_selected"] forState:UIControlStateNormal];
+//    [zoomOutButton setImage:[UIImage imageNamed:@"icon_discovery_selected"] forState:UIControlStateDisabled];
+//    [zoomOutButton addTarget:self action:@selector(zoomOutAction) forControlEvents:UIControlEventTouchUpInside];
+//    [self addSubview:zoomOutButton];
+//
+//    UIButton *zoomInButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    self.zoomInButton = zoomInButton;
+//    zoomInButton.frame = CGRectMake(CGRectGetWidth(self.mapView.frame) - 10 - 30, CGRectGetMinX(zoomOutButton.frame) - 30, 30, 30);
+//#warning 待填坑
+//    [zoomInButton setImage:[UIImage imageNamed:@"icon_discovery_selected"] forState:UIControlStateNormal];
+//    [zoomInButton setImage:[UIImage imageNamed:@"icon_discovery_selected"] forState:UIControlStateDisabled];
+//    [zoomInButton addTarget:self action:@selector(zoomInAction) forControlEvents:UIControlEventTouchUpInside];
+//    [self addSubview:zoomInButton];
 }
 
-- (void)refreshScalingButtons {
-    double zoomLevel = self.mapView.zoomLevel;
-    self.zoomInButton.enabled = zoomLevel < 20;
-    self.zoomOutButton.enabled = zoomLevel > 3;
-}
-
-#pragma mark - AMapLocationManagerDelegate
-
-- (void)amapLocationManager:(AMapLocationManager *)manager didUpdateLocation:(CLLocation *)location {
-    NSLog(@"location:{lat:%f; lon:%f; accuracy:%f}", location.coordinate.latitude, location.coordinate.longitude, location.horizontalAccuracy);
-}
+//- (void)refreshScalingButtons {
+//    double zoomLevel = self.mapView.zoomLevel;
+//    self.zoomInButton.enabled = zoomLevel < 20;
+//    self.zoomOutButton.enabled = zoomLevel > 3;
+//}
 
 #pragma mark - MAMapViewDelegate
 
@@ -114,13 +104,10 @@
         {
             annotationView = [[BMCustomAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:reuseIndetifier];
         }
-        // 设置为NO，用以调用自定义的calloutView
-        annotationView.canShowCallout = NO;
-        // 设置中心点偏移，使得标注底部中间点成为经纬度对应点
-        annotationView.image = [UIImage imageNamed:@"icon_discovery_selected"];
-        annotationView.centerOffset = CGPointMake(0, -30);
-        annotationView.calloutView.navigationBlock = ^{
-            [BMMapNavigationTool navigateWithCoordinate:annotation.coordinate];
+        annotationView.canShowCallout = YES;
+        annotationView.draggable = NO;
+        annotationView.navigationBlock = ^{
+            [BMMapNavigationTool navigateFrom:mapView.userLocation to:annotation];
         };
         
         return annotationView;
@@ -135,24 +122,20 @@
         ///初始化地图
         _mapView = [[MAMapView alloc] initWithFrame:self.bounds];
         _mapView.delegate = self;
+        _mapView.zoomLevel = 16;  // 初始缩放级别，参考微信
         ///如果您需要进入地图就显示定位小蓝点，则需要下面两行代码
         _mapView.showsUserLocation = YES;
         _mapView.userTrackingMode = MAUserTrackingModeFollow;
+//        _mapView.showsCompass = NO;
     }
     return _mapView;
 }
 
-- (AMapLocationManager *)locationManager {
-    if (!_locationManager) {
-        _locationManager = [[AMapLocationManager alloc] init];
-        _locationManager.delegate = self;
-    }
-    return _locationManager;
-}
-
 - (void)setAnnotationArray:(NSArray<MAPointAnnotation *> *)annotationArray {
     _annotationArray = annotationArray;
+    [self.mapView addAnnotations:annotationArray];
     [self.mapView showAnnotations:annotationArray animated:YES];
+    [self.mapView selectAnnotation:annotationArray.firstObject animated:YES];
 }
 
 @end

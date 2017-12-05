@@ -30,7 +30,6 @@
 		B44665E91FB936A800E1A4B5 /* BWResearch15VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B44665E71FB936A800E1A4B5 /* BWResearch15VC.m */; };
 		B44665EA1FB936A800E1A4B5 /* BWResearch15VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B44665E81FB936A800E1A4B5 /* BWResearch15VC.xib */; };
 		B44971071FD104C100455089 /* BMCustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B44971021FD104C100455089 /* BMCustomAnnotationView.m */; };
-		B44971081FD104C100455089 /* BMCustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = B44971041FD104C100455089 /* BMCustomCalloutView.m */; };
 		B44971091FD104C100455089 /* BMAmapView.m in Sources */ = {isa = PBXBuildFile; fileRef = B44971061FD104C100455089 /* BMAmapView.m */; };
 		B461B6721DDD50FB00FB7BC1 /* BWResearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B461B6711DDD50FB00FB7BC1 /* BWResearchVC.m */; };
 		B46B25521DB5DCD800B9FF54 /* BWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B25511DB5DCD800B9FF54 /* BWBaseViewController.m */; };
@@ -131,6 +130,9 @@
 		B4DBC4AB1FC6804A00E9EFC6 /* BWResearch16View.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DBC4AA1FC6804A00E9EFC6 /* BWResearch16View.m */; };
 		B4F50FE11FD51B150099AE0F /* BMMapNavigationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F50FE01FD51B150099AE0F /* BMMapNavigationTool.m */; };
 		B4F50FE41FD537EB0099AE0F /* BMAmapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F50FE31FD537EB0099AE0F /* BMAmapViewController.m */; };
+		B4F50FE91FD648DD0099AE0F /* navi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F50FE61FD648DD0099AE0F /* navi@2x.png */; };
+		B4F50FEA1FD648DD0099AE0F /* naviBackgroundHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F50FE71FD648DD0099AE0F /* naviBackgroundHighlighted.png */; };
+		B4F50FEB1FD648DD0099AE0F /* naviBackgroundNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F50FE81FD648DD0099AE0F /* naviBackgroundNormal.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,8 +190,6 @@
 		B44665E81FB936A800E1A4B5 /* BWResearch15VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWResearch15VC.xib; sourceTree = "<group>"; };
 		B44971011FD104C100455089 /* BMCustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCustomAnnotationView.h; sourceTree = "<group>"; };
 		B44971021FD104C100455089 /* BMCustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCustomAnnotationView.m; sourceTree = "<group>"; };
-		B44971031FD104C100455089 /* BMCustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCustomCalloutView.h; sourceTree = "<group>"; };
-		B44971041FD104C100455089 /* BMCustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCustomCalloutView.m; sourceTree = "<group>"; };
 		B44971051FD104C100455089 /* BMAmapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMAmapView.h; sourceTree = "<group>"; };
 		B44971061FD104C100455089 /* BMAmapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMAmapView.m; sourceTree = "<group>"; };
 		B461B6701DDD50FB00FB7BC1 /* BWResearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearchVC.h; sourceTree = "<group>"; };
@@ -356,6 +356,9 @@
 		B4F50FE01FD51B150099AE0F /* BMMapNavigationTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMMapNavigationTool.m; sourceTree = "<group>"; };
 		B4F50FE21FD537EB0099AE0F /* BMAmapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMAmapViewController.h; sourceTree = "<group>"; };
 		B4F50FE31FD537EB0099AE0F /* BMAmapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMAmapViewController.m; sourceTree = "<group>"; };
+		B4F50FE61FD648DD0099AE0F /* navi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navi@2x.png"; sourceTree = "<group>"; };
+		B4F50FE71FD648DD0099AE0F /* naviBackgroundHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = naviBackgroundHighlighted.png; sourceTree = "<group>"; };
+		B4F50FE81FD648DD0099AE0F /* naviBackgroundNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = naviBackgroundNormal.png; sourceTree = "<group>"; };
 		C103FEAD4813AE671D13F2D2 /* Pods-BWObjective-CResearch-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		DAEA5361C98C05D3A8AC261A /* Pods-BWObjective-CResearch-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DD13E253539AA17662F57D49 /* Pods-BWObjective-CResearch-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOSUITests/Pods-BWObjective-CResearch-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -518,10 +521,9 @@
 				B44971061FD104C100455089 /* BMAmapView.m */,
 				B44971011FD104C100455089 /* BMCustomAnnotationView.h */,
 				B44971021FD104C100455089 /* BMCustomAnnotationView.m */,
-				B44971031FD104C100455089 /* BMCustomCalloutView.h */,
-				B44971041FD104C100455089 /* BMCustomCalloutView.m */,
 				B4F50FDF1FD51B150099AE0F /* BMMapNavigationTool.h */,
 				B4F50FE01FD51B150099AE0F /* BMMapNavigationTool.m */,
+				B4F50FE51FD648DD0099AE0F /* Resource */,
 			);
 			path = BMMapView;
 			sourceTree = "<group>";
@@ -1105,6 +1107,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B4F50FE51FD648DD0099AE0F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B4F50FE61FD648DD0099AE0F /* navi@2x.png */,
+				B4F50FE71FD648DD0099AE0F /* naviBackgroundHighlighted.png */,
+				B4F50FE81FD648DD0099AE0F /* naviBackgroundNormal.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		B4FF7E891DACDD220015089F /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -1276,11 +1288,14 @@
 				B4945B321F676D1F0084CC88 /* icon_new_address_picker_checkbox_blue@3x.png in Resources */,
 				B48F5DCA1F553660000CFA4D /* search@2x.png in Resources */,
 				B4945B341F676D1F0084CC88 /* BMNewAddressPickerCell.xib in Resources */,
+				B4F50FEB1FD648DD0099AE0F /* naviBackgroundNormal.png in Resources */,
 				B43EE5FB1F78CF2000AAAE80 /* voucher_empty@3x.png in Resources */,
 				B48F5ED11F555A6E000CFA4D /* loading.gif in Resources */,
 				B494E6641F304CFD008284C0 /* BWResearch7VC.xib in Resources */,
 				B494E6761F3057AA008284C0 /* temp0.txt in Resources */,
 				B49FC69E1FA1944800DAC7D4 /* BMTest13View.xib in Resources */,
+				B4F50FE91FD648DD0099AE0F /* navi@2x.png in Resources */,
+				B4F50FEA1FD648DD0099AE0F /* naviBackgroundHighlighted.png in Resources */,
 				B48354361F8CC710003D722B /* BWResearch12VC.xib in Resources */,
 				B4B8BABB1F7CA5BD00F25065 /* BWResearch10VC.xib in Resources */,
 				B4B6FA9F1F8C694200506412 /* BWResearch11VC.xib in Resources */,
@@ -1529,7 +1544,6 @@
 				B4B6FA9E1F8C694200506412 /* BWResearch11VC.m in Sources */,
 				B4A8610C1EEE45F5006C07FC /* BWResearch5VC.m in Sources */,
 				B4B631311DAE384F00DF0907 /* UITableViewCell+JZExtension.m in Sources */,
-				B44971081FD104C100455089 /* BMCustomCalloutView.m in Sources */,
 				B4B8BABF1F7CA60300F25065 /* BWTest10View.m in Sources */,
 				B4AC5FB71DB4CC5200D880FB /* _JZValue.m in Sources */,
 			);

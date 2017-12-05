@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+@protocol MAAnnotation;
 
 @interface BMMapNavigationTool : NSObject
 
-+ (void)navigateWithCoordinate:(CLLocationCoordinate2D)coordinate;
++ (void)navigateFrom:(id<MAAnnotation>)fromAnnotation to:(id<MAAnnotation>)toAnnotation;
 
 @end

@@ -40,13 +40,19 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tja-cQ-Y4b">
-                    <rect key="frame" x="144" y="222" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tja-cQ-Y4b">
+                    <rect key="frame" x="157" y="318" width="61" height="30"/>
+                    <state key="normal" title="To Amap"/>
+                    <connections>
+                        <action selector="toAmapAction:" destination="-1" eventType="touchUpInside" id="TxI-wP-Ig5"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Tja-cQ-Y4b" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Yb7-17-nyq"/>
+                <constraint firstItem="Tja-cQ-Y4b" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="kDe-iR-eYc"/>
+            </constraints>
             <point key="canvasLocation" x="-40" y="40"/>
         </view>
     </objects>
