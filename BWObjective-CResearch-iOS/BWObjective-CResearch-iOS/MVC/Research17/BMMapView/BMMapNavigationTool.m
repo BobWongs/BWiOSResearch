@@ -18,7 +18,7 @@
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     if ([self canOpenAmap]) {
         [alertController addAction:[UIAlertAction actionWithTitle:@"高德地图" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            [self appleNavigateFrom:fromAnnotation to:toAnnotation];
+            [self amapNavigateFrom:fromAnnotation to:toAnnotation];
         }]];
     }
     if ([self canOpenBaiduMap]) {
@@ -32,7 +32,7 @@
         }]];
     }
     [alertController addAction:[UIAlertAction actionWithTitle:@"Apple 地图" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self amapNavigateFrom:fromAnnotation to:toAnnotation];
+        [self appleNavigateFrom:fromAnnotation to:toAnnotation];
     }]];
     [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
     [[[self class] currentViewController] presentViewController:alertController animated:YES completion:nil];
@@ -44,6 +44,8 @@
 + (void)appleNavigateFrom:(id<MAAnnotation>)fromAnnotation to:(id<MAAnnotation>)toAnnotation {
     MKMapItem *currentLocation =[MKMapItem mapItemForCurrentLocation];
     MKMapItem *toLocation = [[MKMapItem alloc] initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate:toAnnotation.coordinate addressDictionary:nil]];
+    toLocation.name = toAnnotation.title;
+    
     [MKMapItem openMapsWithItems:@[currentLocation, toLocation] launchOptions:@{MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving,
                                                                                 MKLaunchOptionsShowsTrafficKey:[NSNumber numberWithBool:YES]}];
 }
@@ -52,9 +54,11 @@
 + (void)amapNavigateFrom:(id<MAAnnotation>)fromAnnotation to:(id<MAAnnotation>)toAnnotation {
     if (![self canOpenAmap]) return;
     
+    CLLocationCoordinate2D fromCoordinate = fromAnnotation.coordinate;
     CLLocationCoordinate2D toCoordinate = toAnnotation.coordinate;
     NSString *applicationName = [self appName];
-    NSString *schemeString = [NSString stringWithFormat:@"iosamap://navi?sourceApplication=%@&poiname=fangheng&poiid=BGVIS&lat=%.6f&lon=%.6f&dev=1", applicationName, toCoordinate.latitude, toCoordinate.longitude];
+    NSString *schemeString = [NSString stringWithFormat:@"iosamap://path?sourceApplication=%@&sid=BGVIS1&slat=%f&slon=%f&sname=%@&did=BGVIS2&dlat=%f&dlon=%f&dname=%@&dev=0&t=0", applicationName, fromCoordinate.latitude, fromCoordinate.longitude, fromAnnotation.title, toCoordinate.latitude, toCoordinate.longitude, toAnnotation.title];
+    schemeString = [schemeString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [self openWithSchemeString:schemeString];
 }
 
@@ -74,7 +78,8 @@
     
     CLLocationCoordinate2D toCoordinate = toAnnotation.coordinate;
     NSString *applicationName = [self appName];
-    NSString *schemeString = [NSString stringWithFormat:@"baidumap://map/direction?destination=%f,%f&mode=driving&=gcj02coord_type&src=%@", toCoordinate.latitude, toCoordinate.longitude, applicationName];
+    NSString *schemeString = [NSString stringWithFormat:@"baidumap://map/direction?destination=latlng:%f,%f|name:%@&mode=driving&coord_type=gcj02&src=%@", toCoordinate.latitude, toCoordinate.longitude, toAnnotation.title, applicationName];
+    schemeString = [schemeString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [self openWithSchemeString:schemeString];
 }
 
@@ -88,13 +93,15 @@
     return YES;
 }
 
+/** 腾讯地图导航 */
 + (void)qqMapNavigateFrom:(id<MAAnnotation>)fromAnnotation to:(id<MAAnnotation>)toAnnotation {
     if (![self canOpenQQMap]) return;
     
     CLLocationCoordinate2D fromCoordinate = fromAnnotation.coordinate;
     CLLocationCoordinate2D toCoordinate = toAnnotation.coordinate;
     NSString *applicationName = [self appName];
-    NSString *schemeString = [NSString stringWithFormat:@"qqmap://map/routeplan?type=drive&fromcoor=%f,%f&tocoord=%f,%f&coord_type=2&policy=0&referer=%@", fromCoordinate.latitude, fromCoordinate.latitude, toCoordinate.latitude, toCoordinate.longitude, applicationName];
+    NSString *schemeString = [NSString stringWithFormat:@"qqmap://map/routeplan?type=drive&fromcoor=%f,%f&from=%@&tocoord=%f,%f&to=%@&coord_type=2&policy=0&referer=%@", fromCoordinate.latitude, fromCoordinate.longitude, fromAnnotation.title, toCoordinate.latitude, toCoordinate.longitude, toAnnotation.title, applicationName];
+    schemeString = [schemeString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [self openWithSchemeString:schemeString];
 }
 
