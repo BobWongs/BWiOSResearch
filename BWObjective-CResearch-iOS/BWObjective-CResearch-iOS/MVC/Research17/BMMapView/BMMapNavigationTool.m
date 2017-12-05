@@ -100,7 +100,7 @@
     CLLocationCoordinate2D fromCoordinate = fromAnnotation.coordinate;
     CLLocationCoordinate2D toCoordinate = toAnnotation.coordinate;
     NSString *applicationName = [self appName];
-    NSString *schemeString = [NSString stringWithFormat:@"qqmap://map/routeplan?type=drive&fromcoor=%f,%f&from=%@&tocoord=%f,%f&to=%@&coord_type=2&policy=0&referer=%@", fromCoordinate.latitude, fromCoordinate.longitude, fromAnnotation.title, toCoordinate.latitude, toCoordinate.longitude, toAnnotation.title, applicationName];
+    NSString *schemeString = [NSString stringWithFormat:@"qqmap://map/routeplan?type=drive&fromcoord=%f,%f&from=%@&tocoord=%f,%f&to=%@&coord_type=2&policy=0&referer=%@", fromCoordinate.latitude, fromCoordinate.longitude, fromAnnotation.title, toCoordinate.latitude, toCoordinate.longitude, toAnnotation.title, applicationName];
     schemeString = [schemeString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [self openWithSchemeString:schemeString];
 }
