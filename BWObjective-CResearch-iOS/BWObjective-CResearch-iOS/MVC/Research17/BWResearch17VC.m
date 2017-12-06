@@ -9,14 +9,14 @@
 #import "BWResearch17VC.h"
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
-#import <AMapLocationKit/AMapLocationKit.h>
+//#import <AMapLocationKit/AMapLocationKit.h>
 #import "BMCustomAnnotationView.h"
 #import "BMAmapViewController.h"
 
-@interface BWResearch17VC () <AMapLocationManagerDelegate, MAMapViewDelegate>
+@interface BWResearch17VC () </*AMapLocationManagerDelegate, */MAMapViewDelegate>
 
 @property (strong, nonatomic) MAMapView *mapView;
-@property (strong, nonatomic) AMapLocationManager *locationManager;
+//@property (strong, nonatomic) AMapLocationManager *locationManager;
 
 @end
 
@@ -58,18 +58,18 @@
 }
 
 - (void)amapLocatingDemo {
-    [self.locationManager startUpdatingLocation];
+//    [self.locationManager startUpdatingLocation];
 }
 
 - (void)stopAmapLocating {
-    [self.locationManager stopUpdatingLocation];
+//    [self.locationManager stopUpdatingLocation];
 }
 
 #pragma mark - AMapLocationManagerDelegate
 
-- (void)amapLocationManager:(AMapLocationManager *)manager didUpdateLocation:(CLLocation *)location {
-    NSLog(@"location:{lat:%f; lon:%f; accuracy:%f}", location.coordinate.latitude, location.coordinate.longitude, location.horizontalAccuracy);
-}
+//- (void)amapLocationManager:(AMapLocationManager *)manager didUpdateLocation:(CLLocation *)location {
+//    NSLog(@"location:{lat:%f; lon:%f; accuracy:%f}", location.coordinate.latitude, location.coordinate.longitude, location.horizontalAccuracy);
+//}
 
 #pragma mark - MAMapViewDelegate
 
@@ -108,12 +108,12 @@
     return _mapView;
 }
 
-- (AMapLocationManager *)locationManager {
-    if (!_locationManager) {
-        _locationManager = [[AMapLocationManager alloc] init];
-        _locationManager.delegate = self;
-    }
-    return _locationManager;
-}
+//- (AMapLocationManager *)locationManager {
+//    if (!_locationManager) {
+//        _locationManager = [[AMapLocationManager alloc] init];
+//        _locationManager.delegate = self;
+//    }
+//    return _locationManager;
+//}
 
 @end

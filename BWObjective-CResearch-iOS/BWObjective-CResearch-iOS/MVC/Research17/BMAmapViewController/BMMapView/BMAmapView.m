@@ -9,7 +9,6 @@
 #import "BMAmapView.h"
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
-#import <AMapLocationKit/AMapLocationKit.h>
 #import "BMCustomAnnotationView.h"
 #import "BMMapNavigationTool.h"
 
@@ -19,8 +18,6 @@
 @property (nonatomic, strong) UIButton *locateButton;
 //@property (nonatomic, strong) UIButton *zoomInButton;  ///< 放大
 //@property (strong, nonatomic) UIButton *zoomOutButton;  ///< 缩小
-
-@property (nonatomic, strong) CLLocation *currentLocation;
 
 @end
 

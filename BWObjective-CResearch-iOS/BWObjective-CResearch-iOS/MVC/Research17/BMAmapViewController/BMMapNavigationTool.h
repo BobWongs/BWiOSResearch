@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreLocation/CoreLocation.h>
 @protocol MAAnnotation;
 
 @interface BMMapNavigationTool : NSObject
