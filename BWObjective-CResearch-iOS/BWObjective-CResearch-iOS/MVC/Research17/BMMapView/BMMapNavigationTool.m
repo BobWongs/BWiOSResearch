@@ -47,7 +47,7 @@
     toLocation.name = toAnnotation.title;
     
     [MKMapItem openMapsWithItems:@[currentLocation, toLocation] launchOptions:@{MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving,
-                                                                                MKLaunchOptionsShowsTrafficKey:[NSNumber numberWithBool:YES]}];
+                                                                                MKLaunchOptionsShowsTrafficKey:@(YES)}];
 }
 
 /** 高德地图导航 */

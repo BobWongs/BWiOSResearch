@@ -60,11 +60,11 @@
 - (void)setUI {
     [self addSubview:self.mapView];
     
+    CGFloat locBtnWidth = 40.0;
     UIButton *locateButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.locateButton = locateButton;
-    locateButton.frame = CGRectMake(10, CGRectGetMaxY(self.mapView.frame) - 10 - 30, 30, 30);
-#warning 坑位
-    [locateButton setImage:[UIImage imageNamed:@"icon_discovery_selected"] forState:UIControlStateNormal];
+    locateButton.frame = CGRectMake(10, CGRectGetMaxY(self.mapView.frame) - 30 - locBtnWidth, locBtnWidth, locBtnWidth);
+    [locateButton setImage:[UIImage imageNamed:@"icon_amap_location"] forState:UIControlStateNormal];
     [locateButton addTarget:self action:@selector(locatingAction) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:locateButton];
     

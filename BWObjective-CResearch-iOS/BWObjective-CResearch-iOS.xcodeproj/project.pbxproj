@@ -133,6 +133,8 @@
 		B4F50FE91FD648DD0099AE0F /* navi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F50FE61FD648DD0099AE0F /* navi@2x.png */; };
 		B4F50FEA1FD648DD0099AE0F /* naviBackgroundHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F50FE71FD648DD0099AE0F /* naviBackgroundHighlighted.png */; };
 		B4F50FEB1FD648DD0099AE0F /* naviBackgroundNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F50FE81FD648DD0099AE0F /* naviBackgroundNormal.png */; };
+		B4F510001FD77BD50099AE0F /* icon_amap_location@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F50FFE1FD77BD40099AE0F /* icon_amap_location@3x.png */; };
+		B4F510011FD77BD50099AE0F /* icon_amap_location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F50FFF1FD77BD50099AE0F /* icon_amap_location@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -359,6 +361,8 @@
 		B4F50FE61FD648DD0099AE0F /* navi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navi@2x.png"; sourceTree = "<group>"; };
 		B4F50FE71FD648DD0099AE0F /* naviBackgroundHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = naviBackgroundHighlighted.png; sourceTree = "<group>"; };
 		B4F50FE81FD648DD0099AE0F /* naviBackgroundNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = naviBackgroundNormal.png; sourceTree = "<group>"; };
+		B4F50FFE1FD77BD40099AE0F /* icon_amap_location@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_amap_location@3x.png"; sourceTree = "<group>"; };
+		B4F50FFF1FD77BD50099AE0F /* icon_amap_location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_amap_location@2x.png"; sourceTree = "<group>"; };
 		C103FEAD4813AE671D13F2D2 /* Pods-BWObjective-CResearch-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		DAEA5361C98C05D3A8AC261A /* Pods-BWObjective-CResearch-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DD13E253539AA17662F57D49 /* Pods-BWObjective-CResearch-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOSUITests/Pods-BWObjective-CResearch-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1113,6 +1117,8 @@
 				B4F50FE61FD648DD0099AE0F /* navi@2x.png */,
 				B4F50FE71FD648DD0099AE0F /* naviBackgroundHighlighted.png */,
 				B4F50FE81FD648DD0099AE0F /* naviBackgroundNormal.png */,
+				B4F50FFF1FD77BD50099AE0F /* icon_amap_location@2x.png */,
+				B4F50FFE1FD77BD40099AE0F /* icon_amap_location@3x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1275,6 +1281,7 @@
 				B4AC62D51F96F982008C8D6F /* BWResearch13VC.xib in Resources */,
 				B426B0081DF7ABD400F438F3 /* icon_discovery_selected@2x.png in Resources */,
 				B48F5DCF1F5537B8000CFA4D /* back@3x.png in Resources */,
+				B4F510001FD77BD50099AE0F /* icon_amap_location@3x.png in Resources */,
 				B48F5ECF1F5559A0000CFA4D /* BWResearch8VC.xib in Resources */,
 				B43EE5FA1F78CF2000AAAE80 /* voucher_empty@2x.png in Resources */,
 				B443A1E91D548382003D66C5 /* LaunchScreen.storyboard in Resources */,
@@ -1299,6 +1306,7 @@
 				B48354361F8CC710003D722B /* BWResearch12VC.xib in Resources */,
 				B4B8BABB1F7CA5BD00F25065 /* BWResearch10VC.xib in Resources */,
 				B4B6FA9F1F8C694200506412 /* BWResearch11VC.xib in Resources */,
+				B4F510011FD77BD50099AE0F /* icon_amap_location@2x.png in Resources */,
 				B49D69751FB1693600B22F5B /* BWResearch14VC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1686,7 +1694,7 @@
 				INFOPLIST_FILE = "BWObjective-CResearch-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bws.research1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bws.research;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -1704,7 +1712,7 @@
 				INFOPLIST_FILE = "BWObjective-CResearch-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bws.research1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bws.research;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
