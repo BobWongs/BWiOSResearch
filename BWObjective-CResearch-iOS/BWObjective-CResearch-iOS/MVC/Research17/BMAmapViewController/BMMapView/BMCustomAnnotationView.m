@@ -19,11 +19,11 @@
     
     if (self)
     {
-        [self setBackgroundImage:[UIImage imageNamed:@"naviBackgroundNormal"] forState:UIControlStateNormal];
-        [self setBackgroundImage:[UIImage imageNamed:@"naviBackgroundHighlighted"] forState:UIControlStateSelected];
+        [self setBackgroundImage:[UIImage imageNamed:@"icon_amap_naviBackgroundNormal"] forState:UIControlStateNormal];
+        [self setBackgroundImage:[UIImage imageNamed:@"icon_amap_naviBackgroundHighlighted"] forState:UIControlStateSelected];
         
         //imageView
-        _carImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navi"]];
+        _carImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_amap_navi"]];
         [self addSubview:_carImageView];
         
         //label

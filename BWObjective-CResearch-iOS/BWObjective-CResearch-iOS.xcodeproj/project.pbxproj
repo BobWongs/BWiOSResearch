@@ -29,8 +29,6 @@
 		B443A1FF1D548382003D66C5 /* BWObjective_CResearch_iOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B443A1FE1D548382003D66C5 /* BWObjective_CResearch_iOSUITests.m */; };
 		B44665E91FB936A800E1A4B5 /* BWResearch15VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B44665E71FB936A800E1A4B5 /* BWResearch15VC.m */; };
 		B44665EA1FB936A800E1A4B5 /* BWResearch15VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B44665E81FB936A800E1A4B5 /* BWResearch15VC.xib */; };
-		B44971071FD104C100455089 /* BMCustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B44971021FD104C100455089 /* BMCustomAnnotationView.m */; };
-		B44971091FD104C100455089 /* BMAmapView.m in Sources */ = {isa = PBXBuildFile; fileRef = B44971061FD104C100455089 /* BMAmapView.m */; };
 		B461B6721DDD50FB00FB7BC1 /* BWResearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B461B6711DDD50FB00FB7BC1 /* BWResearchVC.m */; };
 		B46B25521DB5DCD800B9FF54 /* BWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B25511DB5DCD800B9FF54 /* BWBaseViewController.m */; };
 		B46B25551DB5ED6500B9FF54 /* BWBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B25541DB5ED6500B9FF54 /* BWBaseNavigationController.m */; };
@@ -128,13 +126,15 @@
 		B4DBC4A71FC6803A00E9EFC6 /* BWResearch16VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DBC4A51FC6803A00E9EFC6 /* BWResearch16VC.m */; };
 		B4DBC4A81FC6803A00E9EFC6 /* BWResearch16VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4DBC4A61FC6803A00E9EFC6 /* BWResearch16VC.xib */; };
 		B4DBC4AB1FC6804A00E9EFC6 /* BWResearch16View.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DBC4AA1FC6804A00E9EFC6 /* BWResearch16View.m */; };
-		B4F50FE11FD51B150099AE0F /* BMMapNavigationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F50FE01FD51B150099AE0F /* BMMapNavigationTool.m */; };
-		B4F50FE41FD537EB0099AE0F /* BMAmapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F50FE31FD537EB0099AE0F /* BMAmapViewController.m */; };
-		B4F50FE91FD648DD0099AE0F /* navi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F50FE61FD648DD0099AE0F /* navi@2x.png */; };
-		B4F50FEA1FD648DD0099AE0F /* naviBackgroundHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F50FE71FD648DD0099AE0F /* naviBackgroundHighlighted.png */; };
-		B4F50FEB1FD648DD0099AE0F /* naviBackgroundNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F50FE81FD648DD0099AE0F /* naviBackgroundNormal.png */; };
-		B4F510001FD77BD50099AE0F /* icon_amap_location@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F50FFE1FD77BD40099AE0F /* icon_amap_location@3x.png */; };
-		B4F510011FD77BD50099AE0F /* icon_amap_location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F50FFF1FD77BD50099AE0F /* icon_amap_location@2x.png */; };
+		B4F510181FD782150099AE0F /* BMMapNavigationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F510091FD782140099AE0F /* BMMapNavigationTool.m */; };
+		B4F510191FD782150099AE0F /* BMAmapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F5100A1FD782140099AE0F /* BMAmapViewController.m */; };
+		B4F5101A1FD782150099AE0F /* BMCustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F5100D1FD782140099AE0F /* BMCustomAnnotationView.m */; };
+		B4F5101B1FD782150099AE0F /* icon_amap_location@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F510101FD782140099AE0F /* icon_amap_location@3x.png */; };
+		B4F5101C1FD782150099AE0F /* icon_amap_location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F510111FD782140099AE0F /* icon_amap_location@2x.png */; };
+		B4F5101D1FD782150099AE0F /* icon_amap_navi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F510121FD782140099AE0F /* icon_amap_navi@2x.png */; };
+		B4F5101E1FD782150099AE0F /* icon_amap_naviBackgroundNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F510131FD782140099AE0F /* icon_amap_naviBackgroundNormal.png */; };
+		B4F5101F1FD782150099AE0F /* icon_amap_naviBackgroundHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F510141FD782140099AE0F /* icon_amap_naviBackgroundHighlighted.png */; };
+		B4F510201FD782150099AE0F /* BMAmapView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F510151FD782140099AE0F /* BMAmapView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,10 +190,6 @@
 		B44665E61FB936A800E1A4B5 /* BWResearch15VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWResearch15VC.h; sourceTree = "<group>"; };
 		B44665E71FB936A800E1A4B5 /* BWResearch15VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWResearch15VC.m; sourceTree = "<group>"; };
 		B44665E81FB936A800E1A4B5 /* BWResearch15VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWResearch15VC.xib; sourceTree = "<group>"; };
-		B44971011FD104C100455089 /* BMCustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCustomAnnotationView.h; sourceTree = "<group>"; };
-		B44971021FD104C100455089 /* BMCustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCustomAnnotationView.m; sourceTree = "<group>"; };
-		B44971051FD104C100455089 /* BMAmapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMAmapView.h; sourceTree = "<group>"; };
-		B44971061FD104C100455089 /* BMAmapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMAmapView.m; sourceTree = "<group>"; };
 		B461B6701DDD50FB00FB7BC1 /* BWResearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWResearchVC.h; sourceTree = "<group>"; };
 		B461B6711DDD50FB00FB7BC1 /* BWResearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWResearchVC.m; sourceTree = "<group>"; };
 		B46B25501DB5DCD800B9FF54 /* BWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWBaseViewController.h; sourceTree = "<group>"; };
@@ -354,15 +350,19 @@
 		B4DBC4A61FC6803A00E9EFC6 /* BWResearch16VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWResearch16VC.xib; sourceTree = "<group>"; };
 		B4DBC4A91FC6804A00E9EFC6 /* BWResearch16View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWResearch16View.h; sourceTree = "<group>"; };
 		B4DBC4AA1FC6804A00E9EFC6 /* BWResearch16View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWResearch16View.m; sourceTree = "<group>"; };
-		B4F50FDF1FD51B150099AE0F /* BMMapNavigationTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMMapNavigationTool.h; sourceTree = "<group>"; };
-		B4F50FE01FD51B150099AE0F /* BMMapNavigationTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMMapNavigationTool.m; sourceTree = "<group>"; };
-		B4F50FE21FD537EB0099AE0F /* BMAmapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMAmapViewController.h; sourceTree = "<group>"; };
-		B4F50FE31FD537EB0099AE0F /* BMAmapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMAmapViewController.m; sourceTree = "<group>"; };
-		B4F50FE61FD648DD0099AE0F /* navi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navi@2x.png"; sourceTree = "<group>"; };
-		B4F50FE71FD648DD0099AE0F /* naviBackgroundHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = naviBackgroundHighlighted.png; sourceTree = "<group>"; };
-		B4F50FE81FD648DD0099AE0F /* naviBackgroundNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = naviBackgroundNormal.png; sourceTree = "<group>"; };
-		B4F50FFE1FD77BD40099AE0F /* icon_amap_location@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_amap_location@3x.png"; sourceTree = "<group>"; };
-		B4F50FFF1FD77BD50099AE0F /* icon_amap_location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_amap_location@2x.png"; sourceTree = "<group>"; };
+		B4F510091FD782140099AE0F /* BMMapNavigationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMapNavigationTool.m; sourceTree = "<group>"; };
+		B4F5100A1FD782140099AE0F /* BMAmapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMAmapViewController.m; sourceTree = "<group>"; };
+		B4F5100B1FD782140099AE0F /* BMMapNavigationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMapNavigationTool.h; sourceTree = "<group>"; };
+		B4F5100D1FD782140099AE0F /* BMCustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCustomAnnotationView.m; sourceTree = "<group>"; };
+		B4F5100E1FD782140099AE0F /* BMAmapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMAmapView.h; sourceTree = "<group>"; };
+		B4F510101FD782140099AE0F /* icon_amap_location@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_amap_location@3x.png"; sourceTree = "<group>"; };
+		B4F510111FD782140099AE0F /* icon_amap_location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_amap_location@2x.png"; sourceTree = "<group>"; };
+		B4F510121FD782140099AE0F /* icon_amap_navi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_amap_navi@2x.png"; sourceTree = "<group>"; };
+		B4F510131FD782140099AE0F /* icon_amap_naviBackgroundNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_amap_naviBackgroundNormal.png; sourceTree = "<group>"; };
+		B4F510141FD782140099AE0F /* icon_amap_naviBackgroundHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_amap_naviBackgroundHighlighted.png; sourceTree = "<group>"; };
+		B4F510151FD782140099AE0F /* BMAmapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMAmapView.m; sourceTree = "<group>"; };
+		B4F510161FD782140099AE0F /* BMCustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCustomAnnotationView.h; sourceTree = "<group>"; };
+		B4F510171FD782140099AE0F /* BMAmapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMAmapViewController.h; sourceTree = "<group>"; };
 		C103FEAD4813AE671D13F2D2 /* Pods-BWObjective-CResearch-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		DAEA5361C98C05D3A8AC261A /* Pods-BWObjective-CResearch-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DD13E253539AA17662F57D49 /* Pods-BWObjective-CResearch-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOSUITests/Pods-BWObjective-CResearch-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -420,9 +420,7 @@
 				B42A470C1FCE66650013B5DD /* BWResearch17VC.h */,
 				B42A470D1FCE66650013B5DD /* BWResearch17VC.m */,
 				B42A470E1FCE66650013B5DD /* BWResearch17VC.xib */,
-				B4F50FE21FD537EB0099AE0F /* BMAmapViewController.h */,
-				B4F50FE31FD537EB0099AE0F /* BMAmapViewController.m */,
-				B44971001FD104C100455089 /* BMMapView */,
+				B4F510081FD782140099AE0F /* BMAmapViewController */,
 				B42A47111FCFE62B0013B5DD /* View */,
 			);
 			path = Research17;
@@ -516,20 +514,6 @@
 				B4DBC4671FC2AAE000E9EFC6 /* View */,
 			);
 			path = Research15;
-			sourceTree = "<group>";
-		};
-		B44971001FD104C100455089 /* BMMapView */ = {
-			isa = PBXGroup;
-			children = (
-				B44971051FD104C100455089 /* BMAmapView.h */,
-				B44971061FD104C100455089 /* BMAmapView.m */,
-				B44971011FD104C100455089 /* BMCustomAnnotationView.h */,
-				B44971021FD104C100455089 /* BMCustomAnnotationView.m */,
-				B4F50FDF1FD51B150099AE0F /* BMMapNavigationTool.h */,
-				B4F50FE01FD51B150099AE0F /* BMMapNavigationTool.m */,
-				B4F50FE51FD648DD0099AE0F /* Resource */,
-			);
-			path = BMMapView;
 			sourceTree = "<group>";
 		};
 		B461B66F1DDD50D300FB7BC1 /* Research */ = {
@@ -1111,14 +1095,38 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		B4F50FE51FD648DD0099AE0F /* Resource */ = {
+		B4F510081FD782140099AE0F /* BMAmapViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B4F50FE61FD648DD0099AE0F /* navi@2x.png */,
-				B4F50FE71FD648DD0099AE0F /* naviBackgroundHighlighted.png */,
-				B4F50FE81FD648DD0099AE0F /* naviBackgroundNormal.png */,
-				B4F50FFF1FD77BD50099AE0F /* icon_amap_location@2x.png */,
-				B4F50FFE1FD77BD40099AE0F /* icon_amap_location@3x.png */,
+				B4F510171FD782140099AE0F /* BMAmapViewController.h */,
+				B4F5100A1FD782140099AE0F /* BMAmapViewController.m */,
+				B4F5100B1FD782140099AE0F /* BMMapNavigationTool.h */,
+				B4F510091FD782140099AE0F /* BMMapNavigationTool.m */,
+				B4F5100C1FD782140099AE0F /* BMMapView */,
+			);
+			path = BMAmapViewController;
+			sourceTree = "<group>";
+		};
+		B4F5100C1FD782140099AE0F /* BMMapView */ = {
+			isa = PBXGroup;
+			children = (
+				B4F5100E1FD782140099AE0F /* BMAmapView.h */,
+				B4F510151FD782140099AE0F /* BMAmapView.m */,
+				B4F510161FD782140099AE0F /* BMCustomAnnotationView.h */,
+				B4F5100D1FD782140099AE0F /* BMCustomAnnotationView.m */,
+				B4F5100F1FD782140099AE0F /* Resource */,
+			);
+			path = BMMapView;
+			sourceTree = "<group>";
+		};
+		B4F5100F1FD782140099AE0F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B4F510101FD782140099AE0F /* icon_amap_location@3x.png */,
+				B4F510111FD782140099AE0F /* icon_amap_location@2x.png */,
+				B4F510121FD782140099AE0F /* icon_amap_navi@2x.png */,
+				B4F510131FD782140099AE0F /* icon_amap_naviBackgroundNormal.png */,
+				B4F510141FD782140099AE0F /* icon_amap_naviBackgroundHighlighted.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1260,6 +1268,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4BEDFAF1F6FC56B00C98A0B /* BWResearch9VC.xib in Resources */,
+				B4F5101C1FD782150099AE0F /* icon_amap_location@2x.png in Resources */,
+				B4F5101D1FD782150099AE0F /* icon_amap_navi@2x.png in Resources */,
 				B4B6FAA41F8C6A3900506412 /* BWResearch11Cell.xib in Resources */,
 				B42A47101FCE66650013B5DD /* BWResearch17VC.xib in Resources */,
 				B46B25D11DB72CE800B9FF54 /* bw_icon_back_100@2x.png in Resources */,
@@ -1267,6 +1277,7 @@
 				B46B25631DB5EDDD00B9FF54 /* BWHomeTableViewCell.xib in Resources */,
 				B48F5DC31F550DD6000CFA4D /* nav_bg@3x.png in Resources */,
 				B49D69851FB189CC00B22F5B /* BMCardCycleItemCell.xib in Resources */,
+				B4F5101E1FD782150099AE0F /* icon_amap_naviBackgroundNormal.png in Resources */,
 				B4945B311F676D1F0084CC88 /* icon_new_address_picker_checkbox_blue@2x.png in Resources */,
 				B48F5DC21F550DD6000CFA4D /* nav_bg@2x.png in Resources */,
 				B48CC7631EF12129008E3856 /* BWResearch6VC.xib in Resources */,
@@ -1278,10 +1289,10 @@
 				B426B0091DF7ABD400F438F3 /* icon_discovery_unselected@2x.png in Resources */,
 				B48F5DCB1F553660000CFA4D /* search@3x.png in Resources */,
 				B4A583E91F4BD15300370A62 /* BWResearch7View.xib in Resources */,
+				B4F5101B1FD782150099AE0F /* icon_amap_location@3x.png in Resources */,
 				B4AC62D51F96F982008C8D6F /* BWResearch13VC.xib in Resources */,
 				B426B0081DF7ABD400F438F3 /* icon_discovery_selected@2x.png in Resources */,
 				B48F5DCF1F5537B8000CFA4D /* back@3x.png in Resources */,
-				B4F510001FD77BD50099AE0F /* icon_amap_location@3x.png in Resources */,
 				B48F5ECF1F5559A0000CFA4D /* BWResearch8VC.xib in Resources */,
 				B43EE5FA1F78CF2000AAAE80 /* voucher_empty@2x.png in Resources */,
 				B443A1E91D548382003D66C5 /* LaunchScreen.storyboard in Resources */,
@@ -1295,18 +1306,15 @@
 				B4945B321F676D1F0084CC88 /* icon_new_address_picker_checkbox_blue@3x.png in Resources */,
 				B48F5DCA1F553660000CFA4D /* search@2x.png in Resources */,
 				B4945B341F676D1F0084CC88 /* BMNewAddressPickerCell.xib in Resources */,
-				B4F50FEB1FD648DD0099AE0F /* naviBackgroundNormal.png in Resources */,
 				B43EE5FB1F78CF2000AAAE80 /* voucher_empty@3x.png in Resources */,
 				B48F5ED11F555A6E000CFA4D /* loading.gif in Resources */,
 				B494E6641F304CFD008284C0 /* BWResearch7VC.xib in Resources */,
 				B494E6761F3057AA008284C0 /* temp0.txt in Resources */,
+				B4F5101F1FD782150099AE0F /* icon_amap_naviBackgroundHighlighted.png in Resources */,
 				B49FC69E1FA1944800DAC7D4 /* BMTest13View.xib in Resources */,
-				B4F50FE91FD648DD0099AE0F /* navi@2x.png in Resources */,
-				B4F50FEA1FD648DD0099AE0F /* naviBackgroundHighlighted.png in Resources */,
 				B48354361F8CC710003D722B /* BWResearch12VC.xib in Resources */,
 				B4B8BABB1F7CA5BD00F25065 /* BWResearch10VC.xib in Resources */,
 				B4B6FA9F1F8C694200506412 /* BWResearch11VC.xib in Resources */,
-				B4F510011FD77BD50099AE0F /* icon_amap_location@2x.png in Resources */,
 				B49D69751FB1693600B22F5B /* BWResearch14VC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1484,9 +1492,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F5101A1FD782150099AE0F /* BMCustomAnnotationView.m in Sources */,
 				B4900CC41F99E7F700A95274 /* BMButtonsScrollView.m in Sources */,
 				B4AC5FB91DB4CC5200D880FB /* UINavigationBar+JZExtension.m in Sources */,
-				B44971071FD104C100455089 /* BMCustomAnnotationView.m in Sources */,
 				B4D1916C1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m in Sources */,
 				B4B631331DAE384F00DF0907 /* UITableViewRowAction.m in Sources */,
 				B4945B351F676D1F0084CC88 /* BMNewAddressPickerView.m in Sources */,
@@ -1499,7 +1507,6 @@
 				B49E2F161F985A2F004F64E2 /* BMCardBannerIndicatorView.m in Sources */,
 				B46B25521DB5DCD800B9FF54 /* BWBaseViewController.m in Sources */,
 				B49D69841FB189CC00B22F5B /* BMCardCycleItemCell.m in Sources */,
-				B44971091FD104C100455089 /* BMAmapView.m in Sources */,
 				B4AC5FB81DB4CC5200D880FB /* NSNumber+JZExtension.m in Sources */,
 				B4AC5FB61DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m in Sources */,
 				B4B8BABA1F7CA5BD00F25065 /* BWResearch10VC.m in Sources */,
@@ -1515,7 +1522,6 @@
 				B48CC7621EF12129008E3856 /* BWResearch6VC.m in Sources */,
 				B4945B2E1F676D1F0084CC88 /* BMNewAddressPicker.m in Sources */,
 				B46B25681DB5EE1C00B9FF54 /* BWMeController.m in Sources */,
-				B4F50FE11FD51B150099AE0F /* BMMapNavigationTool.m in Sources */,
 				B494DEB61F4AB87500A43EC5 /* UIButton+BMExtension.m in Sources */,
 				B491B0111E66BF2E005CAD43 /* BWResearch3VC.m in Sources */,
 				B4A583EF1F4C181800370A62 /* UIViewController+BMExtension.m in Sources */,
@@ -1528,17 +1534,19 @@
 				B4AC5FBB1DB4CC5200D880FB /* UINavigationController+JZExtension.m in Sources */,
 				B443A1DB1D548382003D66C5 /* main.m in Sources */,
 				B4A583EC1F4BF90C00370A62 /* UIAlertController+BMExtension.m in Sources */,
+				B4F510201FD782150099AE0F /* BMAmapView.m in Sources */,
 				B4A583E71F4BD14700370A62 /* BWResearch7View.m in Sources */,
 				B42A470F1FCE66650013B5DD /* BWResearch17VC.m in Sources */,
 				B4AC62D41F96F982008C8D6F /* BWResearch13VC.m in Sources */,
+				B4F510181FD782150099AE0F /* BMMapNavigationTool.m in Sources */,
 				B46B25621DB5EDDD00B9FF54 /* BWHomeTableViewCell.m in Sources */,
+				B4F510191FD782150099AE0F /* BMAmapViewController.m in Sources */,
 				B4B631321DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m in Sources */,
 				B4945B371F676D1F0084CC88 /* BMValidCodeTimeModel.m in Sources */,
 				B48354291F8C9BF3003D722B /* BWResearch11ReusableView.m in Sources */,
 				B461B6721DDD50FB00FB7BC1 /* BWResearchVC.m in Sources */,
 				B49FC69C1FA1944100DAC7D4 /* BMTest13View.m in Sources */,
 				B426B1261DFA943F00F438F3 /* BWResearchCell.m in Sources */,
-				B4F50FE41FD537EB0099AE0F /* BMAmapViewController.m in Sources */,
 				B4DBC4A71FC6803A00E9EFC6 /* BWResearch16VC.m in Sources */,
 				B4945B361F676D1F0084CC88 /* BMValidCodeTimeManager.m in Sources */,
 				B49D69741FB1693600B22F5B /* BWResearch14VC.m in Sources */,
