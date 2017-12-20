@@ -77,7 +77,7 @@
 //    BWResearch3VC *researchVC = [BWResearch3VC new];
 //    BWResearch4VC *researchVC = [BWResearch4VC new];
 //    BWResearch5VC  *researchVC = [BWResearch5VC new];
-    Class vcClass = [BWResearch17VC class];
+    Class vcClass = [BWResearch16VC class];
 //    Class vcClass = [BWResearch9VC class];
     
 //    UINavigationController *researchNvgtVC = [UINavigationController bmB2B_defaultStyleWithRootViewController:[vcClass new]];

@@ -10,4 +10,6 @@
 
 @interface BWClass1 : NSObject
 
++ (NSURL *)bm_URLWithString:(NSString *)URLString appendedQueryString:(NSString *)appendedQueryString;
+
 @end

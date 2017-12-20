@@ -12,4 +12,12 @@
 
 @implementation BWClass1
 
++ (NSURL *)bm_URLWithString:(NSString *)URLString appendedQueryString:(NSString *)appendedQueryString {
+    if (!URLString) return [NSURL new];
+    NSURLComponents *components = [NSURLComponents componentsWithString:URLString];
+    NSString *query = components.query ? [NSString stringWithFormat:@"%@&%@", components.query, appendedQueryString] : appendedQueryString;
+    components.query = query;
+    return components.URL;
+}
+
 @end

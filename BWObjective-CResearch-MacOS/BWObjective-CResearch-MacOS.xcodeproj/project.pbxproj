@@ -27,6 +27,7 @@
 /* Begin PBXFileReference section */
 		B443A1C31D54834D003D66C5 /* BWObjective-CResearch-MacOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "BWObjective-CResearch-MacOS"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B443A1C61D54834D003D66C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B45297781FE3B41E00A285AC /* BWCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWCommon.h; sourceTree = "<group>"; };
 		B4A313671EEA3B840079F292 /* BWClass1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWClass1.h; sourceTree = "<group>"; };
 		B4A313681EEA3B840079F292 /* BWClass1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWClass1.m; sourceTree = "<group>"; };
 		B4B835111E723C1C00ACAD6F /* BWClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWClass.h; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				B443A1C61D54834D003D66C5 /* main.m */,
+				B45297781FE3B41E00A285AC /* BWCommon.h */,
 				B4B835111E723C1C00ACAD6F /* BWClass.h */,
 				B4B835121E723C1C00ACAD6F /* BWClass.m */,
 				B4A313671EEA3B840079F292 /* BWClass1.h */,

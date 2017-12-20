@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "BWClass.h"
+#import "BWClass1.h"
+#import "BWCommon.h"
 
 #define BMFloatEquation(A, B) (ABS(A-B)<=0.00001)
 
@@ -33,7 +35,9 @@ typedef NS_ENUM(NSInteger, BWType) {
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        CGPoint points[] = {};
+        BWCommonType type;
+        type = BWCommonTypeThird;
+        NSLog(@"type: %ld", (long)type);
         
     }
     
@@ -41,6 +45,35 @@ int main(int argc, const char * argv[]) {
 }
 
 // Test
+void test14() {
+//    NSString *path = @"https://www.baidu.com?key0=value0&key1=value1";
+    NSString *path = @"https://www.baidu.com";
+    NSURL *url = [BWClass1 bm_URLWithString:path appendedQueryString:@"key2=value2&key3=value3"];
+    NSLog(@"URL: %@", url);
+    
+    NSString *host = url.host;
+    NSLog(@"host: %@", host);
+}
+
+void test13() {
+//    NSString *path = @"https://www.baidu.com?key0=value0&key1=value1";
+    NSString *path = @"https://www.baidu.com";
+    NSURLComponents *components = [NSURLComponents componentsWithString:path];
+    NSLog(@"url string: %@", components.URL);
+    
+    NSString *query = components.query;
+    NSLog(@"query: %@", query);
+    NSLog(@"queryItems: %@", components.queryItems);
+    
+    NSString *addedQuery = @"key2=value2&key3=value3";
+    query = [NSString stringWithFormat:@"%@&%@", query, addedQuery];
+    components.query = query;
+    NSLog(@"new query: %@", components.query);
+    NSLog(@"url: %@", components.URL);
+    
+    [NSURL URLWithString:@""];
+}
+
 void test12() {
     BWType type = BWType1;
     switch (type) {

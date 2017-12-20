@@ -19,15 +19,43 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKZ-Ev-mnn">
-                    <rect key="frame" x="84" y="112" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sv-8M-JMm">
+                    <rect key="frame" x="112" y="100" width="150" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="8Ia-CD-XQj"/>
+                        <constraint firstAttribute="width" constant="150" id="UFz-hz-4dk"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="continueAction:" destination="-1" eventType="touchUpInside" id="YDr-C0-66G"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0Z-ZV-WYW">
+                    <rect key="frame" x="157" y="273" width="60" height="30"/>
+                    <state key="normal" title="Call cmd"/>
+                    <connections>
+                        <action selector="callMethod:" destination="-1" eventType="touchUpInside" id="RLk-OV-9sQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBY-7u-xj2">
+                    <rect key="frame" x="30" y="439" width="315" height="30"/>
+                    <state key="normal" title="Test"/>
+                    <connections>
+                        <action selector="testAction:" destination="-1" eventType="touchUpInside" id="w52-SP-cT9"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="0sv-8M-JMm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4LW-lK-bbY"/>
+                <constraint firstItem="S0Z-ZV-WYW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OeH-kd-nRx"/>
+                <constraint firstItem="TBY-7u-xj2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="UPg-2w-ijg"/>
+                <constraint firstItem="0sv-8M-JMm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="Uah-Qe-7BB"/>
+                <constraint firstItem="TBY-7u-xj2" firstAttribute="top" secondItem="S0Z-ZV-WYW" secondAttribute="bottom" constant="136" id="W1d-9a-5T9"/>
+                <constraint firstItem="S0Z-ZV-WYW" firstAttribute="top" secondItem="0sv-8M-JMm" secondAttribute="bottom" constant="143" id="WLK-Lh-JgX"/>
+                <constraint firstAttribute="trailing" secondItem="TBY-7u-xj2" secondAttribute="trailing" constant="30" id="pLg-BZ-gBB"/>
+            </constraints>
+            <point key="canvasLocation" x="135.5" y="53.5"/>
         </view>
     </objects>
 </document>
