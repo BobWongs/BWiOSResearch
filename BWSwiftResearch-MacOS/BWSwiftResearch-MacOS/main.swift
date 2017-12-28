@@ -125,10 +125,10 @@ func test7() {
 
 
 func test8() {
-    var condition0 = true
-    if condition0 {
-        print("true")
-    }
+    let condition0 = true
+//    if condition0 {
+//        print("true")
+//    }
     
     let b = condition0 ? 212 : 32
     print(b)
@@ -137,5 +137,12 @@ func test8() {
 //test8()
 
 func test9() {
-    
+    var string: String?
+    if string != nil {
+        print("valid")
+    } else {
+        print("invalid")
+    }
 }
+
+test9()
