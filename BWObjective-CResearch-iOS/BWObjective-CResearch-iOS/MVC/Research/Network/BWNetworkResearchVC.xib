@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C8n-jz-t0v">
-                    <rect key="frame" x="50" y="89" width="275" height="150"/>
+                    <rect key="frame" x="50" y="69" width="275" height="150"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="7lA-Dw-NCp"/>
@@ -31,23 +30,49 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTR-6K-ecF">
-                    <rect key="frame" x="116" y="41" width="143" height="30"/>
+                    <rect key="frame" x="116" y="21" width="143" height="30"/>
                     <state key="normal" title="HTTP POST Request"/>
                     <connections>
                         <action selector="httpPostRequest:" destination="-1" eventType="touchUpInside" id="dz3-OZ-z51"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjU-7f-Eca">
+                    <rect key="frame" x="50" y="281" width="275" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="t9I-th-Jxf"/>
+                    </constraints>
+                    <state key="normal" title="Request1"/>
+                    <connections>
+                        <action selector="request1Action:" destination="-1" eventType="touchUpInside" id="zXJ-gr-oAb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvJ-yo-NPH">
+                    <rect key="frame" x="50" y="351" width="275" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="KfJ-q1-W6A"/>
+                        <constraint firstAttribute="height" constant="30" id="TDe-EJ-CBw"/>
+                    </constraints>
+                    <state key="normal" title="Request-AFNetworking"/>
+                    <connections>
+                        <action selector="afnetworkingRequestAction:" destination="-1" eventType="touchUpInside" id="h4j-zZ-9qd"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="C8n-jz-t0v" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1Bd-2Z-CnM"/>
-                <constraint firstItem="C8n-jz-t0v" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="50" id="EtW-Rm-ltK"/>
+                <constraint firstItem="C8n-jz-t0v" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="EtW-Rm-ltK"/>
+                <constraint firstItem="SjU-7f-Eca" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="Kv9-kt-dZk"/>
+                <constraint firstItem="SjU-7f-Eca" firstAttribute="top" secondItem="C8n-jz-t0v" secondAttribute="bottom" constant="62" id="Ni1-Q1-XnQ"/>
+                <constraint firstItem="mvJ-yo-NPH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="RUY-sl-d8y"/>
+                <constraint firstAttribute="trailing" secondItem="SjU-7f-Eca" secondAttribute="trailing" constant="50" id="cNl-Ma-A9F"/>
+                <constraint firstItem="mvJ-yo-NPH" firstAttribute="top" secondItem="SjU-7f-Eca" secondAttribute="bottom" constant="40" id="dqR-86-gtj"/>
                 <constraint firstItem="C8n-jz-t0v" firstAttribute="top" secondItem="sTR-6K-ecF" secondAttribute="bottom" constant="18" id="gza-xo-ZVG"/>
+                <constraint firstAttribute="trailing" secondItem="mvJ-yo-NPH" secondAttribute="trailing" constant="50" id="oSf-Hv-QRE"/>
                 <constraint firstItem="sTR-6K-ecF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oTP-M9-OWg"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="C8n-jz-t0v" secondAttribute="trailing" constant="50" id="sxE-BP-1kp"/>
-                <constraint firstItem="sTR-6K-ecF" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="21" id="vto-lj-sMR"/>
+                <constraint firstAttribute="trailing" secondItem="C8n-jz-t0v" secondAttribute="trailing" constant="50" id="sxE-BP-1kp"/>
+                <constraint firstItem="sTR-6K-ecF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="21" id="vto-lj-sMR"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
         </view>
     </objects>
 </document>

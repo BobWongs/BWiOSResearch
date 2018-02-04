@@ -29,6 +29,8 @@
 #import "BWResearch17VC.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import "BWNetworkResearchVC.h"
+#import "BWConstraintsResearchVC.h"
+#import <YYCache.h>
 
 @interface AppDelegate ()
 
@@ -79,10 +81,11 @@
 //    BWResearch4VC *researchVC = [BWResearch4VC new];
 //    BWResearch5VC  *researchVC = [BWResearch5VC new];
     Class vcClass = [BWNetworkResearchVC class];
-//    Class vcClass = [BWResearch9VC class];
+    UIViewController *vc = [vcClass new];
+    vc.title = NSStringFromClass(vcClass);
     
 //    UINavigationController *researchNvgtVC = [UINavigationController bmB2B_defaultStyleWithRootViewController:[vcClass new]];
-    UINavigationController *researchNvgtVC = [[UINavigationController alloc] initWithRootViewController:[vcClass new]];
+    UINavigationController *researchNvgtVC = [[UINavigationController alloc] initWithRootViewController:vc];
     researchNvgtVC.tabBarItem.title = NSStringFromClass(vcClass);
     
 //    UITabBarController *tabVC = [UITabBarController new];
@@ -111,11 +114,20 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    NSLog(@"applicationWillResignActive");
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+//    [NSTimer scheduledTimerWithTimeInterval:1.0 block:^(NSTimer * _Nonnull timer) {
+//        static NSInteger num = 0;
+//        NSLog(@"num: %@", @(num).stringValue);
+//        num += 1;
+//    } repeats:YES];
+    
+    NSLog(@"applicationDidEnterBackground");
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {

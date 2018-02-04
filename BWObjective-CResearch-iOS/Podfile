@@ -17,7 +17,10 @@ target 'BWObjective-CResearch-iOS' do
   pod 'iCarousel', '~> 1.8.3'
   pod 'TYCyclePagerView', '1.0.6'
   pod 'IQKeyboardManager', '~> 5.0.4'
-  
+  pod 'MJExtension', '~> 3.0.13'
+  pod 'YYCache', '~> 1.0.4'
+  pod 'YTKNetwork'
+
   # 高德地图，无IDFA
   pod 'AMap2DMap-NO-IDFA', '4.6.0'  # 2D地图SDK
 #  pod 'AMapLocation-NO-IDFA', '2.5.0'  # 定位SDK
