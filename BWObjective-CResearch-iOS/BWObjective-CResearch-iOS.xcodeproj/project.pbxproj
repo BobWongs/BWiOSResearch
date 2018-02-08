@@ -127,6 +127,8 @@
 		B494E67A1F3057B2008284C0 /* BWResource1 in Resources */ = {isa = PBXBuildFile; fileRef = B494E6781F3057B2008284C0 /* BWResource1 */; };
 		B494E67B1F3057B2008284C0 /* BWResource3.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B494E6791F3057B2008284C0 /* BWResource3.bundle */; };
 		B49A348A1FF373F60071B642 /* BWLaunchScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B49A34891FF373F60071B642 /* BWLaunchScreenVC.m */; };
+		B4A564C91FFCA5B80069E019 /* BWConstraintsResearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A564C71FFCA5B80069E019 /* BWConstraintsResearchVC.m */; };
+		B4A564CA1FFCA5B80069E019 /* BWConstraintsResearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A564C81FFCA5B80069E019 /* BWConstraintsResearchVC.xib */; };
 		B4A583EC1F4BF90C00370A62 /* UIAlertController+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A583EB1F4BF90C00370A62 /* UIAlertController+BMExtension.m */; };
 		B4A583EF1F4C181800370A62 /* UIViewController+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A583EE1F4C181800370A62 /* UIViewController+BMExtension.m */; };
 		B4AC5FB61DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC5FA91DB4CC5100D880FB /* _JZNavigationInteractiveTransition.m */; };
@@ -350,6 +352,9 @@
 		B494E6791F3057B2008284C0 /* BWResource3.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BWResource3.bundle; sourceTree = "<group>"; };
 		B49A34881FF373F60071B642 /* BWLaunchScreenVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWLaunchScreenVC.h; sourceTree = "<group>"; };
 		B49A34891FF373F60071B642 /* BWLaunchScreenVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWLaunchScreenVC.m; sourceTree = "<group>"; };
+		B4A564C61FFCA5B80069E019 /* BWConstraintsResearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWConstraintsResearchVC.h; sourceTree = "<group>"; };
+		B4A564C71FFCA5B80069E019 /* BWConstraintsResearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWConstraintsResearchVC.m; sourceTree = "<group>"; };
+		B4A564C81FFCA5B80069E019 /* BWConstraintsResearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWConstraintsResearchVC.xib; sourceTree = "<group>"; };
 		B4A583E31F4BC78000370A62 /* BMResearch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMResearch.pch; sourceTree = "<group>"; };
 		B4A583E41F4BC88700370A62 /* BMMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMMacro.h; sourceTree = "<group>"; };
 		B4A583EA1F4BF90C00370A62 /* UIAlertController+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+BMExtension.h"; sourceTree = "<group>"; };
@@ -662,9 +667,9 @@
 			isa = PBXGroup;
 			children = (
 				B42CE7991FF4E3440048056F /* BWResearch17VC.h */,
+				B42CE7AB1FF4E3440048056F /* BWResearch17VC.m */,
 				B42CE79A1FF4E3440048056F /* BWResearch17VC.xib */,
 				B42CE79B1FF4E3440048056F /* BMAmapViewController */,
-				B42CE7AB1FF4E3440048056F /* BWResearch17VC.m */,
 			);
 			path = Research17;
 			sourceTree = "<group>";
@@ -1083,6 +1088,16 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		B4A564C51FFCA5990069E019 /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				B4A564C61FFCA5B80069E019 /* BWConstraintsResearchVC.h */,
+				B4A564C71FFCA5B80069E019 /* BWConstraintsResearchVC.m */,
+				B4A564C81FFCA5B80069E019 /* BWConstraintsResearchVC.xib */,
+			);
+			path = Constraints;
+			sourceTree = "<group>";
+		};
 		B4AC5FA41DB4CC5100D880FB /* JZNavigationExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -1339,6 +1354,7 @@
 				B42CE7F21FF4E3450048056F /* icon_amap_naviBackgroundHighlighted.png in Resources */,
 				B43EE5FA1F78CF2000AAAE80 /* voucher_empty@2x.png in Resources */,
 				B42CE7E31FF4E3450048056F /* BWTest10View.xib in Resources */,
+				B4A564CA1FFCA5B80069E019 /* BWConstraintsResearchVC.xib in Resources */,
 				B42CE7F81FF4E3450048056F /* BWResearch8VC.xib in Resources */,
 				B443A1E91D548382003D66C5 /* LaunchScreen.storyboard in Resources */,
 				B42CE7F11FF4E3450048056F /* icon_amap_naviBackgroundNormal.png in Resources */,
@@ -1578,6 +1594,7 @@
 				B494DEB91F4ABC8500A43EC5 /* UIImage+BMExtension.m in Sources */,
 				B42CE7EC1FF4E3450048056F /* BMAmapViewController.m in Sources */,
 				B42CE7E41FF4E3450048056F /* BWTest10View.m in Sources */,
+				B4A564C91FFCA5B80069E019 /* BWConstraintsResearchVC.m in Sources */,
 				B42CE7F31FF4E3450048056F /* BMAmapView.m in Sources */,
 				B42CE7D11FF4E3450048056F /* BWResearch11ReusableView.m in Sources */,
 				B42CE7CB1FF4E3450048056F /* BMCardBannerIndicatorView.m in Sources */,
