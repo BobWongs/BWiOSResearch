@@ -29,6 +29,8 @@
 #import "BWResearch17VC.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import "BWNetworkResearchVC.h"
+#import "BW3DTouchViewController.h"
+#import "BWAnimationViewController.h"
 
 @interface AppDelegate ()
 
@@ -78,7 +80,7 @@
 //    BWResearch3VC *researchVC = [BWResearch3VC new];
 //    BWResearch4VC *researchVC = [BWResearch4VC new];
 //    BWResearch5VC  *researchVC = [BWResearch5VC new];
-    Class vcClass = [BWNetworkResearchVC class];
+    Class vcClass = [BWAnimationViewController class];
 //    Class vcClass = [BWResearch9VC class];
     
 //    UINavigationController *researchNvgtVC = [UINavigationController bmB2B_defaultStyleWithRootViewController:[vcClass new]];

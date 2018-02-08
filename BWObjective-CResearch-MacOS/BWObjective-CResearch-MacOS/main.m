@@ -10,6 +10,7 @@
 #import "BWClass.h"
 #import "BWClass1.h"
 #import "BWCommon.h"
+#import "NSString+BWAdd.h"
 
 #define BMFloatEquation(A, B) (ABS(A-B)<=0.00001)
 
@@ -35,16 +36,23 @@ typedef NS_ENUM(NSInteger, BWType) {
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        BWCommonType type;
-        type = BWCommonTypeThird;
-        NSLog(@"type: %ld", (long)type);
+        NSString *text = @"text";
+        NSString *text1;
         
+        NSLog(@"text %d", [text validAccount]);
+        NSLog(@"text1 %d", [text1 validAccount]);
     }
     
     return 0;
 }
 
 // Test
+void test15() {
+    BWCommonType type;
+    type = BWCommonTypeThird;
+    NSLog(@"type: %ld", (long)type);
+}
+
 void test14() {
 //    NSString *path = @"https://www.baidu.com?key0=value0&key1=value1";
     NSString *path = @"https://www.baidu.com";

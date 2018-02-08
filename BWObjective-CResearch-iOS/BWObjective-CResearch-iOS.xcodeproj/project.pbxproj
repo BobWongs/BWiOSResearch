@@ -85,6 +85,8 @@
 		B443A1E91D548382003D66C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B443A1E71D548382003D66C5 /* LaunchScreen.storyboard */; };
 		B443A1F41D548382003D66C5 /* BWObjective_CResearch_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B443A1F31D548382003D66C5 /* BWObjective_CResearch_iOSTests.m */; };
 		B443A1FF1D548382003D66C5 /* BWObjective_CResearch_iOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B443A1FE1D548382003D66C5 /* BWObjective_CResearch_iOSUITests.m */; };
+		B45C22DF202C4D9E0056D33F /* BWAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45C22DD202C4D9E0056D33F /* BWAnimationViewController.m */; };
+		B45C22E0202C4D9E0056D33F /* BWAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45C22DE202C4D9E0056D33F /* BWAnimationViewController.xib */; };
 		B46B25521DB5DCD800B9FF54 /* BWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B25511DB5DCD800B9FF54 /* BWBaseViewController.m */; };
 		B46B25551DB5ED6500B9FF54 /* BWBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B25541DB5ED6500B9FF54 /* BWBaseNavigationController.m */; };
 		B46B25601DB5EDDD00B9FF54 /* BWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B25591DB5EDDD00B9FF54 /* BWHomeViewController.m */; };
@@ -137,6 +139,8 @@
 		B4B631311DAE384F00DF0907 /* UITableViewCell+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B6312D1DAE384F00DF0907 /* UITableViewCell+JZExtension.m */; };
 		B4B631321DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B6312F1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m */; };
 		B4B631331DAE384F00DF0907 /* UITableViewRowAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B631301DAE384F00DF0907 /* UITableViewRowAction.m */; };
+		B4BE64B420230F7300D2E4F1 /* BW3DTouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BE64B220230F7300D2E4F1 /* BW3DTouchViewController.m */; };
+		B4BE64B520230F7300D2E4F1 /* BW3DTouchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BE64B320230F7300D2E4F1 /* BW3DTouchViewController.xib */; };
 		B4D1916C1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D1916B1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m */; };
 /* End PBXBuildFile section */
 
@@ -283,6 +287,9 @@
 		B443A1FA1D548382003D66C5 /* BWObjective-CResearch-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BWObjective-CResearch-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B443A1FE1D548382003D66C5 /* BWObjective_CResearch_iOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWObjective_CResearch_iOSUITests.m; sourceTree = "<group>"; };
 		B443A2001D548382003D66C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B45C22DC202C4D9E0056D33F /* BWAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWAnimationViewController.h; sourceTree = "<group>"; };
+		B45C22DD202C4D9E0056D33F /* BWAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWAnimationViewController.m; sourceTree = "<group>"; };
+		B45C22DE202C4D9E0056D33F /* BWAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWAnimationViewController.xib; sourceTree = "<group>"; };
 		B46B25501DB5DCD800B9FF54 /* BWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWBaseViewController.h; sourceTree = "<group>"; };
 		B46B25511DB5DCD800B9FF54 /* BWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWBaseViewController.m; sourceTree = "<group>"; };
 		B46B25531DB5ED6500B9FF54 /* BWBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWBaseNavigationController.h; sourceTree = "<group>"; };
@@ -369,6 +376,9 @@
 		B4B6312E1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewRowAction+JZExtension.h"; sourceTree = "<group>"; };
 		B4B6312F1DAE384F00DF0907 /* UITableViewRowAction+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewRowAction+JZExtension.m"; sourceTree = "<group>"; };
 		B4B631301DAE384F00DF0907 /* UITableViewRowAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewRowAction.m; sourceTree = "<group>"; };
+		B4BE64B120230F7300D2E4F1 /* BW3DTouchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BW3DTouchViewController.h; sourceTree = "<group>"; };
+		B4BE64B220230F7300D2E4F1 /* BW3DTouchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BW3DTouchViewController.m; sourceTree = "<group>"; };
+		B4BE64B320230F7300D2E4F1 /* BW3DTouchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BW3DTouchViewController.xib; sourceTree = "<group>"; };
 		B4D1916A1F46EC4200A3F337 /* CAGradientLayer+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAGradientLayer+BMExtension.h"; sourceTree = "<group>"; };
 		B4D1916B1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAGradientLayer+BMExtension.m"; sourceTree = "<group>"; };
 		C103FEAD4813AE671D13F2D2 /* Pods-BWObjective-CResearch-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWObjective-CResearch-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWObjective-CResearch-iOS/Pods-BWObjective-CResearch-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -443,6 +453,8 @@
 				B42CE7BC1FF4E3440048056F /* Research16 */,
 				B42CE7981FF4E3440048056F /* Research17 */,
 				B42CE8021FF4E61A0048056F /* Network */,
+				B4BE64B020230F2C00D2E4F1 /* 3DTouch */,
+				B45C22DB202C4D830056D33F /* Animation */,
 			);
 			path = Research;
 			sourceTree = "<group>";
@@ -839,6 +851,16 @@
 			path = "BWObjective-CResearch-iOSUITests";
 			sourceTree = "<group>";
 		};
+		B45C22DB202C4D830056D33F /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				B45C22DC202C4D9E0056D33F /* BWAnimationViewController.h */,
+				B45C22DD202C4D9E0056D33F /* BWAnimationViewController.m */,
+				B45C22DE202C4D9E0056D33F /* BWAnimationViewController.xib */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		B46B254F1DB5DCC500B9FF54 /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1123,6 +1145,16 @@
 			path = JZTableViewRowAction;
 			sourceTree = "<group>";
 		};
+		B4BE64B020230F2C00D2E4F1 /* 3DTouch */ = {
+			isa = PBXGroup;
+			children = (
+				B4BE64B120230F7300D2E4F1 /* BW3DTouchViewController.h */,
+				B4BE64B220230F7300D2E4F1 /* BW3DTouchViewController.m */,
+				B4BE64B320230F7300D2E4F1 /* BW3DTouchViewController.xib */,
+			);
+			path = 3DTouch;
+			sourceTree = "<group>";
+		};
 		B4D191691F46EC2D00A3F337 /* B2BMall */ = {
 			isa = PBXGroup;
 			children = (
@@ -1298,6 +1330,7 @@
 				B48F5DCB1F553660000CFA4D /* search@3x.png in Resources */,
 				B42CE7C91FF4E3450048056F /* BMTest13View.xib in Resources */,
 				B42CE7E71FF4E3450048056F /* BWResearch15VC.xib in Resources */,
+				B4BE64B520230F7300D2E4F1 /* BW3DTouchViewController.xib in Resources */,
 				B426B0081DF7ABD400F438F3 /* icon_discovery_selected@2x.png in Resources */,
 				B48F5DCF1F5537B8000CFA4D /* back@3x.png in Resources */,
 				B42CE7F01FF4E3450048056F /* icon_amap_navi@2x.png in Resources */,
@@ -1321,6 +1354,7 @@
 				B4945B321F676D1F0084CC88 /* icon_new_address_picker_checkbox_blue@3x.png in Resources */,
 				B48F5DCA1F553660000CFA4D /* search@2x.png in Resources */,
 				B42CE7EA1FF4E3450048056F /* BWResearch17VC.xib in Resources */,
+				B45C22E0202C4D9E0056D33F /* BWAnimationViewController.xib in Resources */,
 				B4945B341F676D1F0084CC88 /* BMNewAddressPickerCell.xib in Resources */,
 				B42CE7D31FF4E3450048056F /* BWResearch11Cell.xib in Resources */,
 				B42CE7FD1FF4E3450048056F /* BWResearch16VC.xib in Resources */,
@@ -1510,6 +1544,7 @@
 				B4D1916C1F46EC4200A3F337 /* CAGradientLayer+BMExtension.m in Sources */,
 				B42CE7D61FF4E3450048056F /* BMCardCycleItemCell.m in Sources */,
 				B4B631331DAE384F00DF0907 /* UITableViewRowAction.m in Sources */,
+				B45C22DF202C4D9E0056D33F /* BWAnimationViewController.m in Sources */,
 				B4945B351F676D1F0084CC88 /* BMNewAddressPickerView.m in Sources */,
 				B494DEB31F4AB80C00A43EC5 /* UIView+BMExtension.m in Sources */,
 				B46B25601DB5EDDD00B9FF54 /* BWHomeViewController.m in Sources */,
@@ -1574,6 +1609,7 @@
 				B42CE7FC1FF4E3450048056F /* BWResearchCell.m in Sources */,
 				B46B25551DB5ED6500B9FF54 /* BWBaseNavigationController.m in Sources */,
 				B42CE7DF1FF4E3450048056F /* BWResearch7VC.m in Sources */,
+				B4BE64B420230F7300D2E4F1 /* BW3DTouchViewController.m in Sources */,
 				B42CE7C81FF4E3450048056F /* BMTest13View.m in Sources */,
 				B42CE7F91FF4E3450048056F /* BWResearch8VC.m in Sources */,
 				B4B631311DAE384F00DF0907 /* UITableViewCell+JZExtension.m in Sources */,

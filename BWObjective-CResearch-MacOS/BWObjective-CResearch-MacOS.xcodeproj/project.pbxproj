@@ -10,6 +10,7 @@
 		B443A1C71D54834D003D66C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B443A1C61D54834D003D66C5 /* main.m */; };
 		B4A313691EEA3B840079F292 /* BWClass1.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A313681EEA3B840079F292 /* BWClass1.m */; };
 		B4B835131E723C1C00ACAD6F /* BWClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B835121E723C1C00ACAD6F /* BWClass.m */; };
+		B4C2378D2029796400FDB5E7 /* NSString+BWAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C2378C2029796400FDB5E7 /* NSString+BWAdd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,8 @@
 		B4A313681EEA3B840079F292 /* BWClass1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWClass1.m; sourceTree = "<group>"; };
 		B4B835111E723C1C00ACAD6F /* BWClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWClass.h; sourceTree = "<group>"; };
 		B4B835121E723C1C00ACAD6F /* BWClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWClass.m; sourceTree = "<group>"; };
+		B4C2378B2029796400FDB5E7 /* NSString+BWAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+BWAdd.h"; sourceTree = "<group>"; };
+		B4C2378C2029796400FDB5E7 /* NSString+BWAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+BWAdd.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +73,18 @@
 				B4B835121E723C1C00ACAD6F /* BWClass.m */,
 				B4A313671EEA3B840079F292 /* BWClass1.h */,
 				B4A313681EEA3B840079F292 /* BWClass1.m */,
+				B4C2378A2029795700FDB5E7 /* Category */,
 			);
 			path = "BWObjective-CResearch-MacOS";
+			sourceTree = "<group>";
+		};
+		B4C2378A2029795700FDB5E7 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				B4C2378B2029796400FDB5E7 /* NSString+BWAdd.h */,
+				B4C2378C2029796400FDB5E7 /* NSString+BWAdd.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4C2378D2029796400FDB5E7 /* NSString+BWAdd.m in Sources */,
 				B443A1C71D54834D003D66C5 /* main.m in Sources */,
 				B4B835131E723C1C00ACAD6F /* BWClass.m in Sources */,
 				B4A313691EEA3B840079F292 /* BWClass1.m in Sources */,
