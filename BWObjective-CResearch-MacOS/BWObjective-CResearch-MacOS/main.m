@@ -11,6 +11,7 @@
 #import "BWClass1.h"
 #import "BWCommon.h"
 #import "NSString+BWAdd.h"
+#import "BWNetwork0.h"
 
 #define BMFloatEquation(A, B) (ABS(A-B)<=0.00001)
 
@@ -38,15 +39,32 @@ int main(int argc, const char * argv[]) {
         
         NSString *text = @"text";
         NSString *text1;
+        // POST request
+        [[BWNetwork0 new] networking0];
         
         NSLog(@"text %d", [text validAccount]);
         NSLog(@"text1 %d", [text1 validAccount]);
+        // GET request
     }
     
     return 0;
 }
 
 // Test
+void test16() {
+    NSString *string = nil;
+    if ([string isEqualToString:@"123"]) {
+        NSLog(@"Equal");
+    } else {
+        NSLog(@"Not equal");
+    }
+    
+    NSArray *array = @[];
+    NSInteger count = array.count;
+    
+    [string performSelector:NSSelectorFromString(@"hi")];
+}
+
 void test15() {
     BWCommonType type;
     type = BWCommonTypeThird;
