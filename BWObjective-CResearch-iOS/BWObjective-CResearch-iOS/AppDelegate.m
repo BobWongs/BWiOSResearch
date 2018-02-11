@@ -31,6 +31,7 @@
 #import "BWNetworkResearchVC.h"
 #import "BW3DTouchViewController.h"
 #import "BWAnimationViewController.h"
+#import "BWCoreDataViewController.h"
 
 @interface AppDelegate ()
 
@@ -41,71 +42,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+//    [AMapServices sharedServices].apiKey = @"da91820d52ede7ec7c5c2375944283d6";  // Amap
     
-    [AMapServices sharedServices].apiKey = @"da91820d52ede7ec7c5c2375944283d6";
+//    UIApplication.sharedApplication.statusBarHidden = NO;
     
-    
-    UIApplication.sharedApplication.statusBarHidden = NO;
-    
-    
-//    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-//    NSDateComponents *comps = nil;
-//    comps = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[NSDate date]];
-//    NSDateComponents *adcomps = [[NSDateComponents alloc] init];
-//    [adcomps setYear:0];
-//    [adcomps setMonth:0];
-//    [adcomps setDay:-1];
-//
-//    NSDate *dateLast = [calendar dateByAddingComponents:adcomps toDate:[NSDate date] options:0];
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//    [formatter setDateFormat:@"yyyyMMddHHmmss"];
-//    NSString *dateStringLast = [formatter stringFromDate:dateLast];
-//    NSLog(@"%@", dateStringLast);
-    
-    
-//    BWHomeViewController *vcHome = [[BWHomeViewController alloc] init];
-//    UINavigationController *nvgtVCHome = [[UINavigationController alloc] initWithRootViewController:vcHome];
-//    nvgtVCHome.tabBarItem.title = @"HomeTab";
-//    
-//    BWMeController *vcMe = [BWMeController new];
-//    vcMe.title = @"Me";
-//    BWBaseNavigationController *nvgtVCMe = [[BWBaseNavigationController alloc] initFullScreenBackWithRootViewController:vcMe];
-//    nvgtVCMe.tabBarItem.title = @"MeTab";
-    
-    
-//    BWResearch2VC *researchVC = [BWResearch2VC new];
-//    UINavigationController *researchNvgtVC = [[UINavigationController alloc] initWithRootViewController:researchVC];
-//    researchNvgtVC.tabBarItem.title = @"Research2";
-    
-//    BWResearch3VC *researchVC = [BWResearch3VC new];
-//    BWResearch4VC *researchVC = [BWResearch4VC new];
-//    BWResearch5VC  *researchVC = [BWResearch5VC new];
-    Class vcClass = [BWAnimationViewController class];
-//    Class vcClass = [BWResearch9VC class];
+    Class vcClass = [BWCoreDataViewController class];
     
 //    UINavigationController *researchNvgtVC = [UINavigationController bmB2B_defaultStyleWithRootViewController:[vcClass new]];
-    UINavigationController *researchNvgtVC = [[UINavigationController alloc] initWithRootViewController:vc];
+    UINavigationController *researchNvgtVC = [[UINavigationController alloc] initWithRootViewController:[vcClass new]];
     researchNvgtVC.tabBarItem.title = NSStringFromClass(vcClass);
-    
-//    UITabBarController *tabVC = [UITabBarController new];
-//    tabVC.viewControllers = @[researchNvgtVC];
-//    tabVC.selectedIndex = 1;
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 //    self.window.rootViewController = tabVC;
     self.window.rootViewController = researchNvgtVC;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
-    
-//    for (NSInteger i = 0; i < 20000; i++) {
-//        @autoreleasepool {
-//            UIImage *image = [UIImage imageNamed:@"icon_discovery_selected"];
-//            NSNumber *number = [NSNumber numberWithInteger:i];
-//            NSLog(@"number: %@", number);
-//            NSLog(@"image: %@", image);
-//        }
-//    }
     
     return YES;
 }

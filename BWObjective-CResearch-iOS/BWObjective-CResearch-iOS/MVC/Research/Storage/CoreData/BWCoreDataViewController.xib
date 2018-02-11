@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BWCoreDataViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkg-xm-zmW">
+                    <rect key="frame" x="20" y="220" width="335" height="30"/>
+                    <state key="normal" title="Read"/>
+                    <connections>
+                        <action selector="readAction:" destination="-1" eventType="touchUpInside" id="4Jn-Cj-PoM"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JoB-OL-GdV">
+                    <rect key="frame" x="20" y="320" width="335" height="30"/>
+                    <state key="normal" title="Clear"/>
+                    <connections>
+                        <action selector="clearAction:" destination="-1" eventType="touchUpInside" id="Scd-NZ-ncF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJN-zb-dBM">
+                    <rect key="frame" x="20" y="120" width="335" height="30"/>
+                    <state key="normal" title="Save"/>
+                    <connections>
+                        <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="vO3-MA-gmy"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="lkg-xm-zmW" secondAttribute="trailing" constant="20" id="0xG-df-3LV"/>
+                <constraint firstItem="JoB-OL-GdV" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="C1C-ay-3mh"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="KJN-zb-dBM" secondAttribute="trailing" constant="20" id="HdG-OM-rmF"/>
+                <constraint firstItem="lkg-xm-zmW" firstAttribute="top" secondItem="KJN-zb-dBM" secondAttribute="bottom" constant="70" id="JyA-9U-cMj"/>
+                <constraint firstItem="KJN-zb-dBM" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="100" id="NAi-0C-DZc"/>
+                <constraint firstItem="lkg-xm-zmW" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="WBM-VK-w24"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="JoB-OL-GdV" secondAttribute="trailing" constant="20" id="ZTw-Ht-fBR"/>
+                <constraint firstItem="JoB-OL-GdV" firstAttribute="top" secondItem="lkg-xm-zmW" secondAttribute="bottom" constant="70" id="gFH-8N-LZY"/>
+                <constraint firstItem="KJN-zb-dBM" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="xzq-l2-pcE"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>
