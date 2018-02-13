@@ -13,6 +13,7 @@
 @interface BWCoreDataStudy ()
 
 @property (strong, nonatomic) NSPersistentContainer *persistentContainer;
+@property (strong, nonatomic) NSManagedObjectContext *context;
 
 @end
 
@@ -41,6 +42,7 @@
     
     // 创建上下文对象，并发队列设置为主队列
     NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    self.context = context;
     
     // 创建托管对象模型，并使用Company.momd路径当做初始化参数
     NSURL *modelPath = [[NSBundle mainBundle] URLForResource:@"Person" withExtension:@"momd"];
@@ -57,31 +59,34 @@
     
     // 上下文对象设置属性为持久化存储器
     context.persistentStoreCoordinator = coordinator;
+}
+
+- (void)insert {
+    BWPerson *person = [NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:self.context];
+    person.name = @"Bob";
+    person.gender = @"male";
+    person.age = 24;
     
-//    BWPerson *person = [NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:context];
-//    person.name = @"Bob";
-//    person.gender = @"male";
-//    person.age = 24;
-//
-//    NSError *error = nil;
-//    if (context.hasChanges) {
-//        [context save:&error];
-//    }
-//
-//    if (error) {
-//        NSLog(@"core data insert error: %@", error);
-//        return;
-//    }
-//
-//    NSLog(@"Core data insert successfully!");
+    NSError *error = nil;
+    if (self.context.hasChanges) {
+        [self.context save:&error];
+    }
     
+    if (error) {
+        NSLog(@"core data insert error: %@", error);
+        return;
+    }
     
+    NSLog(@"Core data insert successfully!");
+}
+
+- (void)fetch {
     // 建立获取数据的请求对象，指明操作的实体为Employee
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Person"];
     
     // 执行获取操作，获取所有Employee托管对象
     NSError *error = nil;
-    NSArray<BWPerson *> *persons = [context executeFetchRequest:request error:&error];
+    NSArray<BWPerson *> *persons = [self.context executeFetchRequest:request error:&error];
     [persons enumerateObjectsUsingBlock:^(BWPerson * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSLog(@"");
         NSLog(@"Person Name : %@, Gender : %@, Age : %hd", obj.name, obj.gender, obj.age);
@@ -93,6 +98,14 @@
     if (error) {
         NSLog(@"CoreData Ergodic Data Error : %@", error);
     }
+}
+
+- (void)remove {
+    
+}
+
+- (void)modify {
+    
 }
 
 @end

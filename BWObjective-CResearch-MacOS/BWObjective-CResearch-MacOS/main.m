@@ -25,8 +25,21 @@ typedef NS_ENUM(NSInteger, BWType) {
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        BWCoreDataStudy *coreDataStudy = [BWCoreDataStudy new];
-        [coreDataStudy study];
+//        BWCoreDataStudy *coreDataStudy = [BWCoreDataStudy new];
+//        [coreDataStudy study];
+        
+        NSDictionary *dict0 = @{@"key0": @"value0"};
+        NSDictionary *dict1 = @{@"key1": @"value1"};
+        
+        NSMutableDictionary *dictM0 = [NSMutableDictionary dictionaryWithDictionary:dict0];
+        NSMutableDictionary *dictM1 = [NSMutableDictionary dictionaryWithDictionary:dict1];
+        
+        NSArray *array = @[dictM0, dictM1];
+        NSLog(@"array: %@", array);
+        
+        dictM0[@"key01"] = @"value01";
+        
+        NSLog(@"array: %@", array);
         
     }
     
